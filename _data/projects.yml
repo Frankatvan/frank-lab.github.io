@@ -1,0 +1,28 @@
+projects:
+  - id: "001"
+    name:
+      zh: "示例项目"
+      en: "Sample Project"
+    url: "https://example.com"
+    status: "running"
+    brief:
+      zh: "这是一个示例项目，展示卡片布局效果"
+      en: "This is a sample project demonstrating card layout"
+  - id: "002"
+    name:
+      zh: "已完成的项目"
+      en: "Completed Project"
+    url: "https://example2.com"
+    status: "completed"
+    brief:
+      zh: "展示已完成状态的项目卡片"
+      en: "Demonstrating a completed project card"
+  - id: "003"
+    name:
+      zh: "暂停中的项目"
+      en: "Paused Project"
+    url: "https://example3.com"
+    status: "paused"
+    brief:
+      zh: "展示暂停状态的项目卡片"
+      en: "Demonstrating a paused project card"
