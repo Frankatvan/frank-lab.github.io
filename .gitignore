@@ -25,6 +25,7 @@ _site/
 /tmp/
 
 # Bundler 文件
+.bundle/
 Gemfile.lock
 /vendor/bundle/
 /vendor/cache/

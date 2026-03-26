@@ -1,52 +1,59 @@
 ---
 layout: default
+title: "实验室控制台 | Lab Console"
 ---
 
 <div class="lab-container">
-  <!-- Lab Header -->
-  <header class="lab-header">
-    <h1 class="lab-title" data-i18n="lab-title">{{ site.title }}</h1>
-    <div class="lab-subtitle" data-i18n="lab-subtitle">实验室控制台 | Lab Console</div>
-    <div class="lab-status" data-i18n="lab-status">
-      <span class="status-indicator"></span>
-      探索中 | Exploring
+  <section class="hero-section" aria-labelledby="lab-title">
+    <h1 id="lab-title" class="lab-title" data-i18n="lab.title">Frank's Lab</h1>
+    <p class="lab-subtitle" data-i18n="lab.subtitle">实验室控制台</p>
+    <div class="lab-status">
+      <span class="status-indicator" aria-hidden="true"></span>
+      <span data-i18n="lab.status">探索中</span>
     </div>
-  </header>
+  </section>
 
-  <!-- Experiment Grid -->
-  <main class="experiment-grid">
+  <section class="experiments-grid" aria-label="Projects">
     {% for project in site.data.projects.projects %}
-    <a href="{{ project.url }}" class="experiment-card" target="_blank">
-      <div class="experiment-header">
+    <a
+      href="{{ project.url }}"
+      class="experiment-card"
+      data-status="{{ project.status }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="{{ project.name.zh }}"
+    >
+      <div class="card-header">
         <span class="experiment-id">#{{ project.id }}</span>
-        <span class="experiment-status {{ project.status }}">
-          <span class="status-dot"></span>
-          <span data-i18n="status-{{ project.status }}">
-            {{ project.status }}
+        <span class="experiment-status status-{{ project.status }}">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-text" data-status-text data-status="{{ project.status }}">
+            {% case project.status %}
+              {% when "running" %}进行中
+              {% when "completed" %}已完成
+              {% when "paused" %}暂停
+              {% else %}进行中
+            {% endcase %}
           </span>
         </span>
       </div>
-      <h2 class="experiment-name">{{ project.name.zh }} / {{ project.name.en }}</h2>
-      <p class="experiment-brief" data-i18n="project-brief">
-        {{ project.brief.zh }} / {{ project.brief.en }}
+      <h2
+        class="project-name"
+        data-project-name
+        data-name-zh="{{ project.name.zh }}"
+        data-name-en="{{ project.name.en }}"
+      >
+        {{ project.name.zh }}
+      </h2>
+      <p
+        class="project-brief"
+        data-project-brief
+        data-brief-zh="{{ project.brief.zh }}"
+        data-brief-en="{{ project.brief.en }}"
+      >
+        {{ project.brief.zh }}
       </p>
     </a>
     {% endfor %}
-  </main>
-
-  <!-- Lab Footer -->
-  <footer class="lab-footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <span data-i18n="lab-established">成立时间:</span>
-        <span>{{ site.data.lab.lab.established }}</span>
-      </div>
-      <div class="footer-section">
-        <span data-i18n="lab-areas">探索领域:</span>
-        <span>{{ site.data.lab.lab.areas.zh }} / {{ site.data.lab.lab.areas.en }}</span>
-      </div>
-    </div>
-  </footer>
+  </section>
 </div>
-
-<script src="{{ '/assets/js/language-switcher.js' | relative_url }}"></script>

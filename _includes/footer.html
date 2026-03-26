@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>
+      <span data-i18n="footer.established">成立于</span>
+      <span>{{ site.data["lab-info"].lab.established }}</span>
+    </p>
+    <p>
+      <span data-i18n="footer.areas">探索领域</span>:
+      <span
+        data-area-text
+        data-zh="{{ site.data["lab-info"].lab.areas.zh }}"
+        data-en="{{ site.data["lab-info"].lab.areas.en }}"
+      >
+        {{ site.data["lab-info"].lab.areas.zh }}
+      </span>
+    </p>
+    <p class="copyright" data-i18n="footer.copyright">© 2024 Frank's Lab. All rights reserved.</p>
+  </div>
+</footer>

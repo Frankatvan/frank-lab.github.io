@@ -1,0 +1,22 @@
+lab:
+  title: "Frank's Lab"
+  subtitle: "Lab Console"
+  status: "Exploring"
+  status_active: "Exploring"
+
+experiment:
+  id: "Experiment ID"
+  status: "Status"
+  brief: "Brief"
+  status_running: "In Progress"
+  status_completed: "Completed"
+  status_paused: "Paused"
+
+footer:
+  established: "Established"
+  areas: "Areas of Exploration"
+  copyright: "© 2024 Frank's Lab. All rights reserved."
+
+nav:
+  language: "Language"
+  language_switch: "Switch Language"

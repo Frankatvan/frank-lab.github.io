@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="header-content">
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="Frank's Lab Home">
+      <span class="logo-mark">FL</span>
+      <span class="logo-text">Frank's Lab</span>
+    </a>
+    <div class="header-controls">
+      <span class="header-chip">
+        <span class="chip-dot" aria-hidden="true"></span>
+        <span data-i18n="lab.status_active">探索中</span>
+      </span>
+      {% include language-switcher.html %}
+    </div>
+  </div>
+</header>

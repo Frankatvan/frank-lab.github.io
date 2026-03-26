@@ -1,127 +1,146 @@
-// Language Switcher for Frank's Lab Website
-// 自动检测浏览器语言 + 手动切换功能
+(function () {
+  "use strict";
 
-// 语言配置
-const LANGUAGES = {
-  zh: 'Chinese',
-  en: 'English'
-};
+  var STORAGE_KEY = "franklab-language";
 
-// 默认语言检测
-function detectLanguage() {
-  const browserLang = navigator.language || navigator.userLanguage;
-  return browserLang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
-}
-
-// 当前语言状态
-let currentLanguage = localStorage.getItem('language') || detectLanguage();
-
-// 语言切换函数
-function switchLanguage(lang) {
-  if (LANGUAGES[lang]) {
-    currentLanguage = lang;
-    localStorage.setItem('language', lang);
-    updatePageLanguage();
-    updateLanguageSwitcherUI();
-
-    // 可选：刷新页面确保所有内容更新
-    // window.location.reload();
-  }
-}
-
-// 更新页面语言显示
-function updatePageLanguage() {
-  // 获取所有带有 data-i18n 属性的元素
-  const elements = document.querySelectorAll('[data-i18n]');
-
-  elements.forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[currentLanguage] && translations[currentLanguage][key]) {
-      element.textContent = translations[currentLanguage][key];
+  var translations = {
+    zh: {
+      "lab.title": "Frank's Lab",
+      "lab.subtitle": "实验室控制台",
+      "lab.status": "探索中",
+      "lab.status_active": "探索中",
+      "footer.established": "成立于",
+      "footer.areas": "探索领域",
+      "footer.copyright": "© 2024 Frank's Lab. All rights reserved."
+    },
+    en: {
+      "lab.title": "Frank's Lab",
+      "lab.subtitle": "Lab Console",
+      "lab.status": "Exploring",
+      "lab.status_active": "Exploring",
+      "footer.established": "Established",
+      "footer.areas": "Areas of Exploration",
+      "footer.copyright": "© 2024 Frank's Lab. All rights reserved."
     }
-  });
+  };
 
-  // 更新 HTML lang 属性
-  document.documentElement.lang = currentLanguage;
-}
+  var statusTranslations = {
+    zh: {
+      running: "进行中",
+      completed: "已完成",
+      paused: "暂停"
+    },
+    en: {
+      running: "In Progress",
+      completed: "Completed",
+      paused: "Paused"
+    }
+  };
 
-// 更新语言切换器UI
-function updateLanguageSwitcherUI() {
-  const switcher = document.querySelector('.language-switcher');
-  if (switcher) {
-    // 移除所有活跃状态
-    switcher.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.remove('active');
+  function getBrowserLanguage() {
+    var lang = (navigator.language || navigator.userLanguage || "zh").toLowerCase();
+    return lang.indexOf("zh") === 0 ? "zh" : "en";
+  }
+
+  function getSavedLanguage() {
+    try {
+      var lang = window.localStorage.getItem(STORAGE_KEY);
+      return lang === "zh" || lang === "en" ? lang : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveLanguage(lang) {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, lang);
+    } catch (error) {
+      // Ignore write failure in private mode.
+    }
+  }
+
+  function updateI18nTexts(lang) {
+    var map = translations[lang] || translations.zh;
+    var nodes = document.querySelectorAll("[data-i18n]");
+
+    nodes.forEach(function (node) {
+      var key = node.getAttribute("data-i18n");
+      if (map[key]) {
+        node.textContent = map[key];
+      }
+    });
+  }
+
+  function updateProjectTexts(lang) {
+    var nameAttr = lang === "zh" ? "nameZh" : "nameEn";
+    var briefAttr = lang === "zh" ? "briefZh" : "briefEn";
+
+    document.querySelectorAll("[data-project-name]").forEach(function (node) {
+      if (node.dataset[nameAttr]) {
+        node.textContent = node.dataset[nameAttr];
+      }
     });
 
-    // 添加当前语言活跃状态
-    const activeBtn = switcher.querySelector(`[data-lang="${currentLanguage}"]`);
-    if (activeBtn) {
-      activeBtn.classList.add('active');
-    }
+    document.querySelectorAll("[data-project-brief]").forEach(function (node) {
+      if (node.dataset[briefAttr]) {
+        node.textContent = node.dataset[briefAttr];
+      }
+    });
   }
-}
 
-// 初始化语言切换器
-function initLanguageSwitcher() {
-  const switcherContainer = document.createElement('div');
-  switcherContainer.className = 'language-switcher';
-
-  Object.keys(LANGUAGES).forEach(lang => {
-    const button = document.createElement('button');
-    button.className = `lang-btn ${lang === currentLanguage ? 'active' : ''}`;
-    button.setAttribute('data-lang', lang);
-    button.textContent = LANGUAGES[lang];
-    button.addEventListener('click', () => switchLanguage(lang));
-    switcherContainer.appendChild(button);
-  });
-
-  // 插入到页面中（根据页面结构调整）
-  const header = document.querySelector('header');
-  if (header) {
-    header.appendChild(switcherContainer);
+  function updateAreaText(lang) {
+    var areaAttr = lang === "zh" ? "zh" : "en";
+    document.querySelectorAll("[data-area-text]").forEach(function (node) {
+      if (node.dataset[areaAttr]) {
+        node.textContent = node.dataset[areaAttr];
+      }
+    });
   }
-}
 
-// 双语翻译数据
-const translations = {
-  zh: {
-    'lab-title': "Frank's Lab",
-    'lab-subtitle': "实验室控制台",
-    'lab-status': "探索中",
-    'status-running': "进行中",
-    'status-completed': "已完成",
-    'status-paused': "暂停中",
-    'lab-established': "成立时间",
-    'lab-areas': "探索领域",
-    'project-brief': "简介"
-  },
-  en: {
-    'lab-title': "Frank's Lab",
-    'lab-subtitle': "Lab Console",
-    'lab-status': "Exploring",
-    'status-running': "Running",
-    'status-completed': "Completed",
-    'status-paused': "Paused",
-    'lab-established': "Established",
-    'lab-areas': "Areas",
-    'project-brief': "Brief"
+  function updateStatusText(lang) {
+    var map = statusTranslations[lang] || statusTranslations.zh;
+    document.querySelectorAll("[data-status-text]").forEach(function (node) {
+      var key = node.getAttribute("data-status");
+      if (map[key]) {
+        node.textContent = map[key];
+      }
+    });
   }
-};
 
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
-  initLanguageSwitcher();
-  updatePageLanguage();
-});
+  function updateActiveButton(lang) {
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+      btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
+    });
+  }
 
-// 暴露全局函数供其他脚本使用
-window.LanguageSwitcher = {
-  switchLanguage: switchLanguage,
-  getCurrentLanguage: () => currentLanguage
-};
+  function applyLanguage(lang) {
+    var target = lang === "zh" ? "zh" : "en";
+    document.documentElement.lang = target === "zh" ? "zh-CN" : "en";
 
-// 自动语言检测（可选）
-if (localStorage.getItem('language') === null) {
-  console.log('Auto-detected language:', currentLanguage);
-}
+    updateI18nTexts(target);
+    updateProjectTexts(target);
+    updateAreaText(target);
+    updateStatusText(target);
+    updateActiveButton(target);
+    saveLanguage(target);
+  }
+
+  function initLanguageSwitcher() {
+    var currentLang = getSavedLanguage() || getBrowserLanguage();
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyLanguage(btn.dataset.lang);
+      });
+    });
+
+    applyLanguage(currentLang);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initLanguageSwitcher);
+  } else {
+    initLanguageSwitcher();
+  }
+})();
