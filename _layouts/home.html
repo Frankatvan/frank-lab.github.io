@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="lab-container">
+  <!-- Lab Header -->
+  <header class="lab-header">
+    <h1 class="lab-title" data-i18n="lab-title">{{ site.title }}</h1>
+    <div class="lab-subtitle" data-i18n="lab-subtitle">实验室控制台 | Lab Console</div>
+    <div class="lab-status" data-i18n="lab-status">
+      <span class="status-indicator"></span>
+      探索中 | Exploring
+    </div>
+  </header>
+
+  <!-- Experiment Grid -->
+  <main class="experiment-grid">
+    {% for project in site.data.projects.projects %}
+    <a href="{{ project.url }}" class="experiment-card" target="_blank">
+      <div class="experiment-header">
+        <span class="experiment-id">#{{ project.id }}</span>
+        <span class="experiment-status {{ project.status }}">
+          <span class="status-dot"></span>
+          <span data-i18n="status-{{ project.status }}">
+            {{ project.status }}
+          </span>
+        </span>
+      </div>
+      <h2 class="experiment-name">{{ project.name.zh }} / {{ project.name.en }}</h2>
+      <p class="experiment-brief" data-i18n="project-brief">
+        {{ project.brief.zh }} / {{ project.brief.en }}
+      </p>
+    </a>
+    {% endfor %}
+  </main>
+
+  <!-- Lab Footer -->
+  <footer class="lab-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <span data-i18n="lab-established">成立时间:</span>
+        <span>{{ site.data.lab.lab.established }}</span>
+      </div>
+      <div class="footer-section">
+        <span data-i18n="lab-areas">探索领域:</span>
+        <span>{{ site.data.lab.lab.areas.zh }} / {{ site.data.lab.lab.areas.en }}</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="{{ '/assets/js/language-switcher.js' | relative_url }}"></script>
