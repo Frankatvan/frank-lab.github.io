@@ -62,11 +62,15 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-# Language settings
+# Language settings (for JavaScript client-side switching)
 languages:
   - zh
   - en
 default_language: zh
+
+# Data files for languages
+# Note: Language switching is handled client-side via JavaScript
+# The _locales/ directory contains language data files
 
 # Collections
 collections:
@@ -252,6 +256,10 @@ git commit -m "feat: add English language pack"
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
   {% include header.html %}
@@ -287,11 +295,11 @@ title: "实验室控制台 | Lab Console"
 ---
 
 <div class="hero-section">
-  <h1 class="lab-title">{{ site.data.locales[site.active_locale].lab.title }}</h1>
-  <p class="lab-subtitle">{{ site.data.locales[site.active_locale].lab.subtitle }}</p>
+  <h1 class="lab-title" data-i18n="lab.title">{{ site.data.locales.zh.lab.title }}</h1>
+  <p class="lab-subtitle" data-i18n="lab.subtitle">{{ site.data.locales.zh.lab.subtitle }}</p>
   <div class="lab-status">
     <span class="status-indicator"></span>
-    <span>{{ site.data.locales[site.active_locale].lab.status }}</span>
+    <span data-i18n="lab.status">{{ site.data.locales.zh.lab.status }}</span>
   </div>
 </div>
 
@@ -301,11 +309,11 @@ title: "实验室控制台 | Lab Console"
     <div class="card-header">
       <span class="experiment-id">{{ project.id }}</span>
       <span class="experiment-status status-{{ project.status }}">
-        {{ site.data.locales[site.active_locale].experiment["status_" | append: project.status] }}
+        <span data-i18n="experiment.status_{{ project.status }}">{{ site.data.locales.zh.experiment["status_" | append: project.status] }}</span>
       </span>
     </div>
-    <h3 class="project-name">{{ project.name[site.active_locale] }}</h3>
-    <p class="project-brief">{{ project.brief[site.active_locale] }}</p>
+    <h3 class="project-name" data-i18n="project.name">{{ project.name.zh }}</h3>
+    <p class="project-brief" data-i18n="project.brief">{{ project.brief.zh }}</p>
   </a>
   {% endfor %}
 </div>
@@ -383,10 +391,10 @@ git commit -m "feat: add language switcher component"
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-info">
-      <p>{{ site.data.locales[site.active_locale].footer.established }} {{ site.data.lab.lab.established }}</p>
-      <p>{{ site.data.locales[site.active_locale].footer.areas }}: {{ site.data.lab.lab.areas[site.active_locale] }}</p>
+      <p><span data-i18n="footer.established">{{ site.data.locales.zh.footer.established }}</span> {{ site.data.lab.lab.established }}</p>
+      <p><span data-i18n="footer.areas">{{ site.data.locales.zh.footer.areas }}</span>: <span data-i18n="lab.areas">{{ site.data.lab.lab.areas.zh }}</span></p>
     </div>
-    <p class="copyright">{{ site.data.locales[site.active_locale].footer.copyright }}</p>
+    <p class="copyright" data-i18n="footer.copyright">{{ site.data.locales.zh.footer.copyright }}</p>
   </div>
 </footer>
 ```
@@ -721,6 +729,46 @@ git commit -m "feat: add main stylesheet with dark tech theme"
 (function() {
   'use strict';
 
+  // Language data (matches _locales/ files)
+  const translations = {
+    zh: {
+      'lab.title': "Frank's Lab",
+      'lab.subtitle': '实验室控制台',
+      'lab.status': '探索中',
+      'experiment.status_running': '进行中',
+      'experiment.status_completed': '已完成',
+      'experiment.status_paused': '暂停',
+      'footer.established': '成立于',
+      'footer.areas': '探索领域',
+      'footer.copyright': '© 2024 Frank\'s Lab. All rights reserved.',
+      'lab.areas': '人工智能, Web开发, 工具创新'
+    },
+    en: {
+      'lab.title': "Frank's Lab",
+      'lab.subtitle': 'Lab Console',
+      'lab.status': 'Exploring',
+      'experiment.status_running': 'In Progress',
+      'experiment.status_completed': 'Completed',
+      'experiment.status_paused': 'Paused',
+      'footer.established': 'Established',
+      'footer.areas': 'Areas of Exploration',
+      'footer.copyright': '© 2024 Frank\'s Lab. All rights reserved.',
+      'lab.areas': 'Artificial Intelligence, Web Development, Tool Innovation'
+    }
+  };
+
+  // Project data (matches _data/projects.yml)
+  const projectsData = {
+    zh: {
+      'project.name': ['示例项目', '已完成的项目', '暂停中的项目'],
+      'project.brief': ['这是一个示例项目，展示卡片布局效果', '展示已完成状态的项目卡片', '展示暂停状态的项目卡片']
+    },
+    en: {
+      'project.name': ['Sample Project', 'Completed Project', 'Paused Project'],
+      'project.brief': ['This is a sample project demonstrating card layout', 'Demonstrating a completed project card', 'Demonstrating a paused project card']
+    }
+  };
+
   // Detect browser language
   function getBrowserLanguage() {
     const lang = navigator.language || navigator.userLanguage;
@@ -737,6 +785,30 @@ git commit -m "feat: add main stylesheet with dark tech theme"
     localStorage.setItem('franklab-language', lang);
   }
 
+  // Update text content by i18n key
+  function updateTextContent(lang) {
+    // Update static translations
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.dataset.i18n;
+      if (translations[lang][key]) {
+        element.textContent = translations[lang][key];
+      }
+    });
+
+    // Update project names and briefs
+    document.querySelectorAll('.experiment-card').forEach((card, index) => {
+      const nameEl = card.querySelector('.project-name');
+      const briefEl = card.querySelector('.project-brief');
+
+      if (nameEl && projectsData[lang]['project.name'][index]) {
+        nameEl.textContent = projectsData[lang]['project.name'][index];
+      }
+      if (briefEl && projectsData[lang]['project.brief'][index]) {
+        briefEl.textContent = projectsData[lang]['project.brief'][index];
+      }
+    });
+  }
+
   // Update page language
   function updateLanguage(lang) {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
@@ -749,17 +821,17 @@ git commit -m "feat: add main stylesheet with dark tech theme"
     // Save preference
     saveLanguage(lang);
 
-    // Trigger page reload with language parameter
-    const url = new URL(window.location);
-    url.searchParams.set('lang', lang);
-    window.location.href = url.toString();
+    // Update page content
+    updateTextContent(lang);
   }
 
   // Initialize language switcher
   function initLanguageSwitcher() {
-    // Get current language from URL or saved preference
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentLang = urlParams.get('lang') || getSavedLanguage();
+    // Get current language from saved preference or browser detection
+    const currentLang = getSavedLanguage();
+
+    // Update content initially
+    updateTextContent(currentLang);
 
     // Update active buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -987,6 +1059,9 @@ git commit -m "docs: add deployment instructions for user"
 ```ruby
 source "https://rubygems.org"
 
+# Ruby version for GitHub Pages compatibility
+ruby "~> 3.1"
+
 gem "jekyll", "~> 4.3"
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-sitemap", "~> 1.4"
@@ -1052,19 +1127,45 @@ git commit -m "chore: add .gitignore for Jekyll project"
 **Files:**
 - Create: `favicon.ico`
 
-- [ ] **Step 1: Create placeholder favicon file**
+- [ ] **Step 1: Create favicon documentation**
 
 ```bash
-# Create a simple 16x16 favicon (will need actual file in production)
-# For now, create empty file placeholder
-touch favicon.ico
+# Create a README file explaining favicon requirements
+cat > FAVICON_GUIDE.md << 'EOF'
+# Favicon Guide
+
+## How to Add a Custom Favicon
+
+1. **Create your favicon**:
+   - Size: 16x16 or 32x32 pixels
+   - Format: .ico, .png, or .svg
+   - Tools: Canva, Favicon.io, or Photoshop
+
+2. **Place the file**:
+   - Name it: `favicon.ico` (or .png/.svg)
+   - Location: Root directory of the project
+
+3. **Update if needed**:
+   - The HTML already references `/favicon.ico`
+   - If using .png or .svg, update the link in `_layouts/default.html`
+
+## Temporary Solution
+
+For now, browsers will show a default icon. You can add your custom favicon later.
+
+## Online Tools
+
+- [Favicon.io](https://favicon.io/) - Generate favicons online
+- [Canva](https://www.canva.com/) - Design favicos with templates
+- [RealFaviconGenerator](https://realfavicongenerator.net/) - Advanced favicon generation
+EOF
 ```
 
-- [ ] **Step 2: Commit favicon placeholder**
+- [ ] **Step 2: Commit favicon guide**
 
 ```bash
-git add favicon.ico
-git commit -m "chore: add favicon placeholder"
+git add FAVICON_GUIDE.md
+git commit -m "docs: add favicon setup guide"
 ```
 
 ---
