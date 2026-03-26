@@ -1,0 +1,38 @@
+# Site settings
+title: "Frank's Lab"
+email: ""
+description: "技术探索者、创新工坊 | Tech Explorer, Innovation Workshop"
+url: "https://frankzh.top"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Language settings (for JavaScript client-side switching)
+languages:
+  - zh
+  - en
+default_language: zh
+
+# Data files for languages
+# Note: Language switching is handled client-side via JavaScript
+# The _locales/ directory contains language data files
+
+# Collections
+collections:
+  projects:
+    output: false
