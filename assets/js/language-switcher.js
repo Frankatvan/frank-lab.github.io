@@ -6,7 +6,7 @@
   var translations = {
     zh: {
       "lab.title": "Frank's Lab",
-      "lab.subtitle": "实验室控制台",
+      "lab.subtitle": "这里是我的思维实验室。作为一名一直在管理逻辑与技术边界间游走的探索者，我在这里记录那些试图让商业更高效、让流程更自动化的“小实验”。这不仅是为了解决当下的难题，更是为了给未来的自己留下一份关于技术思考的注脚。目前实验室正处于初创破壳阶段，欢迎围观我的奇思妙想。",
       "lab.status": "探索中",
       "lab.status_active": "探索中",
       "footer.established": "成立于",
@@ -15,7 +15,7 @@
     },
     en: {
       "lab.title": "Frank's Lab",
-      "lab.subtitle": "Lab Console",
+      "lab.subtitle": "Welcome to my digital sandbox. As an explorer navigating the intersection of management logic and technical frontiers, I use this space to document 'mini-experiments' aimed at boosting business efficiency and workflow automation. It's more than just solving today's puzzles; it's a footnote of technical reflections for my future self. The lab is currently in its Hatching Phase - feel free to stick around and see what's brewing.",
       "lab.status": "Exploring",
       "lab.status_active": "Exploring",
       "footer.established": "Established",
