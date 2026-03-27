@@ -15,7 +15,7 @@ title: "实验室控制台 | Lab Console"
 
   <section class="experiments-grid" aria-label="Projects">
     {% for project in site.data.projects.projects %}
-    {% if project.url and project.url != blank %}
+    {% if project.url and project.url != "" %}
     <a
       href="{{ project.url }}"
       class="experiment-card"
