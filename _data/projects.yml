@@ -12,7 +12,7 @@ projects:
     name:
       zh: "已完成的项目"
       en: "Completed Project"
-    url: "http://afs.frankzh.top:99/"
+    url: ""
     status: "completed"
     brief:
       zh: "展示已完成状态的项目卡片"

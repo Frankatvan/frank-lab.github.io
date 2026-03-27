@@ -1,8 +1,6 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "franklab-language";
-
   var translations = {
     zh: {
       "lab.title": "凡响实验室",
@@ -38,25 +36,13 @@
   };
 
   function getBrowserLanguage() {
-    var lang = (navigator.language || navigator.userLanguage || "zh").toLowerCase();
+    var lang = (
+      (navigator.languages && navigator.languages[0]) ||
+      navigator.language ||
+      navigator.userLanguage ||
+      "en"
+    ).toLowerCase();
     return lang.indexOf("zh") === 0 ? "zh" : "en";
-  }
-
-  function getSavedLanguage() {
-    try {
-      var lang = window.localStorage.getItem(STORAGE_KEY);
-      return lang === "zh" || lang === "en" ? lang : null;
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function saveLanguage(lang) {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, lang);
-    } catch (error) {
-      // Ignore write failure in private mode.
-    }
   }
 
   function updateI18nTexts(lang) {
@@ -123,11 +109,10 @@
     updateAreaText(target);
     updateStatusText(target);
     updateActiveButton(target);
-    saveLanguage(target);
   }
 
   function initLanguageSwitcher() {
-    var currentLang = getSavedLanguage() || getBrowserLanguage();
+    var currentLang = getBrowserLanguage();
 
     document.querySelectorAll(".lang-btn").forEach(function (btn) {
       btn.addEventListener("click", function () {
