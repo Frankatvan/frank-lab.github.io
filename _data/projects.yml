@@ -1,8 +1,8 @@
 projects:
   - id: "001"
     name:
-      zh: "示例项目"
-      en: "Sample Project"
+      zh: "周五"
+      en: "Friday"
     url: "https://friday.frankzh.top"
     status: "running"
     brief:

@@ -41,16 +41,16 @@ title: "实验室控制台 | Lab Console"
       <h2
         class="project-name"
         data-project-name
-        data-name-zh="{{ project.name.zh }}"
-        data-name-en="{{ project.name.en }}"
+        data-name-zh="{{ project.name.zh | escape }}"
+        data-name-en="{{ project.name.en | escape }}"
       >
         {{ project.name.zh }}
       </h2>
       <p
         class="project-brief"
         data-project-brief
-        data-brief-zh="{{ project.brief.zh }}"
-        data-brief-en="{{ project.brief.en }}"
+        data-brief-zh="{{ project.brief.zh | escape }}"
+        data-brief-en="{{ project.brief.en | escape }}"
       >
         {{ project.brief.zh }}
       </p>
@@ -78,16 +78,16 @@ title: "实验室控制台 | Lab Console"
       <h2
         class="project-name"
         data-project-name
-        data-name-zh="{{ project.name.zh }}"
-        data-name-en="{{ project.name.en }}"
+        data-name-zh="{{ project.name.zh | escape }}"
+        data-name-en="{{ project.name.en | escape }}"
       >
         {{ project.name.zh }}
       </h2>
       <p
         class="project-brief"
         data-project-brief
-        data-brief-zh="{{ project.brief.zh }}"
-        data-brief-en="{{ project.brief.en }}"
+        data-brief-zh="{{ project.brief.zh | escape }}"
+        data-brief-en="{{ project.brief.en | escape }}"
       >
         {{ project.brief.zh }}
       </p>
