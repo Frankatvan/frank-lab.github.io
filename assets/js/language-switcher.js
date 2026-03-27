@@ -11,7 +11,7 @@
       "lab.status_active": "探索中",
       "footer.established": "成立于",
       "footer.areas": "探索领域",
-      "footer.copyright": "© 2024 Frank's Lab. All rights reserved."
+      "footer.copyright": "© 2026 Frank's Lab. All rights reserved."
     },
     en: {
       "lab.title": "Frank's Lab",
@@ -20,7 +20,7 @@
       "lab.status_active": "Exploring",
       "footer.established": "Established",
       "footer.areas": "Areas of Exploration",
-      "footer.copyright": "© 2024 Frank's Lab. All rights reserved."
+      "footer.copyright": "© 2026 Frank's Lab. All rights reserved."
     }
   };
 
