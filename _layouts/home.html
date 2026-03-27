@@ -15,6 +15,7 @@ title: "实验室控制台 | Lab Console"
 
   <section class="experiments-grid" aria-label="Projects">
     {% for project in site.data.projects.projects %}
+    {% if project.url and project.url != blank %}
     <a
       href="{{ project.url }}"
       class="experiment-card"
@@ -54,6 +55,44 @@ title: "实验室控制台 | Lab Console"
         {{ project.brief.zh }}
       </p>
     </a>
+    {% else %}
+    <article
+      class="experiment-card"
+      data-status="{{ project.status }}"
+      aria-label="{{ project.name.zh }}"
+    >
+      <div class="card-header">
+        <span class="experiment-id">#{{ project.id }}</span>
+        <span class="experiment-status status-{{ project.status }}">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-text" data-status-text data-status="{{ project.status }}">
+            {% case project.status %}
+              {% when "running" %}进行中
+              {% when "completed" %}已完成
+              {% when "paused" %}暂停
+              {% else %}进行中
+            {% endcase %}
+          </span>
+        </span>
+      </div>
+      <h2
+        class="project-name"
+        data-project-name
+        data-name-zh="{{ project.name.zh }}"
+        data-name-en="{{ project.name.en }}"
+      >
+        {{ project.name.zh }}
+      </h2>
+      <p
+        class="project-brief"
+        data-project-brief
+        data-brief-zh="{{ project.brief.zh }}"
+        data-brief-en="{{ project.brief.en }}"
+      >
+        {{ project.brief.zh }}
+      </p>
+    </article>
+    {% endif %}
     {% endfor %}
   </section>
 </div>

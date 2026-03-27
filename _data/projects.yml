@@ -3,16 +3,16 @@ projects:
     name:
       zh: "示例项目"
       en: "Sample Project"
-    url: "https://example.com"
+    url: "https://friday.frankzh.top"
     status: "running"
     brief:
-      zh: "这是一个示例项目，展示卡片布局效果"
-      en: "This is a sample project demonstrating card layout"
+      zh: "“周五”是一个专为复杂业务场景设计的现代化工作流跟踪与协作平台。它不仅是一个任务管理工具，更是一个融合了 AI 深度参与、跨语言协作与实时反馈的数字化“实验室”。"
+      en: "\"Friday\" is a modern workflow tracking and collaboration platform engineered for complex business environments. It transcends traditional task management by functioning as a digital \"laboratory\" that integrates deep AI involvement, cross-linguistic collaboration, and real-time feedback loops."
   - id: "002"
     name:
       zh: "已完成的项目"
       en: "Completed Project"
-    url: "https://example2.com"
+    url: "https://afs.frankzh.top"
     status: "completed"
     brief:
       zh: "展示已完成状态的项目卡片"
@@ -21,7 +21,7 @@ projects:
     name:
       zh: "暂停中的项目"
       en: "Paused Project"
-    url: "https://example3.com"
+    url: ""
     status: "paused"
     brief:
       zh: "展示暂停状态的项目卡片"
