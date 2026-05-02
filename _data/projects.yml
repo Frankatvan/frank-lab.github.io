@@ -10,6 +10,15 @@ projects:
       en: "\"Friday\" is a modern workflow tracking and collaboration platform engineered for complex business environments. It transcends traditional task management by functioning as a digital \"laboratory\" that integrates deep AI involvement, cross-linguistic collaboration, and real-time feedback loops."
   - id: "002"
     name:
+      zh: "北京-新疆28天自驾"
+      en: "Beijing-Xinjiang Road Trip"
+    url: "/beijing-xinjiang/"
+    status: "completed"
+    brief:
+      zh: "一条手机竖屏 H5 旅行长卷：从青甘入疆、南疆人文、帕米尔高原，到独库伊犁与东疆返程，用电影感视觉和每日卡片呈现完整自驾攻略。"
+      en: "A mobile-first H5 travel scroll for a 28-day road trip from Beijing to Xinjiang, covering Qinghai, South Xinjiang, Pamir, Duku Highway, Ili, and the eastern return route."
+  - id: "003"
+    name:
       zh: "已完成的项目"
       en: "Completed Project"
     url: ""
@@ -17,7 +26,7 @@ projects:
     brief:
       zh: "展示已完成状态的项目卡片"
       en: "Demonstrating a completed project card"
-  - id: "003"
+  - id: "004"
     name:
       zh: "暂停中的项目"
       en: "Paused Project"
