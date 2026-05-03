@@ -244,38 +244,118 @@ const pages = [
 ];
 
 let currentIndex = 0;
+let turnState = null;
+
+function sectionClass(section) {
+  if (section.includes('金税')) return 'section-tax';
+  if (section.includes('经营盲区')) return 'section-ops';
+  if (section.includes('代理 CFO')) return 'section-cfo';
+  if (section.includes('AFS')) return 'section-afs';
+  if (section.includes('下一步')) return 'section-next';
+  return 'section-open';
+}
+
+function layoutClass(page, index) {
+  if ([0, 3, 8, 13, 19, 21].includes(index)) return 'layout-poster';
+  if (['cashGap', 'caseTrail', 'fourTruths', 'invoiceTrace'].includes(page.visual)) return 'layout-case';
+  if (['dashboard', 'afsChain', 'cashCurve', 'profitWaterfall', 'eightWeeks'].includes(page.visual)) return 'layout-dashboard';
+  if (['dataWeb', 'riskSix', 'businessTrace', 'workingCapital', 'meetingLoop'].includes(page.visual)) return 'layout-map';
+  return 'layout-note';
+}
+
+function shouldLeadWithVisual(page, index) {
+  return ['dashboard', 'cashCurve', 'profitWaterfall', 'afsChain', 'invoiceTrace', 'cta'].includes(page.visual) || [3, 8, 13, 19].includes(index);
+}
 
 function visualMarkup(type) {
   const visuals = {
-    cover: '<div class="seal">CFO</div><div class="cover-lines"><span></span><span></span><span></span></div>',
-    cashGap: '<div class="bridge"><span>利润</span><b></b><span>现金</span></div>',
-    pastFuture: '<div class="split-metric"><b>记录过去</b><strong>看见未来</strong></div>',
-    dataWeb: '<div class="nodes"><i>票</i><i>钱</i><i>账</i><i>税</i><i>人</i></div>',
-    riskSix: '<div class="risk-grid"><span>私户</span><span>成本</span><span>发票</span><span>社保</span><span>外包</span><span>收入</span></div>',
-    businessTrace: '<div class="chain"><span>合同</span><span>交付</span><span>收款</span><span>发票</span><span>凭证</span></div>',
-    caseTrail: '<div class="case-card"><b>方便</b><b>补票</b><b>矛盾</b><b>风险</b></div>',
-    fourTruths: '<div class="truths"><span>业务</span><span>账</span><span>税</span><span>钱</span></div>',
-    cashCurve: '<svg viewBox="0 0 220 120"><path d="M10 80 C45 40, 70 110, 105 70 S170 30, 210 52" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>',
-    profitMatrix: '<div class="matrix"><span>高利润</span><span>高占用</span><span>低利润</span><span>低占用</span></div>',
-    spendRoi: '<div class="bars"><i style="height:40%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:88%"></i></div>',
-    workingCapital: '<div class="flow"><span>应收</span><span>库存</span><span>预付</span><span>税费</span><span>工资</span></div>',
-    explainSystem: '<div class="steps"><span>指标</span><span>原因</span><span>动作</span><span>复盘</span></div>',
-    roleMap: '<div class="role"><span>会计</span><strong>代理 CFO</strong><span>老板</span></div>',
-    dashboard: '<div class="dashboard-mini"><b></b><b></b><b></b><b></b><b></b><b></b></div>',
-    eightWeeks: '<div class="weeks"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>',
-    profitWaterfall: '<div class="waterfall"><i></i><i></i><i></i><i></i><i></i></div>',
-    warningLights: '<div class="lights"><span></span><span></span><span></span></div>',
-    meetingLoop: '<div class="loop">数据 → 分析 → 会议 → 行动 → 复盘</div>',
-    afsChain: '<div class="afs-chain"><span>票据</span><span>流水</span><span>合同</span><span>凭证</span><span>报表</span><span>风险</span></div>',
-    invoiceTrace: '<div class="trace">发票 → 合同 → 付款 → 凭证 → 报表 → 提示</div>',
-    cta: '<div class="checklist"><span>现金流</span><span>利润质量</span><span>费用结构</span><span>财税风险</span></div>'
+    cover: `
+      <div class="cover-hero">
+        <div class="seal">CFO</div>
+        <div class="cover-stack">
+          <span>现金流</span><span>利润质量</span><span>经营风险</span>
+        </div>
+      </div>`,
+    cashGap: `
+      <div class="cash-gap-visual">
+        <div class="statement-card"><small>利润表</small><strong>+42万</strong><span>账面利润</span></div>
+        <div class="cash-bridge"><i></i><b>应收 / 库存 / 税费</b></div>
+        <div class="statement-card cash"><small>银行账户</small><strong>8万</strong><span>可用现金</span></div>
+      </div>`,
+    pastFuture: `
+      <div class="past-future-visual">
+        <div><small>传统记账</small><b>记录过去</b><span>凭证 · 报表 · 申报</span></div>
+        <em>→</em>
+        <div><small>经营财务</small><b>看见未来</b><span>预测 · 预警 · 行动</span></div>
+      </div>`,
+    dataWeb: `
+      <div class="data-web-visual">
+        <span class="center">以数治税</span>
+        <i style="--x:0;--y:-1">发票</i><i style="--x:1;--y:-.3">资金</i><i style="--x:.65;--y:.85">业务</i><i style="--x:-.65;--y:.85">社保</i><i style="--x:-1;--y:-.3">平台</i>
+      </div>`,
+    riskSix: `
+      <div class="risk-board">
+        <span>私户收款</span><span>未开票收入</span><span>虚假成本</span><span>品类不匹配</span><span>工资社保不一致</span><span>个体户外包</span>
+      </div>`,
+    businessTrace: `
+      <div class="trace-ladder">
+        <span>合同</span><span>交付</span><span>收款</span><span>发票</span><span>凭证</span>
+      </div>`,
+    caseTrail: `
+      <div class="case-timeline">
+        <div><b>方便</b><span>个人账户收款</span></div><div><b>补票</b><span>咨询发票补成本</span></div><div><b>矛盾</b><span>票钱账不一致</span></div><div><b>风险</b><span>业务解释断裂</span></div>
+      </div>`,
+    fourTruths: `
+      <div class="truth-diamond">
+        <span>业务</span><span>账</span><span>税</span><span>钱</span><b>说同一件事</b>
+      </div>`,
+    cashCurve: `
+      <div class="chart-card">
+        <svg viewBox="0 0 320 160"><path class="gridline" d="M20 36H300M20 78H300M20 120H300"/><path class="area" d="M20 118 C62 72 90 132 132 94 S230 42 300 70 L300 145 L20 145Z"/><path class="curve" d="M20 118 C62 72 90 132 132 94 S230 42 300 70"/></svg>
+        <div class="chart-caption"><b>8周现金预测</b><span>提前看到缺口</span></div>
+      </div>`,
+    profitMatrix: `
+      <div class="matrix-rich">
+        <div class="axis x">资金占用</div><div class="axis y">利润贡献</div>
+        <span class="good">高利润<br>低占用</span><span>高利润<br>高占用</span><span>低利润<br>低占用</span><span class="bad">低利润<br>高占用</span>
+      </div>`,
+    spendRoi: `
+      <div class="roi-chart"><i style="height:42%"></i><i style="height:82%"></i><i style="height:58%"></i><i style="height:92%"></i><small>费用投产比</small></div>`,
+    workingCapital: `
+      <div class="capital-pipeline"><span>应收</span><span>库存</span><span>预付</span><span>税费</span><span>工资</span><b>现金占用链</b></div>`,
+    explainSystem: `
+      <div class="explain-stack"><span>报表</span><span>指标</span><span>原因</span><span>动作</span><span>复盘</span></div>`,
+    roleMap: `
+      <div class="role-map"><span>会计<br><small>做对账</small></span><b>代理 CFO<br><small>讲透经营</small></b><span>老板<br><small>做决策</small></span></div>`,
+    dashboard: `
+      <div class="dashboard-visual">
+        <div class="kpi"><small>现金</small><b>8周</b></div><div class="kpi"><small>毛利</small><b>32%</b></div><div class="kpi"><small>回款</small><b>76%</b></div>
+        <div class="mini-line"></div><div class="mini-bars"><i></i><i></i><i></i><i></i></div>
+      </div>`,
+    eightWeeks: `
+      <div class="week-map"><span>W1</span><span>W2</span><span class="warn">W3</span><span class="warn">W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span><b>资金缺口预警</b></div>`,
+    profitWaterfall: `
+      <div class="waterfall-rich"><i></i><i></i><i></i><i></i><i></i><span>收入 → 毛利 → 费用 → 资金成本 → 净贡献</span></div>`,
+    warningLights: `
+      <div class="warning-panel"><span class="green"></span><span class="gold"></span><span class="red"></span><b>绿 / 黄 / 红</b><small>提前处理异常</small></div>`,
+    meetingLoop: `
+      <div class="meeting-loop"><span>数据整理</span><span>经营分析</span><span>月度会议</span><span>行动清单</span><span>下月复盘</span></div>`,
+    afsChain: `
+      <div class="afs-system"><span>票据</span><span>流水</span><span>合同</span><span>凭证</span><span>报表</span><span>风险</span><b>AFS 证据链</b></div>`,
+    invoiceTrace: `
+      <div class="invoice-demo"><strong>发票</strong><i></i><span>合同</span><span>付款</span><span>凭证</span><span>报表</span><span>风险提示</span></div>`,
+    cta: `
+      <div class="health-check"><span>现金流</span><span>利润质量</span><span>费用结构</span><span>财税风险</span><b>经营财务体检</b></div>`
   };
   return visuals[type] || visuals.cover;
 }
 
 function renderPage(page, side = 'single', index = 0) {
+  const visual = `<div class="visual visual-${page.visual}" aria-hidden="true">${visualMarkup(page.visual)}</div>`;
+  const body = `<div class="body-text">${page.body.map((item) => `<p>${item}</p>`).join('')}</div>`;
+  const leadVisual = shouldLeadWithVisual(page, index);
   return `
-    <article class="book-page ${side}" data-page-id="${page.id}">
+    <article class="book-page ${side} ${sectionClass(page.section)} ${layoutClass(page, index)}" data-page-id="${page.id}">
       <div class="page-meta">
         <span>${page.section}</span>
         <span class="page-number">${String(index + 1).padStart(2, '0')} / ${pages.length}</span>
@@ -284,8 +364,8 @@ function renderPage(page, side = 'single', index = 0) {
         <p class="kicker">${page.kicker}</p>
         <h2>${page.title}</h2>
         <p class="subtitle">${page.subtitle}</p>
-        <div class="body-text">${page.body.map((item) => `<p>${item}</p>`).join('')}</div>
-        <div class="visual visual-${page.visual}" aria-hidden="true">${visualMarkup(page.visual)}</div>
+        ${leadVisual ? visual : body}
+        ${leadVisual ? body : visual}
         <p class="takeaway">${page.takeaway}</p>
       </div>
     </article>
@@ -302,6 +382,7 @@ function render() {
   const left = pages[currentIndex];
   const right = pages[currentIndex + 1];
   const progress = Math.round(((currentIndex + 1) / pages.length) * 100);
+  const turning = turnState ? renderTurnSheet(turnState) : '';
 
   document.getElementById('app').innerHTML = `
     <main class="training-book">
@@ -318,9 +399,10 @@ function render() {
         </div>
       </nav>
       <section class="book-wrap" aria-label="培训材料">
-        <div class="book-spread">
+        <div class="book-spread ${turnState ? 'is-turning' : ''}">
           ${renderPage(left, 'left', currentIndex)}
           ${right ? renderPage(right, 'right', currentIndex + 1) : ''}
+          ${turning}
         </div>
       </section>
       <section class="mobile-story" aria-label="移动端培训材料">
@@ -345,9 +427,39 @@ function render() {
   `;
 }
 
+function renderTurnSheet(state) {
+  if (state.direction === 'next') {
+    const front = pages[state.from + 1] || pages[state.from];
+    const back = pages[state.target] || front;
+    return `
+      <div class="turn-sheet turn-next">
+        <div class="turn-face turn-front">${renderPage(front, 'sheet-page', state.from + 1)}</div>
+        <div class="turn-face turn-back">${renderPage(back, 'sheet-page', state.target)}</div>
+      </div>
+    `;
+  }
+  const front = pages[state.from];
+  const back = pages[state.target + 1] || pages[state.target];
+  return `
+    <div class="turn-sheet turn-prev">
+      <div class="turn-face turn-front">${renderPage(front, 'sheet-page', state.from)}</div>
+      <div class="turn-face turn-back">${renderPage(back, 'sheet-page', state.target + 1)}</div>
+    </div>
+  `;
+}
+
 function go(delta) {
-  currentIndex = normalizeIndex(currentIndex + delta);
+  if (turnState) return;
+  const target = normalizeIndex(currentIndex + delta);
+  if (target === currentIndex) return;
+  const from = currentIndex;
+  turnState = { direction: delta > 0 ? 'next' : 'prev', from, target };
   render();
+  window.setTimeout(() => {
+    currentIndex = target;
+    turnState = null;
+    render();
+  }, 760);
 }
 
 document.addEventListener('click', (event) => {
