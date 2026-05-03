@@ -29,8 +29,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 12% 18%, rgba(31, 113, 87, 0.14), transparent 28%),
-    radial-gradient(circle at 82% 78%, rgba(200, 145, 61, 0.18), transparent 30%),
+    linear-gradient(120deg, rgba(31, 113, 87, 0.08), transparent 30%),
+    linear-gradient(240deg, rgba(200, 145, 61, 0.1), transparent 34%),
     linear-gradient(135deg, #eee7db 0%, #e6ded0 48%, #f4efe6 100%);
 }
 
@@ -124,8 +124,8 @@ button {
 .book-spread {
   position: relative;
   width: min(1160px, 94vw);
-  height: min(700px, calc(100vh - 158px));
-  min-height: 600px;
+  height: min(720px, calc(100vh - 150px));
+  min-height: 620px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 18px;
@@ -199,7 +199,7 @@ button {
 .page-content {
   flex: 1;
   min-height: 0;
-  padding: 22px 40px 34px;
+  padding: 18px 38px 28px;
   display: flex;
   flex-direction: column;
 }
@@ -219,50 +219,69 @@ p {
 }
 
 .book-page h2 {
-  margin-bottom: 12px;
-  font-size: 34px;
+  margin-bottom: 10px;
+  font-size: 31px;
   line-height: 1.14;
   letter-spacing: 0;
 }
 
 .subtitle {
   color: #4e5a6a;
-  font-size: 18px;
-  line-height: 1.58;
-  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .body-text {
   color: #303848;
-  font-size: 16px;
-  line-height: 1.72;
+  font-size: 15px;
+  line-height: 1.58;
+  display: grid;
+  gap: 8px;
 }
 
 .body-text p {
-  margin-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.body-text span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .takeaway {
   margin: auto 0 0;
-  padding: 14px 16px;
+  padding: 12px 14px;
   color: #234b3d;
   background: var(--green-soft);
   border-left: 4px solid var(--green);
   border-radius: 10px;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .visual {
-  min-height: 132px;
-  margin: 14px 0 18px;
-  border: 1px solid rgba(31, 113, 87, 0.14);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.52);
+  min-height: 244px;
+  margin: 12px 0 14px;
+  border: 1px solid rgba(31, 113, 87, 0.12);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.42)),
+    linear-gradient(135deg, var(--accent-soft, var(--green-soft)), #fff);
   display: grid;
   place-items: center;
   color: var(--green);
   overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 18px 40px rgba(35, 38, 45, 0.08);
+}
+
+.scene-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .controls {
@@ -1192,6 +1211,171 @@ p {
 
 .health-check {
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* Visual-first editorial pass: make every page read like an illustrated spread, not a text slide. */
+.body-text span {
+  display: none;
+}
+
+.book-page h2 {
+  font-size: 30px;
+}
+
+.visual {
+  min-height: 286px;
+}
+
+.layout-poster .visual {
+  min-height: 320px;
+}
+
+.layout-case .visual,
+.layout-dashboard .visual,
+.layout-map .visual {
+  min-height: 312px;
+}
+
+.cover-hero {
+  min-height: 292px;
+}
+
+.seal {
+  width: 156px;
+  height: 156px;
+  font-size: 30px;
+}
+
+.cash-gap-visual,
+.past-future-visual,
+.risk-board,
+.dashboard-visual,
+.afs-system,
+.health-check,
+.chart-card,
+.trace-ladder,
+.capital-pipeline,
+.explain-stack,
+.meeting-loop,
+.case-timeline,
+.invoice-demo {
+  width: min(96%, 520px);
+}
+
+.statement-card,
+.past-future-visual div {
+  min-height: 150px;
+  padding: 22px;
+  border-radius: 22px;
+}
+
+.statement-card strong,
+.past-future-visual b {
+  font-size: 34px;
+}
+
+.cash-bridge i {
+  width: 92px;
+}
+
+.data-web-visual {
+  width: 430px;
+  height: 282px;
+}
+
+.data-web-visual i {
+  left: calc(50% + var(--x) * 150px);
+  top: calc(50% + var(--y) * 100px);
+}
+
+.case-timeline div {
+  min-height: 154px;
+  padding: 18px;
+}
+
+.truth-diamond {
+  width: 320px;
+  height: 260px;
+}
+
+.truth-diamond span {
+  width: 84px;
+  height: 66px;
+}
+
+.truth-diamond span:nth-child(1) { left: 118px; top: 0; }
+.truth-diamond span:nth-child(2) { right: 0; top: 96px; }
+.truth-diamond span:nth-child(3) { left: 118px; bottom: 0; }
+.truth-diamond span:nth-child(4) { left: 0; top: 96px; }
+.truth-diamond b {
+  left: 98px;
+  top: 96px;
+  width: 124px;
+  height: 70px;
+}
+
+.chart-card {
+  padding: 18px;
+}
+
+.chart-card svg {
+  height: 192px;
+}
+
+.matrix-rich {
+  width: 380px;
+  height: 250px;
+}
+
+.roi-chart,
+.waterfall-rich {
+  width: 380px;
+  height: 248px;
+}
+
+.roi-chart i,
+.waterfall-rich i {
+  width: 44px;
+}
+
+.waterfall-rich i:nth-child(1) { height: 154px; }
+.waterfall-rich i:nth-child(2) { height: 116px; }
+.waterfall-rich i:nth-child(3) { height: 84px; }
+.waterfall-rich i:nth-child(4) { height: 104px; }
+.waterfall-rich i:nth-child(5) { height: 66px; background: linear-gradient(180deg, #d57660, var(--red)); }
+
+.week-map {
+  width: min(96%, 500px);
+}
+
+.week-map span {
+  min-height: 66px;
+}
+
+.warning-panel {
+  grid-template-columns: repeat(3, 92px);
+}
+
+.warning-panel span {
+  width: 92px;
+  height: 92px;
+}
+
+.dashboard-visual .kpi {
+  padding: 18px;
+}
+
+.dashboard-visual b {
+  font-size: 32px;
+}
+
+.mini-line,
+.mini-bars {
+  height: 86px;
+}
+
+.invoice-demo strong {
+  min-height: 230px;
 }
 
 @media (min-width: 821px) {

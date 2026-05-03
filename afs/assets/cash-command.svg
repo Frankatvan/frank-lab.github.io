@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" role="img" aria-label="现金流驾驶舱插画">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f7fbf8"/><stop offset="1" stop-color="#edf4fb"/></linearGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#1f7157"/><stop offset=".7" stop-color="#c8913d"/></linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#1f2937" flood-opacity=".13"/></filter>
+  </defs>
+  <rect width="820" height="520" rx="34" fill="url(#bg)"/>
+  <rect x="80" y="72" width="660" height="376" rx="28" fill="#fff" filter="url(#sh)"/>
+  <rect x="116" y="112" width="188" height="104" rx="22" fill="#e8f3ee"/>
+  <rect x="326" y="112" width="188" height="104" rx="22" fill="#fff1df"/>
+  <rect x="536" y="112" width="168" height="104" rx="22" fill="#eaf0f5"/>
+  <text x="146" y="148" fill="#667085" font-family="Arial" font-size="17">现金安全期</text>
+  <text x="146" y="190" fill="#1f7157" font-family="Arial" font-size="42" font-weight="800">8周</text>
+  <text x="356" y="148" fill="#667085" font-family="Arial" font-size="17">预计缺口</text>
+  <text x="356" y="190" fill="#9a5b22" font-family="Arial" font-size="42" font-weight="800">12万</text>
+  <text x="566" y="148" fill="#667085" font-family="Arial" font-size="17">回款率</text>
+  <text x="566" y="190" fill="#315d7d" font-family="Arial" font-size="42" font-weight="800">76%</text>
+  <g transform="translate(116 258)">
+    <path d="M0 126 H588" stroke="#e5e7eb" stroke-width="2"/>
+    <path d="M0 82 H588" stroke="#e5e7eb" stroke-width="2"/>
+    <path d="M0 38 H588" stroke="#e5e7eb" stroke-width="2"/>
+    <path d="M0 112 C86 52 136 142 210 78 S356 28 470 66 S560 90 588 48" fill="none" stroke="url(#line)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="390" cy="58" r="12" fill="#c8913d"/>
+    <rect x="328" y="8" width="124" height="34" rx="17" fill="#fff1df"/>
+    <text x="390" y="31" text-anchor="middle" fill="#9a5b22" font-family="Arial" font-size="15" font-weight="700">提前预警</text>
+  </g>
+</svg>

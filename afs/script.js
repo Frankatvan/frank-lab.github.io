@@ -268,6 +268,20 @@ function shouldLeadWithVisual(page, index) {
 }
 
 function visualMarkup(type) {
+  const imageAssets = {
+    cover: 'cover-studio.svg',
+    dataWeb: 'tax-network.svg',
+    cashCurve: 'cash-command.svg',
+    dashboard: 'cash-command.svg',
+    meetingLoop: 'cfo-meeting.svg',
+    afsChain: 'afs-pipeline.svg',
+    invoiceTrace: 'afs-pipeline.svg',
+    cta: 'health-check.svg'
+  };
+  if (imageAssets[type]) {
+    return `<img class="scene-image" src="./assets/${imageAssets[type]}" alt="" loading="eager">`;
+  }
+
   const visuals = {
     cover: `
       <div class="cover-hero">
@@ -352,7 +366,12 @@ function visualMarkup(type) {
 
 function renderPage(page, side = 'single', index = 0) {
   const visual = `<div class="visual visual-${page.visual}" aria-hidden="true">${visualMarkup(page.visual)}</div>`;
-  const body = `<div class="body-text">${page.body.map((item) => `<p>${item}</p>`).join('')}</div>`;
+  const body = `
+    <div class="body-text">
+      <p>${page.body[0]}</p>
+      ${page.body[1] ? `<span>${page.body[1]}</span>` : ''}
+    </div>
+  `;
   const leadVisual = shouldLeadWithVisual(page, index);
   return `
     <article class="book-page ${side} ${sectionClass(page.section)} ${layoutClass(page, index)}" data-page-id="${page.id}">
