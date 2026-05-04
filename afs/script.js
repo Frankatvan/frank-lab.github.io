@@ -3,9 +3,9 @@ const pages = [
     id: 'page-01',
     section: '开场',
     minutes: '0:00-1:00',
-    kicker: '极智语财代理 CFO',
-    title: '让老板每个月看懂经营，而不只是看见报表',
-    subtitle: '一套面向中小企业家的经营财务手册',
+    kicker: '极智语财经营财务沙龙',
+    title: '老板的财务驾驶舱',
+    subtitle: '看懂现金流、利润质量与税务风险，做更清晰的经营决策。',
     body: ['财务不是月底交给会计的一摞票，也不是年底才想起的纳税申报。', '真正有价值的财务，应该帮助老板提前看见现金、利润、风险和行动选择。'],
     takeaway: '这 30 分钟，只解决一个问题：老板怎样用财务看经营。',
     visual: 'cover'
@@ -28,12 +28,23 @@ const pages = [
     kicker: '课程问题',
     title: '财务是在记录过去，还是帮你看未来？',
     subtitle: '传统记账回答“发生了什么”，经营财务回答“接下来怎么办”。',
-    body: ['会计把业务整理成凭证和报表，代理 CFO 把报表翻译成经营判断。', '老板需要的不是更多表格，而是更少、更准、更能行动的经营信号。'],
+    body: ['会计把业务整理成凭证和报表，经营财务顾问把报表翻译成经营判断。', '老板需要的不是更多表格，而是更少、更准、更能行动的经营信号。'],
     takeaway: '从记账到经营财务，是中小企业管理升级的关键一步。',
     visual: 'pastFuture'
   },
   {
     id: 'page-04',
+    section: '主讲人背景',
+    minutes: '3:00-4:00',
+    kicker: '实战经验',
+    title: '这不是一堂会计课，而是经营管理复盘',
+    subtitle: '主讲人长期在 CFO、财务总监、企业经营负责人和信息化建设角色之间切换。',
+    body: ['30 多年财务、内控、预算、资金与企业经营管理经验，曾参与港股上市与新三板挂牌全过程。', '主导过企业运营 ERP、全面预算管理、成本采购、合同费用和自动化记账平台建设。'],
+    takeaway: '这场分享会尽量少讲概念，多讲老板真正会遇到的现金、利润、税务和管理问题。',
+    visual: 'speakerCred'
+  },
+  {
+    id: 'page-05',
     section: '金税四期',
     minutes: '3:00-4:30',
     kicker: '外部环境',
@@ -44,7 +55,7 @@ const pages = [
     visual: 'dataWeb'
   },
   {
-    id: 'page-05',
+    id: 'page-06',
     section: '金税四期',
     minutes: '4:30-6:00',
     kicker: '六类风险',
@@ -55,7 +66,7 @@ const pages = [
     visual: 'riskSix'
   },
   {
-    id: 'page-06',
+    id: 'page-07',
     section: '金税四期',
     minutes: '6:00-7:00',
     kicker: '经营影响',
@@ -66,7 +77,7 @@ const pages = [
     visual: 'businessTrace'
   },
   {
-    id: 'page-07',
+    id: 'page-08',
     section: '金税四期',
     minutes: '7:00-8:30',
     kicker: '虚拟案例',
@@ -77,18 +88,18 @@ const pages = [
     visual: 'caseTrail'
   },
   {
-    id: 'page-08',
+    id: 'page-09',
     section: '金税四期',
     minutes: '8:30-10:00',
     kicker: '老板新问题',
     title: '不要只问“怎么少交税”',
     subtitle: '更重要的问题是：业务、账、税、钱怎样说得通。',
-    body: ['好的财务管理，不是把风险藏起来，而是把业务做清楚、证据留完整、数据对得上。', '这也是代理 CFO 能给老板提供价值的起点。'],
+    body: ['好的财务管理，不是把风险藏起来，而是把业务做清楚、证据留完整、数据对得上。', '这也是外部 CFO 视角能给老板提供价值的起点。'],
     takeaway: '先把经营讲清楚，再谈合规和效率。',
     visual: 'fourTruths'
   },
   {
-    id: 'page-09',
+    id: 'page-10',
     section: '经营盲区',
     minutes: '10:00-11:30',
     kicker: '现金流盲区',
@@ -99,18 +110,18 @@ const pages = [
     visual: 'cashCurve'
   },
   {
-    id: 'page-10',
+    id: 'page-11',
     section: '经营盲区',
     minutes: '11:30-13:00',
     kicker: '利润质量盲区',
     title: '哪些客户赚钱，哪些订单拖累公司？',
     subtitle: '收入大的客户，不一定是好客户。',
     body: ['有些客户贡献收入，但占用大量账期、售后和管理精力。', '有些订单毛利看起来不错，扣掉返工、物流、资金成本后并不赚钱。'],
-    takeaway: '代理 CFO 要帮老板看清利润的质量，而不只是利润的数字。',
+    takeaway: '外部 CFO 视角要帮老板看清利润的质量，而不只是利润的数字。',
     visual: 'profitMatrix'
   },
   {
-    id: 'page-11',
+    id: 'page-12',
     section: '经营盲区',
     minutes: '13:00-14:00',
     kicker: '费用盲区',
@@ -121,41 +132,41 @@ const pages = [
     visual: 'spendRoi'
   },
   {
-    id: 'page-12',
+    id: 'page-13',
     section: '经营盲区',
     minutes: '14:00-15:30',
     kicker: '资金占用',
     title: '钱卡在哪里？',
     subtitle: '应收、库存、预付、税款和工资，都会占用现金。',
-    body: ['很多企业不是利润不够，而是周转效率太低。', '代理 CFO 会把资金占用拆开，让老板知道先解决哪个环节。'],
+    body: ['很多企业不是利润不够，而是周转效率太低。', '经营财务顾问会把资金占用拆开，让老板知道先解决哪个环节。'],
     takeaway: '现金紧张时，先找资金卡点，再谈融资。',
     visual: 'workingCapital'
   },
   {
-    id: 'page-13',
+    id: 'page-14',
     section: '经营盲区',
     minutes: '15:30-17:00',
     kicker: '经营解释系统',
     title: '老板真正需要的不是一张报表',
     subtitle: '而是一套从指标到原因再到动作的解释系统。',
-    body: ['报表告诉你结果，指标告诉你异常，分析告诉你原因，会议决定下一步动作。', '这就是经营分析型代理 CFO 的工作方式。'],
+    body: ['报表告诉你结果，指标告诉你异常，分析告诉你原因，会议决定下一步动作。', '这就是经营分析型外部 CFO 服务的工作方式。'],
     takeaway: '财务数据只有变成行动，才真正有价值。',
     visual: 'explainSystem'
   },
   {
-    id: 'page-14',
-    section: '代理 CFO 方法',
+    id: 'page-15',
+    section: '经营财务方法',
     minutes: '17:00-18:00',
     kicker: '角色定义',
-    title: '什么是代理 CFO？',
+    title: '老板需要什么样的外部 CFO 视角？',
     subtitle: '不是高配会计，而是老板的经营决策外脑。',
-    body: ['会计负责把账做对，代理 CFO 负责把账讲透。', '它连接财务、税务、业务和资金，让老板每个月知道该抓什么。'],
-    takeaway: '代理 CFO 的核心交付，是经营判断和行动建议。',
+    body: ['会计负责把账做对，外部 CFO 视角负责把账讲透。', '它连接财务、税务、业务和资金，让老板每个月知道该抓什么。'],
+    takeaway: '核心交付不是一份报表，而是经营判断和行动建议。',
     visual: 'roleMap'
   },
   {
-    id: 'page-15',
-    section: '代理 CFO 方法',
+    id: 'page-16',
+    section: '经营财务方法',
     minutes: '18:00-20:00',
     kicker: '月度驾驶舱',
     title: '每月一张经营驾驶舱',
@@ -165,8 +176,8 @@ const pages = [
     visual: 'dashboard'
   },
   {
-    id: 'page-16',
-    section: '代理 CFO 方法',
+    id: 'page-17',
+    section: '经营财务方法',
     minutes: '20:00-21:30',
     kicker: '现金预测',
     title: '8 周现金流预测',
@@ -176,19 +187,19 @@ const pages = [
     visual: 'eightWeeks'
   },
   {
-    id: 'page-17',
-    section: '代理 CFO 方法',
+    id: 'page-18',
+    section: '经营财务方法',
     minutes: '21:30-23:00',
     kicker: '利润质量',
     title: '客户、项目、产品线的真实贡献',
     subtitle: '用数据判断哪里该加码，哪里该收缩。',
-    body: ['代理 CFO 会把利润拆到客户、项目或产品线层面。', '老板可以据此调整报价、信用政策、资源投入和销售方向。'],
+    body: ['经营财务顾问会把利润拆到客户、项目或产品线层面。', '老板可以据此调整报价、信用政策、资源投入和销售方向。'],
     takeaway: '增长不只是做大收入，更是做厚有效利润。',
     visual: 'profitWaterfall'
   },
   {
-    id: 'page-18',
-    section: '代理 CFO 方法',
+    id: 'page-19',
+    section: '经营财务方法',
     minutes: '23:00-24:30',
     kicker: '预算预警',
     title: '从事后补救到提前调整',
@@ -198,29 +209,29 @@ const pages = [
     visual: 'warningLights'
   },
   {
-    id: 'page-19',
-    section: '代理 CFO 方法',
+    id: 'page-20',
+    section: '经营财务方法',
     minutes: '24:30-27:00',
     kicker: '月度经营会',
     title: '看数据、定动作、追结果',
-    subtitle: '代理 CFO 把财务分析变成老板团队的管理节奏。',
+    subtitle: '把财务分析变成老板团队的管理节奏。',
     body: ['每月固定复盘收入、毛利、现金、回款、费用和风险。', '会议输出不是一堆意见，而是明确负责人、截止时间和下月复盘点。'],
     takeaway: '经营会的价值，在于让数据变成组织行动。',
     visual: 'meetingLoop'
   },
   {
-    id: 'page-20',
+    id: 'page-21',
     section: 'AFS 核心能力',
     minutes: '27:00-28:00',
     kicker: '系统支撑',
-    title: 'AFS 怎么支撑代理 CFO？',
+    title: 'AFS 怎么支撑经营财务服务？',
     subtitle: '把票据、流水、合同、凭证、报表和风险串起来。',
-    body: ['AFS 减少人工整理，帮代理 CFO 更快看到经营全貌。', '系统不是替代专业判断，而是把证据链和指标准备好。'],
-    takeaway: 'AFS 让代理 CFO 的服务更快、更准、更可追溯。',
+    body: ['AFS 减少人工整理，帮经营财务顾问更快看到经营全貌。', '系统不是替代专业判断，而是把证据链和指标准备好。'],
+    takeaway: 'AFS 让经营财务服务更快、更准、更可追溯。',
     visual: 'afsChain'
   },
   {
-    id: 'page-21',
+    id: 'page-22',
     section: 'AFS 核心能力',
     minutes: '28:00-29:00',
     kicker: '能力演示',
@@ -231,15 +242,26 @@ const pages = [
     visual: 'invoiceTrace'
   },
   {
-    id: 'page-22',
+    id: 'page-23',
     section: '下一步',
     minutes: '29:00-30:00',
     kicker: '轻量开始',
     title: '先做一次经营财务体检',
     subtitle: '不急着换系统，也不急着买服务，先把经营问题看清楚。',
     body: ['适合年营收 500 万到 3000 万、现金流开始复杂、老板希望看清经营的企业。', '体检会围绕现金流、利润质量、费用结构、回款周期和财税风险给出问题清单。'],
-    takeaway: '极智语财代理 CFO：把财务数据翻译成老板能执行的经营动作。',
+    takeaway: '极智语财：把财务数据翻译成老板能执行的经营动作。',
     visual: 'cta'
+  },
+  {
+    id: 'page-24',
+    section: '下一步',
+    minutes: '30:00',
+    kicker: '交流入口',
+    title: '带着一个真实经营问题来聊',
+    subtitle: '可以从现金缺口、利润质量、费用失控、回款周期或税务风险中的任意一个问题开始。',
+    body: ['添加企业微信后，可围绕一个具体经营问题展开交流。', '交流会后可以基于企业现状做一次轻量诊断。'],
+    takeaway: '先把问题看清楚，再决定系统、服务和管理节奏。',
+    visual: 'qrCta'
   }
 ];
 
@@ -249,7 +271,8 @@ let turnState = null;
 function sectionClass(section) {
   if (section.includes('金税')) return 'section-tax';
   if (section.includes('经营盲区')) return 'section-ops';
-  if (section.includes('代理 CFO')) return 'section-cfo';
+  if (section.includes('经营财务方法')) return 'section-cfo';
+  if (section.includes('主讲人')) return 'section-speaker';
   if (section.includes('AFS')) return 'section-afs';
   if (section.includes('下一步')) return 'section-next';
   return 'section-open';
@@ -264,7 +287,7 @@ function layoutClass(page, index) {
 }
 
 function shouldLeadWithVisual(page, index) {
-  return ['dashboard', 'cashCurve', 'profitWaterfall', 'afsChain', 'invoiceTrace', 'cta'].includes(page.visual) || [3, 8, 13, 19].includes(index);
+  return ['speakerCred', 'dashboard', 'cashCurve', 'profitWaterfall', 'afsChain', 'invoiceTrace', 'qrCta'].includes(page.visual) || [3, 8, 13, 19].includes(index);
 }
 
 function visualMarkup(type) {
@@ -275,8 +298,7 @@ function visualMarkup(type) {
     dashboard: 'cash-command.svg',
     meetingLoop: 'cfo-meeting.svg',
     afsChain: 'afs-pipeline.svg',
-    invoiceTrace: 'afs-pipeline.svg',
-    cta: 'health-check.svg'
+    invoiceTrace: 'afs-pipeline.svg'
   };
   if (imageAssets[type]) {
     return `<img class="scene-image" src="./assets/${imageAssets[type]}" alt="" loading="eager">`;
@@ -340,7 +362,13 @@ function visualMarkup(type) {
     explainSystem: `
       <div class="explain-stack"><span>报表</span><span>指标</span><span>原因</span><span>动作</span><span>复盘</span></div>`,
     roleMap: `
-      <div class="role-map"><span>会计<br><small>做对账</small></span><b>代理 CFO<br><small>讲透经营</small></b><span>老板<br><small>做决策</small></span></div>`,
+      <div class="role-map"><span>会计<br><small>做对账</small></span><b>外部 CFO 视角<br><small>讲透经营</small></b><span>老板<br><small>做决策</small></span></div>`,
+    speakerCred: `
+      <div class="speaker-cred">
+        <div><b>30+年</b><span>财务与经营管理</span></div>
+        <div><b>上市/挂牌</b><span>港股上市与新三板实战</span></div>
+        <div><b>系统建设</b><span>预算、ERP、自动化记账</span></div>
+      </div>`,
     dashboard: `
       <div class="dashboard-visual">
         <div class="kpi"><small>现金</small><b>8周</b></div><div class="kpi"><small>毛利</small><b>32%</b></div><div class="kpi"><small>回款</small><b>76%</b></div>
@@ -359,7 +387,12 @@ function visualMarkup(type) {
     invoiceTrace: `
       <div class="invoice-demo"><strong>发票</strong><i></i><span>合同</span><span>付款</span><span>凭证</span><span>报表</span><span>风险提示</span></div>`,
     cta: `
-      <div class="health-check"><span>现金流</span><span>利润质量</span><span>费用结构</span><span>财税风险</span><b>经营财务体检</b></div>`
+      <div class="health-check"><span>现金流</span><span>利润质量</span><span>费用结构</span><span>财税风险</span><b>经营财务体检</b></div>`,
+    qrCta: `
+      <div class="qr-cta">
+        <img src="./assets/contact-qr.png" alt="企业微信二维码">
+        <div><b>扫码交流</b><span>围绕现金流、利润质量、费用结构和财税风险做一次轻量诊断。</span></div>
+      </div>`
   };
   return visuals[type] || visuals.cover;
 }
@@ -407,10 +440,10 @@ function render() {
     <main class="training-book">
       <nav class="topbar">
         <div class="brand">
-          <div class="mark">极</div>
+          <div class="mark">AFS</div>
           <div>
             <strong>极智语财</strong>
-            <span>代理 CFO 经营财务手册 · 30 分钟分享</span>
+            <span>老板的财务驾驶舱 · 30 分钟经营财务沙龙</span>
           </div>
         </div>
         <div class="top-actions">
