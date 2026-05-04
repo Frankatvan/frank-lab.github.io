@@ -266,7 +266,6 @@ const pages = [
 ];
 
 let currentIndex = 0;
-let turnState = null;
 
 function sectionClass(section) {
   if (section.includes('金税')) return 'section-tax';
@@ -425,16 +424,13 @@ function renderPage(page, side = 'single', index = 0) {
 }
 
 function normalizeIndex(index) {
-  const bounded = Math.max(0, Math.min(pages.length - 1, index));
-  return bounded % 2 === 1 ? bounded - 1 : bounded;
+  return Math.max(0, Math.min(pages.length - 1, index));
 }
 
 function render() {
   currentIndex = normalizeIndex(currentIndex);
-  const left = pages[currentIndex];
-  const right = pages[currentIndex + 1];
+  const page = pages[currentIndex];
   const progress = Math.round(((currentIndex + 1) / pages.length) * 100);
-  const turning = turnState ? renderTurnSheet(turnState) : '';
 
   document.getElementById('app').innerHTML = `
     <main class="training-book">
@@ -451,20 +447,17 @@ function render() {
         </div>
       </nav>
       <section class="book-wrap" aria-label="培训材料">
-        <div class="book-spread ${turnState ? 'is-turning' : ''}">
-          ${renderPage(left, 'left', currentIndex)}
-          ${right ? renderPage(right, 'right', currentIndex + 1) : ''}
-          ${turning}
+        <div class="showcase-stage">
+          <div class="stage-orbit" aria-hidden="true"></div>
+          <div class="stage-grid" aria-hidden="true"></div>
+          ${renderPage(page, 'single active', currentIndex)}
         </div>
-      </section>
-      <section class="mobile-story" aria-label="移动端培训材料">
-        ${pages.map((page, index) => renderPage(page, 'mobile', index)).join('')}
       </section>
       <footer class="controls">
         <button type="button" data-action="prev" ${currentIndex === 0 ? 'disabled' : ''}>上一页</button>
         <div class="progress" aria-label="阅读进度"><span style="width:${progress}%"></span></div>
         <span>${Math.min(currentIndex + 1, pages.length)} / ${pages.length}</span>
-        <button type="button" data-action="next" ${currentIndex >= pages.length - 2 ? 'disabled' : ''}>下一页</button>
+        <button type="button" data-action="next" ${currentIndex >= pages.length - 1 ? 'disabled' : ''}>下一页</button>
       </footer>
       <aside class="toc" hidden>
         <div class="toc-panel">
@@ -479,45 +472,17 @@ function render() {
   `;
 }
 
-function renderTurnSheet(state) {
-  if (state.direction === 'next') {
-    const front = pages[state.from + 1] || pages[state.from];
-    const back = pages[state.target] || front;
-    return `
-      <div class="turn-sheet turn-next">
-        <div class="turn-face turn-front">${renderPage(front, 'sheet-page', state.from + 1)}</div>
-        <div class="turn-face turn-back">${renderPage(back, 'sheet-page', state.target)}</div>
-      </div>
-    `;
-  }
-  const front = pages[state.from];
-  const back = pages[state.target + 1] || pages[state.target];
-  return `
-    <div class="turn-sheet turn-prev">
-      <div class="turn-face turn-front">${renderPage(front, 'sheet-page', state.from)}</div>
-      <div class="turn-face turn-back">${renderPage(back, 'sheet-page', state.target + 1)}</div>
-    </div>
-  `;
-}
-
 function go(delta) {
-  if (turnState) return;
   const target = normalizeIndex(currentIndex + delta);
   if (target === currentIndex) return;
-  const from = currentIndex;
-  turnState = { direction: delta > 0 ? 'next' : 'prev', from, target };
+  currentIndex = target;
   render();
-  window.setTimeout(() => {
-    currentIndex = target;
-    turnState = null;
-    render();
-  }, 760);
 }
 
 document.addEventListener('click', (event) => {
   const action = event.target.dataset.action;
-  if (action === 'next') go(2);
-  if (action === 'prev') go(-2);
+  if (action === 'next') go(1);
+  if (action === 'prev') go(-1);
   if (action === 'toc') document.querySelector('.toc').hidden = false;
   if (action === 'close-toc') document.querySelector('.toc').hidden = true;
   if (event.target.dataset.goto) {
@@ -527,8 +492,8 @@ document.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowRight') go(2);
-  if (event.key === 'ArrowLeft') go(-2);
+  if (event.key === 'ArrowRight') go(1);
+  if (event.key === 'ArrowLeft') go(-1);
 });
 
 render();
