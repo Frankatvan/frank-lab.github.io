@@ -17,11 +17,11 @@ const pages = [
     id: "page-02",
     section: "开场",
     kicker: "老板场景",
-    title: "利润表赚钱，为什么账户越来越紧？",
-    subtitle: "很多企业不是没有利润，而是利润没有变成现金。",
+    title: "利润 +42 万，账户只剩 8 万：钱卡在哪？",
+    subtitle: "利润没有错，现金被经营环节占住了。",
     body: [
       "账面利润来自收入和成本的匹配，账户余额来自真实回款、付款节奏和资金占用。",
-      "应收账款、库存、预付款、税费和工资，都会把利润留在路上。"
+      "老板真正要看的不是“赚没赚钱”，而是利润在哪些环节没有变成现金。"
     ],
     visual: "cashGap"
   },
@@ -53,13 +53,13 @@ const pages = [
     id: "page-05",
     section: "金税四期",
     kicker: "外部环境",
-    title: "从“以票管税”到“以数治税”",
+    title: "解释不一致，就是风险入口",
     subtitle: "金税四期背后，是税务监管从单点审核走向数据交叉验证。",
     body: [
       "发票、银行流水、业务合同、社保个税、平台交易和市场监管信息，会越来越多地被放在一起看。",
       "过去“票能开、账能报”不等于现在“业务能解释、数据能对上”。"
     ],
-    visual: "dataWeb"
+    visual: "taxCrossCheck"
   },
   {
     id: "page-06",
@@ -113,13 +113,13 @@ const pages = [
     id: "page-10",
     section: "经营盲区",
     kicker: "现金流盲区",
-    title: "利润不等于现金",
-    subtitle: "利润是会计语言，现金是企业生命体征。",
+    title: "现金缺口不是月底才发生的",
+    subtitle: "它通常在 8 周前就已经能被看见。",
     body: [
       "收入确认了，不代表钱到账；成本摊进去了，不代表现金没有流出。",
-      "老板需要看到未来几周的现金缺口，而不是月底才知道钱不够。"
+      "真正有价值的财务，是在账户见底前把缺口、原因和动作摆到桌面上。"
     ],
-    visual: "cashForecast"
+    visual: "cashTimeline"
   },
   {
     id: "page-11",
@@ -186,12 +186,12 @@ const pages = [
     section: "经营财务方法",
     kicker: "月度驾驶舱",
     title: "每月一张经营驾驶舱",
-    subtitle: "收入、毛利、费用、现金、回款、风险，一眼看清。",
+    subtitle: "不是展示更多数据，而是锁定本月必须处理的动作。",
     body: [
       "驾驶舱不是给财务看的，是给老板做经营判断用的。",
-      "它把复杂报表压缩成少数关键指标和异常提醒。"
+      "现金缺口、回款周期、毛利异常、费用超速和税务风险，都要落到本月动作。"
     ],
-    visual: "dashboard"
+    visual: "ownerDashboard"
   },
   {
     id: "page-17",
@@ -245,13 +245,13 @@ const pages = [
     id: "page-21",
     section: "AFS 核心能力",
     kicker: "系统支撑",
-    title: "AFS 怎么支撑经营财务服务？",
-    subtitle: "把票据、流水、合同、凭证、报表和风险串起来。",
+    title: "AFS 先把证据链准备好",
+    subtitle: "顾问判断之前，系统先让票、钱、账、业务能互相追溯。",
     body: [
       "AFS 减少人工整理，帮经营财务顾问更快看到经营全貌。",
-      "系统不是替代专业判断，而是把证据链和指标准备好。"
+      "系统不是替代专业判断，而是把证据链、指标异常和风险线索提前准备好。"
     ],
-    visual: "afsEvidence"
+    visual: "afsEvidenceMap"
   },
   {
     id: "page-22",
@@ -281,11 +281,11 @@ const pages = [
     id: "page-24",
     section: "下一步",
     kicker: "交流入口",
-    title: "带着一个真实经营问题来聊",
-    subtitle: "可以从现金缺口、利润质量、费用失控、回款周期或税务风险中的任意一个问题开始。",
+    title: "带一个真实经营问题来聊",
+    subtitle: "从现金缺口、利润质量、费用失控、回款周期或税务风险中的任意一个问题开始。",
     body: [
-      "添加企业微信后，可围绕一个具体经营问题展开交流。",
-      "交流后可以基于企业现状做一次轻量诊断。"
+      "先把问题看清楚，再决定是否需要系统、服务和管理节奏升级。",
+      "添加企业微信后，可以基于企业现状做一次轻量诊断。"
     ],
     visual: "qrCta"
   }
@@ -302,6 +302,7 @@ const imageAssets = {
 };
 
 let currentIndex = 0;
+let pageMotion = "settled";
 
 function sectionClass(section) {
   if (section.includes("封面")) return "section-cover";
@@ -321,20 +322,15 @@ function visualMarkup(type) {
 
   const visuals = {
     cashGap: `
-      <div class="metric-bridge">
-        <div class="metric-card">
-          <small>利润表</small>
-          <strong>+42万</strong>
-          <span>账面利润</span>
+      <div class="cash-pipe">
+        <div class="cash-node profit"><small>利润表</small><strong>+42万</strong></div>
+        <div class="pipe-track">
+          <span class="blocker b1"><b>应收</b><em>28万</em></span>
+          <span class="blocker b2"><b>库存</b><em>19万</em></span>
+          <span class="blocker b3"><b>税费</b><em>7万</em></span>
         </div>
-        <div class="bridge-line">
-          <em>应收 / 库存 / 税费</em>
-        </div>
-        <div class="metric-card accent">
-          <small>银行账户</small>
-          <strong>8万</strong>
-          <span>可用现金</span>
-        </div>
+        <div class="cash-node bank"><small>银行账户</small><strong>8万</strong></div>
+        <p>钱没有消失，只是被经营环节占住了。</p>
       </div>`,
     pastFuture: `
       <div class="compare-board">
@@ -356,10 +352,11 @@ function visualMarkup(type) {
         <div><strong>上市 / 挂牌</strong><span>资本与治理实战</span></div>
         <div><strong>ERP / 预算</strong><span>系统建设与流程落地</span></div>
       </div>`,
-    dataWeb: `
-      <div class="network-board">
-        <div class="network-core">以数治税</div>
-        <span>发票</span><span>资金</span><span>业务</span><span>社保</span><span>平台</span><span>主体</span>
+    taxCrossCheck: `
+      <div class="tax-check-board">
+        <div class="check-source">发票</div><div class="check-source">资金</div><div class="check-source">合同</div>
+        <div class="check-source">社保</div><div class="risk-core">解释不一致<br><strong>风险</strong></div><div class="check-source">平台</div>
+        <div class="check-source">主体</div><div class="check-source">申报</div><div class="check-source">业务</div>
       </div>`,
     riskSix: `
       <div class="tag-grid">
@@ -389,6 +386,19 @@ function visualMarkup(type) {
         <div class="matrix-cell">低利润<br>低占用</div>
         <div class="matrix-cell danger">低利润<br>高占用</div>
       </div>`,
+    cashTimeline: `
+      <div class="cash-timeline">
+        <div class="timeline-kpis"><span><b>8周</b>预测窗口</span><span><b>W5</b>缺口出现</span><span><b>-12万</b>最低余额</span></div>
+        <svg viewBox="0 0 760 300" role="img" aria-label="8周现金流预测">
+          <path class="safe-zone" d="M40 72H720V170H40Z"></path>
+          <path class="risk-zone" d="M40 170H720V252H40Z"></path>
+          <path class="axis" d="M40 170H720"></path>
+          <path class="cash-line" d="M50 104 C130 92 160 118 230 124 C306 132 330 154 382 184 C430 212 486 238 552 218 C616 198 648 166 710 144"></path>
+          <circle cx="382" cy="184" r="8"></circle>
+          <circle cx="552" cy="218" r="8"></circle>
+        </svg>
+        <div class="timeline-labels"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>
+      </div>`,
     spendRoi: `
       <div class="roi-board">
         <div class="roi-bar" style="--h:42%"></div>
@@ -406,11 +416,33 @@ function visualMarkup(type) {
       <div class="logic-board">
         <span>报表</span><span>指标</span><span>原因</span><span>动作</span><span>复盘</span>
       </div>`,
+    ownerDashboard: `
+      <div class="owner-dashboard">
+        <div class="dash-kpis">
+          <span class="warn"><b>-12万</b><small>现金缺口</small></span>
+          <span><b>47天</b><small>回款周期</small></span>
+          <span class="bad"><b>+18%</b><small>费用超速</small></span>
+          <span><b>2项</b><small>税务疑点</small></span>
+        </div>
+        <div class="action-panel">
+          <strong>本月动作</strong>
+          <p>催收前 5 大应收客户</p>
+          <p>暂停低毛利订单报价</p>
+          <p>复核咨询费与合同证据</p>
+        </div>
+      </div>`,
     roleMap: `
       <div class="role-board">
         <div class="role-pill">会计<br><small>做对账</small></div>
         <div class="role-core">外部 CFO 视角<br><small>讲透经营</small></div>
         <div class="role-pill">老板<br><small>做决策</small></div>
+      </div>`,
+    afsEvidenceMap: `
+      <div class="afs-evidence-map">
+        <div class="afs-core">AFS<br><small>证据链</small></div>
+        <span class="e1">票据</span><span class="e2">流水</span><span class="e3">合同</span>
+        <span class="e4">凭证</span><span class="e5">报表</span><span class="e6">风险</span>
+        <b>异常指标可以追到业务证据</b>
       </div>`,
     invoiceTrace: `
       <div class="trace-board">
@@ -443,14 +475,11 @@ function renderPage(page, index) {
   const chips = page.chips
     ? `<div class="cover-chips">${page.chips.map((chip) => `<span>${chip}</span>`).join("")}</div>`
     : "";
+  const motionClass = pageMotion === "settled" ? "" : ` page-${pageMotion}`;
 
   if (page.kind === "cover") {
     return `
-      <article class="book-page single cover-page ${sectionClass(page.section)}" data-page-id="${page.id}">
-        <div class="page-meta">
-          <span>${page.section}</span>
-          <span class="page-number">${String(index + 1).padStart(2, "0")} / ${pages.length}</span>
-        </div>
+      <article class="book-page single cover-page ${sectionClass(page.section)}${motionClass}" data-page-id="${page.id}">
         <div class="page-content page-content-cover">
           <div class="cover-copy">
             <p class="kicker">${page.kicker}</p>
@@ -466,11 +495,7 @@ function renderPage(page, index) {
   }
 
   return `
-    <article class="book-page single ${sectionClass(page.section)}" data-page-id="${page.id}">
-      <div class="page-meta">
-        <span>${page.section}</span>
-        <span class="page-number">${String(index + 1).padStart(2, "0")} / ${pages.length}</span>
-      </div>
+    <article class="book-page single ${sectionClass(page.section)}${motionClass}" data-page-id="${page.id}">
       <div class="page-content">
         <div class="copy-column">
           <p class="kicker">${page.kicker}</p>
@@ -491,33 +516,24 @@ function normalizeIndex(index) {
 function render() {
   currentIndex = normalizeIndex(currentIndex);
   const page = pages[currentIndex];
+  const nextPage = pages[currentIndex + 1];
   const progress = Math.round(((currentIndex + 1) / pages.length) * 100);
 
   document.getElementById("app").innerHTML = `
     <main class="training-book">
-      <nav class="topbar">
-        <div class="brand">
-          <img class="brand-logo" src="./assets/afs-logo.png" alt="AFS 极智语财">
-          <div class="brand-copy">
-            <strong>极智语财</strong>
-            <span>老板的财务驾驶舱 · 30 分钟经营财务沙龙</span>
-          </div>
-        </div>
-        <div class="top-actions">
-          <button class="ghost-button" type="button" data-action="toc">目录</button>
-        </div>
-      </nav>
       <section class="book-wrap" aria-label="培训材料">
         <div class="showcase-stage">
           <div class="stage-glow" aria-hidden="true"></div>
           <div class="stage-grid" aria-hidden="true"></div>
           ${renderPage(page, currentIndex)}
+          ${nextPage ? `<div class="page-peek" aria-hidden="true"><span>${String(currentIndex + 2).padStart(2, "0")}</span></div>` : ""}
         </div>
       </section>
       <footer class="controls">
         <button type="button" data-action="prev" ${currentIndex === 0 ? "disabled" : ""}>上一页</button>
         <div class="progress" aria-label="阅读进度"><span style="width:${progress}%"></span></div>
         <span class="progress-label">${currentIndex + 1} / ${pages.length}</span>
+        <button type="button" data-action="toc">目录</button>
         <button type="button" data-action="next" ${currentIndex >= pages.length - 1 ? "disabled" : ""}>下一页</button>
       </footer>
       <aside class="toc" hidden>
@@ -536,6 +552,7 @@ function render() {
 function go(delta) {
   const target = normalizeIndex(currentIndex + delta);
   if (target === currentIndex) return;
+  pageMotion = delta > 0 ? "forward" : "back";
   currentIndex = target;
   render();
 }
@@ -548,7 +565,9 @@ document.addEventListener("click", (event) => {
   if (action === "close-toc") document.querySelector(".toc").hidden = true;
 
   if (event.target.dataset.goto) {
-    currentIndex = normalizeIndex(Number(event.target.dataset.goto));
+    const target = normalizeIndex(Number(event.target.dataset.goto));
+    pageMotion = target >= currentIndex ? "forward" : "back";
+    currentIndex = target;
     render();
   }
 });
