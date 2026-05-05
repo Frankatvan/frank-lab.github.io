@@ -423,20 +423,33 @@ function visualMarkup(type) {
     ownerDashboard: `
       <div class="owner-dashboard">
         <div class="dashboard-conclusion"><small>本月经营结论</small><strong>现金缺口已出现，毛利回落，费用需要收口。</strong></div>
-        <div class="dash-kpis">
-          <span class="warn"><b>-12万</b><small>现金缺口</small></span>
-          <span><b>47天</b><small>回款周期</small></span>
-          <span class="bad"><b>-6pt</b><small>毛利异常</small></span>
-          <span class="bad"><b>+18%</b><small>费用超速</small></span>
-          <span><b>2项</b><small>税务疑点</small></span>
+        <div class="dashboard-main">
+          <div class="dash-kpis">
+            <span class="warn"><b>-12万</b><small>现金缺口</small></span>
+            <span><b>47天</b><small>回款周期</small></span>
+            <span class="bad"><b>-6pt</b><small>毛利异常</small></span>
+            <span class="bad"><b>+18%</b><small>费用超速</small></span>
+            <span><b>2项</b><small>税务疑点</small></span>
+          </div>
+          <div class="dashboard-trend">
+            <small>现金余额趋势</small>
+            <svg viewBox="0 0 420 132" aria-label="现金余额趋势">
+              <path class="trend-safe" d="M18 24H402V64H18Z"></path>
+              <path class="trend-risk" d="M18 64H402V116H18Z"></path>
+              <path class="trend-axis" d="M18 64H402"></path>
+              <path class="trend-line" d="M22 42 C78 36 112 58 158 62 C212 68 234 96 280 94 C330 92 354 72 398 54"></path>
+              <circle cx="238" cy="86" r="6"></circle>
+            </svg>
+            <div class="status-lights"><span class="green">现金安全线</span><span class="gold">费用超速</span><span class="red">税务疑点</span></div>
+          </div>
         </div>
         <div class="action-panel">
           <strong>本月动作</strong>
-          <p>催收前 5 大应收客户</p>
-          <p>暂停低毛利订单报价</p>
-          <p>复核咨询费与合同证据</p>
+          <p><b>催收</b><span>前 5 大应收客户</span><em>本周</em></p>
+          <p><b>报价</b><span>暂停低毛利订单</span><em>本周</em></p>
+          <p><b>复核</b><span>咨询费与合同证据</span><em>月末</em></p>
         </div>
-        <div class="review-points"><b>下月复盘点</b><span>现金余额是否回到安全线</span><span>低毛利订单是否减少</span></div>
+        <div class="review-points"><b>下月复盘点</b><span>现金余额是否回到安全线</span><span>低毛利订单是否减少</span><span>税务疑点是否解释清楚</span></div>
       </div>`,
     roleMap: `
       <div class="role-board">
@@ -450,9 +463,10 @@ function visualMarkup(type) {
         <div class="trace-chain">
           <span>报表科目</span><span>凭证</span><span>发票 / 流水 / 合同</span><span class="risk">风险解释</span><span class="action">经营动作</span>
         </div>
+        <div class="trace-loop"><span>动作执行</span><i></i><span>下月复盘</span><i></i><span>指标回看</span></div>
         <div class="evidence-proof">
           <b>AFS 证据链</b>
-          <p>老板看到异常时，可以一路追到业务证据。</p>
+          <p>异常不是停在提示，而是追到证据、形成解释、落到动作，再回到复盘。</p>
         </div>
       </div>`,
     invoiceTrace: `
