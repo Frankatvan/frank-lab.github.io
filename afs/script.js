@@ -2,16 +2,15 @@ const pages = [
   {
     id: "page-01",
     section: "封面",
-    kicker: "极智语财经营财务沙龙",
+    kicker: "极智语财 · 经营财务手册",
     title: "老板的财务驾驶舱",
-    subtitle: "看懂现金流、利润质量、税务风险与经营动作。",
+    subtitle: "把现金、利润、税务风险，翻译成下个月的经营动作。",
     body: [
-      "这不是一套讲会计分录的材料，而是一套面向中小企业经营者的财务观察框架。",
-      "30 分钟里，我们只回答一个问题：老板怎样用财务数据做更清晰的经营决策。"
+      "财务的价值不是把账做完，而是让老板提前看见判断。"
     ],
     visual: "coverHero",
     kind: "cover",
-    chips: ["中小企业主", "金税四期", "经营财务", "AFS 智能财务"]
+    type: "cover"
   },
   {
     id: "page-02",
@@ -20,10 +19,10 @@ const pages = [
     title: "利润 +42 万，账户只剩 8 万：钱卡在哪？",
     subtitle: "利润没有错，现金被经营环节占住了。",
     body: [
-      "账面利润来自收入和成本的匹配，账户余额来自真实回款、付款节奏和资金占用。",
-      "老板真正要看的不是“赚没赚钱”，而是利润在哪些环节没有变成现金。"
+      "老板要追的不是利润表，而是资金被卡住的经营环节。"
     ],
-    visual: "cashGap"
+    visual: "cashGap",
+    type: "diagnostic"
   },
   {
     id: "page-03",
@@ -56,10 +55,10 @@ const pages = [
     title: "解释不一致，就是风险入口",
     subtitle: "金税四期背后，是税务监管从单点审核走向数据交叉验证。",
     body: [
-      "发票、银行流水、业务合同、社保个税、平台交易和市场监管信息，会越来越多地被放在一起看。",
-      "过去“票能开、账能报”不等于现在“业务能解释、数据能对上”。"
+      "解释不一致时，风险不在某张票，而在业务链条说不通。"
     ],
-    visual: "taxCrossCheck"
+    visual: "taxCrossCheck",
+    type: "risk"
   },
   {
     id: "page-06",
@@ -116,10 +115,10 @@ const pages = [
     title: "现金缺口不是月底才发生的",
     subtitle: "它通常在 8 周前就已经能被看见。",
     body: [
-      "收入确认了，不代表钱到账；成本摊进去了，不代表现金没有流出。",
-      "真正有价值的财务，是在账户见底前把缺口、原因和动作摆到桌面上。"
+      "提前看到缺口，才有时间催收、延期付款、控制支出和准备融资。"
     ],
-    visual: "cashTimeline"
+    visual: "cashTimeline",
+    type: "forecast"
   },
   {
     id: "page-11",
@@ -188,10 +187,10 @@ const pages = [
     title: "每月一张经营驾驶舱",
     subtitle: "不是展示更多数据，而是锁定本月必须处理的动作。",
     body: [
-      "驾驶舱不是给财务看的，是给老板做经营判断用的。",
-      "现金缺口、回款周期、毛利异常、费用超速和税务风险，都要落到本月动作。"
+      "现金、回款、毛利、费用和税务风险，都要落到动作和复盘点。"
     ],
-    visual: "ownerDashboard"
+    visual: "ownerDashboard",
+    type: "method"
   },
   {
     id: "page-17",
@@ -248,10 +247,10 @@ const pages = [
     title: "AFS 先把证据链准备好",
     subtitle: "顾问判断之前，系统先让票、钱、账、业务能互相追溯。",
     body: [
-      "AFS 减少人工整理，帮经营财务顾问更快看到经营全貌。",
-      "系统不是替代专业判断，而是把证据链、指标异常和风险线索提前准备好。"
+      "证据链准备好，经营财务顾问才能更快判断风险和动作。"
     ],
-    visual: "afsEvidenceMap"
+    visual: "afsEvidenceMap",
+    type: "evidence"
   },
   {
     id: "page-22",
@@ -284,10 +283,10 @@ const pages = [
     title: "带一个真实经营问题来聊",
     subtitle: "从现金缺口、利润质量、费用失控、回款周期或税务风险中的任意一个问题开始。",
     body: [
-      "先把问题看清楚，再决定是否需要系统、服务和管理节奏升级。",
-      "添加企业微信后，可以基于企业现状做一次轻量诊断。"
+      "先做轻量诊断，再判断是否需要系统、服务或管理节奏升级。"
     ],
-    visual: "qrCta"
+    visual: "qrCta",
+    type: "closing"
   }
 ];
 
@@ -323,13 +322,14 @@ function visualMarkup(type) {
   const visuals = {
     cashGap: `
       <div class="cash-pipe">
-        <div class="cash-node profit"><small>利润表</small><strong>+42万</strong></div>
+        <div class="cash-node profit"><small>利润表</small><strong>+42万</strong><em>账面利润</em></div>
         <div class="pipe-track">
+          <i class="pipe-flow">利润流向现金</i>
           <span class="blocker b1"><b>应收</b><em>28万</em></span>
           <span class="blocker b2"><b>库存</b><em>19万</em></span>
           <span class="blocker b3"><b>税费</b><em>7万</em></span>
         </div>
-        <div class="cash-node bank"><small>银行账户</small><strong>8万</strong></div>
+        <div class="cash-node bank"><small>银行账户</small><strong>8万</strong><em>可用现金</em></div>
         <p>钱没有消失，只是被经营环节占住了。</p>
       </div>`,
     pastFuture: `
@@ -355,7 +355,7 @@ function visualMarkup(type) {
     taxCrossCheck: `
       <div class="tax-check-board">
         <div class="check-source">发票</div><div class="check-source">资金</div><div class="check-source">合同</div>
-        <div class="check-source">社保</div><div class="risk-core">解释不一致<br><strong>风险</strong></div><div class="check-source">平台</div>
+        <div class="check-source">社保</div><div class="risk-core"><span>解释不一致</span><strong>风险</strong></div><div class="check-source">平台</div>
         <div class="check-source">主体</div><div class="check-source">申报</div><div class="check-source">业务</div>
       </div>`,
     riskSix: `
@@ -396,8 +396,12 @@ function visualMarkup(type) {
           <path class="cash-line" d="M50 104 C130 92 160 118 230 124 C306 132 330 154 382 184 C430 212 486 238 552 218 C616 198 648 166 710 144"></path>
           <circle cx="382" cy="184" r="8"></circle>
           <circle cx="552" cy="218" r="8"></circle>
+          <text x="382" y="160" text-anchor="middle">W5 缺口出现</text>
+          <text x="552" y="248" text-anchor="middle" class="danger-label">最低余额 -12万</text>
+          <text x="650" y="118" text-anchor="middle" class="action-label">可提前动作</text>
         </svg>
         <div class="timeline-labels"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>
+        <div class="cash-actions"><b>本周动作</b><span>催收</span><span>延期付款</span><span>控制支出</span><span>融资准备</span></div>
       </div>`,
     spendRoi: `
       <div class="roi-board">
@@ -418,9 +422,11 @@ function visualMarkup(type) {
       </div>`,
     ownerDashboard: `
       <div class="owner-dashboard">
+        <div class="dashboard-conclusion"><small>本月经营结论</small><strong>现金缺口已出现，毛利回落，费用需要收口。</strong></div>
         <div class="dash-kpis">
           <span class="warn"><b>-12万</b><small>现金缺口</small></span>
           <span><b>47天</b><small>回款周期</small></span>
+          <span class="bad"><b>-6pt</b><small>毛利异常</small></span>
           <span class="bad"><b>+18%</b><small>费用超速</small></span>
           <span><b>2项</b><small>税务疑点</small></span>
         </div>
@@ -430,6 +436,7 @@ function visualMarkup(type) {
           <p>暂停低毛利订单报价</p>
           <p>复核咨询费与合同证据</p>
         </div>
+        <div class="review-points"><b>下月复盘点</b><span>现金余额是否回到安全线</span><span>低毛利订单是否减少</span></div>
       </div>`,
     roleMap: `
       <div class="role-board">
@@ -439,10 +446,14 @@ function visualMarkup(type) {
       </div>`,
     afsEvidenceMap: `
       <div class="afs-evidence-map">
-        <div class="afs-core">AFS<br><small>证据链</small></div>
-        <span class="e1">票据</span><span class="e2">流水</span><span class="e3">合同</span>
-        <span class="e4">凭证</span><span class="e5">报表</span><span class="e6">风险</span>
-        <b>异常指标可以追到业务证据</b>
+        <div class="trace-alert"><small>异常指标</small><strong>毛利率 -6pt</strong><em>系统预警</em></div>
+        <div class="trace-chain">
+          <span>报表科目</span><span>凭证</span><span>发票 / 流水 / 合同</span><span class="risk">风险解释</span><span class="action">经营动作</span>
+        </div>
+        <div class="evidence-proof">
+          <b>AFS 证据链</b>
+          <p>老板看到异常时，可以一路追到业务证据。</p>
+        </div>
       </div>`,
     invoiceTrace: `
       <div class="trace-board">
@@ -455,7 +466,12 @@ function visualMarkup(type) {
       </div>`,
     qrCta: `
       <div class="qr-cta">
-        <img src="./assets/contact-qr.png" alt="企业微信二维码">
+        <div class="qr-topics">
+          <b>可以从这 5 个问题开始</b>
+          <span>现金缺口</span><span>利润质量</span><span>费用失控</span><span>回款周期</span><span>税务风险</span>
+        </div>
+        <div class="qr-card"><img src="./assets/contact-qr.png" alt="企业微信二维码"></div>
+        <p>先做轻量诊断，再判断是否需要系统、服务或管理节奏升级。</p>
       </div>`
   };
 
@@ -476,11 +492,13 @@ function renderPage(page, index) {
     ? `<div class="cover-chips">${page.chips.map((chip) => `<span>${chip}</span>`).join("")}</div>`
     : "";
   const motionClass = pageMotion === "settled" ? "" : ` page-${pageMotion}`;
+  const typeClass = ` page-type-${page.type || "standard"}`;
 
   if (page.kind === "cover") {
     return `
-      <article class="book-page single cover-page ${sectionClass(page.section)}${motionClass}" data-page-id="${page.id}">
+      <article class="book-page single cover-page ${sectionClass(page.section)}${typeClass}${motionClass}" data-page-id="${page.id}">
         <div class="page-content page-content-cover">
+          ${visual}
           <div class="cover-copy">
             <p class="kicker">${page.kicker}</p>
             <h1>${page.title}</h1>
@@ -488,14 +506,13 @@ function renderPage(page, index) {
             ${chips}
             ${renderBody(page)}
           </div>
-          ${visual}
         </div>
       </article>
     `;
   }
 
   return `
-    <article class="book-page single ${sectionClass(page.section)}${motionClass}" data-page-id="${page.id}">
+    <article class="book-page single ${sectionClass(page.section)}${typeClass}${motionClass}" data-page-id="${page.id}">
       <div class="page-content">
         <div class="copy-column">
           <p class="kicker">${page.kicker}</p>
