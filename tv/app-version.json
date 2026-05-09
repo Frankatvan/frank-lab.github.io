@@ -1,8 +1,8 @@
 {
-  "versionCode": 3,
-  "versionName": "1.2",
+  "versionCode": 4,
+  "versionName": "1.3",
   "publishedAt": "2026-05-10T00:00:00Z",
   "apkUrl": "https://frankzh.top/tv/mytv.apk",
-  "sha256": "3e1ace9304690513f60e84b58d4be06d2116dcbda6f4d94566cbb90fef518346",
-  "notes": "Adds in-app APK update checks and a TV-focusable Update button."
+  "sha256": "2a211a2f105a7f47364a5d07a004899ea9e3528238888419592928e4fe1f0f93",
+  "notes": "Fixes HLS channel playback on Android TV boxes and prevents playback errors from closing the app."
 }
