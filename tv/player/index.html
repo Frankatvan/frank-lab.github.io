@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MyTV Player</title>
+  <title>MyTV 播放器</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -13,24 +13,24 @@
         <div class="brand-mark">M</div>
         <div>
           <h1>MyTV</h1>
-          <p id="catalogStatus">Loading channels...</p>
+          <p id="catalogStatus">正在加载频道...</p>
         </div>
       </div>
       <div class="actions">
-        <a class="apk-link" href="../mytv.apk">APK</a>
-        <button id="refreshButton" type="button">Refresh</button>
+        <a class="apk-link" href="../mytv.apk">下载APK</a>
+        <button id="refreshButton" type="button">刷新</button>
       </div>
     </header>
 
-    <section class="layout" aria-label="MyTV web player">
-      <aside class="regions" aria-label="Regions">
-        <div class="panel-title">Regions</div>
+    <section class="layout" aria-label="MyTV 网页播放器">
+      <aside class="regions" aria-label="地区">
+        <div class="panel-title">地区</div>
         <div id="regionList" class="region-list"></div>
       </aside>
 
-      <aside class="channels" aria-label="Channels">
-        <div class="panel-title">Channels</div>
-        <input id="searchInput" class="search" type="search" placeholder="Search channels" autocomplete="off">
+      <aside class="channels" aria-label="频道">
+        <div class="panel-title">频道</div>
+        <input id="searchInput" class="search" type="search" placeholder="搜索频道" autocomplete="off">
         <div id="channelList" class="channel-list"></div>
       </aside>
 
@@ -38,26 +38,26 @@
         <div class="video-frame">
           <video id="video" controls playsinline></video>
           <div id="idleOverlay" class="idle-overlay">
-            <span class="live-pill">LIVE</span>
+            <span class="live-pill">直播</span>
             <strong>MyTV</strong>
-            <span>Choose a channel to start watching</span>
+            <span>请选择一个频道开始播放</span>
           </div>
         </div>
 
         <footer class="now-bar">
           <div class="now-section">
-            <span class="label">Now Playing</span>
-            <strong id="nowTitle">Select a channel</strong>
-            <span id="nowMeta">Web player</span>
+            <span class="label">正在播放</span>
+            <strong id="nowTitle">请选择频道</strong>
+            <span id="nowMeta">网页播放器</span>
           </div>
           <div class="now-section next">
-            <span class="label">Source</span>
-            <strong id="sourceStatus">Ready</strong>
-            <a id="streamLink" href="#" target="_blank" rel="noreferrer">Open stream</a>
+            <span class="label">信号源</span>
+            <strong id="sourceStatus">就绪</strong>
+            <a id="streamLink" href="#" target="_blank" rel="noreferrer">打开原始流</a>
           </div>
           <div class="signal">
-            <span>HLS</span>
-            <strong id="signalText">Online</strong>
+            <span>直播流</span>
+            <strong id="signalText">在线</strong>
           </div>
         </footer>
       </section>

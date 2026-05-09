@@ -1,8 +1,8 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3",
+  "versionCode": 5,
+  "versionName": "1.4",
   "publishedAt": "2026-05-10T00:00:00Z",
   "apkUrl": "https://frankzh.top/tv/mytv.apk",
-  "sha256": "2a211a2f105a7f47364a5d07a004899ea9e3528238888419592928e4fe1f0f93",
-  "notes": "Fixes HLS channel playback on Android TV boxes and prevents playback errors from closing the app."
+  "sha256": "9934c0f0fb4e3e7a19cf2a8100ed5429ed572ba963bbbff8ca731d43258fbb68",
+  "notes": "中文界面、全屏播放按钮、清洗不可播频道并新增已验证中文频道。"
 }
