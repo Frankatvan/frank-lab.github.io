@@ -6,6 +6,8 @@ const state = {
   selectedRegion: '全部频道',
   selectedChannelId: '',
   hls: null,
+  playbackUrls: [],
+  playbackIndex: 0,
 };
 
 const els = {
@@ -14,6 +16,7 @@ const els = {
   channelList: document.getElementById('channelList'),
   searchInput: document.getElementById('searchInput'),
   refreshButton: document.getElementById('refreshButton'),
+  fullscreenButton: document.getElementById('fullscreenButton'),
   video: document.getElementById('video'),
   idleOverlay: document.getElementById('idleOverlay'),
   nowTitle: document.getElementById('nowTitle'),
@@ -93,9 +96,27 @@ function playChannel(channel) {
   els.nowTitle.textContent = channel.name;
   els.nowMeta.textContent = `${channel.region || '未知地区'} / ${channel.group || '综合'}`;
   els.sourceStatus.textContent = channel.sourceNote || channel.lastStatus || '直播源';
-  els.streamLink.href = channel.url;
   els.signalText.textContent = '加载中';
+  state.playbackUrls = playbackUrls(channel);
+  state.playbackIndex = 0;
 
+  if (!state.playbackUrls.length) {
+    setSignal('无地址');
+    els.sourceStatus.textContent = '此频道没有播放地址';
+    return;
+  }
+
+  playUrl(state.playbackUrls[state.playbackIndex], channel);
+}
+
+function playbackUrls(channel) {
+  return [channel.url, ...(Array.isArray(channel.backupUrls) ? channel.backupUrls : [])]
+    .filter(Boolean)
+    .filter((url, index, urls) => urls.indexOf(url) === index);
+}
+
+function playUrl(url, channel) {
+  els.streamLink.href = url;
   if (state.hls) {
     state.hls.destroy();
     state.hls = null;
@@ -105,7 +126,7 @@ function playChannel(channel) {
   els.video.load();
 
   if (els.video.canPlayType('application/vnd.apple.mpegurl')) {
-    els.video.src = channel.url;
+    els.video.src = url;
     els.video.play().catch(() => setSignal('请点播放'));
     setSignal('在线');
     return;
@@ -113,7 +134,7 @@ function playChannel(channel) {
 
   if (window.Hls && window.Hls.isSupported()) {
     state.hls = new window.Hls({ enableWorker: true });
-    state.hls.loadSource(channel.url);
+    state.hls.loadSource(url);
     state.hls.attachMedia(els.video);
     state.hls.on(window.Hls.Events.MANIFEST_PARSED, () => {
       els.video.play().catch(() => setSignal('请点播放'));
@@ -121,8 +142,10 @@ function playChannel(channel) {
     });
     state.hls.on(window.Hls.Events.ERROR, (_, data) => {
       if (data.fatal) {
-        setSignal('播放失败');
-        els.sourceStatus.textContent = '浏览器无法加载此直播源';
+        if (!tryNextUrl(channel)) {
+          setSignal('播放失败');
+          els.sourceStatus.textContent = '浏览器无法加载此直播源';
+        }
       }
     });
     return;
@@ -132,8 +155,28 @@ function playChannel(channel) {
   els.sourceStatus.textContent = '当前浏览器不支持 HLS 播放';
 }
 
+function tryNextUrl(channel) {
+  if (state.playbackIndex + 1 >= state.playbackUrls.length) {
+    return false;
+  }
+  state.playbackIndex += 1;
+  setSignal('备用源');
+  els.sourceStatus.textContent = '正在切换备用源';
+  playUrl(state.playbackUrls[state.playbackIndex], channel);
+  return true;
+}
+
 function setSignal(value) {
   els.signalText.textContent = value;
+}
+
+async function toggleFullscreen() {
+  const target = document.querySelector('.player-panel');
+  if (!document.fullscreenElement) {
+    await target.requestFullscreen();
+  } else {
+    await document.exitFullscreen();
+  }
 }
 
 async function loadChannels() {
@@ -165,4 +208,17 @@ function escapeHtml(value) {
 
 els.searchInput.addEventListener('input', renderChannels);
 els.refreshButton.addEventListener('click', loadChannels);
+els.video.addEventListener('error', () => {
+  const channel = state.channels.find((item) => item.id === state.selectedChannelId);
+  if (channel && tryNextUrl(channel)) {
+    return;
+  }
+  setSignal('播放失败');
+});
+els.fullscreenButton.addEventListener('click', () => {
+  toggleFullscreen().catch(() => setSignal('全屏失败'));
+});
+document.addEventListener('fullscreenchange', () => {
+  els.fullscreenButton.textContent = document.fullscreenElement ? '退出全屏' : '全屏';
+});
 loadChannels();

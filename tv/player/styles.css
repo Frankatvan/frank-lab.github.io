@@ -236,6 +236,22 @@ h1 {
   flex-direction: column;
 }
 
+.player-panel:fullscreen {
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  box-shadow: none;
+}
+
+.player-panel:fullscreen .now-bar {
+  display: none;
+}
+
+.player-panel:fullscreen .video-frame,
+.player-panel:fullscreen video {
+  min-height: 100vh;
+}
+
 .video-frame {
   position: relative;
   flex: 1;

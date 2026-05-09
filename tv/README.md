@@ -22,6 +22,13 @@ Update process:
 3. Increment `version` in `version.json` and `channels.json`.
 4. Redeploy `frankzh.top`.
 
+Channel sources:
+
+- Public, verified HLS streams are kept as normal channels.
+- IPv6/operator-dependent sources are marked in `sourceNote` and may require router IPv6 support or policy routing.
+- Geo-limited sources are kept only when they are public/free streams; route the TV box or the stream domain through the matching region if needed.
+- Current source pools include iptv-org public playlists and fanmingming IPv6 playlist, with manual additions for public city/news streams.
+
 The APK checks `version.json` automatically and downloads `channels.json` when the channel version increases.
 
 APK update process:
