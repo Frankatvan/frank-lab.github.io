@@ -1,0 +1,8 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "publishedAt": "2026-05-10T00:00:00Z",
+  "apkUrl": "https://frankzh.top/tv/mytv.apk",
+  "sha256": "82505da2fb02cff4756d8525d2cad7b1183df298eed30e7567244e726368b38b",
+  "notes": "Adds in-app APK update checks from the TV remote update action."
+}
