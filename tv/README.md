@@ -7,6 +7,7 @@ Copy these files into the homepage project so they are served as:
 - `https://frankzh.top/tv/channels.m3u`
 - `https://frankzh.top/tv/app-version.json`
 - `https://frankzh.top/tv/mytv.apk`
+- `https://frankzh.top/tv/player/`
 
 For a Next.js or Vercel static site, place this folder's contents under:
 
@@ -31,3 +32,9 @@ APK update process:
 4. Redeploy `frankzh.top`.
 
 On the TV box, press Menu from MyTV. If `app-version.json` has a newer `versionCode`, MyTV downloads `mytv.apk` and opens the Android installer for a confirmed overwrite install. If the app is current, the same action updates the channel list.
+
+Web player:
+
+- `player/index.html` reads `../channels.json` at runtime.
+- Safari uses native HLS playback; Chrome and Edge use hls.js from jsDelivr.
+- Some channels may not play in browsers if the source blocks browser CORS, even when the same stream works in the APK or IPTV player.

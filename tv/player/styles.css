@@ -1,0 +1,391 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f8fc;
+  --panel: #ffffff;
+  --panel-soft: #eef7ff;
+  --line: #d8e7f5;
+  --text: #12213a;
+  --muted: #60708a;
+  --blue: #0a84ff;
+  --cyan: #17c9ff;
+  --green: #17c964;
+  --shadow: 0 22px 70px rgba(31, 74, 112, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(23, 201, 255, 0.2), transparent 28%),
+    linear-gradient(135deg, #f9fdff 0%, var(--bg) 48%, #e9f6ff 100%);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.shell {
+  width: min(1440px, 100%);
+  height: 100vh;
+  min-height: 620px;
+  margin: 0 auto;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+}
+
+.topbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(10, 132, 255, 0.28);
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions button,
+.apk-link {
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(31, 74, 112, 0.08);
+}
+
+.actions button:focus,
+.actions button:hover,
+.apk-link:focus,
+.apk-link:hover {
+  outline: 3px solid rgba(10, 132, 255, 0.2);
+  border-color: var(--blue);
+}
+
+.layout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 220px 330px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.regions,
+.channels,
+.player-panel {
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.regions,
+.channels {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  padding: 18px 20px 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.region-list,
+.channel-list {
+  min-height: 0;
+  overflow: auto;
+  padding: 8px;
+}
+
+.region-button,
+.channel-button {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.region-button {
+  min-height: 58px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.region-button.active,
+.region-button:focus,
+.region-button:hover,
+.channel-button.active,
+.channel-button:focus,
+.channel-button:hover {
+  outline: 0;
+  background: #e5f4ff;
+  color: #006fdd;
+  box-shadow: inset 0 0 0 2px rgba(10, 132, 255, 0.32);
+}
+
+.search {
+  width: calc(100% - 24px);
+  height: 44px;
+  margin: 0 12px 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 14px;
+  color: var(--text);
+  background: #f8fcff;
+}
+
+.search:focus {
+  outline: 3px solid rgba(10, 132, 255, 0.18);
+  border-color: var(--blue);
+}
+
+.channel-button {
+  min-height: 66px;
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.channel-number {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.channel-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 750;
+}
+
+.channel-meta {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-frame {
+  position: relative;
+  flex: 1;
+  min-height: 260px;
+  background:
+    linear-gradient(135deg, rgba(10, 132, 255, 0.16), transparent 42%),
+    radial-gradient(circle at 75% 28%, rgba(23, 201, 255, 0.35), transparent 30%),
+    #dcecf8;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  display: block;
+  background: #071421;
+  object-fit: contain;
+}
+
+.idle-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 42px;
+  pointer-events: none;
+}
+
+.idle-overlay.hidden {
+  display: none;
+}
+
+.live-pill {
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.idle-overlay strong {
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 0.95;
+}
+
+.idle-overlay span:last-child {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.now-bar {
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 120px;
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.now-section,
+.signal {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.label {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.now-section strong {
+  margin-top: 6px;
+  font-size: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.now-section span:last-child,
+.now-section a {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.signal {
+  align-items: center;
+  text-align: center;
+}
+
+.signal span {
+  color: var(--blue);
+  font-weight: 850;
+}
+
+.signal strong {
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 15px;
+}
+
+@media (max-width: 980px) {
+  .shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 14px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .regions,
+  .channels {
+    max-height: 260px;
+  }
+
+  .now-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .actions button,
+  .apk-link {
+    flex: 1;
+  }
+
+  .channel-button {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+}

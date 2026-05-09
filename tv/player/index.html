@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyTV Player</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          <h1>MyTV</h1>
+          <p id="catalogStatus">Loading channels...</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="apk-link" href="../mytv.apk">APK</a>
+        <button id="refreshButton" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <section class="layout" aria-label="MyTV web player">
+      <aside class="regions" aria-label="Regions">
+        <div class="panel-title">Regions</div>
+        <div id="regionList" class="region-list"></div>
+      </aside>
+
+      <aside class="channels" aria-label="Channels">
+        <div class="panel-title">Channels</div>
+        <input id="searchInput" class="search" type="search" placeholder="Search channels" autocomplete="off">
+        <div id="channelList" class="channel-list"></div>
+      </aside>
+
+      <section class="player-panel">
+        <div class="video-frame">
+          <video id="video" controls playsinline></video>
+          <div id="idleOverlay" class="idle-overlay">
+            <span class="live-pill">LIVE</span>
+            <strong>MyTV</strong>
+            <span>Choose a channel to start watching</span>
+          </div>
+        </div>
+
+        <footer class="now-bar">
+          <div class="now-section">
+            <span class="label">Now Playing</span>
+            <strong id="nowTitle">Select a channel</strong>
+            <span id="nowMeta">Web player</span>
+          </div>
+          <div class="now-section next">
+            <span class="label">Source</span>
+            <strong id="sourceStatus">Ready</strong>
+            <a id="streamLink" href="#" target="_blank" rel="noreferrer">Open stream</a>
+          </div>
+          <div class="signal">
+            <span>HLS</span>
+            <strong id="signalText">Online</strong>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.20/dist/hls.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
