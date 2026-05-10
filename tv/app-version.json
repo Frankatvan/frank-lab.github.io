@@ -1,8 +1,8 @@
 {
-  "versionCode": 8,
-  "versionName": "1.6",
+  "versionCode": 9,
+  "versionName": "1.6.1",
   "publishedAt": "2026-05-10T00:00:00Z",
-  "apkUrl": "https://frankzh.top/tv/mytv-1.6.apk",
-  "sha256": "7794ee4fd43a3a9a00574fb8a9880febc1115f3676e7f0eda9bee85331650396",
-  "notes": "全屏退出后焦点回到当前频道，右侧预览区改为只读预览；中国大陆频道收敛为央视 1/2/4/5/13、北京卫视、东方卫视、深圳卫视。"
+  "apkUrl": "https://frankzh.top/tv/mytv-1.6.1.apk",
+  "sha256": "be4fd8d56bfab97d934793e426d8539be23c3f5ed6cffecf14c963a6e2ee0e05",
+  "notes": "新增播放超时自动切换备用源；为 CCTV-1/2/4/5、北京卫视、东方卫视、深圳卫视补充公网候选主源，并保留 IPv6 备用。"
 }

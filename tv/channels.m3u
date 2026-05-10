@@ -1,25 +1,37 @@
 #EXTM3U
 #EXTINF:-1 group-title="中国大陆 - 卫视",北京卫视
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 group-title="中国大陆 - 卫视",北京卫视 备用
 https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8
+#EXTINF:-1 group-title="中国大陆 - 卫视",北京卫视 备用
+http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
 #EXTINF:-1 group-title="中国大陆 - 卫视",东方卫视
+http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/
+#EXTINF:-1 group-title="中国大陆 - 卫视",东方卫视 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
 #EXTINF:-1 group-title="中国大陆 - 卫视",深圳卫视
+http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/
+#EXTINF:-1 group-title="中国大陆 - 卫视",深圳卫视 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
 #EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻 备用
 https://cdn3.163189.xyz/163189/cctv13
 #EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻 备用
 https://t.freetv.fun/live/cctv13-2.m3u8
+#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻 备用
+http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
 #EXTINF:-1 group-title="中国大陆 - 央视",CCTV-1综合
+http://223.110.236.8/ott.js.chinamobile.com/PLTV/3/224/3221228149/index.m3u8
+#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-1综合 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
 #EXTINF:-1 group-title="中国大陆 - 央视",CCTV-2财经
+http://223.110.241.204:6610/gitv/live1/G_CCTV-2-CQ/G_CCTV-2-CQ
+#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-2财经 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
 #EXTINF:-1 group-title="中国大陆 - 央视",CCTV-4中文国际
+http://223.110.241.204:6610/gitv/live1/G_CCTV-4-CQ/G_CCTV-4-CQ
+#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-4中文国际 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?
 #EXTINF:-1 group-title="中国大陆 - 央视体育",CCTV-5体育
+http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ
+#EXTINF:-1 group-title="中国大陆 - 央视体育",CCTV-5体育 备用
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
 #EXTINF:-1 group-title="香港 - 综合",港台电视31
 https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
