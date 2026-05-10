@@ -1,21 +1,21 @@
 {
-  "version": 4,
+  "version": 5,
   "publishedAt": "2026-05-10T00:00:00Z",
   "channels": [
     {
       "id": "beijing-satellite",
       "name": "北京卫视",
-      "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND",
       "group": "卫视",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公开源，已验证清单；含IPv6备用源",
+      "sourceNote": "IPv6 主源，仅限具备 IPv6/运营商线路环境；公网源保留为备用。",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "network-dependent",
       "sortOrder": 0,
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
+        "https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8"
       ]
     },
     {
@@ -49,18 +49,18 @@
     {
       "id": "cctv-13",
       "name": "CCTV-13 新闻",
-      "url": "https://cdn3.163189.xyz/163189/cctv13",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?",
       "group": "新闻",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公开源，含备用源；含IPv6备用源",
+      "sourceNote": "IPv6 主源，仅限具备 IPv6/运营商线路环境；公网源保留为备用。",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "network-dependent",
       "sortOrder": 3,
       "backupUrls": [
-        "https://t.freetv.fun/live/cctv13-2.m3u8",
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?"
+        "https://cdn3.163189.xyz/163189/cctv13",
+        "https://t.freetv.fun/live/cctv13-2.m3u8"
       ]
     },
     {
