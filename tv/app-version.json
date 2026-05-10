@@ -2,7 +2,7 @@
   "versionCode": 8,
   "versionName": "1.6",
   "publishedAt": "2026-05-10T00:00:00Z",
-  "apkUrl": "https://frankzh.top/tv/mytv.apk",
+  "apkUrl": "https://frankzh.top/tv/mytv-1.6.apk",
   "sha256": "7794ee4fd43a3a9a00574fb8a9880febc1115f3676e7f0eda9bee85331650396",
   "notes": "全屏退出后焦点回到当前频道，右侧预览区改为只读预览；中国大陆频道收敛为央视 1/2/4/5/13、北京卫视、东方卫视、深圳卫视。"
 }
