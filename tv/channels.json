@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "publishedAt": "2026-05-10T00:00:00Z",
+  "version": 7,
+  "publishedAt": "2026-05-11T00:00:00Z",
   "channels": [
     {
       "id": "beijing-satellite",
@@ -70,65 +70,65 @@
     {
       "id": "cn-ipv6-cctv-1综合",
       "name": "CCTV-1综合",
-      "url": "http://223.110.236.8/ott.js.chinamobile.com/PLTV/3/224/3221228149/index.m3u8",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?",
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?"
+        "http://223.110.236.8/ott.js.chinamobile.com/PLTV/3/224/3221228149/index.m3u8"
       ],
       "group": "央视",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
+      "lastStatus": "playable-ipv6",
       "sortOrder": 4
     },
     {
       "id": "cn-ipv6-cctv-2财经",
       "name": "CCTV-2财经",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_CCTV-2-CQ/G_CCTV-2-CQ",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?",
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?"
+        "http://223.110.241.204:6610/gitv/live1/G_CCTV-2-CQ/G_CCTV-2-CQ"
       ],
       "group": "央视",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
+      "lastStatus": "playable-ipv6",
       "sortOrder": 5
     },
     {
       "id": "cn-ipv6-cctv-4中文国际",
       "name": "CCTV-4中文国际",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_CCTV-4-CQ/G_CCTV-4-CQ",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?",
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?"
+        "http://223.110.241.204:6610/gitv/live1/G_CCTV-4-CQ/G_CCTV-4-CQ"
       ],
       "group": "央视",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
+      "lastStatus": "playable-ipv6",
       "sortOrder": 6
     },
     {
       "id": "cn-ipv6-cctv-5体育",
       "name": "CCTV-5体育",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ",
+      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?",
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?"
+        "http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ"
       ],
       "group": "央视体育",
       "region": "中国大陆",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
+      "lastStatus": "playable-ipv6",
       "sortOrder": 7
     },
     {
@@ -373,9 +373,9 @@
       "region": "美国",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
+      "sourceNote": "iptv-org 同名公开源；当前线路探测 TLS reset，可能需美国/地区线路",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "network-dependent",
       "sortOrder": 26
     },
     {
