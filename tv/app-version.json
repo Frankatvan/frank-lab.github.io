@@ -1,8 +1,8 @@
 {
-  "versionCode": 6,
-  "versionName": "1.5",
+  "versionCode": 7,
+  "versionName": "1.5.1",
   "publishedAt": "2026-05-10T00:00:00Z",
   "apkUrl": "https://frankzh.top/tv/mytv.apk",
-  "sha256": "206ecea4716fc919742acb91ed6958132accf2df090eba25ac2a993d3c7bebb6",
-  "notes": "扩充央视、卫视、香港、台湾、加拿大、美国和德州频道，加入 FOX 26 休斯顿，支持备用源自动切换和全屏播放优化。"
+  "sha256": "aae101ccfd967fd0ceda28ed00b82f4db61ff975e33a98259e342aec25f8d984",
+  "notes": "点击频道即全屏播放；返回键退出全屏并回到三栏列表，同时保留频道扩充、备用源自动切换和播放优化。"
 }
