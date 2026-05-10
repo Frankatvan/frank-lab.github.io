@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "publishedAt": "2026-05-11T00:00:00Z",
   "channels": [
     {
@@ -145,6 +145,51 @@
       "sortOrder": 8
     },
     {
+      "id": "rthk-tv-32",
+      "name": "港台电视32",
+      "url": "https://t.freetv.fun/live/rthk-32.m3u8",
+      "group": "综合",
+      "region": "香港",
+      "logoUrl": "",
+      "source": "remote",
+      "sourceNote": "公开 HLS 转发源；官方 iptv-org RTHK32 源当前地区 403，已验证该源返回媒体流",
+      "isBundledCandidate": true,
+      "lastStatus": "playable",
+      "sortOrder": 9
+    },
+    {
+      "id": "ftv-news-tw",
+      "name": "民视新闻",
+      "url": "http://38.64.72.148/hls/modn/list/4012/playlist.m3u8",
+      "backupUrls": [
+        "http://38.64.72.148/hls/modn/list/4012/chunklist1.m3u8"
+      ],
+      "group": "新闻",
+      "region": "台湾",
+      "logoUrl": "",
+      "source": "remote",
+      "sourceNote": "公开 HLS 源；同源服务器已用于现有 TVBS Asia，当前播放列表和分片均通过探测",
+      "isBundledCandidate": true,
+      "lastStatus": "playable",
+      "sortOrder": 10
+    },
+    {
+      "id": "ttv-news-tw",
+      "name": "台视新闻",
+      "url": "http://38.64.72.148/hls/modn/list/4013/playlist.m3u8",
+      "backupUrls": [
+        "http://38.64.72.148/hls/modn/list/4013/chunklist1.m3u8"
+      ],
+      "group": "新闻",
+      "region": "台湾",
+      "logoUrl": "",
+      "source": "remote",
+      "sourceNote": "公开 HLS 源；当前播放列表和分片均通过探测",
+      "isBundledCandidate": true,
+      "lastStatus": "playable",
+      "sortOrder": 11
+    },
+    {
       "id": "tvbsasia-tw",
       "name": "TVBS Asia",
       "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8",
@@ -155,7 +200,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 9
+      "sortOrder": 12
     },
     {
       "id": "cbc-news",
@@ -168,7 +213,7 @@
       "sourceNote": "公开源，已验证",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 10
+      "sortOrder": 13
     },
     {
       "id": "citynewsedmonton-ca",
@@ -181,7 +226,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 11
+      "sortOrder": 14
     },
     {
       "id": "citynewscalgary-ca",
@@ -194,7 +239,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 12
+      "sortOrder": 15
     },
     {
       "id": "citynewsvancouver-ca",
@@ -207,7 +252,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 13
+      "sortOrder": 16
     },
     {
       "id": "citynews-toronto",
@@ -220,7 +265,7 @@
       "sourceNote": "公开源，已验证",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 14
+      "sortOrder": 17
     },
     {
       "id": "icirdi-ca",
@@ -233,7 +278,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 15
+      "sortOrder": 18
     },
     {
       "id": "cfhddt-ca",
@@ -246,7 +291,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 16
+      "sortOrder": 19
     },
     {
       "id": "nactv-ca",
@@ -259,7 +304,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 17
+      "sortOrder": 20
     },
     {
       "id": "iipctv-ca",
@@ -272,7 +317,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 18
+      "sortOrder": 21
     },
     {
       "id": "abc-news-live",
@@ -285,7 +330,7 @@
       "sourceNote": "公开源，已验证",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 19
+      "sortOrder": 22
     },
     {
       "id": "livenowfromfox-us",
@@ -298,7 +343,7 @@
       "sourceNote": "FOX 官方/公开流",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 20
+      "sortOrder": 23
     },
     {
       "id": "nbcnewsnow-us",
@@ -311,7 +356,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 21
+      "sortOrder": 24
     },
     {
       "id": "bloomberg-tv-us",
@@ -324,7 +369,7 @@
       "sourceNote": "iptv-org 公开财经源，需常规浏览器 User-Agent 时更稳定",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 22
+      "sortOrder": 25
     },
     {
       "id": "espn8-the-ocho-us",
@@ -337,7 +382,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 23
+      "sortOrder": 26
     },
     {
       "id": "flo-hockey-us",
@@ -350,7 +395,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 24
+      "sortOrder": 27
     },
     {
       "id": "fubo-sports-network-us",
@@ -363,7 +408,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 25
+      "sortOrder": 28
     },
     {
       "id": "stadium-us",
@@ -376,7 +421,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 26
+      "sortOrder": 29
     },
     {
       "id": "waypoint-tv-us",
@@ -389,7 +434,7 @@
       "sourceNote": "iptv-org 公开户外/体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 27
+      "sortOrder": 30
     },
     {
       "id": "bfm-tech-co",
@@ -402,7 +447,7 @@
       "sourceNote": "iptv-org 公开科技新闻源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 28
+      "sortOrder": 31
     }
   ]
 }
