@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "publishedAt": "2026-05-11T00:00:00Z",
   "channels": [
     {
@@ -288,19 +288,6 @@
       "sortOrder": 19
     },
     {
-      "id": "cheddarnews-us",
-      "name": "Cheddar News",
-      "url": "https://wurlcheddar.global.transmit.live/hls/689ceac9301c34d3919676f3/v1/Cheddar/samsung_us/latest/main/hls/playlist.m3u8",
-      "group": "新闻",
-      "region": "美国",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 20
-    },
-    {
       "id": "livenowfromfox-us",
       "name": "LiveNOW from FOX",
       "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-livenowbyfox-lgus/playlist.m3u8",
@@ -311,7 +298,7 @@
       "sourceNote": "FOX 官方/公开流",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     {
       "id": "nbcnewsnow-us",
@@ -324,7 +311,7 @@
       "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 22
+      "sortOrder": 21
     },
     {
       "id": "bloomberg-tv-us",
@@ -337,20 +324,7 @@
       "sourceNote": "iptv-org 公开财经源，需常规浏览器 User-Agent 时更稳定",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 23
-    },
-    {
-      "id": "yahoo-finance-us",
-      "name": "Yahoo Finance",
-      "url": "https://d1ewctnvcwvvvu.cloudfront.net/playlist.m3u8",
-      "group": "财经",
-      "region": "美国",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "iptv-org 公开财经源",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 24
+      "sortOrder": 22
     },
     {
       "id": "espn8-the-ocho-us",
@@ -363,7 +337,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 25
+      "sortOrder": 23
     },
     {
       "id": "flo-hockey-us",
@@ -376,7 +350,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 26
+      "sortOrder": 24
     },
     {
       "id": "fubo-sports-network-us",
@@ -389,7 +363,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 27
+      "sortOrder": 25
     },
     {
       "id": "stadium-us",
@@ -402,7 +376,7 @@
       "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 28
+      "sortOrder": 26
     },
     {
       "id": "waypoint-tv-us",
@@ -415,46 +389,7 @@
       "sourceNote": "iptv-org 公开户外/体育源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 29
-    },
-    {
-      "id": "al-jazeera-english",
-      "name": "Al Jazeera English",
-      "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
-      "group": "新闻",
-      "region": "国际",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "官方源",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 30
-    },
-    {
-      "id": "arirang-tv",
-      "name": "Arirang TV",
-      "url": "http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
-      "group": "新闻",
-      "region": "国际",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开源，已验证",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 31
-    },
-    {
-      "id": "france-24-english",
-      "name": "France 24 English",
-      "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8",
-      "group": "新闻",
-      "region": "国际",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "官方源",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 32
+      "sortOrder": 27
     },
     {
       "id": "bfm-tech-co",
@@ -467,7 +402,7 @@
       "sourceNote": "iptv-org 公开科技新闻源",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 33
+      "sortOrder": 28
     }
   ]
 }
