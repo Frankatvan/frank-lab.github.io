@@ -1,8 +1,8 @@
 {
-  "versionCode": 9,
-  "versionName": "1.6.1",
-  "publishedAt": "2026-05-10T00:00:00Z",
-  "apkUrl": "https://frankzh.top/tv/mytv-1.6.1.apk",
-  "sha256": "be4fd8d56bfab97d934793e426d8539be23c3f5ed6cffecf14c963a6e2ee0e05",
-  "notes": "新增播放超时自动切换备用源；为 CCTV-1/2/4/5、北京卫视、东方卫视、深圳卫视补充公网候选主源，并保留 IPv6 备用。"
+  "versionCode": 10,
+  "versionName": "1.7.0",
+  "publishedAt": "2026-05-12T00:00:00Z",
+  "apkUrl": "https://frankzh.top/tv/mytv-1.7.0.apk",
+  "sha256": "cb94ab7d31bf0479f89a6ec150e93c6db93bbce336e5389770542c80977dd69a",
+  "notes": "频道列表保留全部目标频道；聚合器健康检查失败的频道会置灰并显示失败原因，避免误点不可用源。"
 }
