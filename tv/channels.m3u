@@ -1,65 +1,55 @@
 #EXTM3U
-#EXTINF:-1 group-title="中国大陆 - 卫视",北京卫视
-https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8
-#EXTINF:-1 group-title="中国大陆 - 卫视",北京卫视 备用
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 group-title="中国大陆 - 卫视",东方卫视
-http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/
-#EXTINF:-1 group-title="中国大陆 - 卫视",东方卫视 备用
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 group-title="中国大陆 - 卫视",深圳卫视
-http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/
-#EXTINF:-1 group-title="中国大陆 - 卫视",深圳卫视 备用
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻
-https://cdn3.163189.xyz/163189/cctv13
-#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻 备用
-https://t.freetv.fun/live/cctv13-2.m3u8
-#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻 备用
-http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-1综合
+#EXTINF:-1 tvg-id="cctv-1" group-title="中国大陆 - 央视",CCTV-1综合
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-1综合 备用
-http://223.110.236.8/ott.js.chinamobile.com/PLTV/3/224/3221228149/index.m3u8
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-2财经
+#EXTINF:-1 tvg-id="cctv-2" group-title="中国大陆 - 央视",CCTV-2财经
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-2财经 备用
-http://223.110.241.204:6610/gitv/live1/G_CCTV-2-CQ/G_CCTV-2-CQ
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-4中文国际
+#EXTINF:-1 tvg-id="cctv-4" group-title="中国大陆 - 央视",CCTV-4中文国际
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 央视",CCTV-4中文国际 备用
-http://223.110.241.204:6610/gitv/live1/G_CCTV-4-CQ/G_CCTV-4-CQ
-#EXTINF:-1 group-title="中国大陆 - 央视体育",CCTV-5体育
+#EXTINF:-1 tvg-id="cctv-5" group-title="中国大陆 - 央视体育",CCTV-5体育
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
-#EXTINF:-1 group-title="中国大陆 - 央视体育",CCTV-5体育 备用
-http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ
-#EXTINF:-1 group-title="香港 - 综合",港台电视31
-https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
-#EXTINF:-1 group-title="台湾 - 娱乐",TVBS Asia
-http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",CBC News
-https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",CityNews 埃德蒙顿
-https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/Video-2Mbps.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",CityNews 卡尔加里
-https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/master.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",CityNews 温哥华
-https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",CityNews Toronto
-https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8
-#EXTINF:-1 group-title="加拿大 - 新闻",ICI RDI
-https://rcavlive.akamaized.net/hls/live/704025/xcanrdi/master.m3u8
-#EXTINF:-1 group-title="加拿大 - 综合",ICI Montreal
-https://amdici.akamaized.net/hls/live/873426/ICI-Live-Stream/master.m3u8
-#EXTINF:-1 group-title="加拿大 - 综合",NACTV
-https://stream2.pivotalelements.com/memfs/2d2e1038-9eb2-44df-a9b9-109de5752f3b_output_0.m3u8
-#EXTINF:-1 group-title="加拿大 - 宗教",IIPC TV
-https://rpn.bozztv.com/dvrfl03/iipctv/index.m3u8
-#EXTINF:-1 group-title="美国 - 新闻",LiveNOW from FOX
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-livenowbyfox-lgus/playlist.m3u8
-#EXTINF:-1 group-title="美国 - 新闻",NBC News NOW
+#EXTINF:-1 tvg-id="cctv-13" group-title="中国大陆 - 新闻",CCTV-13 新闻
+https://cdn3.163189.xyz/163189/cctv13
+#EXTINF:-1 tvg-id="beijing-satellite" group-title="中国大陆 - 卫视",北京卫视
+https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8
+#EXTINF:-1 tvg-id="dragon-tv" group-title="中国大陆 - 卫视",东方卫视
+http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/
+#EXTINF:-1 tvg-id="shenzhen-satellite" group-title="中国大陆 - 卫视",深圳卫视
+http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/
+#EXTINF:-1 tvg-id="abc-news-live-us" group-title="美国 - 新闻",ABC News Live
+https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master_4000.m3u8
+#EXTINF:-1 tvg-id="livenowfromfox-us" group-title="美国 - 新闻",LiveNOW from FOX
+https://pb-k5p02dtnr2162.akamaized.net/LiveNOW_from_FOX.m3u8
+#EXTINF:-1 tvg-id="nbcnewsnow-us" group-title="美国 - 新闻",NBC News NOW
 https://d1si3n1st4nkgb.cloudfront.net/10502/88896001/hls/master.m3u8?ads.xumo_channelId=88896001
-#EXTINF:-1 group-title="美国 - 体育",FloHockey 24/7
+#EXTINF:-1 tvg-id="bloomberg-television-us" group-title="美国 - 财经",Bloomberg Television
+https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-television/bloombergtv.m3u8?ads.vf=XfUcpFmGLda
+#EXTINF:-1 tvg-id="espn8-the-ocho-us" group-title="美国 - 体育",ESPN8 The Ocho
+https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
+#EXTINF:-1 tvg-id="flo-hockey-us" group-title="美国 - 体育",FloHockey 24/7
 https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="美国 - 体育",Waypoint TV
+#EXTINF:-1 tvg-id="fubo-sports-network-us" group-title="美国 - 体育",fubo Sports Network
+https://dnf08l6u6uxnz.cloudfront.net/master.m3u8
+#EXTINF:-1 tvg-id="stadium-us" group-title="美国 - 体育",Stadium
+https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8
+#EXTINF:-1 tvg-id="waypoint-tv-us" group-title="美国 - 体育",Waypoint TV
 https://waypoint-waypointtv-firetv.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="bfm-tech-co-us" group-title="美国 - 科技",BFM Tech & Co
+https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE
+#EXTINF:-1 tvg-id="cbc-news-ca" group-title="加拿大 - 新闻",CBC News
+https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8
+#EXTINF:-1 tvg-id="citynewsvancouver-ca" group-title="加拿大 - 新闻",CityNews 温哥华
+https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8
+#EXTINF:-1 tvg-id="citynews-toronto-ca" group-title="加拿大 - 新闻",CityNews Toronto
+https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8
+#EXTINF:-1 tvg-id="rthk-tv31-hk" group-title="香港 - 综合",港台电视31
+https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
+#EXTINF:-1 tvg-id="hoy-ibc-hk" group-title="香港 - 财经",HOY International Business Channel
+https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
+#EXTINF:-1 tvg-id="phoenix-info-hk" group-title="香港 - 新闻",凤凰资讯
+http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 tvg-id="tvbsasia-tw" group-title="台湾 - 娱乐",TVBS Asia
+http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
+#EXTINF:-1 tvg-id="taiwanplus-tv-tw" group-title="台湾 - 新闻",TaiwanPlus TV
+https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/6282251407001/playlist.m3u8
+#EXTINF:-1 tvg-id="taiwan-indigenous-tv-tw" group-title="台湾 - 综合",Taiwan Indigenous TV
+http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8

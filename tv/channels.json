@@ -1,74 +1,9 @@
 {
-  "version": 11,
-  "publishedAt": "2026-05-11T00:00:00Z",
+  "version": 12,
+  "publishedAt": "2026-05-12T00:00:00Z",
   "channels": [
     {
-      "id": "beijing-satellite",
-      "name": "北京卫视",
-      "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8",
-      "group": "卫视",
-      "region": "中国大陆",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开源主源，含IPv6备用源",
-      "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
-      "sortOrder": 0,
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
-      ]
-    },
-    {
-      "id": "cn-ipv6-东方卫视",
-      "name": "东方卫视",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
-      ],
-      "group": "卫视",
-      "region": "中国大陆",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
-      "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
-      "sortOrder": 1
-    },
-    {
-      "id": "cn-ipv6-深圳卫视",
-      "name": "深圳卫视",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
-      ],
-      "group": "卫视",
-      "region": "中国大陆",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公网候选主源，含IPv6备用源",
-      "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
-      "sortOrder": 2
-    },
-    {
-      "id": "cctv-13",
-      "name": "CCTV-13 新闻",
-      "url": "https://cdn3.163189.xyz/163189/cctv13",
-      "group": "新闻",
-      "region": "中国大陆",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开源主源，含IPv6备用源",
-      "isBundledCandidate": true,
-      "lastStatus": "network-dependent",
-      "sortOrder": 3,
-      "backupUrls": [
-        "https://t.freetv.fun/live/cctv13-2.m3u8",
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?"
-      ]
-    },
-    {
-      "id": "cn-ipv6-cctv-1综合",
+      "id": "cctv-1",
       "name": "CCTV-1综合",
       "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?",
       "backupUrls": [
@@ -76,15 +11,15 @@
       ],
       "group": "央视",
       "region": "中国大陆",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；IPv4 备用源线路相关",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "playable-ipv6",
-      "sortOrder": 4
+      "lastStatus": "network-dependent",
+      "sortOrder": 0
     },
     {
-      "id": "cn-ipv6-cctv-2财经",
+      "id": "cctv-2",
       "name": "CCTV-2财经",
       "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?",
       "backupUrls": [
@@ -92,15 +27,15 @@
       ],
       "group": "央视",
       "region": "中国大陆",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；IPv4 备用源线路相关",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "playable-ipv6",
-      "sortOrder": 5
+      "lastStatus": "network-dependent",
+      "sortOrder": 1
     },
     {
-      "id": "cn-ipv6-cctv-4中文国际",
+      "id": "cctv-4",
       "name": "CCTV-4中文国际",
       "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?",
       "backupUrls": [
@@ -108,15 +43,15 @@
       ],
       "group": "央视",
       "region": "中国大陆",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；IPv4 备用源线路相关",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "playable-ipv6",
-      "sortOrder": 6
+      "lastStatus": "network-dependent",
+      "sortOrder": 2
     },
     {
-      "id": "cn-ipv6-cctv-5体育",
+      "id": "cctv-5",
       "name": "CCTV-5体育",
       "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?",
       "backupUrls": [
@@ -124,168 +59,110 @@
       ],
       "group": "央视体育",
       "region": "中国大陆",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；IPv4 备用源线路相关",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；原公网候选保留备用",
       "isBundledCandidate": true,
-      "lastStatus": "playable-ipv6",
+      "lastStatus": "network-dependent",
+      "sortOrder": 3
+    },
+    {
+      "id": "cctv-13",
+      "name": "CCTV-13 新闻",
+      "url": "https://cdn3.163189.xyz/163189/cctv13",
+      "backupUrls": [
+        "https://t.freetv.fun/live/cctv13-2.m3u8",
+        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?"
+      ],
+      "group": "新闻",
+      "region": "中国大陆",
+      "sourceNote": "公开源主源，含 fanmingming/live IPv6 备用源",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 4
+    },
+    {
+      "id": "beijing-satellite",
+      "name": "北京卫视",
+      "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8",
+      "backupUrls": [
+        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
+      ],
+      "group": "卫视",
+      "region": "中国大陆",
+      "sourceNote": "公开源主源，含 fanmingming/live IPv6 备用源",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 5
+    },
+    {
+      "id": "dragon-tv",
+      "name": "东方卫视",
+      "url": "http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/",
+      "backupUrls": [
+        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
+      ],
+      "group": "卫视",
+      "region": "中国大陆",
+      "sourceNote": "公网候选主源，含 fanmingming/live IPv6 备用源",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 6
+    },
+    {
+      "id": "shenzhen-satellite",
+      "name": "深圳卫视",
+      "url": "http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/",
+      "backupUrls": [
+        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
+      ],
+      "group": "卫视",
+      "region": "中国大陆",
+      "sourceNote": "公网候选主源，含 fanmingming/live IPv6 备用源",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
       "sortOrder": 7
     },
     {
-      "id": "rthktv31-hk",
-      "name": "港台电视31",
-      "url": "https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8",
-      "group": "综合",
-      "region": "香港",
+      "id": "abc-news-live-us",
+      "name": "ABC News Live",
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master_4000.m3u8",
+      "backupUrls": [
+        "https://abcnews-streams.akamaized.net/hls/live/2023561/abcnewshudson2/master_4000.m3u8",
+        "https://abcnews-streams.akamaized.net/hls/live/2023562/abcnewshudson3/master_4000.m3u8"
+      ],
+      "group": "新闻",
+      "region": "美国",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "RTHK 官方公开 HLS；若电视端不可用，通常与香港/海外出口、VPN 或源站地区策略有关",
       "isBundledCandidate": true,
       "lastStatus": "network-dependent",
       "sortOrder": 8
     },
     {
-      "id": "tvbsasia-tw",
-      "name": "TVBS Asia",
-      "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8",
-      "group": "娱乐",
-      "region": "台湾",
+      "id": "livenowfromfox-us",
+      "name": "LiveNOW from FOX",
+      "url": "https://pb-k5p02dtnr2162.akamaized.net/LiveNOW_from_FOX.m3u8",
+      "backupUrls": [
+        "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-livenowbyfox-lgus/playlist.m3u8"
+      ],
+      "group": "新闻",
+      "region": "美国",
+      "sourceNote": "iptv-org 同名公开源标记 Geo-blocked；备用源当前视频编码不兼容",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公开 HLS 源；若电视端不可用，通常与线路或 VPN 出口到该服务器的连通性有关",
       "isBundledCandidate": true,
       "lastStatus": "network-dependent",
       "sortOrder": 9
-    },
-    {
-      "id": "cbc-news",
-      "name": "CBC News",
-      "url": "https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开源，已验证",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 10
-    },
-    {
-      "id": "citynewsedmonton-ca",
-      "name": "CityNews 埃德蒙顿",
-      "url": "https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/Video-2Mbps.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 11
-    },
-    {
-      "id": "citynewscalgary-ca",
-      "name": "CityNews 卡尔加里",
-      "url": "https://citynewsregional.akamaized.net/hls/live/1024053/Regional_Live_8/master.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 12
-    },
-    {
-      "id": "citynewsvancouver-ca",
-      "name": "CityNews 温哥华",
-      "url": "https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 13
-    },
-    {
-      "id": "citynews-toronto",
-      "name": "CityNews Toronto",
-      "url": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开源，已验证",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 14
-    },
-    {
-      "id": "icirdi-ca",
-      "name": "ICI RDI",
-      "url": "https://rcavlive.akamaized.net/hls/live/704025/xcanrdi/master.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 15
-    },
-    {
-      "id": "cfhddt-ca",
-      "name": "ICI Montreal",
-      "url": "https://amdici.akamaized.net/hls/live/873426/ICI-Live-Stream/master.m3u8",
-      "group": "综合",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 16
-    },
-    {
-      "id": "nactv-ca",
-      "name": "NACTV",
-      "url": "https://stream2.pivotalelements.com/memfs/2d2e1038-9eb2-44df-a9b9-109de5752f3b_output_0.m3u8",
-      "group": "综合",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 17
-    },
-    {
-      "id": "iipctv-ca",
-      "name": "IIPC TV",
-      "url": "https://rpn.bozztv.com/dvrfl03/iipctv/index.m3u8",
-      "group": "宗教",
-      "region": "加拿大",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 18
-    },
-    {
-      "id": "livenowfromfox-us",
-      "name": "LiveNOW from FOX",
-      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-livenowbyfox-lgus/playlist.m3u8",
-      "group": "新闻",
-      "region": "美国",
-      "logoUrl": "",
-      "source": "remote",
-      "sourceNote": "FOX 官方/公开流",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 19
     },
     {
       "id": "nbcnewsnow-us",
@@ -293,12 +170,38 @@
       "url": "https://d1si3n1st4nkgb.cloudfront.net/10502/88896001/hls/master.m3u8?ads.xumo_channelId=88896001",
       "group": "新闻",
       "region": "美国",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "公开 IPTV 源，已验证清单",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 20
+      "lastStatus": "network-dependent",
+      "sortOrder": 10
+    },
+    {
+      "id": "bloomberg-television-us",
+      "name": "Bloomberg Television",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-television/bloombergtv.m3u8?ads.vf=XfUcpFmGLda",
+      "group": "财经",
+      "region": "美国",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 11
+    },
+    {
+      "id": "espn8-the-ocho-us",
+      "name": "ESPN8 The Ocho",
+      "url": "https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8",
+      "group": "体育",
+      "region": "美国",
+      "sourceNote": "iptv-org TSN The Ocho 公开 HLS 源；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 12
     },
     {
       "id": "flo-hockey-us",
@@ -306,12 +209,38 @@
       "url": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8",
       "group": "体育",
       "region": "美国",
+      "sourceNote": "iptv-org 公开体育源；本轮本地探测音视频正常",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "iptv-org 公开体育源",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 21
+      "lastStatus": "network-dependent",
+      "sortOrder": 13
+    },
+    {
+      "id": "fubo-sports-network-us",
+      "name": "fubo Sports Network",
+      "url": "https://dnf08l6u6uxnz.cloudfront.net/master.m3u8",
+      "group": "体育",
+      "region": "美国",
+      "sourceNote": "iptv-org 公开 HLS 源；当前线路探测超时，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 14
+    },
+    {
+      "id": "stadium-us",
+      "name": "Stadium",
+      "url": "https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8",
+      "group": "体育",
+      "region": "美国",
+      "sourceNote": "iptv-org 公开 HLS 源；当前线路探测超时，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 15
     },
     {
       "id": "waypoint-tv-us",
@@ -319,12 +248,142 @@
       "url": "https://waypoint-waypointtv-firetv.amagi.tv/playlist.m3u8",
       "group": "体育",
       "region": "美国",
+      "sourceNote": "iptv-org 公开户外/体育源；本轮本地探测音视频正常",
       "logoUrl": "",
       "source": "remote",
-      "sourceNote": "iptv-org 公开户外/体育源",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "network-dependent",
+      "sortOrder": 16
+    },
+    {
+      "id": "bfm-tech-co-us",
+      "name": "BFM Tech & Co",
+      "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
+      "group": "科技",
+      "region": "美国",
+      "sourceNote": "iptv-org 法国公开科技财经源；按用户美国科技目标保留，本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 17
+    },
+    {
+      "id": "cbc-news-ca",
+      "name": "CBC News",
+      "url": "https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8",
+      "group": "新闻",
+      "region": "加拿大",
+      "sourceNote": "iptv-org 公开源；当前线路探测超时，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 18
+    },
+    {
+      "id": "citynewsvancouver-ca",
+      "name": "CityNews 温哥华",
+      "url": "https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8",
+      "group": "新闻",
+      "region": "加拿大",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 19
+    },
+    {
+      "id": "citynews-toronto-ca",
+      "name": "CityNews Toronto",
+      "url": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8",
+      "group": "新闻",
+      "region": "加拿大",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 20
+    },
+    {
+      "id": "rthk-tv31-hk",
+      "name": "港台电视31",
+      "url": "https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8",
+      "group": "综合",
+      "region": "香港",
+      "sourceNote": "iptv-org/RTHK 公开 HLS；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 21
+    },
+    {
+      "id": "hoy-ibc-hk",
+      "name": "HOY International Business Channel",
+      "url": "https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8",
+      "group": "财经",
+      "region": "香港",
+      "sourceNote": "iptv-org 公开 HLS 源标记 Geo-blocked；交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
       "sortOrder": 22
+    },
+    {
+      "id": "phoenix-info-hk",
+      "name": "凤凰资讯",
+      "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8",
+      "group": "新闻",
+      "region": "香港",
+      "sourceNote": "iptv-org 公开 HLS 源；当前线路探测超时，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 23
+    },
+    {
+      "id": "tvbsasia-tw",
+      "name": "TVBS Asia",
+      "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8",
+      "group": "娱乐",
+      "region": "台湾",
+      "sourceNote": "iptv-org 公开 HLS 源；本轮本地探测音视频正常",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 24
+    },
+    {
+      "id": "taiwanplus-tv-tw",
+      "name": "TaiwanPlus TV",
+      "url": "https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/6282251407001/playlist.m3u8",
+      "group": "新闻",
+      "region": "台湾",
+      "sourceNote": "iptv-org 公开 HLS 源；当前线路返回 403，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 25
+    },
+    {
+      "id": "taiwan-indigenous-tv-tw",
+      "name": "Taiwan Indigenous TV",
+      "url": "http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8",
+      "group": "综合",
+      "region": "台湾",
+      "sourceNote": "iptv-org 公开 HLS 源；当前线路返回 403，交由聚合器动态过滤",
+      "logoUrl": "",
+      "source": "remote",
+      "isBundledCandidate": true,
+      "lastStatus": "network-dependent",
+      "sortOrder": 26
     }
   ]
 }
