@@ -1,13 +1,13 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="shenzhen-satellite" group-title="中国大陆 - 卫视",深圳卫视
+#EXTINF:-1 group-title="中国大陆 - 卫视",深圳卫视
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 tvg-id="abc-news-live-us" group-title="美国 - 新闻",ABC News Live
+#EXTINF:-1 group-title="美国 - 新闻",ABC News Live
 https://abcnews-streams.akamaized.net/hls/live/2023561/abcnewshudson2/master_4000.m3u8
-#EXTINF:-1 tvg-id="espn8-the-ocho-us" group-title="美国 - 体育",ESPN8 The Ocho
+#EXTINF:-1 group-title="美国 - 体育",ESPN8 The Ocho
 https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
-#EXTINF:-1 tvg-id="flo-hockey-us" group-title="美国 - 体育",FloHockey 24/7
+#EXTINF:-1 group-title="美国 - 体育",FloHockey 24/7
 https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="waypoint-tv-us" group-title="美国 - 体育",Waypoint TV
+#EXTINF:-1 group-title="美国 - 体育",Waypoint TV
 https://waypoint-waypointtv-firetv.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="tvbsasia-tw" group-title="台湾 - 娱乐",TVBS Asia
+#EXTINF:-1 group-title="台湾 - 娱乐",TVBS Asia
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
