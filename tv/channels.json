@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "publishedAt": "2026-05-17T02:45:31.905Z",
+  "version": 17,
+  "publishedAt": "2026-05-17T04:02:10.898Z",
   "channels": [
     {
       "id": "cctv-1",
@@ -465,12 +465,12 @@
       "group": "网页直播",
       "region": "中国大陆",
       "source": "remote",
-      "sourceNote": "CCTV 网页直播入口；由 MyTV 内置浏览器打开",
+      "sourceNote": "CCTV 网页直播入口；由使用端本地网络直接访问，若提示版权限制请关闭 VPN 或更换本地线路",
       "disabled": false,
       "isBundledCandidate": true,
       "lastStatus": "web",
-      "lastCheckedAt": 1778985931906,
-      "remoteVersion": 15,
+      "lastCheckedAt": 1778990530898,
+      "remoteVersion": 17,
       "sortOrder": 46
     },
     {
@@ -482,12 +482,12 @@
       "group": "网页直播",
       "region": "中国大陆",
       "source": "remote",
-      "sourceNote": "CCTV 网页直播入口；由 MyTV 内置浏览器打开",
+      "sourceNote": "CCTV 网页直播入口；由使用端本地网络直接访问，若提示版权限制请关闭 VPN 或更换本地线路",
       "disabled": false,
       "isBundledCandidate": true,
       "lastStatus": "web",
-      "lastCheckedAt": 1778985931906,
-      "remoteVersion": 15,
+      "lastCheckedAt": 1778990530898,
+      "remoteVersion": 17,
       "sortOrder": 56
     },
     {
@@ -533,12 +533,12 @@
       "group": "网页直播",
       "region": "中国大陆",
       "source": "remote",
-      "sourceNote": "CCTV 网页直播入口；由 MyTV 内置浏览器打开",
+      "sourceNote": "CCTV 网页直播入口；由使用端本地网络直接访问，若提示版权限制请关闭 VPN 或更换本地线路",
       "disabled": false,
       "isBundledCandidate": true,
       "lastStatus": "web",
-      "lastCheckedAt": 1778985931906,
-      "remoteVersion": 15,
+      "lastCheckedAt": 1778990530898,
+      "remoteVersion": 17,
       "sortOrder": 86
     }
   ]

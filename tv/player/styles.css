@@ -208,6 +208,22 @@ h1 {
   align-items: center;
 }
 
+.channel-button.disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.channel-button.disabled:hover,
+.channel-button.disabled:focus {
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+}
+
+.channel-button.disabled .channel-name {
+  color: var(--muted);
+}
+
 .channel-number {
   color: var(--muted);
   font-variant-numeric: tabular-nums;

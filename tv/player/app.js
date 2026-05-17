@@ -68,12 +68,14 @@ function renderChannels() {
   channels.forEach((channel, index) => {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = `channel-button${channel.id === state.selectedChannelId ? ' active' : ''}`;
+    const disabled = Boolean(channel.disabled);
+    button.className = `channel-button${channel.id === state.selectedChannelId ? ' active' : ''}${disabled ? ' disabled' : ''}`;
+    button.disabled = disabled;
     button.innerHTML = `
       <span class="channel-number">${String(index + 1).padStart(3, '0')}</span>
       <span>
-        <span class="channel-name">${escapeHtml(channel.name)}</span>
-        <span class="channel-meta">${escapeHtml(channel.region || '未知地区')} / ${escapeHtml(channel.group || '综合')}</span>
+        <span class="channel-name">${escapeHtml(channel.name)}${disabled ? ' 暂不可用' : ''}</span>
+        <span class="channel-meta">${escapeHtml(channel.region || '未知地区')} / ${escapeHtml(channel.group || '综合')}${disabled ? ` / ${escapeHtml(statusLabel(channel.lastStatus))}` : ''}</span>
       </span>
     `;
     button.addEventListener('click', () => playChannel(channel));
@@ -90,6 +92,16 @@ function renderChannels() {
 }
 
 function playChannel(channel) {
+  if (channel.disabled) {
+    state.selectedChannelId = channel.id;
+    renderChannels();
+    els.nowTitle.textContent = channel.name;
+    els.nowMeta.textContent = `${channel.region || '未知地区'} / ${channel.group || '综合'}`;
+    els.sourceStatus.textContent = channel.sourceNote || statusLabel(channel.lastStatus);
+    setSignal(statusLabel(channel.lastStatus));
+    return;
+  }
+
   state.selectedChannelId = channel.id;
   renderChannels();
 
@@ -197,6 +209,23 @@ function tryNextUrl(channel) {
 
 function setSignal(value) {
   els.signalText.textContent = value;
+}
+
+function statusLabel(status) {
+  switch (String(status || '').trim()) {
+    case 'copyright-restricted':
+      return '版权限制';
+    case 'forbidden':
+      return '拒绝访问';
+    case 'timeout':
+      return '超时';
+    case 'network-unreachable':
+    case 'ipv6-unavailable':
+    case 'line-dependent':
+      return '需要特定线路';
+    default:
+      return status || '不可用';
+  }
 }
 
 async function toggleFullscreen() {
