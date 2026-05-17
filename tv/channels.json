@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "publishedAt": "2026-05-17T01:09:40.955Z",
+  "version": 14,
+  "publishedAt": "2026-05-17T01:30:10.955Z",
   "channels": [
     {
       "id": "cctv-1",
@@ -84,14 +84,14 @@
       ],
       "group": "新闻",
       "region": "中国大陆",
-      "sourceNote": "公开源主源，含 fanmingming/live IPv6 备用源；当前线路超时",
+      "sourceNote": "公开源主源，含 fanmingming/live IPv6 备用源；无信号占位流",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "timeout",
+      "lastStatus": "placeholder-stream",
       "sortOrder": 4,
       "disabled": true,
-      "lastCheckedAt": 1778980068003
+      "lastCheckedAt": 1778981410956
     },
     {
       "id": "beijing-satellite",
