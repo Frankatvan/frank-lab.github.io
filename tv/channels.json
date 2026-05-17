@@ -1,6 +1,6 @@
 {
-  "version": 18,
-  "publishedAt": "2026-05-17T19:08:29.501Z",
+  "version": 19,
+  "publishedAt": "2026-05-17T19:10:50.040Z",
   "channels": [
     {
       "id": "cctv-1",
@@ -11,14 +11,14 @@
       ],
       "group": "央视",
       "region": "中国大陆",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 0,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "cctv-2",
@@ -29,14 +29,14 @@
       ],
       "group": "央视",
       "region": "中国大陆",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 1,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "cctv-4",
@@ -47,14 +47,14 @@
       ],
       "group": "央视",
       "region": "中国大陆",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 2,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "cctv-5",
@@ -65,14 +65,14 @@
       ],
       "group": "央视体育",
       "region": "中国大陆",
-      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；当前本地线路无 IPv6 路由，IPv4 备用源超时；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 3,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "cctv-13",
@@ -84,14 +84,14 @@
       ],
       "group": "新闻",
       "region": "中国大陆",
-      "sourceNote": "iptv-org 同名公开源当前非标准/占位响应；fanmingming/live IPv6 备用源需可达 IPv6 线路",
+      "sourceNote": "iptv-org 同名公开 HLS；播放列表可达但分片为相对 API 路径，本轮 ffprobe 未通过，保留网页直播备用",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "invalid-data",
+      "lastStatus": "hls-smoke-failed",
       "sortOrder": 4,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "beijing-satellite",
@@ -102,14 +102,14 @@
       ],
       "group": "卫视",
       "region": "中国大陆",
-      "sourceNote": "公开主源本地超时；fanmingming/live IPv6 同名备用源需可达 IPv6 线路",
+      "sourceNote": "公开主源本地超时；fanmingming/live IPv6 同名备用源需可达 IPv6 线路；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 5,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "dragon-tv",
@@ -120,14 +120,14 @@
       ],
       "group": "卫视",
       "region": "中国大陆",
-      "sourceNote": "公开主源本地超时；fanmingming/live IPv6 同名备用源需可达 IPv6 线路",
+      "sourceNote": "公开主源本地超时；fanmingming/live IPv6 同名备用源需可达 IPv6 线路；当前网络无 IPv6 路由，IPv4 备用源线路超时，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 6,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "shenzhen-satellite",
@@ -138,14 +138,14 @@
       ],
       "group": "卫视",
       "region": "中国大陆",
-      "sourceNote": "fanmingming/live IPv6 同名公开源需可达 IPv6 线路；IPv4 备用源本地超时",
+      "sourceNote": "fanmingming/live IPv6 同名公开源；当前网络无 IPv6 路由，需 IPv6 或大陆运营商线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "line-dependent",
+      "lastStatus": "ipv6-route-unavailable",
       "sortOrder": 7,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "abc-news-live-us",
@@ -157,14 +157,14 @@
       ],
       "group": "新闻",
       "region": "美国",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 公开源；本轮健康检查通过；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 8,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "livenowfromfox-us",
@@ -175,14 +175,14 @@
       ],
       "group": "新闻",
       "region": "美国",
-      "sourceNote": "iptv-org 同名公开源标记 Geo-blocked；备用源无可用视频流",
+      "sourceNote": "iptv-org 同名公开源标记 Geo-blocked；备用源无可用视频流；本轮检查 forbidden",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "forbidden",
       "sortOrder": 9,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "nbcnewsnow-us",
@@ -194,10 +194,10 @@
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "timeout",
       "sortOrder": 10,
-      "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "disabled": true,
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "bloomberg-television-us",
@@ -205,29 +205,29 @@
       "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-television/bloombergtv.m3u8?ads.vf=XfUcpFmGLda",
       "group": "财经",
       "region": "美国",
-      "sourceNote": "iptv-org 同名公开源当前 404；未找到可用同名替代源",
+      "sourceNote": "iptv-org 同名公开源当前 404；未找到可用同名替代源；本轮检查 not-found",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "not-found",
       "sortOrder": 11,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "espn8-the-ocho-us",
       "name": "ESPN8 The Ocho",
-      "url": "https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8",
+      "url": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8",
       "group": "体育",
       "region": "美国",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 同名公开源；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 12,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "flo-hockey-us",
@@ -235,14 +235,14 @@
       "url": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8",
       "group": "体育",
       "region": "美国",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 公开源；本轮健康检查通过；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 13,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "fubo-sports-network-us",
@@ -250,14 +250,14 @@
       "url": "https://dnf08l6u6uxnz.cloudfront.net/master.m3u8",
       "group": "体育",
       "region": "美国",
-      "sourceNote": "iptv-org 同名公开源当前超时；未找到可用同名替代源",
+      "sourceNote": "iptv-org 同名公开源当前超时；未找到可用同名替代源；本轮检查 timeout",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "timeout",
       "sortOrder": 14,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "stadium-us",
@@ -265,14 +265,14 @@
       "url": "https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8",
       "group": "体育",
       "region": "美国",
-      "sourceNote": "iptv-org 同名公开源当前超时；未找到可用同名替代源",
+      "sourceNote": "iptv-org 同名公开源当前超时；未找到可用同名替代源；本轮检查 timeout",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "timeout",
       "sortOrder": 15,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "waypoint-tv-us",
@@ -280,14 +280,14 @@
       "url": "https://waypoint-waypointtv-firetv.amagi.tv/playlist.m3u8",
       "group": "体育",
       "region": "美国",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 公开源；本轮健康检查通过；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 16,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "bfm-tech-co-us",
@@ -295,14 +295,14 @@
       "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
       "group": "科技",
       "region": "美国",
-      "sourceNote": "iptv-org 同名公开源当前 4XX；未找到可用同名替代源",
+      "sourceNote": "iptv-org 同名公开源当前 4XX；未找到可用同名替代源；本轮检查 hls-smoke-failed",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "forbidden",
+      "lastStatus": "hls-smoke-failed",
       "sortOrder": 17,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "cbc-news-ca",
@@ -310,14 +310,14 @@
       "url": "https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8",
       "group": "新闻",
       "region": "加拿大",
-      "sourceNote": "iptv-org 同名公开源当前超时；jmp2.uk 替代候选返回 400",
+      "sourceNote": "iptv-org 同名公开源当前超时；jmp2.uk 替代候选返回 400；本轮检查 timeout",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "timeout",
       "sortOrder": 18,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "citynewsvancouver-ca",
@@ -325,14 +325,14 @@
       "url": "https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m3u8",
       "group": "新闻",
       "region": "加拿大",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 同名公开源；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 19,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "citynews-toronto-ca",
@@ -340,14 +340,14 @@
       "url": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8",
       "group": "新闻",
       "region": "加拿大",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 同名公开源；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 20,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "rthk-tv31-hk",
@@ -355,14 +355,14 @@
       "url": "https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8",
       "group": "综合",
       "region": "香港",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org/RTHK 同名公开 HLS；本轮复验返回 403，需香港/地区线路",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "forbidden",
       "sortOrder": 21,
-      "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "disabled": true,
+      "lastCheckedAt": 1779045050040
     },
     {
       "id": "hoy-ibc-hk",
@@ -370,14 +370,14 @@
       "url": "https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8",
       "group": "财经",
       "region": "香港",
-      "sourceNote": "iptv-org 同名公开源当前超时/地区相关",
+      "sourceNote": "iptv-org 同名公开源当前超时/地区相关；本轮检查 timeout",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "timeout",
       "sortOrder": 22,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "phoenix-info-hk",
@@ -385,14 +385,14 @@
       "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8",
       "group": "新闻",
       "region": "香港",
-      "sourceNote": "iptv-org 同名公开源当前本地线路超时",
+      "sourceNote": "iptv-org 同名公开源当前本地线路超时；本轮检查 timeout",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "timeout",
       "sortOrder": 23,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "tvbsasia-tw",
@@ -400,14 +400,14 @@
       "url": "http://38.64.72.148/hls/modn/list/4005/playlist.m3u8",
       "group": "娱乐",
       "region": "台湾",
-      "sourceNote": "iptv-org 公开源；本轮健康检查通过",
+      "sourceNote": "iptv-org 公开源；本轮健康检查通过；本轮 ffprobe 音视频探测通过",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 24,
       "disabled": false,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "taiwanplus-tv-tw",
@@ -415,14 +415,14 @@
       "url": "https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/6282251407001/playlist.m3u8",
       "group": "新闻",
       "region": "台湾",
-      "sourceNote": "iptv-org 同名公开源当前 403",
+      "sourceNote": "iptv-org 同名公开源当前 403；本轮检查 forbidden",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "forbidden",
       "sortOrder": 25,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     },
     {
       "id": "taiwan-indigenous-tv-tw",
@@ -430,14 +430,14 @@
       "url": "http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8",
       "group": "综合",
       "region": "台湾",
-      "sourceNote": "iptv-org 同名公开源当前 403",
+      "sourceNote": "iptv-org 同名公开源当前 403；本轮检查 forbidden",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "forbidden",
       "sortOrder": 26,
       "disabled": true,
-      "lastCheckedAt": 1779044909501
+      "lastCheckedAt": 1779044969130
     }
   ]
 }
