@@ -18,6 +18,7 @@ const els = {
   refreshButton: document.getElementById('refreshButton'),
   fullscreenButton: document.getElementById('fullscreenButton'),
   video: document.getElementById('video'),
+  webFrame: document.getElementById('webFrame'),
   idleOverlay: document.getElementById('idleOverlay'),
   nowTitle: document.getElementById('nowTitle'),
   nowMeta: document.getElementById('nowMeta'),
@@ -100,6 +101,11 @@ function playChannel(channel) {
   state.playbackUrls = playbackUrls(channel);
   state.playbackIndex = 0;
 
+  if (isWebChannel(channel)) {
+    playWebChannel(channel);
+    return;
+  }
+
   if (!state.playbackUrls.length) {
     setSignal('无地址');
     els.sourceStatus.textContent = '此频道没有播放地址';
@@ -109,14 +115,17 @@ function playChannel(channel) {
   playUrl(state.playbackUrls[state.playbackIndex], channel);
 }
 
+function isWebChannel(channel) {
+  return String(channel.type || 'hls').trim() === 'web';
+}
+
 function playbackUrls(channel) {
   return [channel.url, ...(Array.isArray(channel.backupUrls) ? channel.backupUrls : [])]
     .filter(Boolean)
     .filter((url, index, urls) => urls.indexOf(url) === index);
 }
 
-function playUrl(url, channel) {
-  els.streamLink.href = url;
+function resetHlsPlayer() {
   if (state.hls) {
     state.hls.destroy();
     state.hls = null;
@@ -124,6 +133,26 @@ function playUrl(url, channel) {
   els.video.pause();
   els.video.removeAttribute('src');
   els.video.load();
+}
+
+function playWebChannel(channel) {
+  resetHlsPlayer();
+  els.video.classList.add('hidden');
+  els.webFrame.classList.add('active');
+  els.webFrame.src = channel.url;
+  els.streamLink.href = channel.url;
+  els.streamLink.textContent = '打开网页';
+  els.sourceStatus.textContent = channel.sourceNote || '网页直播入口';
+  setSignal('网页');
+}
+
+function playUrl(url, channel) {
+  els.webFrame.removeAttribute('src');
+  els.webFrame.classList.remove('active');
+  els.video.classList.remove('hidden');
+  els.streamLink.href = url;
+  els.streamLink.textContent = '打开原始流';
+  resetHlsPlayer();
 
   if (els.video.canPlayType('application/vnd.apple.mpegurl')) {
     els.video.src = url;
