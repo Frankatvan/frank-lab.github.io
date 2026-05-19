@@ -1,0 +1,6 @@
+{
+  "version": 21,
+  "publishedAt": "2026-05-19T17:52:00.000Z",
+  "channelsUrl": "http://100.111.120.26:8080/channels.json",
+  "m3uUrl": "http://100.111.120.26:8080/channels.m3u"
+}

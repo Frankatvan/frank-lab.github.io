@@ -3,6 +3,7 @@
 Copy these files into the homepage project so they are served as:
 
 - `https://frankzh.top/tv/version.json`
+- `https://frankzh.top/tv/version-remote.json` (Tailnet remote profile)
 - `https://frankzh.top/tv/channels.json`
 - `https://frankzh.top/tv/channels.m3u`
 - `https://frankzh.top/tv/app-version.json`
