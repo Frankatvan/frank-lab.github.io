@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "publishedAt": "2026-05-17T19:10:50.040Z",
-  "channelsUrl": "https://mytv.frankzh.top/mytv-c38938b705fc2bc9e800206fb723621f/channels.json",
-  "m3uUrl": "https://mytv.frankzh.top/mytv-c38938b705fc2bc9e800206fb723621f/channels.m3u"
+  "version": 20,
+  "publishedAt": "2026-05-19T08:41:08.000Z",
+  "channelsUrl": "http://100.111.120.26:8080/channels.json",
+  "m3uUrl": "http://100.111.120.26:8080/channels.m3u"
 }
