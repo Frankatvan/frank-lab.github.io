@@ -789,6 +789,15 @@ input {
   font-weight: 700;
 }
 
+.quote-target {
+  margin-left: auto;
+  color: #5e6c7b;
+  font-size: 25px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
 .chart-canvas {
   min-height: 290px;
   margin: 0 12px;

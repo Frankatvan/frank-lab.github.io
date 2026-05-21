@@ -37,6 +37,20 @@ function renderQuote(root, quote) {
   });
 }
 
+function renderQuoteTarget(root, candles, targetHistory) {
+  const node = root.querySelector("[data-quote-target]");
+  if (!node) return;
+  const rows = candles.slice(-120).filter((row) => row.high && row.low && row.close);
+  const targetSeries = normalizeTargetHistory(targetHistory, rows);
+  const latestTarget = [...targetSeries].reverse().find((value) => Number.isFinite(value));
+  if (!Number.isFinite(latestTarget)) {
+    node.hidden = true;
+    return;
+  }
+  node.textContent = `目标 ${numberFormat.format(latestTarget)}`;
+  node.hidden = false;
+}
+
 function setPositionField(field, value, trendValue = null) {
   document.querySelectorAll(`[data-position-field="${field}"]`).forEach((node) => {
     node.textContent = value;
@@ -144,16 +158,6 @@ function candleSvg(candles, targetHistory = []) {
   const targetDots = targetPoints
     .map((point) => `<circle cx="${point.x}" cy="${point.y}" r="2.4" fill="#f58220" />`)
     .join("");
-  const latestTarget = targetPoints[targetPoints.length - 1];
-  const targetLabel = latestTarget
-    ? `
-      <text x="${Math.min(latestTarget.x + 8, width - pad.right - 96)}" y="${Math.max(latestTarget.y - 8, pad.top + 12)}" fill="#f58220" font-weight="700">
-        目标 ${numberFormat.format(latestTarget.value)}
-      </text>
-    `
-    : "";
-  const first = rows[0];
-  const last = rows[rows.length - 1];
   return `
     <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="日K与成交量">
       <rect width="${width}" height="${height}" fill="#fff" />
@@ -164,12 +168,8 @@ function candleSvg(candles, targetHistory = []) {
       ${shapes}
       ${targetPath}
       ${targetDots}
-      ${targetLabel}
-      ${targetPoints.length ? `<text x="${pad.left}" y="${pad.top + 14}" fill="#f58220" font-weight="700">平均目标价</text>` : ""}
       <text x="${width - pad.right + 8}" y="${pad.top + 4}" dominant-baseline="middle">${numberFormat.format(high)}</text>
       <text x="${width - pad.right + 8}" y="${pad.top + priceHeight}" dominant-baseline="middle">${numberFormat.format(low)}</text>
-      <text x="${pad.left}" y="${height - 5}">${first.date}</text>
-      <text x="${width - pad.right - 80}" y="${height - 5}">${last.date}</text>
       <text x="${pad.left}" y="${pad.top + priceHeight + 18}" fill="#697581">成交量</text>
     </svg>
   `;
@@ -198,9 +198,11 @@ async function hydrateChart(root) {
       return;
     }
     source.textContent = payload.source || "免费行情源";
+    const targetHistory = targetHistoryFrom(root);
     renderQuote(root, payload.quote || {});
+    renderQuoteTarget(root, payload.candles || [], targetHistory);
     renderPositionSummary(payload.quote || {});
-    canvas.innerHTML = candleSvg(payload.candles || [], targetHistoryFrom(root));
+    canvas.innerHTML = candleSvg(payload.candles || [], targetHistory);
   } catch (error) {
     source.textContent = "行情源暂不可用";
     canvas.innerHTML = `<p class="empty">${error}</p>`;
