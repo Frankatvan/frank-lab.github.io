@@ -1,0 +1,7 @@
+{
+  "symbol": "BCE.TO",
+  "source": "Manual CA fallback",
+  "quote": {},
+  "candles": [],
+  "error": "Canadian market data / 加拿大行情需要稳定免费源或带 key 的数据源；当前请用手动证据补充。"
+}
