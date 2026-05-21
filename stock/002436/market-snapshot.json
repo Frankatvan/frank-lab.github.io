@@ -2,13 +2,13 @@
   "symbol": "002436.SZ",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 35.09,
+    "latest": 34.48,
     "high": 36.41,
     "low": 33.5,
     "open": 33.54,
     "previous_close": 33.54,
-    "volume": 157955392,
-    "turnover": 5546256252.88
+    "volume": 172422862,
+    "turnover": 6048268010.86
   },
   "candles": [
     {

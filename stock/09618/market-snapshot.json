@@ -3,25 +3,25 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "京东集团-SW",
-    "latest": 125.5,
+    "latest": 124.3,
     "previous_close": 127.8,
     "open": 127.8,
-    "volume": 3069498,
-    "turnover": 387727744.27,
-    "change_percent": -1.8,
+    "volume": 3675280,
+    "turnover": 463366603.37,
+    "change_percent": -2.74,
     "high": 127.8,
-    "low": 125.1,
-    "trailing_pe": 21.87,
-    "price_to_book": 1.4,
-    "turnover_rate": 0.13,
-    "market_cap": 302439360000.0,
-    "dividend_yield": 0.031200000000000002,
+    "low": 124.2,
+    "trailing_pe": 21.66,
+    "price_to_book": 1.38,
+    "turnover_rate": 0.15,
+    "market_cap": 299547510000.0,
+    "dividend_yield": 0.0315,
     "fifty_two_week_high": 139.891,
     "fifty_two_week_low": 91.991,
-    "beta": 0.52,
-    "volume_ratio": 22.91,
+    "beta": 0.51,
+    "volume_ratio": -12.7,
     "eps_ttm": 3.918,
-    "average_price": 126.316
+    "average_price": 126.077
   },
   "candles": [
     {
@@ -1299,10 +1299,10 @@
     {
       "date": "2026-05-21",
       "open": 127.8,
-      "close": 124.9,
+      "close": 124.0,
       "high": 127.8,
-      "low": 124.8,
-      "volume": 3259796
+      "low": 123.9,
+      "volume": 4002831
     }
   ]
 }
