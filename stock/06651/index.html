@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>06651 五一视界 - Stock Lab</title>
+    <link rel="stylesheet" href="../static/styles.css?v=20260521-targetline">
+    <script src="../static/charts.js?v=20260521-targetline" defer></script>
+  </head>
+  <body class="public-share">
+    
+      <main class="workspace share-workspace">
+    
+      
+<section class="market-layout futu-workbench share-workbench">
+  
+
+  <section class="stock-main">
+    <div class="stock-sticky-head">
+      <header class="quote-head">
+        <div>
+          <p class="eyebrow">深度分析工作台</p>
+          <h1>06651 五一视界</h1>
+          <p>HK · HKD · 总账户 USD 计价</p>
+        </div>
+        
+      </header>
+      
+
+      
+      
+
+      <nav class="workbench-tabs" aria-label="研究维度" data-workbench-tabs>
+        <button type="button" class="active" data-tab-target="market-tab" aria-controls="market-tab" aria-selected="true">行情K线</button>
+        <button type="button" data-tab-target="profile-tab" aria-controls="profile-tab" aria-selected="false">公司简介</button>
+        <button type="button" data-tab-target="report-tab" aria-controls="report-tab" aria-selected="false">深度报告</button>
+        <button type="button" data-tab-target="thesis-tab" aria-controls="thesis-tab" aria-selected="false">每日判断</button>
+        <button type="button" data-tab-target="review-tab" aria-controls="review-tab" aria-selected="false">反方观点</button>
+        <button type="button" data-tab-target="fundamentals-tab" aria-controls="fundamentals-tab" aria-selected="false">基本面</button>
+        <button type="button" data-tab-target="street-tab" aria-controls="street-tab" aria-selected="false">传闻研报</button>
+        <button type="button" data-tab-target="events-tab" aria-controls="events-tab" aria-selected="false">重大事件</button>
+        
+      </nav>
+    </div>
+
+    <div class="tab-panels">
+      <section id="market-tab" class="tab-panel active chart-stage" data-tab-panel data-market-chart data-url="./market-snapshot.json">
+        <div class="stage-head">
+          <div>
+            <p class="eyebrow">Market Data</p>
+            <h2>日K与成交量</h2>
+          </div>
+          <span class="data-source" data-chart-source>免费行情源加载中</span>
+        </div>
+        <div class="quote-strip">
+          <strong data-quote-field="latest">--</strong>
+          <span data-quote-field="change_percent">--</span>
+          <small>HKD</small>
+        </div>
+        <div class="chart-canvas" data-candle-canvas>
+          <p class="empty">正在加载日K、成交量和关键行情指标。</p>
+        </div>
+        <script type="application/json" data-target-history-json>[{"action": "\u6301\u6709", "average_target_price": 70.25, "codex_target_price": 68.0, "created_at": "2026-05-20 17:36", "date": "2026-05-20", "gemini_target_price": 72.5, "latest_price": 75.45}, {"action": "\u6301\u6709", "average_target_price": 75.25, "codex_target_price": 68.0, "created_at": "2026-05-20 18:51", "date": "2026-05-20", "gemini_target_price": 82.5, "latest_price": 75.45}, {"action": "\u6301\u6709", "average_target_price": 69.0, "codex_target_price": 70.0, "created_at": "2026-05-21 08:15", "date": "2026-05-21", "gemini_target_price": 68.0, "latest_price": 75.45}, {"action": "\u51cf\u4ed3", "average_target_price": 70.0, "codex_target_price": 72.0, "created_at": "2026-05-21 12:18", "date": "2026-05-21", "gemini_target_price": 68.0, "latest_price": 80.7}]</script>
+        <div class="quote-grid">
+          <div><span>最高</span><strong data-quote-field="high">--</strong></div>
+          <div><span>最低</span><strong data-quote-field="low">--</strong></div>
+          <div><span>今开</span><strong data-quote-field="open">--</strong></div>
+          <div><span>昨收</span><strong data-quote-field="previous_close">--</strong></div>
+          <div><span>成交量</span><strong data-quote-field="volume">--</strong></div>
+          <div><span>市值</span><strong data-quote-field="market_cap">--</strong></div>
+          <div><span>市盈率TTM</span><strong data-quote-field="trailing_pe">--</strong></div>
+          <div><span>市净率</span><strong data-quote-field="price_to_book">--</strong></div>
+          <div><span>52周最高</span><strong data-quote-field="fifty_two_week_high">--</strong></div>
+          <div><span>52周最低</span><strong data-quote-field="fifty_two_week_low">--</strong></div>
+          <div><span>股息率</span><strong data-quote-field="dividend_yield">--</strong></div>
+          <div><span>Beta</span><strong data-quote-field="beta">--</strong></div>
+        </div>
+      </section>
+
+      <section id="profile-tab" class="tab-panel research-card company-profile" data-tab-panel hidden>
+        <p class="eyebrow">Company Profile</p>
+        <h2>公司简介</h2>
+        <section class="profile-block profile-overview">
+          <div class="profile-block-head">
+            <h3>概况</h3>
+            <span>›</span>
+          </div>
+          
+            <pre class="profile-text">五一视界，港股代码 06651，英文简称 51WORLD，上市主体为北京五一视界数字孪生科技股份有限公司。公司定位为中国数字孪生科技公司，主营数字孪生相关软件平台及服务，核心业务包括 51Aes 数字孪生平台、51Sim 合成数据与仿真平台、51Earth 数字地球平台。公司于 2025-12-30 在港交所主板上市，上市价 30.50 港元，发行股数约 4.14 亿股。来源：[港交所年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)、[etnet 公司资料](https://www.etnet.com.hk/www/sc/stocks/realtime/quote_ci_detail.php?code=6651)。</pre>
+          
+        </section>
+        <section class="profile-block profile-meta-block">
+          <div class="profile-block-head">
+            <h3>板块</h3>
+            <span>›</span>
+          </div>
+          <dl class="profile-meta-list">
+            <div>
+              <dt>市场</dt>
+              <dd>HK</dd>
+            </div>
+            <div>
+              <dt>代码</dt>
+              <dd>06651</dd>
+            </div>
+            <div>
+              <dt>币种</dt>
+              <dd>HKD</dd>
+            </div>
+            <div>
+              <dt>行业/概念</dt>
+              <dd>交易软件口径可归入“软件服务/资讯科技”，概念包括数字孪生、物理 AI、自动驾驶仿真、合成数据、空间智能、具身智能、国产 GPU 适配、低空经济/智能装备验证链条。</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="profile-block">
+          <div class="profile-block-head">
+            <h3>公司高管</h3>
+            <span>›</span>
+          </div>
+          
+            <pre class="profile-text">董事会包括执行董事李熠、王晨康、杜金燕、童珊、蒲歌；非执行董事杨谷；独立非执行董事李攀、林晨、张乐宁。李熠为董事长兼 CEO。来源：[港交所 2025 年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)。</pre>
+          
+        </section>
+        <section class="profile-block">
+          <div class="profile-block-head">
+            <h3>股东情况</h3>
+            <span>›</span>
+          </div>
+          
+            <pre class="profile-text">公开资料显示，李熠、LS 51World Holding Limited、星际宏图、青岛万物镜像等为重要股东；etnet 的 IPO 股东页面显示李熠、LS 51World、SBI Cross-border Advantage Fund、摩尔线程、国和三期、辰途系基金等持股。不同平台对“总股本/同类股本/好仓”口径存在差异，应以港交所权益披露和公司公告为准。来源：[etnet 大股东持股](https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=6651&amp;tab=majorsharesholder)、[同花顺 F10](https://basic.10jqka.com.cn/176/HK6651/holder.html)。</pre>
+          
+        </section>
+        <section class="profile-block">
+          <div class="profile-block-head">
+            <h3>基金与机构持股</h3>
+            <span>›</span>
+          </div>
+          
+            <pre class="profile-text">公开资料显示，李熠、LS 51World Holding Limited、星际宏图、青岛万物镜像等为重要股东；etnet 的 IPO 股东页面显示李熠、LS 51World、SBI Cross-border Advantage Fund、摩尔线程、国和三期、辰途系基金等持股。不同平台对“总股本/同类股本/好仓”口径存在差异，应以港交所权益披露和公司公告为准。来源：[etnet 大股东持股](https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=6651&amp;tab=majorsharesholder)、[同花顺 F10](https://basic.10jqka.com.cn/176/HK6651/holder.html)。
+可确认的机构型或产业资本包括 LS 51World Holding、SBI Cross-border Advantage Fund、国和三期、辰途系基金、摩尔线程等。未找到可核验的主动公募基金重仓明细；港股新股阶段更多体现为上市前投资人、基石/机构股东和中央结算系统持股，而非 A 股式季度基金持仓。</pre>
+          
+        </section>
+      </section>
+
+      <section id="daily-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Daily Tracking</p>
+        <h2>每日跟踪摘要</h2>
+        
+          <dl class="metrics-list daily-summary-metrics">
+            <div><dt>更新时间</dt><dd>2026-05-21 12:18</dd></div>
+            <div><dt>状态</dt><dd>COMPLETE</dd></div>
+            <div><dt>最新价</dt><dd>80.70</dd></div>
+            <div><dt>涨跌幅</dt><dd>6.96%</dd></div>
+            <div><dt>行情源</dt><dd>Tencent Finance free quote/K-line endpoints</dd></div>
+            <div><dt>新增证据</dt><dd>1</dd></div>
+            <div><dt>触发项</dt><dd>PRICE_MOVE_5PCT</dd></div>
+            <div><dt>建议重跑完整深度报告</dt><dd>是</dd></div>
+          </dl>
+          
+            <p class="daily-target-title">目标价与每日判断</p>
+            <section class="daily-target-strip">
+              <div>
+                <span>今日判断</span>
+                <strong class="daily-action">减仓</strong>
+              </div>
+              <div>
+                <span>Codex目标价</span>
+                <strong>72.00 HKD</strong>
+              </div>
+              <div>
+                <span>Gemini目标价</span>
+                <strong>68.00 HKD</strong>
+              </div>
+              <div>
+                <span>平均目标价</span>
+                <strong>70.00 HKD</strong>
+              </div>
+              <div>
+                <span>偏离目标价</span>
+                <strong>15.29%</strong>
+              </div>
+            </section>
+          
+          
+            <pre class="section-excerpt">一、今日行情
+06651 今日跟踪：最新价 80.70，涨跌幅 6.96%。
+
+二、持仓与预期收益
+当前无持仓；本次只更新观察池行情和证据。
+
+三、新增证据
+本次新增 1 条行情证据，作为后续深度报告和复盘分析的输入。
+
+四、触发检查
+触发项：PRICE_MOVE_5PCT。<strong class="decision-alert">风险</strong>关键词：未命中。建议重跑完整深度报告。</pre>
+          
+          
+            <pre class="section-excerpt daily-conclusion">五、今日结论
+今日判断：<strong class="decision-alert">减仓</strong>；Codex目标价 72.00，Gemini目标价 68.00，平均目标价 70.00，当前价相对目标价偏离 15.29%，置信度 中 79/100。
+建议重跑完整深度报告；继续按既定投资假设和<strong class="decision-alert">复盘触发</strong>条件跟踪。</pre>
+          
+          
+        
+      </section>
+
+      <section id="report-tab" class="tab-panel report-stage" data-tab-panel hidden>
+        <div class="stage-head">
+          <div>
+            <p class="eyebrow">报告流水线</p>
+            <h2>中文深度报告</h2>
+          </div>
+          <div class="pipeline">
+            <span>Codex 生成</span>
+            <span>Gemini 复核</span>
+            <span>长期跟踪</span>
+          </div>
+        </div>
+        
+          <pre class="report-preview">**06651 五一视界深度分析报告**
+
+截至本次整理，本地证据目录仅有 `evidence_manifest.md`，未发现 `/images` 子目录或图片文件。因此：没有可逐张核查的截图、图表或研报附图；本报告的“图片证据”栏结论为“未提供”。本地行情证据显示，06651 在 2026-05-20/21 的快照价为 75.45 港元、涨幅 13.03%（EVIDENCE-78/59/48），另有较早快照 79.15 港元、涨幅 18.58%（EVIDENCE-31）。注意：这些是行情快照，不应误读为全天收盘价或成交均价。
+
+**一、公司档案页式简介**
+
+概况：五一视界，港股代码 06651，英文简称 51WORLD，上市主体为北京五一视界数字孪生科技股份有限公司。公司定位为中国数字孪生科技公司，主营数字孪生相关软件平台及服务，核心业务包括 51Aes 数字孪生平台、51Sim 合成数据与仿真平台、51Earth 数字地球平台。公司于 2025-12-30 在港交所主板上市，上市价 30.50 港元，发行股数约 4.14 亿股。来源：[港交所年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)、[etnet 公司资料](https://www.etnet.com.hk/www/sc/stocks/realtime/quote_ci_detail.php?code=6651)。
+
+板块：交易软件口径可归入“软件服务/资讯科技”，概念包括数字孪生、物理 AI、自动驾驶仿真、合成数据、空间智能、具身智能、国产 GPU 适配、低空经济/智能装备验证链条。
+
+公司高管：董事会包括执行董事李熠、王晨康、杜金燕、童珊、蒲歌；非执行董事杨谷；独立非执行董事李攀、林晨、张乐宁。李熠为董事长兼 CEO。来源：[港交所 2025 年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)。
+
+股东情况：公开资料显示，李熠、LS 51World Holding Limited、星际宏图、青岛万物镜像等为重要股东；etnet 的 IPO 股东页面显示李熠、LS 51World、SBI Cross-border Advantage Fund、摩尔线程、国和三期、辰途系基金等持股。不同平台对“总股本/同类股本/好仓”口径存在差异，应以港交所权益披露和公司公告为准。来源：[etnet 大股东持股](https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=6651&amp;tab=majorsharesholder)、[同花顺 F10](https://basic.10jqka.com.cn/176/HK6651/holder.html)。
+
+基金/机构持股：可确认的机构型或产业资本包括 LS 51World Holding、SBI Cross-border Advantage Fund、国和三期、辰途系基金、摩尔线程等。未找到可核验的主动公募基金重仓明细；港股新股阶段更多体现为上市前投资人、基石/机构股东和中央结算系统持股，而非 A 股式季度基金持仓。
+
+**二、事实层：经营与财务**
+
+2025 年收入 3.48 亿元人民币，同比增长 21.0%；但<strong class="decision-alert">亏损</strong>扩大至 1.86 亿元，毛利率由 2024 年的 51.1%降至约 30.0%。分业务看，51Aes 收入约 2.74 亿元，占 78.9%；51Sim 收入约 5562 万元，占 16.0%；51Earth 收入约 1773 万元。来源：[港交所年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)、[etnet 公司资料](https://www.etnet.com.hk/www/sc/stocks/realtime/quote_ci_detail.php?code=6651)。
+
+费用端压力明显：2025 年销售费用 6445 万元，行政费用 1.06 亿元，研发费用 8230 万元，应收及合约资产减值 4132 万元。现金层面，2025 年末现金及等价物约 7.97 亿元，银行贷款约 2.86 亿元，资产负债率约 44.7%。事实含义是：公司上市融资后短期现金垫较厚，但商业模式仍处在高投入、低利润兑现阶段。
+
+按 75.45 港元快照价和约 4.14 亿股总股本粗算，市值约 312 亿港元。以 2025 年 3.48 亿元人民币收入衡量，静态 PS 极高；这说明当前股价主要交易“物理 AI/仿真数据平台成长性”，而不是传统盈利估值。
+
+**三、投资假设**
+
+核心多头假设：51Sim 从“项目制仿真软件”升级为“物理 AI 数据与验证基础设施”。公司公告称，51Sim 在中国端到端高阶智驾仿真及数据平台市场份额为 53.5%，并与中国前十大车企中 8 家建立合作，覆盖六家国家级测试机构。若 L3/L4 智驾准入把仿真验证变成刚需，51Sim 收入弹性可能显著高于公司整体。来源：[3 月 9 日业务更新](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0309/2026030901260.pdf)。
+
+第二假设：公司可通过 NVIDIA NuRec、摩尔线程 MTT S5000 适配、SimOne4.0、51Claw 等，把自动驾驶仿真能力外溢到机器人、低空经济、空间智能场景。来源：[NVIDIA 集成公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0318/2026031801688.pdf)、[摩尔线程适配公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0223/2026022300556.pdf)、[51Claw 公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0324/2026032400011.pdf)。
+
+关键推断：如果 2026 年 51Sim <strong class="decision-alert">放量</strong>且毛利率修复，公司估值可被成长叙事支撑；如果收入增长仍主要来自低毛利集成项目，当前估值会很脆弱。
+
+**四、研报观点**
+
+偏多观点：中信证券首次覆盖给予“增持”，目标价 68 港元，认为公司是物理 AI 时代“数据卖铲人”，预计 51Sim 2026 年可能高增长，并认为 2027 年接近盈亏平衡、2028 年转正。来源：[新浪转载智通/中信观点](https://finance.sina.com.cn/stock/hkstock/hkgg/2026-04-22/doc-inhvkqhe4359459.shtml)。
+
+更激进观点：部分卖方/第三方报告给出更高目标价，例如 199.74 港元，采用 2026E PS 114 倍、预计 2026 年收入 6.26 亿元。该假设对收入增速、毛利率恢复和估值溢价要求很高，应作为乐观情景而非基准。来源：[研报 PDF](https://pdf.dfcfw.com/pdf/H3_AP202603271820821591_1.pdf?1774691743000.pdf=)。
+
+反向/谨慎观点：2025 年已经出现“增收不增利”，毛利率下滑、减值扩大、应收周转拉长。若公司用战略降价换准入但后续无法提价或转订阅，市场会重新按<strong class="decision-alert">亏损</strong>软件服务商定价。来源：[经济观察网/新浪](https://finance.sina.com.cn/roll/2026-04-06/doc-inhtprnc6173766.shtml)。
+
+**五、传闻与情绪**
+
+传闻/情绪层面，5 月以来“物理 AI”成为市场热点；媒体报道提到孙宇晨称未来主线是物理 AI，并准备大额布局相关方向，这推动了市场对五一视界的关注。该信息属于市场情绪和名人观点，不等于公司订单或业绩。来源：[新浪 5 月 20 日异动报道](https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-20/doc-inhypaep9510751.shtml)。
+
+政策情绪方面，工信部、国家数据局“模数共振”行动被市场解读为物理 AI、智能网联汽车、低空装备的催化。这里的事实是政策方向利好数据与模型协同；推断是五一视界可能受益；尚不能直接推导为公司新增合同。来源：[新浪 5 月 7 日异动报道](https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-07/doc-inhxahrf2779335.shtml)。
+
+**六、重大事件**
+
+2025-12-30：港股上市，发行价 30.50 港元。  
+2026-01-22：稳定价格期间结束，无稳定价格行动，超额配股权失效。来源：[港交所公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0122/2026012200344.pdf)。  
+2026-02-23：SimOne4.0 完成摩尔线程 MTT S5000 GPU 适配。  
+2026-03-09：公告 51Sim 市占率 53.5%，并称中国物理 AI 仿真及数据平台 2030 年市场规模预计 1806.1 亿元。  
+2026-03-18：公告与 NVIDIA Omniverse NuRec 深度集成。  
+2026-03-24：公告 51Claw 具身 AI 系统平台。  
+2026-04-27：授出 94.02 万份 RSU，约占已发行股份 0.23%，覆盖 303 名董事及员工，归属不设置业绩目标。来源：[RSU 公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042800257.pdf)。
+
+**七、反方观点**
+
+第一，估值先行过多。75.45 港元对应的市值已经把 2026-2028 年高增长、毛利修复和平台化转型提前计入；只要收入或毛利率不及预期，回撤弹性会很大。
+
+第二，毛利率下滑不是小问题。2025 年收入增长 21%，但毛利减少、<strong class="decision-alert">亏损</strong>扩大，说明公司在争取市场准入时付出了价格和成本代价。管理层称毛利率下降具有阶段性，但这需要后续财报验证。
+
+第三，应收与减值削弱收入质量。应收及合约资产减值扩大，意味着项目制业务回款和客户预算周期仍是<strong class="decision-alert">风险</strong>点。
+
+第四，51Sim 叙事很强，但收入体量仍小。2025 年 51Sim 收入约 5562 万元，只占总收入 16%；市场给的却是物理 AI 平台估值。短期最大矛盾是“叙事占比高、收入占比低”。
+
+第五，RSU 无业绩目标虽有留才作用，但对外部股东而言，激励约束不够硬，未来若继续授予，会带来摊薄和费用压力。
+
+**八、结论与操作框架**
+
+事实结论：五一视界是港股稀缺的数字孪生/物理 AI 标的，拥有可验证的上市文件、业务公告、51Sim 市占率披露和多条产业合作线索。但 2025 年财务质量尚未证明“平台型高毛利增长”，目前仍是高估值、高波动、强主题驱动资产。
+
+观点结论：中长期看，公司最大的价值在 51Sim 能否从智驾仿真扩展为物理 AI 训练、验证和合成数据基础设施；短中期看，股价更容易受政策、AI 主题、名人言论和卖方目标价驱动。以当前快照价 75.45 港元看，不宜把它当作低估值基本面票，更适合作为高<strong class="decision-alert">风险</strong>成长观察标的。
+
+<strong class="decision-alert">复盘触发</strong>条件：  
+1. 2026 中报确认 51Sim 收入同比大幅增长，且收入占比明显提升。  
+2. 毛利率回升至 45%-50%区间，证明 2025 年低毛利确为阶段性。  
+3. 应收账款和减值改善，经营现金流不再显著拖累利润表。  
+4. 公司披露 51Sim 或物理 AI 工厂的实质合同、续费、SaaS/用量付费数据。  
+5. 若股价<strong class="decision-alert">跌破</strong> 60 港元且无业绩兑现，说明主题交易退潮；若继续突破 80 港元但无新增基本面，应提高追高<strong class="decision-alert">风险</strong>权重。  
+6. 2026-12-30 前后注意上市前股东解禁和流通压力。
+
+本次尝试按 AGENTS.md 发送完成通知，但 `codex-notify` 在只读沙箱下无法创建临时文件，iMessage 回退也失败；报告本身已完成。</pre>
+        
+      </section>
+
+      <section id="thesis-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Strategy Decision</p>
+        <h2>每日判断</h2>
+        
+          <div class="decision-hero">
+            <span>今日判断</span>
+            <strong>减仓</strong>
+            <em>置信度 中 79/100</em>
+          </div>
+          <dl class="metrics-list daily-summary-metrics">
+            <div><dt>更新时间</dt><dd>2026-05-21 12:18</dd></div>
+            <div><dt>当前股价</dt><dd>80.70 HKD</dd></div>
+            <div><dt>Codex 目标价</dt><dd>72.00 HKD</dd></div>
+            <div><dt>Gemini 目标价</dt><dd>68.00 HKD</dd></div>
+            <div><dt>平均目标价</dt><dd>70.00 HKD</dd></div>
+            <div><dt>目标价分歧</dt><dd>5.71%</dd></div>
+            <div><dt>偏离目标价</dt><dd>15.29%</dd></div>
+            <div><dt>风险触发</dt><dd>PRICE_MOVE_5PCT、股价突破80港元但缺少新增业绩兑现、静态PS极高且亏损扩大、毛利率修复与51Sim放量待验证、应收及合约资产减值压力、物理AI情绪交易退潮风险、估值先行透支未来预期、毛利率下滑与增收不增利、核心AI业务收入占比过低、应收账款及合约资产减值风险、2026年底前解禁压力</dd></div>
+          </dl>
+          <pre class="section-excerpt">当前价 80.70 HKD，平均目标价 70.00，偏离率 15.29%，目标价分歧 5.71%，规则动作：<strong class="decision-alert">减仓</strong>。置信度评分：79/100；扣分：目标价分歧 30/30、证据质量 20/20、财报新鲜度 15/15、<strong class="decision-alert">风险</strong>触发 5/20、模型一致性 9/15。Codex：51Sim叙事强但收入占比仍低，2025毛利率降至约30%、<strong class="decision-alert">亏损</strong>和减值扩大；80.7已高于中信68元目标，主题溢价偏满。 Gemini：股价已突破80港元，过度计入未来高增长预期。25年增收不增利、毛利率降至30%，核心51Sim收入占比仅16%。基准采纳中信68港元目标价，当前属高<strong class="decision-alert">风险</strong>主题博弈，基本面证实前下行回撤弹性极大。</pre>
+          
+            <section class="profile-block">
+              <div class="profile-block-head">
+                <h3>长期投资假设</h3>
+                <span>›</span>
+              </div>
+              <pre class="profile-text">核心多头假设：51Sim 从“项目制仿真软件”升级为“物理 AI 数据与验证基础设施”。公司公告称，51Sim 在中国端到端高阶智驾仿真及数据平台市场份额为 53.5%，并与中国前十大车企中 8 家建立合作，覆盖六家国家级测试机构。若 L3/L4 智驾准入把仿真验证变成刚需，51Sim 收入弹性可能显著高于公司整体。来源：[3 月 9 日业务更新](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0309/2026030901260.pdf)。
+
+第二假设：公司可通过 NVIDIA NuRec、摩尔线程 MTT S5000 适配、SimOne4.0、51Claw 等，把自动驾驶仿真能力外溢到机器人、低空经济、空间智能场景。来源：[NVIDIA 集成公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0318/2026031801688.pdf)、[摩尔线程适配公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0223/2026022300556.pdf)、[51Claw 公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0324/2026032400011.pdf)。
+
+关键推断：如果 2026 年 51Sim <strong class="decision-alert">放量</strong>且毛利率修复，公司估值可被成长叙事支撑；如果收入增长仍主要来自低毛利集成项目，当前估值会很脆弱。</pre>
+            </section>
+          
+          
+            <section class="profile-block">
+              <div class="profile-block-head">
+                <h3>目标价日志</h3>
+                <span>›</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>时间</th>
+                      <th>动作</th>
+                      <th>当前价</th>
+                      <th>Codex</th>
+                      <th>Gemini</th>
+                      <th>平均</th>
+                      <th>偏离</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                      <tr>
+                        <td>2026-05-21 12:18</td>
+                        <td>减仓</td>
+                        <td>80.70</td>
+                        <td>72.00</td>
+                        <td>68.00</td>
+                        <td>70.00</td>
+                        <td>15.29%</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>2026-05-21 08:15</td>
+                        <td>持有</td>
+                        <td>75.45</td>
+                        <td>70.00</td>
+                        <td>68.00</td>
+                        <td>69.00</td>
+                        <td>9.35%</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>2026-05-20 18:51</td>
+                        <td>持有</td>
+                        <td>75.45</td>
+                        <td>68.00</td>
+                        <td>82.50</td>
+                        <td>75.25</td>
+                        <td>0.27%</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>2026-05-20 17:36</td>
+                        <td>持有</td>
+                        <td>75.45</td>
+                        <td>68.00</td>
+                        <td>72.50</td>
+                        <td>70.25</td>
+                        <td>7.40%</td>
+                      </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          
+          
+        
+      </section>
+
+      <section id="risk-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Risk</p>
+        <h2>风险点</h2>
+        
+          <pre class="section-excerpt">第一，估值先行过多。75.45 港元对应的市值已经把 2026-2028 年高增长、毛利修复和平台化转型提前计入；只要收入或毛利率不及预期，回撤弹性会很大。
+
+第二，毛利率下滑不是小问题。2025 年收入增长 21%，但毛利减少、<strong class="decision-alert">亏损</strong>扩大，说明公司在争取市场准入时付出了价格和成本代价。管理层称毛利率下降具有阶段性，但这需要后续财报验证。
+
+第三，应收与减值削弱收入质量。应收及合约资产减值扩大，意味着项目制业务回款和客户预算周期仍是<strong class="decision-alert">风险</strong>点。
+
+第五，RSU 无业绩目标虽有留才作用，但对外部股东而言，激励约束不够硬，未来若继续授予，会带来摊薄和费用压力。</pre>
+        
+      </section>
+
+      <section id="review-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Review</p>
+        <h2>反方观点</h2>
+        
+          <pre class="section-excerpt">第一，估值先行过多。75.45 港元对应的市值已经把 2026-2028 年高增长、毛利修复和平台化转型提前计入；只要收入或毛利率不及预期，回撤弹性会很大。
+
+第二，毛利率下滑不是小问题。2025 年收入增长 21%，但毛利减少、<strong class="decision-alert">亏损</strong>扩大，说明公司在争取市场准入时付出了价格和成本代价。管理层称毛利率下降具有阶段性，但这需要后续财报验证。
+
+第三，应收与减值削弱收入质量。应收及合约资产减值扩大，意味着项目制业务回款和客户预算周期仍是<strong class="decision-alert">风险</strong>点。
+
+第四，51Sim 叙事很强，但收入体量仍小。2025 年 51Sim 收入约 5562 万元，只占总收入 16%；市场给的却是物理 AI 平台估值。短期最大矛盾是“叙事占比高、收入占比低”。
+
+第五，RSU 无业绩目标虽有留才作用，但对外部股东而言，激励约束不够硬，未来若继续授予，会带来摊薄和费用压力。</pre>
+        
+      </section>
+
+      <section id="fundamentals-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Fundamentals</p>
+        <h2>公司财报与基本面</h2>
+        
+          <pre class="section-excerpt">2025 年收入 3.48 亿元人民币，同比增长 21.0%；但<strong class="decision-alert">亏损</strong>扩大至 1.86 亿元，毛利率由 2024 年的 51.1%降至约 30.0%。分业务看，51Aes 收入约 2.74 亿元，占 78.9%；51Sim 收入约 5562 万元，占 16.0%；51Earth 收入约 1773 万元。来源：[港交所年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)、[etnet 公司资料](https://www.etnet.com.hk/www/sc/stocks/realtime/quote_ci_detail.php?code=6651)。
+
+费用端压力明显：2025 年销售费用 6445 万元，行政费用 1.06 亿元，研发费用 8230 万元，应收及合约资产减值 4132 万元。现金层面，2025 年末现金及等价物约 7.97 亿元，银行贷款约 2.86 亿元，资产负债率约 44.7%。事实含义是：公司上市融资后短期现金垫较厚，但商业模式仍处在高投入、低利润兑现阶段。
+
+按 75.45 港元快照价和约 4.14 亿股总股本粗算，市值约 312 亿港元。以 2025 年 3.48 亿元人民币收入衡量，静态 PS 极高；这说明当前股价主要交易“物理 AI/仿真数据平台成长性”，而不是传统盈利估值。</pre>
+        
+      </section>
+
+      <section id="street-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Street</p>
+        <h2>市场传闻与情绪</h2>
+        
+          <pre class="section-excerpt">偏多观点：中信证券首次覆盖给予“增持”，目标价 68 港元，认为公司是物理 AI 时代“数据卖铲人”，预计 51Sim 2026 年可能高增长，并认为 2027 年接近盈亏平衡、2028 年转正。来源：[新浪转载智通/中信观点](https://finance.sina.com.cn/stock/hkstock/hkgg/2026-04-22/doc-inhvkqhe4359459.shtml)。
+
+更激进观点：部分卖方/第三方报告给出更高目标价，例如 199.74 港元，采用 2026E PS 114 倍、预计 2026 年收入 6.26 亿元。该假设对收入增速、毛利率恢复和估值溢价要求很高，应作为乐观情景而非基准。来源：[研报 PDF](https://pdf.dfcfw.com/pdf/H3_AP202603271820821591_1.pdf?1774691743000.pdf=)。
+
+反向/谨慎观点：2025 年已经出现“增收不增利”，毛利率下滑、减值扩大、应收周转拉长。若公司用战略降价换准入但后续无法提价或转订阅，市场会重新按<strong class="decision-alert">亏损</strong>软件服务商定价。来源：[经济观察网/新浪](https://finance.sina.com.cn/roll/2026-04-06/doc-inhtprnc6173766.shtml)。
+
+传闻/情绪层面，5 月以来“物理 AI”成为市场热点；媒体报道提到孙宇晨称未来主线是物理 AI，并准备大额布局相关方向，这推动了市场对五一视界的关注。该信息属于市场情绪和名人观点，不等于公司订单或业绩。来源：[新浪 5 月 20 日异动报道](https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-20/doc-inhypaep9510751.shtml)。
+
+政策情绪方面，工信部、国家数据局“模数共振”行动被市场解读为物理 AI、智能网联汽车、低空装备的催化。这里的事实是政策方向利好数据与模型协同；推断是五一视界可能受益；尚不能直接推导为公司新增合同。来源：[新浪 5 月 7 日异动报道](https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-07/doc-inhxahrf2779335.shtml)。</pre>
+        
+      </section>
+
+      <section id="events-tab" class="tab-panel research-card" data-tab-panel hidden>
+        <p class="eyebrow">Events</p>
+        <h2>关联重大事件影响因子</h2>
+        
+          <pre class="section-excerpt">2025-12-30：港股上市，发行价 30.50 港元。
+2026-01-22：稳定价格期间结束，无稳定价格行动，超额配股权失效。来源：[港交所公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0122/2026012200344.pdf)。
+2026-02-23：SimOne4.0 完成摩尔线程 MTT S5000 GPU 适配。
+2026-03-09：公告 51Sim 市占率 53.5%，并称中国物理 AI 仿真及数据平台 2030 年市场规模预计 1806.1 亿元。
+2026-03-18：公告与 NVIDIA Omniverse NuRec 深度集成。
+2026-03-24：公告 51Claw 具身 AI 系统平台。
+2026-04-27：授出 94.02 万份 RSU，约占已发行股份 0.23%，覆盖 303 名董事及员工，归属不设置业绩目标。来源：[RSU 公告](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042800257.pdf)。
+
+2025 年收入 3.48 亿元人民币，同比增长 21.0%；但<strong class="decision-alert">亏损</strong>扩大至 1.86 亿元，毛利率由 2024 年的 51.1%降至约 30.0%。分业务看，51Aes 收入约 2.74 亿元，占 78.9%；51Sim 收入约 5562 万元，占 16.0%；51Earth 收入约 1773 万元。来源：[港交所年报](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0424/2026042403908.pdf)、[etnet 公司资料](https://www.etnet.com.hk/www/sc/stocks/realtime/quote_ci_detail.php?code=6651)。
+
+费用端压力明显：2025 年销售费用 6445 万元，行政费用 1.06 亿元，研发费用 8230 万元，应收及合约资产减值 4132 万元。现金层面，2025 年末现金及等价物约 7.97 亿元，银行贷款约 2.86 亿元，资产负债率约 44.7%。事实含义是：公司上市融资后短期现金垫较厚，但商业模式仍处在高投入、低利润兑现阶段。
+
+按 75.45 港元快照价和约 4.14 亿股总股本粗算，市值约 312 亿港元。以 2025 年 3.48 亿元人民币收入衡量，静态 PS 极高；这说明当前股价主要交易“物理 AI/仿真数据平台成长性”，而不是传统盈利估值。</pre>
+        
+      </section>
+
+      
+    </div>
+  </section>
+
+  
+</section>
+
+    
+      </main>
+    
+  </body>
+</html>

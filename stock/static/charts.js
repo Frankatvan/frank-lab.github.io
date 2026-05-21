@@ -76,7 +76,23 @@ function renderPositionSummary(quote) {
   );
 }
 
-function candleSvg(candles) {
+function normalizeTargetHistory(targetHistory, rows) {
+  const byDate = new Map();
+  targetHistory.forEach((item) => {
+    const date = item?.date;
+    const target = Number(item?.average_target_price);
+    if (!date || !Number.isFinite(target) || target <= 0) return;
+    byDate.set(date, target);
+  });
+
+  let activeTarget = null;
+  return rows.map((row) => {
+    if (byDate.has(row.date)) activeTarget = byDate.get(row.date);
+    return activeTarget;
+  });
+}
+
+function candleSvg(candles, targetHistory = []) {
   const rows = candles.slice(-120).filter((row) => row.high && row.low && row.close);
   if (!rows.length) {
     return '<p class="empty">暂无可用K线数据。</p>';
@@ -86,8 +102,10 @@ function candleSvg(candles) {
   const volumeHeight = 72;
   const priceHeight = height - volumeHeight - 34;
   const pad = { top: 18, right: 48, bottom: 24, left: 48 };
-  const high = Math.max(...rows.map((row) => Number(row.high)));
-  const low = Math.min(...rows.map((row) => Number(row.low)));
+  const targetSeries = normalizeTargetHistory(targetHistory, rows);
+  const targetValues = targetSeries.filter((value) => Number.isFinite(value));
+  const high = Math.max(...rows.map((row) => Number(row.high)), ...targetValues);
+  const low = Math.min(...rows.map((row) => Number(row.low)), ...targetValues);
   const maxVolume = Math.max(...rows.map((row) => Number(row.volume || 0)), 1);
   const slot = (width - pad.left - pad.right) / rows.length;
   const bodyWidth = Math.max(3, Math.min(9, slot * 0.58));
@@ -111,6 +129,29 @@ function candleSvg(candles) {
       `;
     })
     .join("");
+  const targetPoints = targetSeries
+    .map((value, index) => {
+      if (!Number.isFinite(value)) return null;
+      const x = pad.left + index * slot + slot / 2;
+      return { x, y: y(value), value };
+    })
+    .filter(Boolean);
+  const targetPath = targetPoints.length
+    ? `<path d="${targetPoints
+        .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`)
+        .join(" ")}" fill="none" stroke="#f58220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" />`
+    : "";
+  const targetDots = targetPoints
+    .map((point) => `<circle cx="${point.x}" cy="${point.y}" r="2.4" fill="#f58220" />`)
+    .join("");
+  const latestTarget = targetPoints[targetPoints.length - 1];
+  const targetLabel = latestTarget
+    ? `
+      <text x="${Math.min(latestTarget.x + 8, width - pad.right - 96)}" y="${Math.max(latestTarget.y - 8, pad.top + 12)}" fill="#f58220" font-weight="700">
+        目标 ${numberFormat.format(latestTarget.value)}
+      </text>
+    `
+    : "";
   const first = rows[0];
   const last = rows[rows.length - 1];
   return `
@@ -121,6 +162,10 @@ function candleSvg(candles) {
       <line x1="${pad.left}" x2="${width - pad.right}" y1="${pad.top + priceHeight}" y2="${pad.top + priceHeight}" stroke="#d9dee6" />
       <line x1="${pad.left}" x2="${width - pad.right}" y1="${volumeBase}" y2="${volumeBase}" stroke="#d9dee6" />
       ${shapes}
+      ${targetPath}
+      ${targetDots}
+      ${targetLabel}
+      ${targetPoints.length ? `<text x="${pad.left}" y="${pad.top + 14}" fill="#f58220" font-weight="700">平均目标价</text>` : ""}
       <text x="${width - pad.right + 8}" y="${pad.top + 4}" dominant-baseline="middle">${numberFormat.format(high)}</text>
       <text x="${width - pad.right + 8}" y="${pad.top + priceHeight}" dominant-baseline="middle">${numberFormat.format(low)}</text>
       <text x="${pad.left}" y="${height - 5}">${first.date}</text>
@@ -128,6 +173,17 @@ function candleSvg(candles) {
       <text x="${pad.left}" y="${pad.top + priceHeight + 18}" fill="#697581">成交量</text>
     </svg>
   `;
+}
+
+function targetHistoryFrom(root) {
+  const node = root.querySelector("[data-target-history-json]");
+  if (!node) return [];
+  try {
+    const parsed = JSON.parse(node.textContent || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
 }
 
 async function hydrateChart(root) {
@@ -144,7 +200,7 @@ async function hydrateChart(root) {
     source.textContent = payload.source || "免费行情源";
     renderQuote(root, payload.quote || {});
     renderPositionSummary(payload.quote || {});
-    canvas.innerHTML = candleSvg(payload.candles || []);
+    canvas.innerHTML = candleSvg(payload.candles || [], targetHistoryFrom(root));
   } catch (error) {
     source.textContent = "行情源暂不可用";
     canvas.innerHTML = `<p class="empty">${error}</p>`;

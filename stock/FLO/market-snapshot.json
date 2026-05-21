@@ -3,17 +3,17 @@
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
     "latest": 7.24,
-    "change_percent": 0.42,
-    "open": 7.15,
-    "high": 7.325,
-    "low": 6.89,
-    "volume": 9760090,
-    "market_cap": 1533840690.0,
+    "change_percent": 0.0,
+    "open": 0.0,
+    "high": 0.0,
+    "low": 0.0,
+    "volume": 0,
+    "market_cap": 1533840640.0,
     "eps_ttm": 0.4,
     "trailing_pe": 18.1,
-    "previous_close": 7.21,
+    "previous_close": 7.24,
     "fifty_two_week_high": 16.25,
-    "fifty_two_week_low": 6.89
+    "fifty_two_week_low": 7.004
   },
   "candles": [
     {
