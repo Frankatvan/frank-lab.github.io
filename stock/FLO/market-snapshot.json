@@ -2,18 +2,18 @@
   "symbol": "FLO",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 7.24,
-    "change_percent": 0.0,
-    "open": 0.0,
-    "high": 0.0,
-    "low": 0.0,
-    "volume": 0,
-    "market_cap": 1533840640.0,
+    "latest": 6.95,
+    "change_percent": -4.01,
+    "open": 7.09,
+    "high": 7.14,
+    "low": 6.88,
+    "volume": 2221260,
+    "market_cap": 1472402271.0,
     "eps_ttm": 0.4,
-    "trailing_pe": 18.1,
+    "trailing_pe": 17.38,
     "previous_close": 7.24,
     "fifty_two_week_high": 16.25,
-    "fifty_two_week_low": 7.004
+    "fifty_two_week_low": 6.88
   },
   "candles": [
     {
