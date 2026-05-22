@@ -2,36 +2,20 @@
   "symbol": "JD",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 31.47,
-    "change_percent": -3.05,
-    "open": 31.545,
-    "high": 31.63,
-    "low": 31.145,
-    "volume": 7769748,
-    "market_cap": 42500237643.0,
+    "latest": 30.52,
+    "change_percent": -3.02,
+    "open": 30.255,
+    "high": 30.99,
+    "low": 30.13,
+    "volume": 10409340,
+    "market_cap": 41217260000.0,
     "eps_ttm": 1.39,
-    "trailing_pe": 22.64,
-    "previous_close": 32.46,
+    "trailing_pe": 21.96,
+    "previous_close": 31.47,
     "fifty_two_week_high": 35.86,
     "fifty_two_week_low": 23.508
   },
   "candles": [
-    {
-      "date": "2025-10-01",
-      "open": 35.3,
-      "high": 36.33,
-      "low": 35.22,
-      "close": 36.17,
-      "volume": 21279389
-    },
-    {
-      "date": "2025-10-02",
-      "open": 36.74,
-      "high": 36.86,
-      "low": 35.85,
-      "close": 35.98,
-      "volume": 21720498
-    },
     {
       "date": "2025-10-03",
       "open": 36.16,
@@ -1295,6 +1279,22 @@
       "low": 32.38,
       "close": 32.46,
       "volume": 7574934
+    },
+    {
+      "date": "2026-05-21",
+      "open": 31.55,
+      "high": 31.63,
+      "low": 31.14,
+      "close": 31.47,
+      "volume": 7779152
+    },
+    {
+      "date": "2026-05-22",
+      "open": 30.25,
+      "high": 30.99,
+      "low": 30.13,
+      "close": 30.52,
+      "volume": 10408740
     }
   ]
 }

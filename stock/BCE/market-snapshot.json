@@ -2,36 +2,20 @@
   "symbol": "BCE",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 24.39,
-    "change_percent": 0.91,
-    "open": 24.13,
-    "high": 24.495,
-    "low": 23.945,
-    "volume": 2497235,
-    "market_cap": 22744304676.0,
+    "latest": 24.6,
+    "change_percent": 0.86,
+    "open": 24.39,
+    "high": 24.675,
+    "low": 24.37,
+    "volume": 1755340,
+    "market_cap": 22940135098.0,
     "eps_ttm": 4.89,
-    "trailing_pe": 4.99,
-    "previous_close": 24.17,
+    "trailing_pe": 5.03,
+    "previous_close": 24.39,
     "fifty_two_week_high": 26.46,
     "fifty_two_week_low": 19.498
   },
   "candles": [
-    {
-      "date": "2025-10-01",
-      "open": 23.39,
-      "high": 23.53,
-      "low": 23.31,
-      "close": 23.47,
-      "volume": 2559436
-    },
-    {
-      "date": "2025-10-02",
-      "open": 23.46,
-      "high": 23.46,
-      "low": 23.06,
-      "close": 23.23,
-      "volume": 1936524
-    },
     {
       "date": "2025-10-03",
       "open": 23.19,
@@ -1295,6 +1279,22 @@
       "low": 23.89,
       "close": 24.17,
       "volume": 3358075
+    },
+    {
+      "date": "2026-05-21",
+      "open": 24.13,
+      "high": 24.5,
+      "low": 23.95,
+      "close": 24.39,
+      "volume": 2497235
+    },
+    {
+      "date": "2026-05-22",
+      "open": 24.39,
+      "high": 24.68,
+      "low": 24.37,
+      "close": 24.6,
+      "volume": 1755337
     }
   ]
 }

@@ -2,36 +2,20 @@
   "symbol": "PFE",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 25.95,
-    "change_percent": 0.62,
-    "open": 25.765,
-    "high": 25.96,
-    "low": 25.57,
-    "volume": 20175430,
-    "market_cap": 147871900034.0,
+    "latest": 25.9,
+    "change_percent": -0.19,
+    "open": 26.0,
+    "high": 26.15,
+    "low": 25.76,
+    "volume": 22307582,
+    "market_cap": 147615603795.0,
     "eps_ttm": 1.36,
-    "trailing_pe": 19.08,
-    "previous_close": 25.79,
+    "trailing_pe": 19.04,
+    "previous_close": 25.95,
     "fifty_two_week_high": 28.315,
-    "fifty_two_week_low": 21.09
+    "fifty_two_week_low": 21.16
   },
   "candles": [
-    {
-      "date": "2025-10-01",
-      "open": 25.97,
-      "high": 27.45,
-      "low": 25.58,
-      "close": 27.21,
-      "volume": 150879818
-    },
-    {
-      "date": "2025-10-02",
-      "open": 26.93,
-      "high": 27.17,
-      "low": 26.62,
-      "close": 27.08,
-      "volume": 69684073
-    },
     {
       "date": "2025-10-03",
       "open": 27.2,
@@ -1295,6 +1279,22 @@
       "low": 25.67,
       "close": 25.79,
       "volume": 35574177
+    },
+    {
+      "date": "2026-05-21",
+      "open": 25.77,
+      "high": 25.96,
+      "low": 25.57,
+      "close": 25.95,
+      "volume": 20181492
+    },
+    {
+      "date": "2026-05-22",
+      "open": 26.0,
+      "high": 26.15,
+      "low": 25.76,
+      "close": 25.9,
+      "volume": 22301586
     }
   ]
 }
