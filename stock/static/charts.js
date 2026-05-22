@@ -106,6 +106,24 @@ function normalizeTargetHistory(targetHistory, rows) {
   });
 }
 
+function monthMarkers(rows, pad, width, priceHeight, volumeBase) {
+  const markers = [];
+  if (!rows.length) return markers;
+  const usableWidth = width - pad.left - pad.right;
+  const slot = usableWidth / rows.length;
+  let previousMonth = "";
+  rows.forEach((row, index) => {
+    const dateText = String(row.date || "");
+    const month = dateText.slice(0, 7);
+    if (!month || month === previousMonth) return;
+    previousMonth = month;
+    if (index === 0) return;
+    const x = pad.left + index * slot + slot / 2;
+    markers.push({ x, month: month.slice(5) });
+  });
+  return markers;
+}
+
 function candleSvg(candles, targetHistory = []) {
   const rows = candles.slice(-120).filter((row) => row.high && row.low && row.close);
   if (!rows.length) {
@@ -158,6 +176,19 @@ function candleSvg(candles, targetHistory = []) {
   const targetDots = targetPoints
     .map((point) => `<circle cx="${point.x}" cy="${point.y}" r="2.4" fill="#f58220" />`)
     .join("");
+  const monthGuides = monthMarkers(rows, pad, width, priceHeight, volumeBase);
+  const monthLines = monthGuides
+    .map(
+      (point) =>
+        `<line x1="${point.x}" x2="${point.x}" y1="${pad.top}" y2="${volumeBase}" stroke="#edf0f4" stroke-width="1" />`,
+    )
+    .join("");
+  const monthTexts = monthGuides
+    .map(
+      (point) =>
+        `<text x="${point.x}" y="${volumeBase + 18}" text-anchor="middle" fill="#97a2b0" font-size="11">${point.month}</text>`,
+    )
+    .join("");
   return `
     <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="日K与成交量">
       <rect width="${width}" height="${height}" fill="#fff" />
@@ -165,12 +196,14 @@ function candleSvg(candles, targetHistory = []) {
       <line x1="${pad.left}" x2="${width - pad.right}" y1="${pad.top + priceHeight / 2}" y2="${pad.top + priceHeight / 2}" stroke="#edf0f4" />
       <line x1="${pad.left}" x2="${width - pad.right}" y1="${pad.top + priceHeight}" y2="${pad.top + priceHeight}" stroke="#d9dee6" />
       <line x1="${pad.left}" x2="${width - pad.right}" y1="${volumeBase}" y2="${volumeBase}" stroke="#d9dee6" />
+      ${monthLines}
       ${shapes}
       ${targetPath}
       ${targetDots}
       <text x="${width - pad.right + 8}" y="${pad.top + 4}" dominant-baseline="middle">${numberFormat.format(high)}</text>
       <text x="${width - pad.right + 8}" y="${pad.top + priceHeight}" dominant-baseline="middle">${numberFormat.format(low)}</text>
       <text x="${pad.left}" y="${pad.top + priceHeight + 18}" fill="#697581">成交量</text>
+      ${monthTexts}
     </svg>
   `;
 }
@@ -189,6 +222,34 @@ function targetHistoryFrom(root) {
 async function hydrateChart(root) {
   const source = root.querySelector("[data-chart-source]");
   const canvas = root.querySelector("[data-candle-canvas]");
+  const cacheKey = `stocklab:market-snapshot:${root.dataset.url}`;
+  const readCache = () => {
+    try {
+      const text = localStorage.getItem(cacheKey);
+      if (!text) return null;
+      const payload = JSON.parse(text);
+      if (!payload || typeof payload !== "object") return null;
+      return payload;
+    } catch {
+      return null;
+    }
+  };
+  const writeCache = (payload) => {
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify(payload));
+    } catch {
+      // ignore quota errors
+    }
+  };
+  const cached = readCache();
+  if (cached && !cached.error) {
+    const targetHistory = targetHistoryFrom(root);
+    source.textContent = `${cached.source || "免费行情源"}（缓存）`;
+    renderQuote(root, cached.quote || {});
+    renderQuoteTarget(root, cached.candles || [], targetHistory);
+    renderPositionSummary(cached.quote || {});
+    canvas.innerHTML = candleSvg(cached.candles || [], targetHistory);
+  }
   try {
     const response = await fetch(root.dataset.url);
     const payload = await response.json();
@@ -203,6 +264,7 @@ async function hydrateChart(root) {
     renderQuoteTarget(root, payload.candles || [], targetHistory);
     renderPositionSummary(payload.quote || {});
     canvas.innerHTML = candleSvg(payload.candles || [], targetHistory);
+    writeCache(payload);
   } catch (error) {
     source.textContent = "行情源暂不可用";
     canvas.innerHTML = `<p class="empty">${error}</p>`;
