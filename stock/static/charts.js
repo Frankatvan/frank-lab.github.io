@@ -255,7 +255,7 @@ async function hydrateChart(root) {
     const payload = await response.json();
     if (payload.error) {
       source.textContent = "行情源暂不可用";
-      canvas.innerHTML = `<p class="empty">${payload.error}</p>`;
+      canvas.innerHTML = '<p class="empty">行情数据暂时不可用，稍后将自动恢复。</p>';
       return;
     }
     source.textContent = payload.source || "免费行情源";
@@ -267,7 +267,7 @@ async function hydrateChart(root) {
     writeCache(payload);
   } catch (error) {
     source.textContent = "行情源暂不可用";
-    canvas.innerHTML = `<p class="empty">${error}</p>`;
+    canvas.innerHTML = '<p class="empty">行情数据暂时不可用，稍后将自动恢复。</p>';
   }
 }
 
