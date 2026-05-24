@@ -91,12 +91,15 @@ function renderPositionSummary(quote) {
 }
 
 function normalizeTargetHistory(targetHistory, rows) {
+  const candleDates = rows.map((row) => String(row.date || ""));
   const byDate = new Map();
   targetHistory.forEach((item) => {
-    const date = item?.date;
+    const date = String(item?.date || "");
     const target = Number(item?.average_target_price);
     if (!date || !Number.isFinite(target) || target <= 0) return;
-    byDate.set(date, target);
+    const mappedDate = mapTargetToCandleDate(date, candleDates);
+    if (!mappedDate) return;
+    byDate.set(mappedDate, target);
   });
 
   let activeTarget = null;
@@ -104,6 +107,15 @@ function normalizeTargetHistory(targetHistory, rows) {
     if (byDate.has(row.date)) activeTarget = byDate.get(row.date);
     return activeTarget;
   });
+}
+
+function mapTargetToCandleDate(targetDate, candleDates) {
+  if (!candleDates.length) return "";
+  if (candleDates.includes(targetDate)) return targetDate;
+  for (let index = candleDates.length - 1; index >= 0; index -= 1) {
+    if (candleDates[index] <= targetDate) return candleDates[index];
+  }
+  return "";
 }
 
 function monthMarkers(rows, pad, width, priceHeight, volumeBase) {
