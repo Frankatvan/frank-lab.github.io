@@ -3,8 +3,6 @@
 http://74.91.26.218:82/live/cctv1hd.m3u8
 #EXTINF:-1 group-title="中国大陆 - 央视体育",CCTV-5体育
 http://74.91.26.218:82/live/cctv5hd.m3u8
-#EXTINF:-1 group-title="中国大陆 - 新闻",CCTV-13 新闻
-http://74.91.26.218:82/live/cctv13hd.m3u8
 #EXTINF:-1 group-title="美国 - 新闻",ABC News Live
 https://abcnews-streams.akamaized.net/hls/live/2023561/abcnewshudson2/master_4000.m3u8
 #EXTINF:-1 group-title="美国 - 新闻",LiveNOW from FOX

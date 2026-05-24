@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "publishedAt": "2026-05-24T17:07:25.795Z",
+  "version": 23,
+  "publishedAt": "2026-05-24T17:16:38.289Z",
   "channels": [
     {
       "id": "cctv-1",
@@ -19,7 +19,7 @@
       "lastStatus": "playable",
       "sortOrder": 0,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "cctv-2",
@@ -37,7 +37,7 @@
       "lastStatus": "route-timeout",
       "sortOrder": 1,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "cctv-4",
@@ -55,7 +55,7 @@
       "lastStatus": "route-timeout",
       "sortOrder": 2,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "cctv-5",
@@ -74,7 +74,7 @@
       "lastStatus": "playable",
       "sortOrder": 3,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "cctv-13",
@@ -85,14 +85,14 @@
       ],
       "group": "新闻",
       "region": "中国大陆",
-      "sourceNote": "iptv-org CN 同名公开 HLS 源，2026-05-25 本机验证返回 #EXTM3U；原 cdn3/t.freetv 源失败，备用为 fanmingming/live IPv6",
+      "sourceNote": "iptv-org CN 同名公开 HLS 本轮连续重定向后超时；fanmingming/live 同名 IPv6 备用源需 IPv6 或大陆运营商线路，暂不启用",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
-      "lastStatus": "playable",
+      "lastStatus": "timeout",
       "sortOrder": 4,
-      "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "disabled": true,
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "beijing-satellite",
@@ -110,7 +110,7 @@
       "lastStatus": "route-timeout",
       "sortOrder": 5,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "dragon-tv",
@@ -128,7 +128,7 @@
       "lastStatus": "route-timeout",
       "sortOrder": 6,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "shenzhen-satellite",
@@ -146,7 +146,7 @@
       "lastStatus": "route-timeout",
       "sortOrder": 7,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "abc-news-live-us",
@@ -165,7 +165,7 @@
       "lastStatus": "playable",
       "sortOrder": 8,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "livenowfromfox-us",
@@ -183,7 +183,7 @@
       "lastStatus": "playable",
       "sortOrder": 9,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "nbcnewsnow-us",
@@ -198,7 +198,7 @@
       "lastStatus": "playable",
       "sortOrder": 10,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "bloomberg-television-us",
@@ -213,7 +213,7 @@
       "lastStatus": "timeout",
       "sortOrder": 11,
       "disabled": true,
-      "lastCheckedAt": 1779642691561,
+      "lastCheckedAt": 1779642998289,
       "backupUrls": [
         "https://bloomberg.com/media-manifest/streams/us-event.m3u8",
         "https://bloomberg.com/media-manifest/streams/politics.m3u8"
@@ -232,7 +232,7 @@
       "lastStatus": "playable",
       "sortOrder": 12,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "flo-hockey-us",
@@ -247,7 +247,7 @@
       "lastStatus": "playable",
       "sortOrder": 13,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "fubo-sports-network-us",
@@ -262,7 +262,7 @@
       "lastStatus": "playable",
       "sortOrder": 14,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "stadium-us",
@@ -277,7 +277,7 @@
       "lastStatus": "playable",
       "sortOrder": 15,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "waypoint-tv-us",
@@ -292,7 +292,7 @@
       "lastStatus": "playable",
       "sortOrder": 16,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "bfm-tech-co-us",
@@ -307,7 +307,7 @@
       "lastStatus": "forbidden",
       "sortOrder": 17,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "cbc-news-ca",
@@ -322,7 +322,7 @@
       "lastStatus": "timeout",
       "sortOrder": 18,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "citynewsvancouver-ca",
@@ -337,7 +337,7 @@
       "lastStatus": "playable",
       "sortOrder": 19,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "citynews-toronto-ca",
@@ -352,7 +352,7 @@
       "lastStatus": "playable",
       "sortOrder": 20,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "rthk-tv31-hk",
@@ -367,7 +367,7 @@
       "lastStatus": "playable",
       "sortOrder": 21,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "hoy-ibc-hk",
@@ -382,7 +382,7 @@
       "lastStatus": "timeout",
       "sortOrder": 22,
       "disabled": true,
-      "lastCheckedAt": 1779642691561,
+      "lastCheckedAt": 1779642998289,
       "backupUrls": [
         "https://hoytv-live-stream.hoy.tv/ch76/va2-index.m3u8"
       ]
@@ -400,7 +400,7 @@
       "lastStatus": "timeout",
       "sortOrder": 23,
       "disabled": true,
-      "lastCheckedAt": 1779642691561,
+      "lastCheckedAt": 1779642998289,
       "backupUrls": [
         "http://php.17186.eu.org/phtv/fhzx.m3u8"
       ]
@@ -418,7 +418,7 @@
       "lastStatus": "playable",
       "sortOrder": 24,
       "disabled": false,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "taiwanplus-tv-tw",
@@ -433,7 +433,7 @@
       "lastStatus": "forbidden",
       "sortOrder": 25,
       "disabled": true,
-      "lastCheckedAt": 1779642691561
+      "lastCheckedAt": 1779642998289
     },
     {
       "id": "taiwan-indigenous-tv-tw",
@@ -448,7 +448,7 @@
       "lastStatus": "forbidden",
       "sortOrder": 26,
       "disabled": true,
-      "lastCheckedAt": 1779642691561,
+      "lastCheckedAt": 1779642998289,
       "backupUrls": [
         "http://streamipcf.akamaized.net/live/_definst_/smil:liveabr.smil/playlist.m3u8"
       ]
