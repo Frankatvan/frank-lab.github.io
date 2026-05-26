@@ -2,18 +2,18 @@
   "symbol": "PFE",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 25.9,
+    "latest": 25.85,
     "change_percent": -0.19,
-    "open": 26.0,
-    "high": 26.15,
-    "low": 25.76,
-    "volume": 22320028,
-    "market_cap": 147615603795.0,
+    "open": 25.87,
+    "high": 25.9,
+    "low": 25.66,
+    "volume": 29069300,
+    "market_cap": 147330631768.0,
     "eps_ttm": 1.36,
-    "trailing_pe": 19.04,
-    "previous_close": 25.95,
+    "trailing_pe": 19.01,
+    "previous_close": 25.9,
     "fifty_two_week_high": 28.315,
-    "fifty_two_week_low": 21.16
+    "fifty_two_week_low": 21.34
   },
   "candles": [
     {
