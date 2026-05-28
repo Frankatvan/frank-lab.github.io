@@ -2,36 +2,20 @@
   "symbol": "AAPL",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 308.33,
-    "change_percent": -0.16,
-    "open": 309.56,
-    "high": 311.82,
-    "low": 307.67,
-    "volume": 47963420,
-    "market_cap": 4528552475480.0,
+    "latest": 310.85,
+    "change_percent": 0.82,
+    "open": 308.33,
+    "high": 313.26,
+    "low": 308.3,
+    "volume": 50430919,
+    "market_cap": 4565564612600.0,
     "eps_ttm": 7.93,
-    "trailing_pe": 38.88,
-    "previous_close": 308.82,
-    "fifty_two_week_high": 311.82,
+    "trailing_pe": 39.2,
+    "previous_close": 308.33,
+    "fifty_two_week_high": 313.26,
     "fifty_two_week_low": 194.02
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 254.66,
-      "high": 259.24,
-      "low": 253.95,
-      "close": 258.02,
-      "volume": 49155614
-    },
-    {
-      "date": "2025-10-06",
-      "open": 257.99,
-      "high": 259.07,
-      "low": 255.05,
-      "close": 256.69,
-      "volume": 44664081
-    },
     {
       "date": "2025-10-07",
       "open": 256.81,
@@ -1295,6 +1279,22 @@
       "low": 305.84,
       "close": 308.82,
       "volume": 43670211
+    },
+    {
+      "date": "2026-05-26",
+      "open": 309.56,
+      "high": 311.82,
+      "low": 307.67,
+      "close": 308.33,
+      "volume": 48000493
+    },
+    {
+      "date": "2026-05-27",
+      "open": 308.33,
+      "high": 313.26,
+      "low": 308.3,
+      "close": 310.85,
+      "volume": 50405798
     }
   ]
 }

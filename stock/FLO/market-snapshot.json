@@ -2,36 +2,20 @@
   "symbol": "FLO",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 7.79,
-    "change_percent": -1.89,
-    "open": 7.99,
-    "high": 8.235,
-    "low": 7.78,
-    "volume": 11728056,
-    "market_cap": 1651427020.0,
+    "latest": 7.81,
+    "change_percent": 0.26,
+    "open": 7.81,
+    "high": 7.89,
+    "low": 7.57,
+    "volume": 10380254,
+    "market_cap": 1655666860.0,
     "eps_ttm": 0.34,
-    "trailing_pe": 22.91,
-    "previous_close": 7.94,
+    "trailing_pe": 22.97,
+    "previous_close": 7.79,
     "fifty_two_week_high": 16.25,
     "fifty_two_week_low": 6.8
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 13.01,
-      "high": 13.28,
-      "low": 13.01,
-      "close": 13.16,
-      "volume": 2779522
-    },
-    {
-      "date": "2025-10-06",
-      "open": 13.12,
-      "high": 13.12,
-      "low": 12.78,
-      "close": 12.79,
-      "volume": 3707414
-    },
     {
       "date": "2025-10-07",
       "open": 12.79,
@@ -1295,6 +1279,22 @@
       "low": 7.4,
       "close": 7.94,
       "volume": 17830249
+    },
+    {
+      "date": "2026-05-26",
+      "open": 7.99,
+      "high": 8.23,
+      "low": 7.78,
+      "close": 7.79,
+      "volume": 11728278
+    },
+    {
+      "date": "2026-05-27",
+      "open": 7.81,
+      "high": 7.89,
+      "low": 7.57,
+      "close": 7.81,
+      "volume": 10379887
     }
   ]
 }

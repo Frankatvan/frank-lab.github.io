@@ -2,36 +2,20 @@
   "symbol": "TSLA",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 433.59,
-    "change_percent": 1.78,
-    "open": 430.26,
-    "high": 435.2,
-    "low": 426.12,
-    "volume": 45464675,
-    "market_cap": 1628444312793.0,
+    "latest": 440.36,
+    "change_percent": 1.56,
+    "open": 442.89,
+    "high": 445.6,
+    "low": 435.52,
+    "volume": 44656505,
+    "market_cap": 1653870563393.0,
     "eps_ttm": 1.2,
-    "trailing_pe": 361.33,
-    "previous_close": 426.01,
+    "trailing_pe": 366.97,
+    "previous_close": 433.59,
     "fifty_two_week_high": 498.83,
     "fifty_two_week_low": 273.21
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 443.29,
-      "high": 446.77,
-      "low": 416.57,
-      "close": 429.83,
-      "volume": 133187989
-    },
-    {
-      "date": "2025-10-06",
-      "open": 440.75,
-      "high": 453.55,
-      "low": 436.69,
-      "close": 453.25,
-      "volume": 85324868
-    },
     {
       "date": "2025-10-07",
       "open": 447.82,
@@ -1295,6 +1279,22 @@
       "low": 420.51,
       "close": 426.01,
       "volume": 46104707
+    },
+    {
+      "date": "2026-05-26",
+      "open": 430.26,
+      "high": 435.2,
+      "low": 426.12,
+      "close": 433.59,
+      "volume": 45658897
+    },
+    {
+      "date": "2026-05-27",
+      "open": 442.89,
+      "high": 445.6,
+      "low": 435.52,
+      "close": 440.36,
+      "volume": 44546407
     }
   ]
 }
