@@ -8,11 +8,11 @@
     "high": 7.89,
     "low": 7.57,
     "volume": 10380254,
-    "market_cap": 1655666860.0,
+    "market_cap": 1655667126.0,
     "eps_ttm": 0.34,
     "trailing_pe": 22.97,
     "previous_close": 7.79,
-    "fifty_two_week_high": 16.25,
+    "fifty_two_week_high": 16.212,
     "fifty_two_week_low": 6.8
   },
   "candles": [
@@ -1294,7 +1294,7 @@
       "high": 7.89,
       "low": 7.57,
       "close": 7.81,
-      "volume": 10379887
+      "volume": 10380254
     }
   ]
 }

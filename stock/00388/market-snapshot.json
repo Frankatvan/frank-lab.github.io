@@ -3,35 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "香港交易所",
-    "latest": 400.0,
+    "latest": 396.2,
     "previous_close": 402.2,
-    "open": 0.0,
-    "volume": 565058,
-    "turnover": 227171514.3,
-    "change_percent": -0.55,
-    "high": 0.0,
-    "low": 0.0,
-    "trailing_pe": 26.88,
-    "price_to_book": 9.2,
-    "turnover_rate": 0.04,
-    "market_cap": 507134760000.0,
-    "dividend_yield": 0.0313,
+    "open": 400.6,
+    "volume": 6999876,
+    "turnover": 2780502243.3,
+    "change_percent": -1.49,
+    "high": 401.8,
+    "low": 394.0,
+    "trailing_pe": 26.63,
+    "price_to_book": 9.11,
+    "turnover_rate": 0.55,
+    "market_cap": 502316979999.99994,
+    "dividend_yield": 0.0316,
     "fifty_two_week_high": 453.68,
     "fifty_two_week_low": 371.48,
-    "beta": 51.3,
-    "volume_ratio": 13.75,
+    "beta": 1.92,
+    "volume_ratio": 60.34,
     "eps_ttm": 12.52,
-    "average_price": 402.032
+    "average_price": 397.222
   },
   "candles": [
-    {
-      "date": "2025-09-26",
-      "open": 433.2,
-      "close": 430.2,
-      "high": 435.4,
-      "low": 428.8,
-      "volume": 5578807
-    },
     {
       "date": "2025-09-29",
       "open": 432.4,
@@ -1303,6 +1295,14 @@
       "high": 406.8,
       "low": 401.0,
       "volume": 4319453
+    },
+    {
+      "date": "2026-05-28",
+      "open": 400.6,
+      "close": 396.2,
+      "high": 401.8,
+      "low": 394.0,
+      "volume": 6999876
     }
   ]
 }

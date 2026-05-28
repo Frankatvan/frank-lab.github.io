@@ -7,7 +7,7 @@
     "open": 30.7,
     "high": 30.775,
     "low": 29.9685,
-    "volume": 934636,
+    "volume": 934570,
     "market_cap": 0.0,
     "eps_ttm": 0.0,
     "trailing_pe": null,
@@ -1294,7 +1294,7 @@
       "high": 30.77,
       "low": 29.97,
       "close": 30.24,
-      "volume": 934370
+      "volume": 934570
     }
   ]
 }

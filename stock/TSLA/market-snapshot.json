@@ -8,7 +8,7 @@
     "high": 445.6,
     "low": 435.52,
     "volume": 44656505,
-    "market_cap": 1653870563393.0,
+    "market_cap": 1653870563833.0,
     "eps_ttm": 1.2,
     "trailing_pe": 366.97,
     "previous_close": 433.59,
@@ -1294,7 +1294,7 @@
       "high": 445.6,
       "low": 435.52,
       "close": 440.36,
-      "volume": 44546407
+      "volume": 44656505
     }
   ]
 }
