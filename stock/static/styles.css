@@ -284,6 +284,17 @@ input {
   cursor: pointer;
 }
 
+a.primary-action,
+a.secondary-action,
+a.published-action,
+a.danger-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 12px;
+}
+
 .primary-action {
   background: var(--accent);
   color: white;
@@ -305,6 +316,38 @@ input {
   border: 1px solid #b7e4c7;
   background: #f0fdf4;
   color: #16803c;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.valuation-settings-form {
+  display: grid;
+  gap: 10px;
+}
+
+.valuation-settings-form label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.valuation-settings-form textarea {
+  width: 100%;
+  min-height: 420px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fbfdff;
 }
 
 .ticker-add p {
@@ -1176,6 +1219,108 @@ input {
 
 .table-scroll {
   overflow-x: auto;
+}
+
+.decision-log-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #2d4059;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.decision-log-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px;
+  color: #607084;
+  font-size: 12px;
+}
+
+.decision-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+}
+
+.decision-modal-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 22, 35, 0.4);
+}
+
+.decision-modal-dialog {
+  position: relative;
+  margin: 4vh auto;
+  width: min(980px, 92vw);
+  max-height: 92vh;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.decision-modal-dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.decision-modal-close {
+  border: 0;
+  background: transparent;
+  color: #5d6876;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.decision-modal-metrics div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.decision-modal-metrics dt {
+  color: var(--muted);
+}
+
+.decision-modal-metrics dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
+.decision-modal-dialog section {
+  margin-top: 10px;
+}
+
+.decision-modal-dialog h5 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #3f4b5a;
+}
+
+.decision-modal-dialog pre {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: #2f3946;
+  background: #fbfcfe;
 }
 
 .research-card ul,

@@ -3,25 +3,25 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "五一视界",
-    "latest": 116.0,
-    "previous_close": 112.5,
-    "open": 116.0,
-    "volume": 17584350,
-    "turnover": 2062052820.5,
-    "change_percent": 3.11,
-    "high": 126.3,
-    "low": 105.4,
-    "trailing_pe": -238.54,
-    "price_to_book": 59.87,
-    "turnover_rate": 4.45,
-    "market_cap": 45810950000.0,
+    "latest": 114.1,
+    "previous_close": 116.0,
+    "open": 117.2,
+    "volume": 1200200,
+    "turnover": 141206760.0,
+    "change_percent": -1.64,
+    "high": 120.9,
+    "low": 113.7,
+    "trailing_pe": -234.63,
+    "price_to_book": 58.89,
+    "turnover_rate": 0.3,
+    "market_cap": 45060600000.0,
     "dividend_yield": null,
     "fifty_two_week_high": 127.8,
     "fifty_two_week_low": 35.0,
-    "beta": 0.84,
-    "volume_ratio": -71.58,
+    "beta": 2.1,
+    "volume_ratio": 37.87,
     "eps_ttm": 0.0,
-    "average_price": 117.266
+    "average_price": 117.653
   },
   "candles": [
     {
@@ -815,6 +815,14 @@
       "high": 126.3,
       "low": 105.4,
       "volume": 17584350
+    },
+    {
+      "date": "2026-05-29",
+      "open": 117.2,
+      "close": 112.1,
+      "high": 120.9,
+      "low": 109.0,
+      "volume": 2566400
     }
   ]
 }

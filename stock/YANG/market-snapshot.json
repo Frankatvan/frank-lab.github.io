@@ -2,28 +2,20 @@
   "symbol": "YANG",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 30.24,
-    "change_percent": 3.46,
-    "open": 30.7,
-    "high": 30.775,
-    "low": 29.9685,
-    "volume": 934570,
+    "latest": 31.11,
+    "change_percent": 2.88,
+    "open": 31.78,
+    "high": 32.08,
+    "low": 31.02,
+    "volume": 880288,
     "market_cap": 0.0,
     "eps_ttm": 0.0,
     "trailing_pe": null,
-    "previous_close": 29.23,
+    "previous_close": 30.24,
     "fifty_two_week_high": 37.111,
     "fifty_two_week_low": 19.653
   },
   "candles": [
-    {
-      "date": "2025-10-07",
-      "open": 21.05,
-      "high": 21.98,
-      "low": 21.0,
-      "close": 21.82,
-      "volume": 1575691
-    },
     {
       "date": "2025-10-08",
       "open": 21.87,
@@ -1295,6 +1287,14 @@
       "low": 29.97,
       "close": 30.24,
       "volume": 934570
+    },
+    {
+      "date": "2026-05-28",
+      "open": 31.78,
+      "high": 32.08,
+      "low": 31.02,
+      "close": 31.11,
+      "volume": 878674
     }
   ]
 }

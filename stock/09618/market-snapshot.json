@@ -3,35 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "京东集团-SW",
-    "latest": 114.2,
-    "previous_close": 116.3,
-    "open": 115.7,
-    "volume": 14344170,
-    "turnover": 1631443124.0,
-    "change_percent": -1.81,
-    "high": 116.3,
-    "low": 112.4,
-    "trailing_pe": 19.9,
-    "price_to_book": 1.27,
-    "turnover_rate": 0.6,
-    "market_cap": 275207770000.0,
-    "dividend_yield": 0.034300000000000004,
+    "latest": 112.9,
+    "previous_close": 114.2,
+    "open": 113.1,
+    "volume": 693843,
+    "turnover": 78485122.65,
+    "change_percent": -1.14,
+    "high": 113.8,
+    "low": 112.7,
+    "trailing_pe": 19.67,
+    "price_to_book": 1.26,
+    "turnover_rate": 0.03,
+    "market_cap": 272074930000.0,
+    "dividend_yield": 0.0347,
     "fifty_two_week_high": 139.891,
     "fifty_two_week_low": 91.991,
-    "beta": 1.29,
-    "volume_ratio": -53.93,
+    "beta": 1.95,
+    "volume_ratio": 16.04,
     "eps_ttm": 3.918,
-    "average_price": 113.736
+    "average_price": 113.117
   },
   "candles": [
-    {
-      "date": "2025-09-29",
-      "open": 134.5,
-      "close": 136.6,
-      "high": 137.0,
-      "low": 134.5,
-      "volume": 16670663
-    },
     {
       "date": "2025-09-30",
       "open": 137.7,
@@ -1303,6 +1295,14 @@
       "high": 116.3,
       "low": 112.4,
       "volume": 14344170
+    },
+    {
+      "date": "2026-05-29",
+      "open": 113.1,
+      "close": 112.6,
+      "high": 113.8,
+      "low": 112.3,
+      "volume": 1212784
     }
   ]
 }

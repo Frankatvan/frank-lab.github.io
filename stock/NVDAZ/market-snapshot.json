@@ -1,0 +1,19 @@
+{
+  "symbol": "NVDAZ",
+  "source": "Sina Finance free quote/K-line endpoints",
+  "quote": {
+    "latest": null,
+    "change_percent": null,
+    "open": null,
+    "high": null,
+    "low": null,
+    "volume": null,
+    "market_cap": null,
+    "eps_ttm": null,
+    "trailing_pe": null,
+    "previous_close": null,
+    "fifty_two_week_high": null,
+    "fifty_two_week_low": null
+  },
+  "candles": []
+}

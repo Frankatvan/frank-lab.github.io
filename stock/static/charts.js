@@ -356,6 +356,185 @@ function initSoftProgressForms() {
   });
 }
 
+function initDecisionLogModal() {
+  const historyNode = document.querySelector("[data-decision-history-json]");
+  const modal = document.querySelector("[data-decision-modal]");
+  if (!historyNode || !modal) return;
+
+  let history = [];
+  try {
+    const parsed = JSON.parse(historyNode.textContent || "[]");
+    history = Array.isArray(parsed) ? parsed : [];
+  } catch {
+    history = [];
+  }
+  const detailById = new Map(history.map((item) => [String(item.id), item]));
+  const metrics = modal.querySelector("[data-decision-modal-metrics]");
+  const rationale = modal.querySelector("[data-decision-rationale]");
+  const trace = modal.querySelector("[data-decision-trace]");
+  const rawCodex = modal.querySelector("[data-decision-raw-codex]");
+  const rawGemini = modal.querySelector("[data-decision-raw-gemini]");
+  const toNumber = (value) => {
+    const n = Number(value);
+    return Number.isFinite(n) ? n : null;
+  };
+  const fmt = (value, digits = 2) => {
+    const n = toNumber(value);
+    return n === null ? "--" : n.toFixed(digits);
+  };
+  const fmtPct = (value) => {
+    const n = toNumber(value);
+    return n === null ? "--" : `${n.toFixed(2)}%`;
+  };
+  const asArray = (value) => {
+    if (Array.isArray(value)) return value;
+    if (typeof value === "string" && value.trim()) return [value.trim()];
+    return [];
+  };
+  const renderTraceHuman = (tracePayload, decision) => {
+    const traceObj =
+      tracePayload && typeof tracePayload === "object" && !Array.isArray(tracePayload)
+        ? tracePayload
+        : {};
+    const methods = traceObj.methods || {};
+    const inputs = traceObj.inputs || {};
+    const outputs = traceObj.outputs || {};
+    const formula = traceObj.formula || {};
+    const flags = asArray(outputs.risk_flags || decision.risk_flags);
+    const deductions = asArray(outputs.confidence_deductions);
+    const lines = [];
+    lines.push(`估值框架：${traceObj.bucket || traceObj.mode || "通用框架"}`);
+    lines.push(`链路版本：${traceObj.trace_version || formula.formula_version || "v1"}`);
+    lines.push(`输入快照哈希：${traceObj.input_snapshot_hash || "无"}`);
+    lines.push(
+      `主方法：${methods.primary || "未记录"}；辅方法：${methods.secondary || methods.fallback || "未记录"}`,
+    );
+    lines.push("");
+    lines.push("输入：");
+    lines.push(`- 当前价：${decision.latest_price || "--"}`);
+    lines.push(`- Codex 建议目标：${decision.codex_target_price || "--"}`);
+    lines.push(`- Gemini 建议目标：${decision.gemini_target_price || "--"}`);
+    lines.push(
+      `- 目标价约束区间：${fmt(inputs.target_bounds?.min)} ~ ${fmt(inputs.target_bounds?.max)} ${inputs.currency || ""}`.trim(),
+    );
+    lines.push(
+      `- 每日目标价最大变化：${fmtPct(inputs.max_daily_target_change_percent)}；分歧阈值：${fmtPct(inputs.dispersion_limit_percent)}`,
+    );
+    lines.push("");
+    lines.push("输出：");
+    lines.push(`- 最终目标价：${decision.average_target_price || "--"}`);
+    if (outputs.model_average_target !== undefined && outputs.model_average_target !== null) {
+      lines.push(`- 模型均值目标价（仅模型）：${fmt(outputs.model_average_target)}`);
+    }
+    lines.push(`- 目标价分歧：${decision.target_dispersion_percent || "--"}`);
+    lines.push(`- 偏离目标价：${decision.price_gap_percent || "--"}`);
+    lines.push(`- 规则动作：${decision.action || "--"}`);
+    lines.push(`- 置信度：${decision.confidence || "--"}`);
+    if (formula.mode === "whitebox_formula") {
+      lines.push("");
+      lines.push("白盒公式计算：");
+      lines.push(`- 基准倍数（按桶）：${fmt(formula.baseline_multiplier)}`);
+      lines.push(`- 模型建议倍数：${fmt(formula.suggested_multiplier)}`);
+      lines.push(`- 模型权重：${fmtPct(formula.blend_weight ? formula.blend_weight * 100 : null)}`);
+      lines.push(`- 混合后倍数：${fmt(formula.blended_multiplier)}`);
+      lines.push(
+        `- 风险折价：${fmtPct(formula.risk_penalty)}；分歧折价：${fmtPct(formula.dispersion_penalty)}`,
+      );
+      lines.push(`- 折价后倍数：${fmt(formula.adjusted_multiplier)}`);
+      lines.push(`- 公式目标价（限幅前）：${fmt(formula.raw_target)}`);
+      lines.push(`- 最终目标价（限幅后）：${fmt(formula.bounded_target)}`);
+    }
+    if (deductions.length) {
+      lines.push(`- 置信度构成：${deductions.join("，")}`);
+    }
+    if (flags.length) {
+      lines.push("");
+      lines.push(`风险触发：${flags.join("；")}`);
+    }
+    if (traceObj.note) {
+      lines.push("");
+      lines.push(`备注：${traceObj.note}`);
+    }
+    return lines.join("\n");
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("decision-modal-open");
+  };
+
+  modal.querySelectorAll("[data-decision-close]").forEach((node) => {
+    node.addEventListener("click", closeModal);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+
+  document.querySelectorAll("[data-decision-open]").forEach((node) => {
+    node.addEventListener("click", () => {
+      const decision = detailById.get(String(node.dataset.decisionId));
+      if (!decision || !metrics || !rationale || !trace || !rawCodex || !rawGemini) return;
+      const fallbackTrace = {
+        mode: "fallback_from_decision_row",
+        inputs: {
+          latest_price: decision.latest_price || "--",
+          codex_target_price: decision.codex_target_price || "--",
+          gemini_target_price: decision.gemini_target_price || "--",
+          average_target_price: decision.average_target_price || "--",
+          target_dispersion_percent: decision.target_dispersion_percent || "--",
+          price_gap_percent: decision.price_gap_percent || "--",
+          confidence: decision.confidence || "--",
+        },
+        outputs: {
+          action: decision.action || "--",
+          risk_flags: decision.risk_flags || "--",
+        },
+        note: "历史记录未保存结构化 trace，已从当时决策行字段回填最小链路。",
+      };
+      const rows = [
+        ["时间", decision.created_at || "--"],
+        ["动作", decision.action || "--"],
+        ["当前价", decision.latest_price || "--"],
+        ["Codex目标价", decision.codex_target_price || "--"],
+        ["Gemini目标价", decision.gemini_target_price || "--"],
+        ["平均", decision.average_target_price || "--"],
+        ["目标价分歧", decision.target_dispersion_percent || "--"],
+        ["偏离目标价", decision.price_gap_percent || "--"],
+        ["置信度", decision.confidence || "--"],
+        ["风险触发", decision.risk_flags || "--"],
+      ];
+      metrics.innerHTML = rows
+        .map(
+          ([label, value]) =>
+            `<div><dt>${label}</dt><dd>${String(value || "--").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</dd></div>`,
+        )
+        .join("");
+      rationale.textContent = decision.rationale || "--";
+      const tracePayload = decision.decision_trace || fallbackTrace;
+      trace.textContent = renderTraceHuman(tracePayload, decision);
+      rawCodex.textContent = decision.raw_codex || "无";
+      rawGemini.textContent = decision.raw_gemini || "无";
+      modal.hidden = false;
+      document.body.classList.add("decision-modal-open");
+    });
+  });
+}
+
+function initDecisionRowsFilter() {
+  const toggle = document.querySelector("[data-show-failed-decisions]");
+  if (!toggle) return;
+  const rows = Array.from(document.querySelectorAll("[data-decision-row]"));
+  const apply = () => {
+    const showFailed = toggle.checked;
+    rows.forEach((row) => {
+      const hasTarget = row.dataset.hasTarget === "1";
+      row.hidden = !showFailed && !hasTarget;
+    });
+  };
+  toggle.addEventListener("change", apply);
+  apply();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-workbench-tabs]").forEach((root) => {
     initWorkbenchTabs(root);
@@ -370,4 +549,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initSoftProgressForms();
+  initDecisionLogModal();
+  initDecisionRowsFilter();
 });
