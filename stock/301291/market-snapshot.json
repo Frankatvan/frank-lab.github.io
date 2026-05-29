@@ -2,23 +2,15 @@
   "symbol": "301291.SZ",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 58.24,
+    "latest": 57.75,
     "high": 60.8,
-    "low": 58.15,
+    "low": 57.21,
     "open": 60.6,
     "previous_close": 60.97,
-    "volume": 3805049,
-    "turnover": 225793656.74
+    "volume": 11091957,
+    "turnover": 650463982.58
   },
   "candles": [
-    {
-      "date": "2025-09-23",
-      "open": 45.45,
-      "high": 48.1,
-      "low": 45.06,
-      "close": 47.32,
-      "volume": 18205594
-    },
     {
       "date": "2025-09-24",
       "open": 47.0,
@@ -1290,6 +1282,14 @@
       "low": 59.19,
       "close": 60.97,
       "volume": 13265947
+    },
+    {
+      "date": "2026-05-29",
+      "open": 60.6,
+      "high": 60.8,
+      "low": 57.21,
+      "close": 57.75,
+      "volume": 11091957
     }
   ]
 }

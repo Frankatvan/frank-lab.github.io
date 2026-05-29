@@ -396,54 +396,78 @@ function initDecisionLogModal() {
       tracePayload && typeof tracePayload === "object" && !Array.isArray(tracePayload)
         ? tracePayload
         : {};
-    const methods = traceObj.methods || {};
     const inputs = traceObj.inputs || {};
     const outputs = traceObj.outputs || {};
     const formula = traceObj.formula || {};
+    const factors = inputs.factors || {};
     const flags = asArray(outputs.risk_flags || decision.risk_flags);
     const deductions = asArray(outputs.confidence_deductions);
     const lines = [];
-    lines.push(`估值框架：${traceObj.bucket || traceObj.mode || "通用框架"}`);
-    lines.push(`链路版本：${traceObj.trace_version || formula.formula_version || "v1"}`);
-    lines.push(`输入快照哈希：${traceObj.input_snapshot_hash || "无"}`);
-    lines.push(
-      `主方法：${methods.primary || "未记录"}；辅方法：${methods.secondary || methods.fallback || "未记录"}`,
-    );
+    lines.push(`估值模型：${traceObj.valuation_model || traceObj.bucket || traceObj.mode || "未记录"}`);
+    lines.push(`链路版本：${traceObj.trace_version || formula.formula_version || "v4.0"}`);
     lines.push("");
-    lines.push("输入：");
-    lines.push(`- 当前价：${decision.latest_price || "--"}`);
-    lines.push(`- Codex 建议目标：${decision.codex_target_price || "--"}`);
-    lines.push(`- Gemini 建议目标：${decision.gemini_target_price || "--"}`);
-    lines.push(
-      `- 目标价约束区间：${fmt(inputs.target_bounds?.min)} ~ ${fmt(inputs.target_bounds?.max)} ${inputs.currency || ""}`.trim(),
-    );
-    lines.push(
-      `- 每日目标价最大变化：${fmtPct(inputs.max_daily_target_change_percent)}；分歧阈值：${fmtPct(inputs.dispersion_limit_percent)}`,
-    );
+    lines.push("关键输入：");
+    lines.push(`- 当前价：${decision.latest_price || "--"} ${inputs.currency || ""}`.trim());
+    if (factors.tnav_per_share !== undefined) lines.push(`- 每股有形净资产/TNAV：${fmt(factors.tnav_per_share)} ${inputs.currency || ""}`.trim());
+    if (factors.tnav_per_share_usd !== undefined) lines.push(`- 原始 TNAV：${fmt(factors.tnav_per_share_usd)} USD；换算：USD/HKD ${fmt(factors.fx_usdhkd)}`);
+    if (factors.rote_percent !== undefined) lines.push(`- 可持续 RoTE：${fmtPct(factors.rote_percent)}`);
+    if (factors.cet1_percent !== undefined) lines.push(`- CET1：${fmtPct(factors.cet1_percent)}`);
+    if (factors.ecl_bp !== undefined) lines.push(`- ECL：${fmt(factors.ecl_bp)} bp`);
+    if (factors.forward_eps !== undefined) lines.push(`- 12个月预期 EPS：${fmt(factors.forward_eps)} ${inputs.currency || ""}`.trim());
+    if (factors.current_eps !== undefined) lines.push(`- 当前 EPS：${fmt(factors.current_eps)} ${inputs.currency || ""}`.trim());
+    if (factors.revenue_growth_percent !== undefined) lines.push(`- 收入增长率：${fmtPct(factors.revenue_growth_percent)}`);
+    if (factors.growth_percent !== undefined) lines.push(`- 原始增长率：${fmtPct(factors.growth_percent)}`);
+    if (factors.current_pe !== undefined) lines.push(`- 当前 PE：${fmt(factors.current_pe)}x`);
+    if (factors.current_ev_ebitda !== undefined) lines.push(`- 当前 EV/EBITDA：${fmt(factors.current_ev_ebitda)}x`);
+    if (factors.current_ps !== undefined) lines.push(`- 当前 PS：${fmt(factors.current_ps)}x`);
+    if (factors.revenue !== undefined) lines.push(`- 收入：${fmt(factors.revenue, 0)} ${factors.revenue_currency || ""}`.trim());
+    if (factors.shares !== undefined) lines.push(`- 股本：${fmt(factors.shares, 0)} 股`);
+    if (factors.gross_margin_percent !== undefined) lines.push(`- 毛利率：${fmtPct(factors.gross_margin_percent)}`);
+    if (factors.forward_ebitda !== undefined) lines.push(`- 预期 EBITDA：${fmt(factors.forward_ebitda, 0)} ${inputs.currency || ""}`.trim());
+    if (factors.net_debt !== undefined) lines.push(`- 净债务：${fmt(factors.net_debt, 0)} ${inputs.currency || ""}`.trim());
+    lines.push("");
+    lines.push("白盒公式：");
+    lines.push(`- ${formula.method || "参数不足，未计算目标价"}`);
+    if (formula.raw_p_tnav !== undefined) {
+      lines.push(`- 原始合理 P/TNAV = (${fmt(factors.rote_percent)}% - ${fmt(formula.terminal_growth_percent)}%) / (${fmt(formula.cost_of_equity_percent)}% - ${fmt(formula.terminal_growth_percent)}%) = ${fmt(formula.raw_p_tnav)}`);
+    }
+    if (Array.isArray(formula.adjustments) && formula.adjustments.length) {
+      lines.push("- 修正项：");
+      formula.adjustments.forEach((item) => {
+        lines.push(`  · ${item.label || "修正"}：${fmt(item.delta)}，${item.reason || ""}`.trim());
+      });
+    }
+    if (formula.final_p_tnav !== undefined) {
+      lines.push(`- 最终 P/TNAV：${fmt(formula.final_p_tnav)}`);
+    }
+    if (formula.forward_eps !== undefined && formula.fair_pe !== undefined) {
+      lines.push(`- 目标价 = ${fmt(formula.forward_eps)} × ${fmt(formula.fair_pe)} = ${fmt(formula.raw_target)} ${inputs.currency || ""}`.trim());
+    }
+    if (formula.fair_peg !== undefined) {
+      lines.push(`- 合理 PE = ${fmt(formula.capped_growth_percent)}% × PEG ${fmt(formula.fair_peg)} = ${fmt(formula.fair_pe)}x`);
+    }
+    if (formula.forward_sales_per_share !== undefined && formula.fair_ps !== undefined) {
+      lines.push(`- 目标价 = ${fmt(formula.forward_sales_per_share)} × PS ${fmt(formula.fair_ps)} = ${fmt(formula.raw_target)} ${inputs.currency || ""}`.trim());
+    }
+    if (formula.forward_ebitda !== undefined && formula.fair_ev_ebitda !== undefined) {
+      lines.push(`- 股权价值 = EBITDA ${fmt(formula.forward_ebitda, 0)} × ${fmt(formula.fair_ev_ebitda)} - 净债务 ${fmt(formula.net_debt, 0)}`);
+      lines.push(`- 目标价 = 股权价值 ${fmt(formula.equity_value, 0)} / 股本 ${fmt(formula.shares, 0)} = ${fmt(formula.raw_target)} ${inputs.currency || ""}`.trim());
+    }
+    if (formula.forward_tnav !== undefined) {
+      lines.push(`- 12个月预期 TNAV：${fmt(formula.forward_tnav)}`);
+    }
+    if (formula.secondary_check) {
+      lines.push(`- 辅估值校验：${formula.secondary_check.method || "已记录"}；${formula.secondary_check.note || ""}`.trim());
+    }
+    if (formula.raw_target !== undefined) {
+      lines.push(`- 公式目标价：${fmt(formula.raw_target)} ${inputs.currency || ""}`.trim());
+    }
     lines.push("");
     lines.push("输出：");
-    lines.push(`- 最终目标价：${decision.average_target_price || "--"}`);
-    if (outputs.model_average_target !== undefined && outputs.model_average_target !== null) {
-      lines.push(`- 模型均值目标价（仅模型）：${fmt(outputs.model_average_target)}`);
-    }
-    lines.push(`- 目标价分歧：${decision.target_dispersion_percent || "--"}`);
+    lines.push(`- 估值目标价：${decision.average_target_price || "--"} ${inputs.currency || ""}`.trim());
     lines.push(`- 偏离目标价：${decision.price_gap_percent || "--"}`);
     lines.push(`- 规则动作：${decision.action || "--"}`);
     lines.push(`- 置信度：${decision.confidence || "--"}`);
-    if (formula.mode === "whitebox_formula") {
-      lines.push("");
-      lines.push("白盒公式计算：");
-      lines.push(`- 基准倍数（按桶）：${fmt(formula.baseline_multiplier)}`);
-      lines.push(`- 模型建议倍数：${fmt(formula.suggested_multiplier)}`);
-      lines.push(`- 模型权重：${fmtPct(formula.blend_weight ? formula.blend_weight * 100 : null)}`);
-      lines.push(`- 混合后倍数：${fmt(formula.blended_multiplier)}`);
-      lines.push(
-        `- 风险折价：${fmtPct(formula.risk_penalty)}；分歧折价：${fmtPct(formula.dispersion_penalty)}`,
-      );
-      lines.push(`- 折价后倍数：${fmt(formula.adjusted_multiplier)}`);
-      lines.push(`- 公式目标价（限幅前）：${fmt(formula.raw_target)}`);
-      lines.push(`- 最终目标价（限幅后）：${fmt(formula.bounded_target)}`);
-    }
     if (deductions.length) {
       lines.push(`- 置信度构成：${deductions.join("，")}`);
     }
@@ -478,9 +502,7 @@ function initDecisionLogModal() {
         mode: "fallback_from_decision_row",
         inputs: {
           latest_price: decision.latest_price || "--",
-          codex_target_price: decision.codex_target_price || "--",
-          gemini_target_price: decision.gemini_target_price || "--",
-          average_target_price: decision.average_target_price || "--",
+          valuation_target_price: decision.valuation_target_price || decision.average_target_price || "--",
           target_dispersion_percent: decision.target_dispersion_percent || "--",
           price_gap_percent: decision.price_gap_percent || "--",
           confidence: decision.confidence || "--",
@@ -495,10 +517,7 @@ function initDecisionLogModal() {
         ["时间", decision.created_at || "--"],
         ["动作", decision.action || "--"],
         ["当前价", decision.latest_price || "--"],
-        ["Codex目标价", decision.codex_target_price || "--"],
-        ["Gemini目标价", decision.gemini_target_price || "--"],
-        ["平均", decision.average_target_price || "--"],
-        ["目标价分歧", decision.target_dispersion_percent || "--"],
+        ["估值目标价", decision.average_target_price || "--"],
         ["偏离目标价", decision.price_gap_percent || "--"],
         ["置信度", decision.confidence || "--"],
         ["风险触发", decision.risk_flags || "--"],

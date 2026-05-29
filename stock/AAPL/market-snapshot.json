@@ -7,12 +7,12 @@
     "open": 310.68,
     "high": 312.8,
     "low": 309.57,
-    "volume": 48220390,
+    "volume": 48220309,
     "market_cap": 4589945623560.0,
     "eps_ttm": 7.93,
     "trailing_pe": 39.41,
     "previous_close": 310.85,
-    "fifty_two_week_high": 312.8,
+    "fifty_two_week_high": 313.26,
     "fifty_two_week_low": 194.02
   },
   "candles": [
@@ -1294,7 +1294,7 @@
       "high": 312.8,
       "low": 309.57,
       "close": 312.51,
-      "volume": 48190430
+      "volume": 48220309
     }
   ]
 }
