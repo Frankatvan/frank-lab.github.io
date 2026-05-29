@@ -3,25 +3,25 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "汇丰控股",
-    "latest": 144.4,
+    "latest": 145.1,
     "previous_close": 145.3,
     "open": 145.2,
-    "volume": 2906741,
-    "turnover": 421378583.1,
-    "change_percent": -0.62,
+    "volume": 13019970,
+    "turnover": 1884564030.22,
+    "change_percent": -0.14,
     "high": 145.7,
-    "low": 144.3,
-    "trailing_pe": 15.0,
-    "price_to_book": 1.61,
-    "turnover_rate": 0.02,
-    "market_cap": 2481306140000.0,
-    "dividend_yield": 0.0406,
+    "low": 143.6,
+    "trailing_pe": 15.07,
+    "price_to_book": 1.62,
+    "turnover_rate": 0.08,
+    "market_cap": 2493334630000.0,
+    "dividend_yield": 0.0405,
     "fifty_two_week_high": 147.0,
     "fifty_two_week_low": 85.039,
-    "beta": 0.89,
-    "volume_ratio": 13.82,
+    "beta": 0.75,
+    "volume_ratio": -34.6,
     "eps_ttm": 5.87,
-    "average_price": 144.966
+    "average_price": 144.744
   },
   "candles": [
     {
@@ -1299,10 +1299,10 @@
     {
       "date": "2026-05-29",
       "open": 145.2,
-      "close": 144.1,
+      "close": 145.1,
       "high": 145.7,
-      "low": 144.1,
-      "volume": 3367726
+      "low": 143.6,
+      "volume": 13019970
     }
   ]
 }

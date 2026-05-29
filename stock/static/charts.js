@@ -314,19 +314,38 @@ function initWatchlistFilters(root) {
   const panel = root.closest(".watch-panel");
   const items = Array.from(panel?.querySelectorAll("[data-watch-item]") || []);
 
+  function updateItemLinks(filter) {
+    items.forEach((item) => {
+      const href = item.getAttribute("href") || "";
+      const [path] = href.split("?");
+      item.setAttribute("href", filter && filter !== "ALL" ? `${path}?filter=${filter}` : path);
+    });
+  }
+
+  function applyFilter(filter) {
+    buttons.forEach((item) => {
+      const active = item.dataset.watchFilter === filter;
+      item.classList.toggle("active", active);
+    });
+    items.forEach((item) => {
+      const visible =
+        filter === "ALL" ||
+        (filter === "HOLDING" && item.dataset.holding === "1") ||
+        item.dataset.market === filter;
+      item.hidden = !visible;
+    });
+    root.dataset.activeWatchFilter = filter;
+    updateItemLinks(filter);
+  }
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.dataset.watchFilter;
-      buttons.forEach((item) => item.classList.toggle("active", item === button));
-      items.forEach((item) => {
-        const visible =
-          filter === "ALL" ||
-          (filter === "HOLDING" && item.dataset.holding === "1") ||
-          item.dataset.market === filter;
-        item.hidden = !visible;
-      });
+      applyFilter(button.dataset.watchFilter || "ALL");
     });
   });
+
+  const initialFilter = root.dataset.activeWatchFilter || "ALL";
+  applyFilter(initialFilter);
 }
 
 function initSoftProgressForms() {

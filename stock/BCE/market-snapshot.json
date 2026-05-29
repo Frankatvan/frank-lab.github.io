@@ -2,18 +2,18 @@
   "symbol": "BCE",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 24.91,
-    "change_percent": -0.72,
-    "open": 25.08,
-    "high": 25.15,
-    "low": 24.825,
-    "volume": 4013883,
-    "market_cap": 23229218101.0,
+    "latest": 25.11,
+    "change_percent": 0.8,
+    "open": 24.93,
+    "high": 25.195,
+    "low": 24.795,
+    "volume": 7071986,
+    "market_cap": 23415723264.0,
     "eps_ttm": 4.89,
-    "trailing_pe": 5.09,
-    "previous_close": 25.09,
+    "trailing_pe": 5.13,
+    "previous_close": 24.91,
     "fifty_two_week_high": 26.46,
-    "fifty_two_week_low": 19.593
+    "fifty_two_week_low": 19.873
   },
   "candles": [
     {

@@ -3,67 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "腾讯控股",
-    "latest": 445.2,
-    "previous_close": 455.2,
-    "open": 460.0,
-    "volume": 17013357,
-    "turnover": 7673578517.58,
-    "change_percent": -2.2,
-    "high": 460.0,
-    "low": 445.2,
-    "trailing_pe": 15.24,
-    "price_to_book": 3.19,
-    "turnover_rate": 0.19,
-    "market_cap": 4059333860000.0005,
-    "dividend_yield": 0.011899999999999999,
+    "latest": 427.2,
+    "previous_close": 425.0,
+    "open": 428.2,
+    "volume": 48005475,
+    "turnover": 20597452291.17,
+    "change_percent": 0.52,
+    "high": 438.4,
+    "low": 423.6,
+    "trailing_pe": 14.63,
+    "price_to_book": 3.07,
+    "turnover_rate": 0.53,
+    "market_cap": 3895235820000.0,
+    "dividend_yield": 0.0124,
     "fifty_two_week_high": 677.7,
-    "fifty_two_week_low": 445.2,
-    "beta": 1.05,
-    "volume_ratio": 48.66,
+    "fifty_two_week_low": 420.4,
+    "beta": 1.46,
+    "volume_ratio": 65.78,
     "eps_ttm": 5.3,
-    "average_price": 451.033
+    "average_price": 429.065
   },
   "candles": [
-    {
-      "date": "2025-09-23",
-      "open": 641.5,
-      "close": 635.5,
-      "high": 643.5,
-      "low": 627.0,
-      "volume": 15293080
-    },
-    {
-      "date": "2025-09-24",
-      "open": 633.5,
-      "close": 648.5,
-      "high": 651.0,
-      "low": 628.0,
-      "volume": 18440788
-    },
-    {
-      "date": "2025-09-25",
-      "open": 651.0,
-      "close": 650.0,
-      "high": 659.0,
-      "low": 643.5,
-      "volume": 17384258
-    },
-    {
-      "date": "2025-09-26",
-      "open": 645.0,
-      "close": 644.0,
-      "high": 653.0,
-      "low": 640.0,
-      "volume": 19504951
-    },
-    {
-      "date": "2025-09-29",
-      "open": 649.5,
-      "close": 660.0,
-      "high": 664.5,
-      "low": 647.5,
-      "volume": 20489556
-    },
     {
       "date": "2025-09-30",
       "open": 658.0,
@@ -1299,10 +1259,50 @@
     {
       "date": "2026-05-21",
       "open": 460.0,
-      "close": 442.8,
+      "close": 439.0,
       "high": 460.0,
-      "low": 442.4,
-      "volume": 19651059
+      "low": 438.4,
+      "volume": 39653795
+    },
+    {
+      "date": "2026-05-22",
+      "open": 442.2,
+      "close": 441.4,
+      "high": 445.0,
+      "low": 438.8,
+      "volume": 23998219
+    },
+    {
+      "date": "2026-05-26",
+      "open": 438.0,
+      "close": 439.0,
+      "high": 441.0,
+      "low": 432.0,
+      "volume": 32795639
+    },
+    {
+      "date": "2026-05-27",
+      "open": 435.8,
+      "close": 434.4,
+      "high": 442.6,
+      "low": 433.6,
+      "volume": 24863984
+    },
+    {
+      "date": "2026-05-28",
+      "open": 431.0,
+      "close": 425.0,
+      "high": 432.8,
+      "low": 420.4,
+      "volume": 42196103
+    },
+    {
+      "date": "2026-05-29",
+      "open": 428.2,
+      "close": 427.2,
+      "high": 438.4,
+      "low": 423.6,
+      "volume": 48005475
     }
   ]
 }
