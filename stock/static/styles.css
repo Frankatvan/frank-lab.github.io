@@ -1660,6 +1660,56 @@ th:last-child {
   text-align: left;
 }
 
+.numeric {
+  text-align: right !important;
+}
+
+.ledger-stock-button {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ledger-stock-button strong {
+  font-weight: 800;
+}
+
+.ledger-stock-button span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.ledger-stock-button:hover strong {
+  color: var(--accent);
+}
+
+.ledger-total-row td {
+  border-top: 1px solid var(--line);
+  background: #fbfcff;
+  font-weight: 800;
+}
+
+.usd-total-column {
+  border-left: 1px solid var(--line-soft);
+  background: #fcfdff;
+}
+
+.negative-number {
+  color: var(--red);
+  font-weight: 800;
+}
+
+.ledger-modal-dialog h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
 @media (max-width: 1180px) {
   .market-layout {
     grid-template-columns: 260px minmax(0, 1fr);

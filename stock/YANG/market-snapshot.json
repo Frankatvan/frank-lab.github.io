@@ -7,7 +7,7 @@
     "open": 31.15,
     "high": 31.42,
     "low": 30.415,
-    "volume": 711453,
+    "volume": 713037,
     "market_cap": 0.0,
     "eps_ttm": 0.0,
     "trailing_pe": null,
@@ -16,14 +16,6 @@
     "fifty_two_week_low": 19.653
   },
   "candles": [
-    {
-      "date": "2025-10-08",
-      "open": 21.87,
-      "high": 22.17,
-      "low": 21.64,
-      "close": 21.65,
-      "volume": 1951992
-    },
     {
       "date": "2025-10-09",
       "open": 21.54,
@@ -1295,6 +1287,14 @@
       "low": 31.02,
       "close": 31.11,
       "volume": 880288
+    },
+    {
+      "date": "2026-05-29",
+      "open": 31.15,
+      "high": 31.42,
+      "low": 30.41,
+      "close": 31.05,
+      "volume": 712908
     }
   ]
 }

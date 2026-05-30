@@ -2,10 +2,19 @@
   "symbol": "RY.TRT",
   "source": "Alpha Vantage free quote/K-line endpoints",
   "quote": {
-    "latest": null,
-    "change_percent": null,
-    "previous_close": null,
-    "volume": null
+    "latest": 264.44,
+    "change_percent": 1.4969,
+    "previous_close": 260.54,
+    "volume": 5271802
   },
-  "candles": []
+  "candles": [
+    {
+      "date": "2026-05-30",
+      "open": 264.44,
+      "high": 264.44,
+      "low": 264.44,
+      "close": 264.44,
+      "volume": 5271802
+    }
+  ]
 }
