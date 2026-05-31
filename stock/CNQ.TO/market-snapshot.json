@@ -3,9 +3,9 @@
   "source": "Alpha Vantage free quote/K-line endpoints",
   "quote": {
     "latest": 62.7,
-    "change_percent": -0.7911,
-    "previous_close": 63.2,
-    "volume": 29866598
+    "change_percent": null,
+    "previous_close": null,
+    "volume": null
   },
   "candles": [
     {
