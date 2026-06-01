@@ -2,18 +2,18 @@
   "symbol": "NVDA",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 211.14,
-    "change_percent": -1.45,
-    "open": 214.575,
-    "high": 217.8599,
-    "low": 211.13,
-    "volume": 289410623,
-    "market_cap": 5114021940000.0,
+    "latest": 224.36,
+    "change_percent": 6.26,
+    "open": 215.73,
+    "high": 224.87,
+    "low": 215.7,
+    "volume": 211769228,
+    "market_cap": 5434223560000.0,
     "eps_ttm": 6.57,
-    "trailing_pe": 32.14,
-    "previous_close": 214.25,
+    "trailing_pe": 34.15,
+    "previous_close": 211.14,
     "fifty_two_week_high": 236.54,
-    "fifty_two_week_low": 132.88
+    "fifty_two_week_low": 135.36
   },
   "candles": [
     {
