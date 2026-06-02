@@ -3,35 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "腾讯控股",
-    "latest": 481.6,
-    "previous_close": 436.0,
-    "open": 438.0,
-    "volume": 101874275,
-    "turnover": 47789124229.338,
-    "change_percent": 10.46,
-    "high": 484.8,
-    "low": 437.4,
-    "trailing_pe": 16.49,
-    "price_to_book": 3.46,
-    "turnover_rate": 1.12,
-    "market_cap": 4391277380000.0005,
-    "dividend_yield": 0.011000000000000001,
+    "latest": 466.4,
+    "previous_close": 481.6,
+    "open": 484.0,
+    "volume": 49104320,
+    "turnover": 22994821512.47,
+    "change_percent": -3.16,
+    "high": 484.0,
+    "low": 461.6,
+    "trailing_pe": 15.97,
+    "price_to_book": 3.35,
+    "turnover_rate": 0.54,
+    "market_cap": 4252682250000.0,
+    "dividend_yield": 0.011399999999999999,
     "fifty_two_week_high": 677.7,
     "fifty_two_week_low": 420.4,
-    "beta": 2.77,
-    "volume_ratio": -51.65,
+    "beta": 0.97,
+    "volume_ratio": -47.85,
     "eps_ttm": 5.3,
-    "average_price": 469.099
+    "average_price": 468.285
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 677.0,
-      "close": 673.5,
-      "high": 680.0,
-      "low": 670.0,
-      "volume": 7125093
-    },
     {
       "date": "2025-10-06",
       "open": 675.0,
@@ -1303,6 +1295,14 @@
       "high": 484.8,
       "low": 437.4,
       "volume": 101874275
+    },
+    {
+      "date": "2026-06-03",
+      "open": 484.0,
+      "close": 466.4,
+      "high": 484.0,
+      "low": 461.6,
+      "volume": 49104320
     }
   ]
 }
