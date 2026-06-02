@@ -3,35 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "华润电力",
-    "latest": 21.64,
-    "previous_close": 21.26,
-    "open": 21.26,
-    "volume": 29719349,
-    "turnover": 644608203.38,
-    "change_percent": 1.79,
-    "high": 22.16,
-    "low": 21.02,
-    "trailing_pe": 7.72,
-    "price_to_book": 1.01,
-    "turnover_rate": 0.57,
-    "market_cap": 112031530000.0,
-    "dividend_yield": 0.0484,
+    "latest": 21.46,
+    "previous_close": 21.64,
+    "open": 21.64,
+    "volume": 20769064,
+    "turnover": 446998027.44,
+    "change_percent": -0.83,
+    "high": 21.88,
+    "low": 21.36,
+    "trailing_pe": 7.65,
+    "price_to_book": 1.0,
+    "turnover_rate": 0.4,
+    "market_cap": 111099660000.0,
+    "dividend_yield": 0.048799999999999996,
     "fifty_two_week_high": 22.16,
     "fifty_two_week_low": 16.9,
-    "beta": 1.39,
-    "volume_ratio": -8.96,
+    "beta": 0.83,
+    "volume_ratio": -11.19,
     "eps_ttm": 1.047,
-    "average_price": 21.69
+    "average_price": 21.522
   },
   "candles": [
-    {
-      "date": "2025-10-02",
-      "open": 17.9,
-      "close": 17.83,
-      "high": 17.94,
-      "low": 17.7,
-      "volume": 8233402
-    },
     {
       "date": "2025-10-03",
       "open": 17.8,
@@ -1303,6 +1295,14 @@
       "high": 22.16,
       "low": 21.02,
       "volume": 29719349
+    },
+    {
+      "date": "2026-06-02",
+      "open": 21.64,
+      "close": 21.46,
+      "high": 21.88,
+      "low": 21.36,
+      "volume": 20769064
     }
   ]
 }
