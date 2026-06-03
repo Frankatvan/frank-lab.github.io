@@ -1,20 +1,6 @@
 {
-  "symbol": "BCE.TRT",
+  "symbol": "BCE.TO",
   "source": "Alpha Vantage free quote/K-line endpoints",
-  "quote": {
-    "latest": 34.68,
-    "change_percent": -0.2875,
-    "previous_close": 34.78,
-    "volume": 3168374
-  },
-  "candles": [
-    {
-      "date": "2026-06-02",
-      "open": 34.68,
-      "high": 34.68,
-      "low": 34.68,
-      "close": 34.68,
-      "volume": 3168374
-    }
-  ]
+  "quote": {},
+  "candles": []
 }

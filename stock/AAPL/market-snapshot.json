@@ -2,52 +2,20 @@
   "symbol": "AAPL",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 315.2,
-    "change_percent": 2.9,
-    "open": 307.46,
-    "high": 315.45,
-    "low": 306.685,
-    "volume": 44408669,
-    "market_cap": 4629454537758.0,
+    "latest": 307.34,
+    "change_percent": -1.25,
+    "open": 312.86,
+    "high": 315.17,
+    "low": 307.15,
+    "volume": 65310502,
+    "market_cap": 4514011993040.0,
     "eps_ttm": 8.3,
-    "trailing_pe": 37.98,
-    "previous_close": 306.31,
-    "fifty_two_week_high": 315.45,
+    "trailing_pe": 37.03,
+    "previous_close": 311.23,
+    "fifty_two_week_high": 316.94,
     "fifty_two_week_low": 194.02
   },
   "candles": [
-    {
-      "date": "2025-10-10",
-      "open": 254.94,
-      "high": 256.38,
-      "low": 244.0,
-      "close": 245.27,
-      "volume": 61999050
-    },
-    {
-      "date": "2025-10-13",
-      "open": 249.38,
-      "high": 249.69,
-      "low": 245.56,
-      "close": 247.66,
-      "volume": 38142755
-    },
-    {
-      "date": "2025-10-14",
-      "open": 246.6,
-      "high": 248.84,
-      "low": 244.7,
-      "close": 247.77,
-      "volume": 35477865
-    },
-    {
-      "date": "2025-10-15",
-      "open": 249.49,
-      "high": 251.82,
-      "low": 247.47,
-      "close": 249.34,
-      "volume": 33893577
-    },
     {
       "date": "2025-10-16",
       "open": 248.25,
@@ -1295,6 +1263,38 @@
       "low": 305.02,
       "close": 306.31,
       "volume": 48849913
+    },
+    {
+      "date": "2026-06-02",
+      "open": 307.46,
+      "high": 315.45,
+      "low": 306.69,
+      "close": 315.2,
+      "volume": 44534686
+    },
+    {
+      "date": "2026-06-03",
+      "open": 314.18,
+      "high": 316.94,
+      "low": 308.85,
+      "close": 310.26,
+      "volume": 50836553
+    },
+    {
+      "date": "2026-06-04",
+      "open": 313.23,
+      "high": 313.54,
+      "low": 309.65,
+      "close": 311.23,
+      "volume": 44869122
+    },
+    {
+      "date": "2026-06-05",
+      "open": 312.86,
+      "high": 315.17,
+      "low": 307.15,
+      "close": 307.34,
+      "volume": 65310417
     }
   ]
 }

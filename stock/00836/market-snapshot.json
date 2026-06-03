@@ -3,51 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "华润电力",
-    "latest": 21.46,
-    "previous_close": 21.64,
-    "open": 21.64,
-    "volume": 20769064,
-    "turnover": 446998027.44,
-    "change_percent": -0.83,
-    "high": 21.88,
-    "low": 21.36,
-    "trailing_pe": 7.65,
-    "price_to_book": 1.0,
-    "turnover_rate": 0.4,
-    "market_cap": 111099660000.0,
-    "dividend_yield": 0.048799999999999996,
+    "latest": 21.02,
+    "previous_close": 21.48,
+    "open": 21.36,
+    "volume": 42338206,
+    "turnover": 894965816.32,
+    "change_percent": -2.14,
+    "high": 21.68,
+    "low": 20.84,
+    "trailing_pe": 7.5,
+    "price_to_book": 0.98,
+    "turnover_rate": 0.82,
+    "market_cap": 108821750000.0,
+    "dividend_yield": 0.049800000000000004,
     "fifty_two_week_high": 22.16,
     "fifty_two_week_low": 16.9,
-    "beta": 0.83,
-    "volume_ratio": -11.19,
+    "beta": 1.46,
+    "volume_ratio": -19.94,
     "eps_ttm": 1.047,
-    "average_price": 21.522
+    "average_price": 21.138
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 17.8,
-      "close": 18.02,
-      "high": 18.12,
-      "low": 17.78,
-      "volume": 5071398
-    },
-    {
-      "date": "2025-10-06",
-      "open": 18.02,
-      "close": 17.91,
-      "high": 18.03,
-      "low": 17.8,
-      "volume": 4405084
-    },
-    {
-      "date": "2025-10-08",
-      "open": 17.91,
-      "close": 17.86,
-      "high": 17.92,
-      "low": 17.67,
-      "volume": 3066347
-    },
     {
       "date": "2025-10-09",
       "open": 17.83,
@@ -1303,6 +1279,30 @@
       "high": 21.88,
       "low": 21.36,
       "volume": 20769064
+    },
+    {
+      "date": "2026-06-03",
+      "open": 21.46,
+      "close": 21.7,
+      "high": 22.0,
+      "low": 21.46,
+      "volume": 30462072
+    },
+    {
+      "date": "2026-06-04",
+      "open": 21.7,
+      "close": 21.48,
+      "high": 21.76,
+      "low": 21.36,
+      "volume": 25540986
+    },
+    {
+      "date": "2026-06-05",
+      "open": 21.36,
+      "close": 21.02,
+      "high": 21.68,
+      "low": 20.84,
+      "volume": 42338206
     }
   ]
 }

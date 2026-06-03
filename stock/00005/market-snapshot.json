@@ -3,51 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "汇丰控股",
-    "latest": 147.2,
-    "previous_close": 146.3,
-    "open": 144.8,
-    "volume": 17445189,
-    "turnover": 2529350608.8,
-    "change_percent": 0.62,
-    "high": 147.2,
-    "low": 142.7,
-    "trailing_pe": 15.29,
-    "price_to_book": 1.64,
-    "turnover_rate": 0.1,
-    "market_cap": 2529420110000.0,
-    "dividend_yield": 0.039900000000000005,
-    "fifty_two_week_high": 147.2,
+    "latest": 141.8,
+    "previous_close": 146.4,
+    "open": 143.8,
+    "volume": 29293119,
+    "turnover": 4164406841.3,
+    "change_percent": -3.14,
+    "high": 144.5,
+    "low": 141.2,
+    "trailing_pe": 14.73,
+    "price_to_book": 1.58,
+    "turnover_rate": 0.17,
+    "market_cap": 2436629350000.0,
+    "dividend_yield": 0.0414,
+    "fifty_two_week_high": 148.8,
     "fifty_two_week_low": 85.139,
-    "beta": 1.15,
-    "volume_ratio": -40.91,
+    "beta": 2.19,
+    "volume_ratio": 21.95,
     "eps_ttm": 5.87,
-    "average_price": 144.988
+    "average_price": 142.163
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 109.5,
-      "close": 109.9,
-      "high": 110.1,
-      "low": 109.0,
-      "volume": 9743604
-    },
-    {
-      "date": "2025-10-06",
-      "open": 111.1,
-      "close": 110.9,
-      "high": 112.2,
-      "low": 110.7,
-      "volume": 15257276
-    },
-    {
-      "date": "2025-10-08",
-      "open": 109.8,
-      "close": 110.6,
-      "high": 110.6,
-      "low": 109.2,
-      "volume": 10546369
-    },
     {
       "date": "2025-10-09",
       "open": 107.5,
@@ -1303,6 +1279,30 @@
       "high": 147.2,
       "low": 142.7,
       "volume": 17445189
+    },
+    {
+      "date": "2026-06-03",
+      "open": 147.8,
+      "close": 146.9,
+      "high": 148.8,
+      "low": 146.3,
+      "volume": 13176862
+    },
+    {
+      "date": "2026-06-04",
+      "open": 145.8,
+      "close": 146.4,
+      "high": 146.9,
+      "low": 144.5,
+      "volume": 11968429
+    },
+    {
+      "date": "2026-06-05",
+      "open": 143.8,
+      "close": 141.8,
+      "high": 144.5,
+      "low": 141.2,
+      "volume": 29293119
     }
   ]
 }

@@ -886,13 +886,21 @@ a.danger-action {
 }
 
 .quote-strip {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
   padding: 10px 12px 0;
 }
 
-.quote-strip strong {
+.quote-current {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.quote-current strong {
   color: var(--red);
   font-size: 25px;
   line-height: 1;
@@ -916,8 +924,37 @@ a.danger-action {
   font-weight: 700;
 }
 
+.quote-decision-hero {
+  display: inline-flex;
+  align-items: baseline;
+  justify-self: center;
+  gap: 12px;
+  max-width: 100%;
+  padding: 7px 12px;
+  border: 1px solid #f1c9a8;
+  border-radius: 6px;
+  background: #fff8f1;
+  white-space: nowrap;
+}
+
+.quote-decision-hero strong {
+  overflow: hidden;
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  text-overflow: ellipsis;
+}
+
+.quote-decision-hero em {
+  color: #637083;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
 .quote-target {
-  margin-left: auto;
+  justify-self: end;
   color: #5e6c7b;
   font-size: 25px;
   font-weight: 800;
@@ -1781,6 +1818,22 @@ th:last-child {
   .profile-meta-list div,
   .entry-form {
     grid-template-columns: 1fr;
+  }
+
+  .quote-strip {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .quote-current,
+  .quote-decision-hero,
+  .quote-target {
+    justify-self: start;
+  }
+
+  .quote-decision-hero {
+    flex-wrap: wrap;
+    white-space: normal;
   }
 
   .wide-field {

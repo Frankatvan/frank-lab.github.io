@@ -3,51 +3,27 @@
   "source": "Tencent Finance free quote/K-line endpoints",
   "quote": {
     "name": "香港交易所",
-    "latest": 410.4,
-    "previous_close": 400.2,
-    "open": 402.0,
-    "volume": 4652632,
-    "turnover": 1895099841.8,
-    "change_percent": 2.55,
-    "high": 411.0,
-    "low": 398.4,
-    "trailing_pe": 27.58,
-    "price_to_book": 9.43,
-    "turnover_rate": 0.37,
-    "market_cap": 520320259999.99994,
-    "dividend_yield": 0.0305,
+    "latest": 396.4,
+    "previous_close": 400.8,
+    "open": 398.8,
+    "volume": 5668650,
+    "turnover": 2254836775.15,
+    "change_percent": -1.1,
+    "high": 400.4,
+    "low": 396.0,
+    "trailing_pe": 26.64,
+    "price_to_book": 9.11,
+    "turnover_rate": 0.45,
+    "market_cap": 502570550000.0,
+    "dividend_yield": 0.0316,
     "fifty_two_week_high": 453.68,
     "fifty_two_week_low": 373.68,
-    "beta": 0.9,
-    "volume_ratio": 12.14,
+    "beta": 1.28,
+    "volume_ratio": 25.77,
     "eps_ttm": 12.52,
-    "average_price": 407.318
+    "average_price": 397.773
   },
   "candles": [
-    {
-      "date": "2025-10-03",
-      "open": 451.2,
-      "close": 450.2,
-      "high": 452.8,
-      "low": 447.4,
-      "volume": 2736862
-    },
-    {
-      "date": "2025-10-06",
-      "open": 447.4,
-      "close": 448.4,
-      "high": 450.0,
-      "low": 446.0,
-      "volume": 1532822
-    },
-    {
-      "date": "2025-10-08",
-      "open": 449.0,
-      "close": 445.0,
-      "high": 449.8,
-      "low": 440.4,
-      "volume": 3671413
-    },
     {
       "date": "2025-10-09",
       "open": 445.8,
@@ -1303,6 +1279,30 @@
       "high": 411.0,
       "low": 398.4,
       "volume": 4652632
+    },
+    {
+      "date": "2026-06-03",
+      "open": 410.6,
+      "close": 409.4,
+      "high": 411.0,
+      "low": 406.6,
+      "volume": 3369317
+    },
+    {
+      "date": "2026-06-04",
+      "open": 408.4,
+      "close": 400.8,
+      "high": 408.4,
+      "low": 400.0,
+      "volume": 3900024
+    },
+    {
+      "date": "2026-06-05",
+      "open": 398.8,
+      "close": 396.4,
+      "high": 400.4,
+      "low": 396.0,
+      "volume": 5668650
     }
   ]
 }

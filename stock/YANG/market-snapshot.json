@@ -2,52 +2,20 @@
   "symbol": "YANG",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 27.7,
-    "change_percent": -8.7,
-    "open": 27.55,
-    "high": 27.92,
-    "low": 27.0,
-    "volume": 1048777,
+    "latest": 31.53,
+    "change_percent": 6.13,
+    "open": 30.23,
+    "high": 31.95,
+    "low": 30.185,
+    "volume": 1151612,
     "market_cap": 0.0,
     "eps_ttm": 0.0,
     "trailing_pe": null,
-    "previous_close": 30.34,
-    "fifty_two_week_high": 34.551,
+    "previous_close": 29.71,
+    "fifty_two_week_high": 33.381,
     "fifty_two_week_low": 19.653
   },
   "candles": [
-    {
-      "date": "2025-10-10",
-      "open": 22.78,
-      "high": 26.57,
-      "low": 22.27,
-      "close": 26.18,
-      "volume": 18624278
-    },
-    {
-      "date": "2025-10-13",
-      "open": 23.33,
-      "high": 23.99,
-      "low": 23.2,
-      "close": 23.8,
-      "volume": 5364903
-    },
-    {
-      "date": "2025-10-14",
-      "open": 24.59,
-      "high": 24.7,
-      "low": 23.33,
-      "close": 23.96,
-      "volume": 4483774
-    },
-    {
-      "date": "2025-10-15",
-      "open": 23.1,
-      "high": 23.76,
-      "low": 22.87,
-      "close": 23.26,
-      "volume": 2581805
-    },
     {
       "date": "2025-10-16",
       "open": 22.86,
@@ -1295,6 +1263,38 @@
       "low": 30.01,
       "close": 30.34,
       "volume": 977613
+    },
+    {
+      "date": "2026-06-02",
+      "open": 27.55,
+      "high": 27.92,
+      "low": 27.0,
+      "close": 27.7,
+      "volume": 1062811
+    },
+    {
+      "date": "2026-06-03",
+      "open": 28.98,
+      "high": 29.64,
+      "low": 28.97,
+      "close": 29.52,
+      "volume": 818268
+    },
+    {
+      "date": "2026-06-04",
+      "open": 29.23,
+      "high": 29.74,
+      "low": 28.85,
+      "close": 29.71,
+      "volume": 576253
+    },
+    {
+      "date": "2026-06-05",
+      "open": 30.23,
+      "high": 31.95,
+      "low": 30.18,
+      "close": 31.53,
+      "volume": 1151526
     }
   ]
 }

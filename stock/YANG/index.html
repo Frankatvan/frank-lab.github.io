@@ -53,9 +53,17 @@
           <span class="data-source" data-chart-source>免费行情源加载中</span>
         </div>
         <div class="quote-strip">
-          <strong data-quote-field="latest">--</strong>
-          <span data-quote-field="change_percent">--</span>
-          <small>USD</small>
+          <div class="quote-current">
+            <strong data-quote-field="latest">--</strong>
+            <span data-quote-field="change_percent">--</span>
+            <small>USD</small>
+          </div>
+          
+            <div class="quote-decision-hero">
+              <strong>观察</strong>
+              <em>置信度 低 40/100</em>
+            </div>
+          
           <span class="quote-target" data-quote-target hidden>目标 --</span>
         </div>
         <div class="chart-canvas" data-candle-canvas>
@@ -87,7 +95,7 @@
             <span>›</span>
           </div>
           
-            <pre class="profile-text">YANG 由 Direxion 发行，跟踪 FTSE China 50 Net Tax USD Index 的每日反向三倍表现。Direxion 官方披露，YANG 在 2026-05-19 的 NAV 为 27.94 美元，市场收盘价为 27.92 美元，单日 NAV 变动 -0.96%；这与本地证据 `EVIDENCE-44` 的 `latest=27.92; change_percent=-0.96` 一致。来源：[本地 evidence_manifest.md](/Users/frank/Documents/My%20Documents/Claude%20Code/Frank%E2%80%98Lab/stock-lab/data/evidence/15/evidence_manifest.md)、[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)</pre>
+            <pre class="profile-text">YANG 是 Direxion 发行的日度 -3x 反向杠杆 ETF，目标是在扣除费用前提供 FTSE China 50 Index 单日表现的 300% 反向结果；基金明确不追求超过一个交易日周期的 -300% 累计收益。Direxion 官方页面显示，YANG 截至 2026-06-03 的 NAV 为 29.57 美元，市场收盘价为 29.52 美元，日度市场价变动 +6.57%，净费用率/总费用率为 1.03%/1.03%，日成交量 815,000，证券识别码 25461A460，成立日期 2009-12-03。</pre>
           
         </section>
         <section class="profile-block profile-meta-block">
@@ -110,7 +118,9 @@
             </div>
             <div>
               <dt>行业/概念</dt>
-              <dd>行业上归为交易型/反向杠杆 ETF、权益类、亚太/中国大盘；概念上属于中国空头、港股大盘反向、三倍杠杆、政策博弈、人民币/中美关系/地产链压力交易。底层指数为香港上市的 50 家大型、流动性较强中国公司；官方说明指数按市值加权并设有集中度限制。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)</dd>
+              <dd>行业和概念（事实）**
+行业分类不是经营性行业，而是“Trading--Inverse Equity / 反向权益交易型 ETF”。ETFDB 将其归为 Inverse Equities，FactSet 细分为 “Inverse Equity: China - Large Cap”，地区为中国/新兴亚太，杠杆方向为 -3x。
+港股中国大盘、FTSE China 50、反向 ETF、三倍杠杆、日内/短线对冲、中国宏观与政策交易。</dd>
             </div>
           </dl>
         </section>
@@ -120,7 +130,7 @@
             <span>›</span>
           </div>
           
-            <pre class="profile-text">YANG 无经营性公司 CEO/CFO 口径。基金管理口径下，MarketBeat 披露基金经理为 Paul Brigandi、Tony Ng，投顾为 Rafferty Asset Management，发行人为 Direxion；托管/转让代理涉及 BNY Mellon，做市商披露为 Virtu Financial。来源为第三方聚合，需以基金文件为准。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)</pre>
+            <pre class="profile-text">YANG 不是普通上市公司，没有 CEO/CFO 这类经营层披露口径。基金投资顾问为 Rafferty Asset Management, LLC。招募说明书列明日常组合管理人为 Paul Brigandi（自 2009 年 12 月成立以来）和 Tony Ng（自 2015 年 9 月以来）。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))</pre>
           
         </section>
         <section class="profile-block">
@@ -129,7 +139,8 @@
             <span>›</span>
           </div>
           
-            <pre class="profile-text">ETF 份额由一级市场申购赎回机制和二级市场交易共同形成，不存在普通公司的控股股东、实控人、董监高持股逻辑。MarketBeat 披露 YANG AUM 约 9,872 万美元、杠杆倍数 -3.00、可交易期权，数据为第三方延迟数据。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)</pre>
+            <pre class="profile-text">ETF 没有传统意义上的控股股东和实控人。Fintel 的 13F/13D/G 聚合数据显示，YANG 有 23 家机构所有者/股东披露持仓，合计长期持有 632,874 股，长期机构市值约 1,738.6 万美元；主要机构包括 Susquehanna、Citadel、Jane Street、Group One Trading、Renaissance Technologies、Cantor Fitzgerald 等。
+注意：13F 有滞后性，且做市商/量化机构持有 ETF 往往服务于做市、套利、对冲或期权组合，不宜简单解读为长期方向性看多。</pre>
           
         </section>
         <section class="profile-block">
@@ -138,7 +149,8 @@
             <span>›</span>
           </div>
           
-            <pre class="profile-text">从 13F 口径看，MarketBeat 披露过去 12 个月有 11 家机构买入、总流入 2,569 万美元；10 家机构<strong class="decision-alert">卖出</strong>、总流出 1.2665 亿美元。披露样本中 Group One Trading 持有 287,537 股、Virtu Financial 持有 30,026 股等，说明机构参与更偏做市、套利和战术交易，而非长期配置。[MarketBeat Institutional Ownership](https://www.marketbeat.com/stocks/NYSEARCA/YANG/institutional-ownership/)</pre>
+            <pre class="profile-text">从“YANG 持有什么”看，StockAnalysis/Finnhub 截至 2026-06-01 的持仓显示 12 项：Dreyfus 政府现金管理工具 74.36%、Goldman Treasury 机构份额 29.50%、多笔 iShares China Large-Cap ETF swap 合计约 18.40%、现金 3.00%，另有 Goldman、BNP、UBS、BAML collateral 为负权重。
+这说明 YANG 的经济敞口主要通过现金、国债/货币基金、掉期与抵押品结构实现，而不是直接持有 50 只港股。</pre>
           
         </section>
       </section>
@@ -148,10 +160,10 @@
         <h2>每日跟踪摘要</h2>
         
           <dl class="metrics-list daily-summary-metrics">
-            <div><dt>更新时间</dt><dd>2026-06-03 06:02</dd></div>
+            <div><dt>更新时间</dt><dd>2026-06-06 14:19</dd></div>
             <div><dt>状态</dt><dd>COMPLETE</dd></div>
-            <div><dt>最新价</dt><dd>27.70</dd></div>
-            <div><dt>涨跌幅</dt><dd>-8.70%</dd></div>
+            <div><dt>最新价</dt><dd>31.53</dd></div>
+            <div><dt>涨跌幅</dt><dd>6.13%</dd></div>
             <div><dt>行情源</dt><dd>Sina Finance free quote/K-line endpoints</dd></div>
             <div><dt>新增证据</dt><dd>1</dd></div>
             <div><dt>触发项</dt><dd>PRICE_MOVE_5PCT</dd></div>
@@ -176,10 +188,10 @@
           
           
             <pre class="section-excerpt">一、今日行情
-YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
+YANG 今日跟踪：最新价 31.53，涨跌幅 6.13%。
 
 二、持仓与预期收益
-当前持仓 1700，平均成本 27.54 USD；按最新价测算，预期浮盈 272.00 USD，预期收益率 0.58%。
+当前持仓 1700，平均成本 27.54 USD；按最新价测算，预期浮盈 6783.00 USD，预期收益率 14.49%。
 
 三、新增证据
 本次新增 1 条行情证据，作为后续深度报告和复盘分析的输入。
@@ -209,76 +221,160 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
           </div>
         </div>
         
-          <pre class="report-preview">已完成；本次无法写入本地报告文件，因为当前沙箱是只读权限。另按 AGENTS.md 尝试发送完成通知，但 `codex-notify` 也因只读环境无法创建临时文件而失败。
+          <pre class="report-preview">下面是中文深度分析报告正文。说明：当前目录是只读权限，我无法把报告写入 `/data/reports/15` 文件；另外已按 AGENTS.md 调用 `codex-notify`，但命令因只读环境无法创建临时文件而发送失败。
 
-**YANG 中文深度分析报告**
-报告时间：2026-05-20，Asia/Shanghai  
+# YANG 中文深度分析报告
+
+报告日期：2026-06-06（Asia/Shanghai）  
 标的：YANG，Direxion Daily FTSE China Bear 3X ETF  
-结论先行：YANG 不是普通公司股票，而是每日目标 -300% 的反向杠杆 ETF。它适合非常短线、事件驱动、主动止损的中国/港股大盘空头表达，不适合作为长期核心持仓。
+交易所：NYSE Arca  
+报告性质：事实、观点、传闻、图片证据和推断分层分析；不提供口头目标价。
 
-**一、公司简介**
-概况：YANG 由 Direxion 发行，跟踪 FTSE China 50 Net Tax USD Index 的每日反向三倍表现。Direxion 官方披露，YANG 在 2026-05-19 的 NAV 为 27.94 美元，市场收盘价为 27.92 美元，单日 NAV 变动 -0.96%；这与本地证据 `EVIDENCE-44` 的 `latest=27.92; change_percent=-0.96` 一致。来源：[本地 evidence_manifest.md](/Users/frank/Documents/My%20Documents/Claude%20Code/Frank%E2%80%98Lab/stock-lab/data/evidence/15/evidence_manifest.md)、[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+## 1. 证据边界
 
-板块：行业上归为交易型/反向杠杆 ETF、权益类、亚太/中国大盘；概念上属于中国空头、港股大盘反向、三倍杠杆、政策博弈、人民币/中美关系/地产链压力交易。底层指数为香港上市的 50 家大型、流动性较强中国公司；官方说明指数按市值加权并设有集中度限制。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+本地证据目录 `/Users/frank/Documents/My Documents/Claude Code/Frank‘Lab/stock-lab/data/evidence/15` 仅发现 `evidence_manifest.md`，未发现 `images` 子目录，因此没有可逐张检查的截图、图表或研报附图。图片证据结论：未找到本地图片证据，故不存在可提取的截图数字、来源或图表误读点。
 
-公司高管：YANG 无经营性公司 CEO/CFO 口径。基金管理口径下，MarketBeat 披露基金经理为 Paul Brigandi、Tony Ng，投顾为 Rafferty Asset Management，发行人为 Direxion；托管/转让代理涉及 BNY Mellon，做市商披露为 Virtu Financial。来源为第三方聚合，需以基金文件为准。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)
+本地事实证据显示，YANG 从 2026-05-20 的 27.92（EVIDENCE-44/55/74）波动至 2026-06-04 的 29.71，涨跌幅 +0.64%（EVIDENCE-869）。中间走势明显震荡：2026-05-29 附近多次记录 31.11/31.05（EVIDENCE-662/683/726），2026-06-02 回落到 27.70（EVIDENCE-819），2026-06-03 反弹到 29.52（EVIDENCE-845），2026-06-04 到 29.71（EVIDENCE-869）。这与 3 倍日度反向杠杆产品的高波动特征一致。
 
-股东情况：ETF 份额由一级市场申购赎回机制和二级市场交易共同形成，不存在普通公司的控股股东、实控人、董监高持股逻辑。MarketBeat 披露 YANG AUM 约 9,872 万美元、杠杆倍数 -3.00、可交易期权，数据为第三方延迟数据。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)
+## 2. 交易软件档案页式简介
 
-基金/机构持股：从 13F 口径看，MarketBeat 披露过去 12 个月有 11 家机构买入、总流入 2,569 万美元；10 家机构<strong class="decision-alert">卖出</strong>、总流出 1.2665 亿美元。披露样本中 Group One Trading 持有 287,537 股、Virtu Financial 持有 30,026 股等，说明机构参与更偏做市、套利和战术交易，而非长期配置。[MarketBeat Institutional Ownership](https://www.marketbeat.com/stocks/NYSEARCA/YANG/institutional-ownership/)
+**概况（事实）**  
+YANG 是 Direxion 发行的日度 -3x 反向杠杆 ETF，目标是在扣除费用前提供 FTSE China 50 Index 单日表现的 300% 反向结果；基金明确不追求超过一个交易日周期的 -300% 累计收益。Direxion 官方页面显示，YANG 截至 2026-06-03 的 NAV 为 29.57 美元，市场收盘价为 29.52 美元，日度市场价变动 +6.57%，净费用率/总费用率为 1.03%/1.03%，日成交量 815,000，证券识别码 25461A460，成立日期 2009-12-03。
 
-**二、本地证据与图片证据**
-事实：本地目录 `/data/evidence/15` 仅发现 `evidence_manifest.md`，未发现 `images` 子目录或图片文件。因此本报告没有可逐张解读的截图、图表或研报附图。  
-图片证据：无。  
-可能误读点：不能把缺失图片脑补为技术图形证据；本报告的行情锚点只使用 `EVIDENCE-44` 和 Direxion 官网闭合数据。
+**板块：行业和概念（事实）**  
+行业分类不是经营性行业，而是“Trading--Inverse Equity / 反向权益交易型 ETF”。ETFDB 将其归为 Inverse Equities，FactSet 细分为 “Inverse Equity: China - Large Cap”，地区为中国/新兴亚太，杠杆方向为 -3x。  
+概念标签：港股中国大盘、FTSE China 50、反向 ETF、三倍杠杆、日内/短线对冲、中国宏观与政策交易。
 
-**三、产品机制与基本面**
-事实：YANG 的目标是“单日”实现 FTSE China 50 指数 -300% 的结果，Direxion 明确提示不应期待它在超过一天的周期内等于指数累计收益的负三倍。YANG 的总/净费率官方披露为 1.03%/1.03%，4 月底官网绩效显示 YANG NAV：1 个月 -7.01%、3 个月 +22.48%、年初至今 +8.67%、1 年 -33.01%、5 年 -35.56%、10 年 -39.53%。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+**公司高管/基金管理（事实）**  
+YANG 不是普通上市公司，没有 CEO/CFO 这类经营层披露口径。基金投资顾问为 Rafferty Asset Management, LLC。招募说明书列明日常组合管理人为 Paul Brigandi（自 2009 年 12 月成立以来）和 Tony Ng（自 2015 年 9 月以来）。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))
 
-事实：基金不是靠“做空 50 只中国股票”简单实现，而是通过现金、货币市场基金和 iShares China Large-Cap ETF 相关总收益互换实现反向杠杆。2026-01-31 半年度持仓显示，YANG 短期投资 1.5558 亿美元，占净资产 103.9%；净资产 1.4970 亿美元；短总收益互换名义金额约 4.4365 亿美元，交易对手包括 BNP Paribas、Goldman Sachs、BofA、UBS。[OTC Markets SEC filing](https://www.otcmarkets.com/filing/conv_pdf?guid=vJI-kKd1NB_TB3h&amp;id=19310586)
+**股东情况（事实）**  
+ETF 没有传统意义上的控股股东和实控人。Fintel 的 13F/13D/G 聚合数据显示，YANG 有 23 家机构所有者/股东披露持仓，合计长期持有 632,874 股，长期机构市值约 1,738.6 万美元；主要机构包括 Susquehanna、Citadel、Jane Street、Group One Trading、Renaissance Technologies、Cantor Fitzgerald 等。  
+注意：13F 有滞后性，且做市商/量化机构持有 ETF 往往服务于做市、套利、对冲或期权组合，不宜简单解读为长期方向性看多。
 
-推断：YANG 的“基本面”不是营收、利润、估值，而是三件事：底层中国/港股大盘方向、波动率路径、互换/融资/跟踪误差成本。若中国资产单边下跌，YANG 会放大利润；若横盘震荡或政策利好反复拉升，净值损耗和反向杠杆会快速侵蚀持仓。
+**基金/机构持股（事实）**  
+从“YANG 持有什么”看，StockAnalysis/Finnhub 截至 2026-06-01 的持仓显示 12 项：Dreyfus 政府现金管理工具 74.36%、Goldman Treasury 机构份额 29.50%、多笔 iShares China Large-Cap ETF swap 合计约 18.40%、现金 3.00%，另有 Goldman、BNP、UBS、BAML collateral 为负权重。  
+这说明 YANG 的经济敞口主要通过现金、国债/货币基金、掉期与抵押品结构实现，而不是直接持有 50 只港股。
 
-**四、投资假设**
-观点：YANG 的多头假设是“看空中国/港股大盘的短线工具”。成立条件包括：一是中国宏观数据继续弱于预期，二是地产和消费修复低于市场定价，三是中美关税/地缘<strong class="decision-alert">风险</strong>重新压低<strong class="decision-alert">风险</strong>偏好，四是港股前期反弹后资金获利了结。Reuters 转引的市场报道显示，2026-05-18 中国与香港股市下跌，原因包括弱数据、中东冲突和全球债市抛售；这支持短线避险/做空逻辑，但不是长期持有依据。[Business Recorder/Reuters](https://www.brecorder.com/news/amp/40421749)
+## 3. 投资假设
 
-反方假设：若中国政策继续托底、科技投资预期升温、南向资金和外资继续回流，YANG 可能快速下跌。IMF 对香港 2026 年 Article IV 结论中提到，香港股权融资和资管活动随市场情绪改善而回升；这对 YANG 是反向压力。[IMF Hong Kong SAR 2026](https://www.imf.org/en/news/articles/2026/05/13/mcs-05152026-hong-kong-sar-staff-concluding-statement-of-the-2026-article-iv-mission)
+**核心投资假设（推断）**  
+YANG 的合理使用场景不是长期持有，而是短期表达“FTSE China 50 / 港股中国大盘在单日或极短周期下跌”的交易假设。若中国宏观数据走弱、地产拖累持续、政策刺激低于预期、互联网/金融/消费龙头承压，YANG 可能因反向三倍机制受益。
 
-**五、研报观点与市场情绪**
-事实/研报：Direxion 自身文件不是买卖建议，而是产品说明和<strong class="decision-alert">风险</strong>揭示。其核心观点是“交易不同于投资”，杠杆/反向 ETF 应由理解杠杆<strong class="decision-alert">风险</strong>且主动管理的投资者使用。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+**证据支持（事实）**  
+中国国家统计局显示，2026 年 5 月官方制造业 PMI 为 50.0%，较上月下降 0.3 个百分点，处于荣枯线；生产指数 51.2，新订单指数 49.9。  
+房地产仍是宏观压力源之一：2026 年 1-4 月房地产开发投资 23,969 亿元，同比下降 13.7%，其中住宅投资下降 13.1%。  
+这些数据支持“宏观修复不稳”的战术空头逻辑，但不能自动推出 YANG 可长期上涨。
 
-第三方观点：Schwab/ETF 类报告显示，YANG 长期年化表现显著为负，体现了反向杠杆 ETF 的路径损耗和长期持有劣势。Direxion 官方截至 2026-04-30 的长期绩效也显示 5 年、10 年、成立以来均为大幅负收益。[Schwab ETF report](https://www.schwab.wallst.com/schwab/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&amp;symbol=YANG)、[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+## 4. 基本面分析
 
-传闻/情绪：社媒上 YANG/YINN 常被当作政策消息、港股反弹/崩跌的高波动交易工具。Reddit 旧帖也提醒 YANG 曾在政策刺激后快速回落，说明散户情绪高度投机化、样本不稳定，不能作为事实依据。[Reddit 示例](https://www.reddit.com/r/wallstreetbets/comments/15x7lwe)
+**ETF 结构基本面（事实）**  
+YANG 的底层不是公司盈利，而是日度反向杠杆机制。招募说明书说明，基金正常情况下至少 80% 净资产加借款投资于金融工具，包括掉期、期货或空头仓位，以提供对指数或跟踪指数 ETF 的 3 倍日度反向/空头敞口。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))
 
-**六、重大事件**
-事实：2024-11-04，YANG 执行 1:20 反向拆股，MarketBeat 亦记录该事件；这解释了长期价格图中可能出现的跳变，不能误读为单日暴涨。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)
+**指数基本面（事实）**  
+FTSE China 50 Index 由在港交所交易的 50 家最大且最具流动性的中国公司组成，按总市值加权，并进行流动性筛选和权重上限约束。  
+Direxion 事实表披露，截至 2025-12-31，指数行业权重中金融 31.50%、可选消费 28.12%、通信服务 18.40%、信息技术 7.28%、能源 4.49%、材料 4.18%。  
+因此，YANG 实质上是对港股中国金融、互联网/通信、消费龙头的杠杆反向交易工具。
 
-事实：2026-03-24 除息，2026-03-31 支付，YANG 每份收益分配 0.26168 美元；2025 年也有多次季度分配。分配不是经营性盈利，主要来自基金资产和衍生品/现金管理结构。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+**交易表现（事实）**  
+Direxion 官方截至 2026-05-31 的表现数据显示，YANG NAV 1 个月 +14.60%、3 个月 +17.42%、YTD +24.53%，但 1 年 -14.04%、3 年年化 -48.94%、5 年年化 -33.57%、成立以来年化 -38.14%。市场收盘价口径类似：1 个月 +14.24%、YTD +24.56%、成立以来年化 -38.14%。  
+这组数据很关键：短期可暴涨，长期损耗极重。
 
-**七、主要<strong class="decision-alert">风险</strong>点**
-事实<strong class="decision-alert">风险</strong>：每日 -3 倍目标、非长期跟踪、互换交易对手、融资成本、跟踪误差、单日极端<strong class="decision-alert">亏损</strong>、非多元化、中国证券政策<strong class="decision-alert">风险</strong>。Direxion 明确提示杠杆基金可能在不利市场中<strong class="decision-alert">亏损</strong>更多，甚至单日发生总损失。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+## 5. 白盒估值参数
 
-交易<strong class="decision-alert">风险</strong>：YANG 的最大敌人不是单日判断错误，而是“方向大体正确但路径震荡”。中国资产若先急涨再回落，YANG 可能因为复利路径和再平衡损耗而表现差于直觉。
+| 参数 | 结论 |
+|---|---|
+| 是否 ETF | 是。YANG 是日度 -3x 反向杠杆 ETF。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786)) |
+| 12 个月预期 EPS | ETF 不适用；未找到可靠来源。 |
+| TTM EPS | ETF 不适用；未找到可靠来源。 |
+| 收入增长率 | ETF 不适用；无经营收入。 |
+| 营收 CAGR | ETF 不适用；无经营营收。 |
+| 净利率 | ETF 不适用；无经营利润率。 |
+| ROE/RoTE | ETF 不适用；未找到可靠来源。 |
+| FCF 稳定性 | ETF 不适用；无经营性自由现金流。 |
+| 股本/稀释股数 | Shares Out 约 4.21M（StockAnalysis，截至 2026-06-04）。 |
+| 总市值 | 普通公司市值口径不适用；可观察基金资产/AUM 为 127.54M 美元（StockAnalysis），Direxion/Schwab不同日期口径分别有差异。 |
+| Forward PE | ETF 不适用；StockAnalysis 显示 PE 为 n/a。 |
+| EV/EBITDA | ETF 不适用；未找到可靠来源。 |
+| EBITDA | ETF 不适用；未找到可靠来源。 |
+| 净债务 | ETF 不适用；未找到可靠来源。 |
+| BVPS/TNAV | ETF 不适用；可用 NAV 替代，Direxion 截至 2026-06-03 NAV 为 29.57 美元。 |
+| PS/EV Sales | ETF 不适用；无销售额。 |
+| Beta | -0.73（StockAnalysis，截至 2026-06-04 页面）。 |
+| 负债率 | ETF 不适用；未找到可靠来源。 |
+| 费用率 | 官方净/总费用率 1.03%/1.03%；招募说明书 2025 年费用表为 1.02%，网页更新口径为 1.03%。 |
+| 组合持仓 | 12 项，现金/国债货基/掉期/抵押品为主。 |
 
-误读<strong class="decision-alert">风险</strong>：官网网页抽取的指数行业权重存在重复/异常显示，报告采用官方事实表与产品说明为主；投资者应优先核对最新 PDF/CSV，而不是只看网页聚合表格。
+结论：YANG 不能用 EPS、PE、ROE、EV/EBITDA 等经营性公司估值框架给目标价。更合理的白盒输入是：底层指数单日涨跌、杠杆倍数、费用率、跟踪误差、折溢价、掉期/抵押品结构、AUM、成交量、买卖价差和持有周期。
 
-**八、反方观点**
-反方一：YANG 过去长期收益极差，官方 10 年和成立以来年化均大幅为负，说明长期持有它不是“看空中国”的低成本方式，而是持续支付波动损耗和融资成本。  
-反方二：中国政策底、港股流动性、AI/科技链重估、人民币走强都可能引发 YANG 快速回撤。Reuters 报道 2026 年 4 月内地买家购买香港住宅环比增加 48%，显示部分资产价格和资金情绪已有修复迹象。[Investing/Reuters](https://www.investing.com/news/economic-indicators/mainland-chinese-snap-up-hong-kong-homes-in-april-most-in-2-years-4683159)  
-反方三：如果投资目的只是对冲中国股票组合，直接降低多头仓位、买保护性期权或用低杠杆反向工具，通常比持有 -3 倍 ETF 更容易控制损耗。
+## 6. 研报观点
 
-**九、<strong class="decision-alert">复盘触发</strong>条件**
-1. 价格触发：若 YANG 相对本地证据锚点 27.92 美元下跌 10%-15%，且不是单日噪音，应复盘空头假设是否被政策或资金流反转击穿。  
-2. 基准触发：若 FTSE China 50、FXI 或港股中国大盘连续两到三日<strong class="decision-alert">放量</strong>上涨，YANG 只能按短线止损逻辑处理，不能用长期基本面理由硬扛。  
-3. 宏观触发：若中国消费、地产销售、信贷、出口数据连续改善，或 IMF/世界银行/主流券商上修中国增长预期，应降低 YANG 仓位假设。  
-4. 政策触发：降准、资本市场支持工具扩容、地产融资放松、中美关税缓和、港股 IPO/南向资金大幅改善，均是 YANG 的负面复盘信号。  
-5. 产品触发：若 YANG 折溢价扩大、成交量异常萎缩、互换持仓/交易对手结构大幅变化，需重新核对 Direxion 每日持仓 CSV 和最新招募说明书。
+**ETFDB 观点（观点）**  
+ETFDB 的 Analyst Report 认为，YANG 可作为看空中国大盘股的短期工具，但由于每日重置和复利效应，不适合低<strong class="decision-alert">风险</strong>承受能力或买入并持有型投资者。
 
-**最终判断**
-事实层面，YANG 当前与本地证据一致的官方收盘锚点是 27.92 美元，产品清晰、流动性尚可，但不是普通公司股票。  
-观点层面，对 YANG 的合理定位是“短线中国/港股大盘下跌交易或临时对冲工具”，不是长期看空中国资产的持仓工具。  
-操作含义：只有在明确催化、明确期限、明确止损的情况下才有研究价值；若无法每日复盘，不建议把 YANG 当作自选股里的长期配置标的。</pre>
+**Schwab/Market Edge 观点（观点）**  
+Schwab ETF 报告截至 2026-05-14 的 Market Edge Second Opinion 显示 “AVOID / NEUTRAL / LONG” 框架下偏向 AVOID，信心评级 -5.6，并写明“不是买入候选”。该报告同时显示，2021-2026 历史 3 个月最佳回报 158.05%，最差 3 个月 -79.00%，凸显路径<strong class="decision-alert">风险</strong>。
+
+**本报告判断（推断）**  
+YANG 的“研报式结论”不是便宜或贵，而是“交易工具是否匹配持有周期”。若持有周期超过 1 个交易日，核心问题变成路径依赖和波动损耗，而不是方向判断本身。
+
+## 7. 传闻情绪
+
+**可核验传闻：未找到重大、可靠、与 YANG 直接相关的公司级传闻。**  
+因为 YANG 是 ETF，不存在并购、订单、业绩泄露等普通公司传闻。
+
+**社媒情绪（传闻/情绪，不作为事实）**  
+近期 Reddit 讨论中，对中国股票的分歧集中在“估值很低、腾讯/阿里等基本面便宜”与“地缘政治、政策干预、地产后遗症、价格战压制估值”之间。  
+这类情绪对 YANG 的含义是双向的：如果市场继续把中国资产视为高政策<strong class="decision-alert">风险</strong>/低信任资产，YANG 的短线需求会上升；如果低估值叙事触发资金回补，YANG 会快速受损。
+
+## 8. 重大事件
+
+1. 2024-10-11，Direxion 宣布 YANG 进行 1-for-20 反向拆股，2024-11-04 起按拆股调整后交易，新 CUSIP 为 25461A460。反向拆股不改变总市值，但会显著提高单份价格并减少份额数量。  
+2. 2026-06-03，Direxion 官方显示 YANG NAV 29.57、市场收盘价 29.52，单日市场价 +6.57%。  
+3. 2026-06-04，本地与 StockAnalysis 均显示 YANG 收于 29.71，+0.64%（本地 EVIDENCE-869；StockAnalysis 页面也显示 2026-06-04 收盘 29.71）。  
+4. 2026 年 5 月中国制造业 PMI 降至 50.0，新订单 49.9，地产投资 1-4 月同比 -13.7%，为 YANG 的宏观交易逻辑提供背景，但不是买入信号本身。 
+
+## 9. <strong class="decision-alert">风险</strong>点
+
+1. **单日目标<strong class="decision-alert">风险</strong>**：YANG 只追求单日 -3x，不追求多日 -3x。持有越久，偏离越大。  
+2. **复利损耗<strong class="decision-alert">风险</strong>**：招募说明书明确，长期持有时即使指数区间下跌，基金也可能亏钱。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))  
+3. **极端损失<strong class="decision-alert">风险</strong>**：若 FTSE China 50 单日上涨超过约 33%，投资者可能在一天内损失全部本金；招募说明书明确提示该<strong class="decision-alert">风险</strong>。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))  
+4. **政策反转<strong class="decision-alert">风险</strong>**：中国若推出强刺激、平台经济政策改善、地产信用修复或港股大盘快速反弹，YANG 将被三倍放大<strong class="decision-alert">亏损</strong>。  
+5. **衍生品和交易结构<strong class="decision-alert">风险</strong>**：YANG 依赖掉期、期货、空头敞口、现金和抵押品，存在对手方、融资成本、流动性和跟踪误差<strong class="decision-alert">风险</strong>。  
+6. **折溢价与流动性<strong class="decision-alert">风险</strong>**：市场压力下 ETF 可能出现折溢价扩大、买卖价差扩大或无法有效再平衡。招募说明书也提示极端情况下份额可显著偏离 NAV。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))  
+7. **误读<strong class="decision-alert">风险</strong>**：看到 YANG 近 1 个月/YTD 为正，不能推断其适合中长期持有；官方历史表现显示成立以来年化约 -38%，长期损耗严重。
+
+## 10. 反方观点
+
+**反方观点一：YANG 不是“低估值中国空头股”，而是会自然损耗的杠杆工具。**  
+如果投资者把它当作普通股票或长期中国空头仓位，可能因每日重置、融资成本和波动损耗而持续<strong class="decision-alert">亏损</strong>。
+
+**反方观点二：中国资产可能出现估值修复。**  
+如果政策托底、消费/地产改善、港股互联网和金融龙头回购分红增强，FTSE China 50 可能反弹，YANG 会以约三倍反向幅度承压。
+
+**反方观点三：宏观数据弱不等于 YANG 必涨。**  
+YANG 交易的是指数价格路径，而不是经济数据本身。市场若提前定价悲观、随后出现弱数据不再恶化，YANG 也可能下跌。
+
+**反方观点四：机构持股不能简单解读为看多。**  
+YANG 的机构持有人中有大量做市商和量化机构，持仓可能是做市、套利、期权对冲的一部分，不代表方向性押注。
+
+## 11. <strong class="decision-alert">复盘触发</strong>条件
+
+1. 持仓超过 1 个交易日：<strong class="decision-alert">必须</strong>复盘是否仍需承担复利损耗。  
+2. FTSE China 50 / FXI / 港股中国大盘连续反弹：复盘 YANG 是否触发止损或仓位削减。  
+3. 中国官方 PMI 连续高于 50.5，或新订单重回扩张：复盘空头宏观假设。  
+4. 房地产开发投资降幅显著收窄，或销售/融资政策明显改善：复盘地产拖累假设。  
+5. 中国出台超预期财政、消费券、地产、平台经济或资本市场支持政策：立即复盘。  
+6. YANG 折溢价、买卖价差或成交量异常扩大：复盘交易执行<strong class="decision-alert">风险</strong>。  
+7. AUM 快速下降、份额变化异常或反向拆股/合并公告：复盘产品延续性和流动性。  
+8. 持仓中掉期/抵押品结构明显变化：复盘对手方和跟踪误差<strong class="decision-alert">风险</strong>。  
+9. 本地证据价格与官方/NAV 数据显著不一致：复盘数据源质量，不以单一免费行情源决策。
+
+## 12. 结论
+
+YANG 是一个高强度、短周期、路径依赖极强的中国大盘反向交易工具，不是普通意义上的“股票投资标的”。当前本地证据显示其 2026-05-20 至 2026-06-04 期间上行但波动剧烈；官方与第三方资料均显示它短期可显著放大中国大盘下跌收益，但长期历史回报显著为负。
+
+更合理的使用方式是：把 YANG 视为对 FTSE China 50 单日或极短期下跌的战术表达或对冲工具；若无法每天复盘底层指数、政策新闻、折溢价、成交量和仓位<strong class="decision-alert">风险</strong>，则该产品的<strong class="decision-alert">风险</strong>收益结构并不适合长期持有。</pre>
         
       </section>
 
@@ -292,11 +388,11 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
             <em>置信度 低 40/100</em>
           </div>
           <dl class="metrics-list daily-summary-metrics">
-            <div><dt>更新时间</dt><dd>2026-06-03 06:02</dd></div>
-            <div><dt>当前股价</dt><dd>27.70 USD</dd></div>
+            <div><dt>更新时间</dt><dd>2026-06-06 06:55</dd></div>
+            <div><dt>当前股价</dt><dd>31.53 USD</dd></div>
             <div><dt>估值目标价</dt><dd>-- USD</dd></div>
             <div><dt>偏离目标价</dt><dd>--</dd></div>
-            <div><dt>风险触发</dt><dd>PRICE_MOVE_5PCT、TARGET_NOT_APPLICABLE_TREND_PRODUCT</dd></div>
+            <div><dt>风险触发</dt><dd>PRICE_MOVE_5PCT、FULL_REPORT_AUTO_UPDATED、TARGET_NOT_APPLICABLE_TREND_PRODUCT</dd></div>
           </dl>
           <pre class="section-excerpt">杠杆/反向ETF不适合用长期基本面目标价，今日只做趋势与<strong class="decision-alert">风险</strong>观察。</pre>
           
@@ -305,9 +401,7 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
                 <h3>长期投资假设</h3>
                 <span>›</span>
               </div>
-              <pre class="profile-text">观点：YANG 的多头假设是“看空中国/港股大盘的短线工具”。成立条件包括：一是中国宏观数据继续弱于预期，二是地产和消费修复低于市场定价，三是中美关税/地缘<strong class="decision-alert">风险</strong>重新压低<strong class="decision-alert">风险</strong>偏好，四是港股前期反弹后资金获利了结。Reuters 转引的市场报道显示，2026-05-18 中国与香港股市下跌，原因包括弱数据、中东冲突和全球债市抛售；这支持短线避险/做空逻辑，但不是长期持有依据。[Business Recorder/Reuters](https://www.brecorder.com/news/amp/40421749)
-
-反方假设：若中国政策继续托底、科技投资预期升温、南向资金和外资继续回流，YANG 可能快速下跌。IMF 对香港 2026 年 Article IV 结论中提到，香港股权融资和资管活动随市场情绪改善而回升；这对 YANG 是反向压力。[IMF Hong Kong SAR 2026](https://www.imf.org/en/news/articles/2026/05/13/mcs-05152026-hong-kong-sar-staff-concluding-statement-of-the-2026-article-iv-mission)</pre>
+              <pre class="profile-text">YANG 的合理使用场景不是长期持有，而是短期表达“FTSE China 50 / 港股中国大盘在单日或极短周期下跌”的交易假设。若中国宏观数据走弱、地产拖累持续、政策刺激低于预期、互联网/金融/消费龙头承压，YANG 可能因反向三倍机制受益。</pre>
             </section>
           
           
@@ -321,7 +415,7 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
                 显示失败记录
               </label>
               <div class="table-scroll">
-                <script type="application/json" data-decision-history-json>[{"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-03 06:02", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "db0f9eb53e93d48fa82e12f6d2bdb1cbb96c499d3f99766943dbb53f302181d7", "inputs": {"currency": "USD", "factors": {}, "latest_price": 27.7}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 426, "latest_price": "27.70", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "PRICE_MOVE_5PCT\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-03", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-02 06:04", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "a2d29a9eada729649fa1e7dd1ab0a61ae1b52f7e2de586bb7728115f6ddfe8c8", "inputs": {"currency": "USD", "factors": {}, "latest_price": 30.34}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 405, "latest_price": "30.34", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-02", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-01 06:02", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 383, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-01", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-31 06:00", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 361, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-31", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-30 06:01", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 339, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-30", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-29 21:16", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "4259025776b41c4f3b7e7274db6917257520dd7e35c5ee5f880adfa0f50cb50c", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.11}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 317, "latest_price": "31.11", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-29", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 0/100", "created_at": "2026-05-28 17:13", "decision_trace": {"bucket": "SpecialProducts", "inputs": {"currency": "USD", "latest_price": 30.24, "raw_targets": [null, null]}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "mode": "backfilled", "note": "\u8be5\u6761\u4e3a\u5386\u53f2\u56de\u586b\uff0c\u62a4\u680f\u524d\u540e\u8fc7\u7a0b\u9700\u4ece\u672c\u6b21\u4e4b\u540e\u7684\u65b0\u8bb0\u5f55\u67e5\u770b\u3002", "outputs": {"action": "\u89c2\u5bdf", "average_target": null, "confidence": "\u4f4e 0/100", "price_gap_percent": null, "risk_flags": ["CODEX_TARGET_FAILED", "GEMINI_TARGET_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "target_dispersion_percent": null}}, "error": "", "id": 293, "latest_price": "30.24", "price_gap_percent": "--", "rationale": "YANG \u4e0d\u9002\u5408\u666e\u901a\u76ee\u6807\u4ef7\u4f30\u503c\uff0c\u4eca\u65e5\u6539\u7528 FTSE China 50 / FXI / \u4e2d\u56fd\u5927\u76d8\u80a1\u8d8b\u52bf\u5224\u65ad\u3002\u8d8b\u52bf\u5224\u65ad\uff1a\u9707\u8361\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0a\u6da8\uff0cYANG \u901a\u5e38\u4e0b\u8dcc\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0b\u8dcc\uff0cYANG \u901a\u5e38\u4e0a\u6da8\uff0c\u540c\u65f6\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u5b58\u5728\u8def\u5f84\u635f\u8017\u3002Codex\uff1aCodex \u76ee\u6807\u4ef7\u751f\u6210\u5931\u8d25\u3002 Gemini\uff1aGemini \u76ee\u6807\u4ef7\u751f\u6210\u5931\u8d25\u3002", "raw_codex": "Command \u0027[\u0027/Applications/Codex.app/Contents/Resources/codex\u0027, \u0027--search\u0027, \u0027exec\u0027, \u0027--skip-git-repo-check\u0027, \u0027--sandbox\u0027, \u0027read-only\u0027, \u0027\u4f60\u662f\u957f\u671f\u57fa\u672c\u9762\u6295\u8d44\u7814\u7a76\u5458\u3002\u8bf7\u57fa\u4e8e\u516c\u5f00\u4fe1\u606f\u3001\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u548c\u4eca\u65e5\u80a1\u4ef7\uff0c\u4e3a\u80a1\u7968\u751f\u6210\u4e00\u4e2a 12 \u4e2a\u6708\u57fa\u51c6\u76ee\u6807\u4ef7\uff0c\u7528\u4e8e\u4e2a\u4eba\u6295\u8d44\u8ddf\u8e2a\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002\u80a1\u7968\uff1aYANG Direxion Daily FTSE China Bear 3X Shares\uff0c\u5e02\u573a\uff1aUS\uff0c\u5e01\u79cd\uff1aUSD\uff0c\u5f53\u524d\u80a1\u4ef7\uff1a30.24\u3002\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u8def\u5f84\uff1a/Users/frank/Documents/My Documents/Claude Code/Frank\u2018Lab/stock-lab/data/reports/15/codex_report.md\u3002\u7279\u6b8a\u89c4\u5219\uff1aYANG \u662f\u8ddf\u8e2a FTSE China 50 / \u4e2d\u56fd\u5927\u76d8\u80a1\u65b9\u5411\u7684\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u4ea7\u54c1\uff0c\u4e0d\u9002\u5408\u7528\u666e\u901a\u957f\u671f\u57fa\u672c\u9762\u4f30\u503c\u7ed9 12 \u4e2a\u6708\u76ee\u6807\u4ef7\u3002\u8bf7\u6539\u4e3a\u5206\u6790 FTSE China 50\u3001FXI \u6216\u4e2d\u56fd\u5927\u76d8\u80a1\u8d70\u52bf\u5bf9 YANG \u81ea\u8eab\u7684\u65b9\u5411\u5f71\u54cd\uff0ctarget_price \u8f93\u51fa null\uff1brationale \u5fc5\u987b\u4ee5\u201c\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0a\u6da8/\u4e0b\u8dcc/\u9707\u8361\uff1b\u201d\u5f00\u5934\uff0c\u8d8b\u52bf\u8868\u793a YANG \u81ea\u8eab\u65b9\u5411\uff0c\u4e0d\u662f\u5e95\u5c42\u6307\u6570\u65b9\u5411\u3002\u8bf7\u7279\u522b\u8003\u8651\u6295\u8d44\u5047\u8bbe\u662f\u5426\u6210\u7acb\u3001\u98ce\u9669\u70b9\u3001\u53cd\u65b9\u89c2\u70b9\u3001\u590d\u76d8\u89e6\u53d1\u6761\u4ef6\u3001\u8d22\u62a5\u8d28\u91cf\u3001\u4f30\u503c\u548c\u5e02\u573a\u60c5\u7eea\u3002\u53ea\u8f93\u51fa JSON\uff0c\u4e0d\u8981\u8f93\u51fa Markdown\u3002\u5b57\u6bb5\u4e3a\uff1a{\"target_price\": \u6570\u5b57\u6216 null, \"confidence\": \"\u9ad8/\u4e2d/\u4f4e\", \"rationale\": \"\u4e0d\u8d85\u8fc7120\u5b57\u7684\u4e2d\u6587\u7406\u7531\", \"risk_triggered\": true\u6216false, \"risk_flags\": [\"\u98ce\u9669\u98791\",\"\u98ce\u9669\u98792\"]}\u3002\u0027]\u0027 timed out after 45 seconds", "raw_gemini": "Command \u0027[\u0027/usr/local/bin/gemini\u0027, \u0027--approval-mode\u0027, \u0027plan\u0027, \u0027--output-format\u0027, \u0027json\u0027, \u0027--prompt\u0027, \u0027\u4f60\u662f\u957f\u671f\u57fa\u672c\u9762\u6295\u8d44\u7814\u7a76\u5458\u3002\u8bf7\u57fa\u4e8e\u516c\u5f00\u4fe1\u606f\u3001\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u548c\u4eca\u65e5\u80a1\u4ef7\uff0c\u4e3a\u80a1\u7968\u751f\u6210\u4e00\u4e2a 12 \u4e2a\u6708\u57fa\u51c6\u76ee\u6807\u4ef7\uff0c\u7528\u4e8e\u4e2a\u4eba\u6295\u8d44\u8ddf\u8e2a\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002\u80a1\u7968\uff1aYANG Direxion Daily FTSE China Bear 3X Shares\uff0c\u5e02\u573a\uff1aUS\uff0c\u5e01\u79cd\uff1aUSD\uff0c\u5f53\u524d\u80a1\u4ef7\uff1a30.24\u3002\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u8def\u5f84\uff1a/Users/frank/Documents/My Documents/Claude Code/Frank\u2018Lab/stock-lab/data/reports/15/codex_report.md\u3002\u7279\u6b8a\u89c4\u5219\uff1aYANG \u662f\u8ddf\u8e2a FTSE China 50 / \u4e2d\u56fd\u5927\u76d8\u80a1\u65b9\u5411\u7684\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u4ea7\u54c1\uff0c\u4e0d\u9002\u5408\u7528\u666e\u901a\u957f\u671f\u57fa\u672c\u9762\u4f30\u503c\u7ed9 12 \u4e2a\u6708\u76ee\u6807\u4ef7\u3002\u8bf7\u6539\u4e3a\u5206\u6790 FTSE China 50\u3001FXI \u6216\u4e2d\u56fd\u5927\u76d8\u80a1\u8d70\u52bf\u5bf9 YANG \u81ea\u8eab\u7684\u65b9\u5411\u5f71\u54cd\uff0ctarget_price \u8f93\u51fa null\uff1brationale \u5fc5\u987b\u4ee5\u201c\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0a\u6da8/\u4e0b\u8dcc/\u9707\u8361\uff1b\u201d\u5f00\u5934\uff0c\u8d8b\u52bf\u8868\u793a YANG \u81ea\u8eab\u65b9\u5411\uff0c\u4e0d\u662f\u5e95\u5c42\u6307\u6570\u65b9\u5411\u3002\u8bf7\u7279\u522b\u8003\u8651\u6295\u8d44\u5047\u8bbe\u662f\u5426\u6210\u7acb\u3001\u98ce\u9669\u70b9\u3001\u53cd\u65b9\u89c2\u70b9\u3001\u590d\u76d8\u89e6\u53d1\u6761\u4ef6\u3001\u8d22\u62a5\u8d28\u91cf\u3001\u4f30\u503c\u548c\u5e02\u573a\u60c5\u7eea\u3002\u53ea\u8f93\u51fa JSON\uff0c\u4e0d\u8981\u8f93\u51fa Markdown\u3002\u5b57\u6bb5\u4e3a\uff1a{\"target_price\": \u6570\u5b57\u6216 null, \"confidence\": \"\u9ad8/\u4e2d/\u4f4e\", \"rationale\": \"\u4e0d\u8d85\u8fc7120\u5b57\u7684\u4e2d\u6587\u7406\u7531\", \"risk_triggered\": true\u6216false, \"risk_flags\": [\"\u98ce\u9669\u98791\",\"\u98ce\u9669\u98792\"]}\u3002\u0027]\u0027 timed out after 45 seconds", "risk_flags": "CODEX_TARGET_FAILED\u3001GEMINI_TARGET_FAILED\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["CODEX_TARGET_FAILED", "GEMINI_TARGET_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-28", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 0/100", "created_at": "2026-05-28 09:17", "decision_trace": {"bucket": "SpecialProducts", "inputs": {"currency": "USD", "latest_price": 30.24, "raw_targets": [null, null]}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "mode": "backfilled", "note": "\u8be5\u6761\u4e3a\u5386\u53f2\u56de\u586b\uff0c\u62a4\u680f\u524d\u540e\u8fc7\u7a0b\u9700\u4ece\u672c\u6b21\u4e4b\u540e\u7684\u65b0\u8bb0\u5f55\u67e5\u770b\u3002", "outputs": {"action": "\u89c2\u5bdf", "average_target": null, "confidence": "\u4f4e 0/100", "price_gap_percent": null, "risk_flags": ["CODEX_TARGET_FAILED", "GEMINI_TARGET_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "target_dispersion_percent": null}}, "error": "", "id": 265, "latest_price": "30.24", "price_gap_percent": "--", "rationale": "YANG \u4e0d\u9002\u5408\u666e\u901a\u76ee\u6807\u4ef7\u4f30\u503c\uff0c\u4eca\u65e5\u6539\u7528 FTSE China 50 / FXI / \u4e2d\u56fd\u5927\u76d8\u80a1\u8d8b\u52bf\u5224\u65ad\u3002\u8d8b\u52bf\u5224\u65ad\uff1a\u9707\u8361\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0a\u6da8\uff0cYANG \u901a\u5e38\u4e0b\u8dcc\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0b\u8dcc\uff0cYANG \u901a\u5e38\u4e0a\u6da8\uff0c\u540c\u65f6\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u5b58\u5728\u8def\u5f84\u635f\u8017\u3002Codex\uff1aCodex \u76ee\u6807\u4ef7\u751f\u6210\u5931\u8d25\u3002 Gemini\uff1aGemini \u76ee\u6807\u4ef7\u751f\u6210\u5931\u8d25\u3002", "raw_codex": "Command \u0027[\u0027/Applications/Codex.app/Contents/Resources/codex\u0027, \u0027--search\u0027, \u0027exec\u0027, \u0027--skip-git-repo-check\u0027, \u0027--sandbox\u0027, \u0027read-only\u0027, \u0027\u4f60\u662f\u957f\u671f\u57fa\u672c\u9762\u6295\u8d44\u7814\u7a76\u5458\u3002\u8bf7\u57fa\u4e8e\u516c\u5f00\u4fe1\u606f\u3001\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u548c\u4eca\u65e5\u80a1\u4ef7\uff0c\u4e3a\u80a1\u7968\u751f\u6210\u4e00\u4e2a 12 \u4e2a\u6708\u57fa\u51c6\u76ee\u6807\u4ef7\uff0c\u7528\u4e8e\u4e2a\u4eba\u6295\u8d44\u8ddf\u8e2a\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002\u80a1\u7968\uff1aYANG Direxion Daily FTSE China Bear 3X Shares\uff0c\u5e02\u573a\uff1aUS\uff0c\u5e01\u79cd\uff1aUSD\uff0c\u5f53\u524d\u80a1\u4ef7\uff1a30.24\u3002\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u8def\u5f84\uff1a/Users/frank/Documents/My Documents/Claude Code/Frank\u2018Lab/stock-lab/data/reports/15/codex_report.md\u3002\u7279\u6b8a\u89c4\u5219\uff1aYANG \u662f\u8ddf\u8e2a FTSE China 50 / \u4e2d\u56fd\u5927\u76d8\u80a1\u65b9\u5411\u7684\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u4ea7\u54c1\uff0c\u4e0d\u9002\u5408\u7528\u666e\u901a\u957f\u671f\u57fa\u672c\u9762\u4f30\u503c\u7ed9 12 \u4e2a\u6708\u76ee\u6807\u4ef7\u3002\u8bf7\u6539\u4e3a\u5206\u6790 FTSE China 50\u3001FXI \u6216\u4e2d\u56fd\u5927\u76d8\u80a1\u8d70\u52bf\u5bf9 YANG \u81ea\u8eab\u7684\u65b9\u5411\u5f71\u54cd\uff0ctarget_price \u8f93\u51fa null\uff1brationale \u5fc5\u987b\u4ee5\u201c\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0a\u6da8/\u4e0b\u8dcc/\u9707\u8361\uff1b\u201d\u5f00\u5934\uff0c\u8d8b\u52bf\u8868\u793a YANG \u81ea\u8eab\u65b9\u5411\uff0c\u4e0d\u662f\u5e95\u5c42\u6307\u6570\u65b9\u5411\u3002\u8bf7\u7279\u522b\u8003\u8651\u6295\u8d44\u5047\u8bbe\u662f\u5426\u6210\u7acb\u3001\u98ce\u9669\u70b9\u3001\u53cd\u65b9\u89c2\u70b9\u3001\u590d\u76d8\u89e6\u53d1\u6761\u4ef6\u3001\u8d22\u62a5\u8d28\u91cf\u3001\u4f30\u503c\u548c\u5e02\u573a\u60c5\u7eea\u3002\u53ea\u8f93\u51fa JSON\uff0c\u4e0d\u8981\u8f93\u51fa Markdown\u3002\u5b57\u6bb5\u4e3a\uff1a{\"target_price\": \u6570\u5b57\u6216 null, \"confidence\": \"\u9ad8/\u4e2d/\u4f4e\", \"rationale\": \"\u4e0d\u8d85\u8fc7120\u5b57\u7684\u4e2d\u6587\u7406\u7531\", \"risk_triggered\": true\u6216false, \"risk_flags\": [\"\u98ce\u9669\u98791\",\"\u98ce\u9669\u98792\"]}\u3002\u0027]\u0027 timed out after 12 seconds", "raw_gemini": "Command \u0027[\u0027/usr/local/bin/gemini\u0027, \u0027--approval-mode\u0027, \u0027plan\u0027, \u0027--output-format\u0027, \u0027json\u0027, \u0027--prompt\u0027, \u0027\u4f60\u662f\u957f\u671f\u57fa\u672c\u9762\u6295\u8d44\u7814\u7a76\u5458\u3002\u8bf7\u57fa\u4e8e\u516c\u5f00\u4fe1\u606f\u3001\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u548c\u4eca\u65e5\u80a1\u4ef7\uff0c\u4e3a\u80a1\u7968\u751f\u6210\u4e00\u4e2a 12 \u4e2a\u6708\u57fa\u51c6\u76ee\u6807\u4ef7\uff0c\u7528\u4e8e\u4e2a\u4eba\u6295\u8d44\u8ddf\u8e2a\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002\u80a1\u7968\uff1aYANG Direxion Daily FTSE China Bear 3X Shares\uff0c\u5e02\u573a\uff1aUS\uff0c\u5e01\u79cd\uff1aUSD\uff0c\u5f53\u524d\u80a1\u4ef7\uff1a30.24\u3002\u6700\u65b0\u6df1\u5ea6\u62a5\u544a\u8def\u5f84\uff1a/Users/frank/Documents/My Documents/Claude Code/Frank\u2018Lab/stock-lab/data/reports/15/codex_report.md\u3002\u7279\u6b8a\u89c4\u5219\uff1aYANG \u662f\u8ddf\u8e2a FTSE China 50 / \u4e2d\u56fd\u5927\u76d8\u80a1\u65b9\u5411\u7684\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u4ea7\u54c1\uff0c\u4e0d\u9002\u5408\u7528\u666e\u901a\u957f\u671f\u57fa\u672c\u9762\u4f30\u503c\u7ed9 12 \u4e2a\u6708\u76ee\u6807\u4ef7\u3002\u8bf7\u6539\u4e3a\u5206\u6790 FTSE China 50\u3001FXI \u6216\u4e2d\u56fd\u5927\u76d8\u80a1\u8d70\u52bf\u5bf9 YANG \u81ea\u8eab\u7684\u65b9\u5411\u5f71\u54cd\uff0ctarget_price \u8f93\u51fa null\uff1brationale \u5fc5\u987b\u4ee5\u201c\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0a\u6da8/\u4e0b\u8dcc/\u9707\u8361\uff1b\u201d\u5f00\u5934\uff0c\u8d8b\u52bf\u8868\u793a YANG \u81ea\u8eab\u65b9\u5411\uff0c\u4e0d\u662f\u5e95\u5c42\u6307\u6570\u65b9\u5411\u3002\u8bf7\u7279\u522b\u8003\u8651\u6295\u8d44\u5047\u8bbe\u662f\u5426\u6210\u7acb\u3001\u98ce\u9669\u70b9\u3001\u53cd\u65b9\u89c2\u70b9\u3001\u590d\u76d8\u89e6\u53d1\u6761\u4ef6\u3001\u8d22\u62a5\u8d28\u91cf\u3001\u4f30\u503c\u548c\u5e02\u573a\u60c5\u7eea\u3002\u53ea\u8f93\u51fa JSON\uff0c\u4e0d\u8981\u8f93\u51fa Markdown\u3002\u5b57\u6bb5\u4e3a\uff1a{\"target_price\": \u6570\u5b57\u6216 null, \"confidence\": \"\u9ad8/\u4e2d/\u4f4e\", \"rationale\": \"\u4e0d\u8d85\u8fc7120\u5b57\u7684\u4e2d\u6587\u7406\u7531\", \"risk_triggered\": true\u6216false, \"risk_flags\": [\"\u98ce\u9669\u98791\",\"\u98ce\u9669\u98792\"]}\u3002\u0027]\u0027 timed out after 12 seconds", "risk_flags": "CODEX_TARGET_FAILED\u3001GEMINI_TARGET_FAILED\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["CODEX_TARGET_FAILED", "GEMINI_TARGET_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-28", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 0/100", "created_at": "2026-05-27 06:34", "decision_trace": {"bucket": "SpecialProducts", "inputs": {"currency": "USD", "latest_price": 29.23, "raw_targets": [null, null]}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "mode": "backfilled", "note": "\u8be5\u6761\u4e3a\u5386\u53f2\u56de\u586b\uff0c\u62a4\u680f\u524d\u540e\u8fc7\u7a0b\u9700\u4ece\u672c\u6b21\u4e4b\u540e\u7684\u65b0\u8bb0\u5f55\u67e5\u770b\u3002", "outputs": {"action": "\u89c2\u5bdf", "average_target": null, "confidence": "\u4f4e 0/100", "price_gap_percent": null, "risk_flags": ["\u6bcf\u65e5-3\u500d\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u6301\u6709", "\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u6216\u6e2f\u80a1\u5927\u76d8\u53cd\u5f39\u5c06\u538b\u4f4eYANG", "\u957f\u671f\u6301\u6709\u7684\u6ce2\u52a8\u7387\u635f\u8017\u4e0e\u6760\u6746\u53cd\u566c", "\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u6258\u5e95", "\u5e95\u5c42\u6307\u6570\u5927\u6da8\u5f15\u53d1\u5355\u65e5\u6781\u7aef\u4e8f\u635f", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "target_dispersion_percent": null}}, "error": "", "id": 232, "latest_price": "29.23", "price_gap_percent": "--", "rationale": "YANG \u4e0d\u9002\u5408\u666e\u901a\u76ee\u6807\u4ef7\u4f30\u503c\uff0c\u4eca\u65e5\u6539\u7528 FTSE China 50 / FXI / \u4e2d\u56fd\u5927\u76d8\u80a1\u8d8b\u52bf\u5224\u65ad\u3002\u8d8b\u52bf\u5224\u65ad\uff1a\u9707\u8361\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0a\u6da8\uff0cYANG \u901a\u5e38\u4e0b\u8dcc\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0b\u8dcc\uff0cYANG \u901a\u5e38\u4e0a\u6da8\uff0c\u540c\u65f6\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u5b58\u5728\u8def\u5f84\u635f\u8017\u3002Codex\uff1a\u8d8b\u52bf\u5224\u65ad\uff1a\u9707\u8361\uff1bYANG\u975e\u57fa\u672c\u9762\u6807\u7684\uff0c\u65e012\u6708\u4f30\u503c\u951a\uff1b\u4e2d\u56fd\u5927\u76d8\u4f4e\u4f30\u503c\u4e0e\u653f\u7b56\u6258\u5e95\u5bf9\u51b2\u5b8f\u89c2\u538b\u529b\uff0c\u6760\u6746\u635f\u8017\u98ce\u9669\u9ad8\u3002 Gemini\uff1a\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1b\u5c3d\u7ba1\u8fd1\u671f\u5f31\u6570\u636e\u652f\u6301\u77ed\u7ebf\u505a\u7a7a\u5e95\u5c42\u4e2d\u56fd\u5927\u76d8\uff0c\u4f46\u653f\u7b56\u6258\u5e95\u4e0e\u8d44\u4ea7\u4fee\u590d\u9650\u5236\u4e86\u6307\u6570\u5927\u8dcc\u7a7a\u95f4\u3002YANG\u4f5c\u4e3a\u6bcf\u65e5-3\u500d\u6760\u6746ETF\uff0c\u5728\u9707\u8361\u6216\u53cd\u5f39\u5e02\u4e2d\u5c06\u56e0\u6ce2\u52a8\u7387\u635f\u8017\u548c\u878d\u8d44\u6210\u672c\u9762\u4e34\u4e25\u91cd\u51c0\u503c\u4fb5\u8680\uff0c\u957f\u671f\u6301\u6709\u6781\u5927\u6982\u7387\u5927\u5e45\u4e0b\u8dcc\u3002", "raw_codex": "{\"target_price\":null,\"confidence\":\"\u4f4e\",\"rationale\":\"\u8d8b\u52bf\u5224\u65ad\uff1a\u9707\u8361\uff1bYANG\u975e\u57fa\u672c\u9762\u6807\u7684\uff0c\u65e012\u6708\u4f30\u503c\u951a\uff1b\u4e2d\u56fd\u5927\u76d8\u4f4e\u4f30\u503c\u4e0e\u653f\u7b56\u6258\u5e95\u5bf9\u51b2\u5b8f\u89c2\u538b\u529b\uff0c\u6760\u6746\u635f\u8017\u98ce\u9669\u9ad8\u3002\",\"risk_triggered\":true,\"risk_flags\":[\"\u6bcf\u65e5-3\u500d\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u6301\u6709\",\"\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u6216\u6e2f\u80a1\u5927\u76d8\u53cd\u5f39\u5c06\u538b\u4f4eYANG\"]}\n", "raw_gemini": "{\n  \"session_id\": \"e667fb71-84ed-4c36-877d-d568fc70ca21\",\n  \"response\": \"{\\n  \\\"target_price\\\": null,\\n  \\\"confidence\\\": \\\"\u9ad8\\\",\\n  \\\"rationale\\\": \\\"\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1b\u5c3d\u7ba1\u8fd1\u671f\u5f31\u6570\u636e\u652f\u6301\u77ed\u7ebf\u505a\u7a7a\u5e95\u5c42\u4e2d\u56fd\u5927\u76d8\uff0c\u4f46\u653f\u7b56\u6258\u5e95\u4e0e\u8d44\u4ea7\u4fee\u590d\u9650\u5236\u4e86\u6307\u6570\u5927\u8dcc\u7a7a\u95f4\u3002YANG\u4f5c\u4e3a\u6bcf\u65e5-3\u500d\u6760\u6746ETF\uff0c\u5728\u9707\u8361\u6216\u53cd\u5f39\u5e02\u4e2d\u5c06\u56e0\u6ce2\u52a8\u7387\u635f\u8017\u548c\u878d\u8d44\u6210\u672c\u9762\u4e34\u4e25\u91cd\u51c0\u503c\u4fb5\u8680\uff0c\u957f\u671f\u6301\u6709\u6781\u5927\u6982\u7387\u5927\u5e45\u4e0b\u8dcc\u3002\\\",\\n  \\\"risk_triggered\\\": true,\\n  \\\"risk_flags\\\": [\\n    \\\"\u957f\u671f\u6301\u6709\u7684\u6ce2\u52a8\u7387\u635f\u8017\u4e0e\u6760\u6746\u53cd\u566c\\\",\\n    \\\"\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u6258\u5e95\\\",\\n    \\\"\u5e95\u5c42\u6307\u6570\u5927\u6da8\u5f15\u53d1\u5355\u65e5\u6781\u7aef\u4e8f\u635f\\\"\\n  ]\\n}\",\n  \"stats\": {\n    \"models\": {\n      \"gemini-3.1-pro-preview\": {\n        \"api\": {\n          \"totalRequests\": 4,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 39447\n        },\n        \"tokens\": {\n          \"input\": 27027,\n          \"prompt\": 42396,\n          \"candidates\": 329,\n          \"total\": 46523,\n          \"cached\": 15369,\n          \"thoughts\": 3798,\n          \"tool\": 0\n        },\n        \"roles\": {\n          \"main\": {\n            \"totalRequests\": 4,\n            \"totalErrors\": 0,\n            \"totalLatencyMs\": 39447,\n            \"tokens\": {\n              \"input\": 27027,\n              \"prompt\": 42396,\n              \"candidates\": 329,\n              \"total\": 46523,\n              \"cached\": 15369,\n              \"thoughts\": 3798,\n              \"tool\": 0\n            }\n          }\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 3,\n      \"totalSuccess\": 2,\n      \"totalFail\": 1,\n      \"totalDurationMs\": 48,\n      \"totalDecisions\": {\n        \"accept\": 2,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 0\n      },\n      \"byName\": {\n        \"read_file\": {\n          \"count\": 1,\n          \"success\": 0,\n          \"fail\": 1,\n          \"durationMs\": 0,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 0\n          }\n        },\n        \"glob\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 28,\n          \"decisions\": {\n            \"accept\": 1,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 0\n          }\n        },\n        \"grep_search\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 20,\n          \"decisions\": {\n            \"accept\": 1,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 0\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    }\n  }\n}", "risk_flags": "\u6bcf\u65e5-3\u500d\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u6301\u6709\u3001\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u6216\u6e2f\u80a1\u5927\u76d8\u53cd\u5f39\u5c06\u538b\u4f4eYANG\u3001\u957f\u671f\u6301\u6709\u7684\u6ce2\u52a8\u7387\u635f\u8017\u4e0e\u6760\u6746\u53cd\u566c\u3001\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u6258\u5e95\u3001\u5e95\u5c42\u6307\u6570\u5927\u6da8\u5f15\u53d1\u5355\u65e5\u6781\u7aef\u4e8f\u635f\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["\u6bcf\u65e5-3\u500d\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u6301\u6709", "\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u6216\u6e2f\u80a1\u5927\u76d8\u53cd\u5f39\u5c06\u538b\u4f4eYANG", "\u957f\u671f\u6301\u6709\u7684\u6ce2\u52a8\u7387\u635f\u8017\u4e0e\u6760\u6746\u53cd\u566c", "\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u6258\u5e95", "\u5e95\u5c42\u6307\u6570\u5927\u6da8\u5f15\u53d1\u5355\u65e5\u6781\u7aef\u4e8f\u635f", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-27", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 0/100", "created_at": "2026-05-26 06:30", "decision_trace": {"bucket": "SpecialProducts", "inputs": {"currency": "USD", "latest_price": 29.79, "raw_targets": [null, null]}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "mode": "backfilled", "note": "\u8be5\u6761\u4e3a\u5386\u53f2\u56de\u586b\uff0c\u62a4\u680f\u524d\u540e\u8fc7\u7a0b\u9700\u4ece\u672c\u6b21\u4e4b\u540e\u7684\u65b0\u8bb0\u5f55\u67e5\u770b\u3002", "outputs": {"action": "\u89c2\u5bdf", "average_target": null, "confidence": "\u4f4e 0/100", "price_gap_percent": null, "risk_flags": ["\u6bcf\u65e5-3\u500d\u6760\u6746\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u4f30\u503c", "\u653f\u7b56\u523a\u6fc0\u6216\u8d44\u91d1\u56de\u6d41\u63a8\u5347FXI/FTSE China 50", "\u6760\u6746ETF\u957f\u671f\u8def\u5f84\u635f\u8017\u4e0e\u878d\u8d44\u6210\u672c", "\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u523a\u6fc0", "\u5355\u65e5\u6781\u7aef\u4e8f\u635f\u4e0e\u884d\u751f\u54c1\u5bf9\u624b\u98ce\u9669", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "target_dispersion_percent": null}}, "error": "", "id": 211, "latest_price": "29.79", "price_gap_percent": "--", "rationale": "YANG \u4e0d\u9002\u5408\u666e\u901a\u76ee\u6807\u4ef7\u4f30\u503c\uff0c\u4eca\u65e5\u6539\u7528 FTSE China 50 / FXI / \u4e2d\u56fd\u5927\u76d8\u80a1\u8d8b\u52bf\u5224\u65ad\u3002\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0a\u6da8\uff0cYANG \u901a\u5e38\u4e0b\u8dcc\uff1b\u82e5\u5e95\u5c42\u6307\u6570\u4e0b\u8dcc\uff0cYANG \u901a\u5e38\u4e0a\u6da8\uff0c\u540c\u65f6\u6bcf\u65e5\u53cd\u5411\u6760\u6746\u5b58\u5728\u8def\u5f84\u635f\u8017\u3002Codex\uff1a\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1b\u4e2d\u56fd\u5927\u76d8\u4f30\u503c\u4f4e\u4e14\u653f\u7b56/\u8d44\u91d1\u60c5\u7eea\u4fee\u590d\uff0c\u538b\u5236YANG\uff1b\u4f46\u5b8f\u89c2\u4e0e\u5730\u7f18\u6270\u52a8\u4ecd\u652f\u6301\u77ed\u7ebf\u9707\u8361\u3002 Gemini\uff1a\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1bYANG\u662f\u6bcf\u65e5-3\u500d\u53cd\u5411\u6760\u6746ETF\uff0c\u957f\u671f\u6301\u6709\u9762\u4e34\u6781\u5927\u7684\u8def\u5f84\u635f\u8017\u548c\u878d\u8d44\u6210\u672c\u3002\u5f53\u524d\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u53ca\u8d44\u91d1\u56de\u6d41\u8ff9\u8c61\u589e\u52a0\u5e95\u5c42\u6307\u6570\u53cd\u5f39\u6982\u7387\uff0cYANG\u81ea\u8eab\u957f\u671f\u8d8b\u52bf\u5411\u4e0b\u3002\u8be5\u4ea7\u54c1\u4ec5\u9002\u5408\u6781\u77ed\u7ebf\u7a7a\u5934\u5bf9\u51b2\uff0c\u7edd\u5bf9\u4e0d\u5b9c\u4f5c\u4e3a12\u4e2a\u6708\u957f\u671f\u914d\u7f6e\u3002", "raw_codex": "{\"target_price\":null,\"confidence\":\"\u4f4e\",\"rationale\":\"\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1b\u4e2d\u56fd\u5927\u76d8\u4f30\u503c\u4f4e\u4e14\u653f\u7b56/\u8d44\u91d1\u60c5\u7eea\u4fee\u590d\uff0c\u538b\u5236YANG\uff1b\u4f46\u5b8f\u89c2\u4e0e\u5730\u7f18\u6270\u52a8\u4ecd\u652f\u6301\u77ed\u7ebf\u9707\u8361\u3002\",\"risk_triggered\":true,\"risk_flags\":[\"\u6bcf\u65e5-3\u500d\u6760\u6746\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u4f30\u503c\",\"\u653f\u7b56\u523a\u6fc0\u6216\u8d44\u91d1\u56de\u6d41\u63a8\u5347FXI/FTSE China 50\"]}\n", "raw_gemini": "{\n  \"session_id\": \"733a4cc0-d1ca-4779-86a3-9061ca7d16e2\",\n  \"response\": \"{\\n  \\\"target_price\\\": null,\\n  \\\"confidence\\\": \\\"\u9ad8\\\",\\n  \\\"rationale\\\": \\\"\u8d8b\u52bf\u5224\u65ad\uff1a\u4e0b\u8dcc\uff1bYANG\u662f\u6bcf\u65e5-3\u500d\u53cd\u5411\u6760\u6746ETF\uff0c\u957f\u671f\u6301\u6709\u9762\u4e34\u6781\u5927\u7684\u8def\u5f84\u635f\u8017\u548c\u878d\u8d44\u6210\u672c\u3002\u5f53\u524d\u4e2d\u56fd\u653f\u7b56\u6258\u5e95\u53ca\u8d44\u91d1\u56de\u6d41\u8ff9\u8c61\u589e\u52a0\u5e95\u5c42\u6307\u6570\u53cd\u5f39\u6982\u7387\uff0cYANG\u81ea\u8eab\u957f\u671f\u8d8b\u52bf\u5411\u4e0b\u3002\u8be5\u4ea7\u54c1\u4ec5\u9002\u5408\u6781\u77ed\u7ebf\u7a7a\u5934\u5bf9\u51b2\uff0c\u7edd\u5bf9\u4e0d\u5b9c\u4f5c\u4e3a12\u4e2a\u6708\u957f\u671f\u914d\u7f6e\u3002\\\",\\n  \\\"risk_triggered\\\": true,\\n  \\\"risk_flags\\\": [\\n    \\\"\u6760\u6746ETF\u957f\u671f\u8def\u5f84\u635f\u8017\u4e0e\u878d\u8d44\u6210\u672c\\\",\\n    \\\"\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u523a\u6fc0\\\",\\n    \\\"\u5355\u65e5\u6781\u7aef\u4e8f\u635f\u4e0e\u884d\u751f\u54c1\u5bf9\u624b\u98ce\u9669\\\"\\n  ]\\n}\",\n  \"stats\": {\n    \"models\": {\n      \"gemini-3.1-pro-preview\": {\n        \"api\": {\n          \"totalRequests\": 3,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 29895\n        },\n        \"tokens\": {\n          \"input\": 23149,\n          \"prompt\": 29485,\n          \"candidates\": 264,\n          \"total\": 31582,\n          \"cached\": 6336,\n          \"thoughts\": 1833,\n          \"tool\": 0\n        },\n        \"roles\": {\n          \"main\": {\n            \"totalRequests\": 3,\n            \"totalErrors\": 0,\n            \"totalLatencyMs\": 29895,\n            \"tokens\": {\n              \"input\": 23149,\n              \"prompt\": 29485,\n              \"candidates\": 264,\n              \"total\": 31582,\n              \"cached\": 6336,\n              \"thoughts\": 1833,\n              \"tool\": 0\n            }\n          }\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 2,\n      \"totalSuccess\": 1,\n      \"totalFail\": 1,\n      \"totalDurationMs\": 61,\n      \"totalDecisions\": {\n        \"accept\": 1,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 0\n      },\n      \"byName\": {\n        \"read_file\": {\n          \"count\": 1,\n          \"success\": 0,\n          \"fail\": 1,\n          \"durationMs\": 0,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 0\n          }\n        },\n        \"grep_search\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 61,\n          \"decisions\": {\n            \"accept\": 1,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 0\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    }\n  }\n}", "risk_flags": "\u6bcf\u65e5-3\u500d\u6760\u6746\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u4f30\u503c\u3001\u653f\u7b56\u523a\u6fc0\u6216\u8d44\u91d1\u56de\u6d41\u63a8\u5347FXI/FTSE China 50\u3001\u6760\u6746ETF\u957f\u671f\u8def\u5f84\u635f\u8017\u4e0e\u878d\u8d44\u6210\u672c\u3001\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u523a\u6fc0\u3001\u5355\u65e5\u6781\u7aef\u4e8f\u635f\u4e0e\u884d\u751f\u54c1\u5bf9\u624b\u98ce\u9669\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["\u6bcf\u65e5-3\u500d\u6760\u6746\u590d\u5229\u635f\u8017\uff0c\u4e0d\u9002\u540812\u4e2a\u6708\u4f30\u503c", "\u653f\u7b56\u523a\u6fc0\u6216\u8d44\u91d1\u56de\u6d41\u63a8\u5347FXI/FTSE China 50", "\u6760\u6746ETF\u957f\u671f\u8def\u5f84\u635f\u8017\u4e0e\u878d\u8d44\u6210\u672c", "\u4e2d\u56fd\u5b8f\u89c2\u653f\u7b56\u8d85\u9884\u671f\u523a\u6fc0", "\u5355\u65e5\u6781\u7aef\u4e8f\u635f\u4e0e\u884d\u751f\u54c1\u5bf9\u624b\u98ce\u9669", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-26", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}]</script>
+                <script type="application/json" data-decision-history-json>[{"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-06 06:55", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "ed4cd6ac884fe5740146be06e9ade6fa9d38f58d79e8c1cbcf44abf609c14b95", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.53}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["PRICE_MOVE_5PCT", "FULL_REPORT_AUTO_UPDATED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 502, "latest_price": "31.53", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "PRICE_MOVE_5PCT\u3001FULL_REPORT_AUTO_UPDATED\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["PRICE_MOVE_5PCT", "FULL_REPORT_AUTO_UPDATED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-06", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-06 06:52", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "c16f97c6d574544a839e0eeca530e69670e58a49748b84fab02b579ae1fe38c4", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.53}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 497, "latest_price": "31.53", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "PRICE_MOVE_5PCT\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-06", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-05 06:03", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "319048c723e46c88b521e7aa0a48ed5d040a3473f8f393f94e286f3a14b861e5", "inputs": {"currency": "USD", "factors": {}, "latest_price": 29.71}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 478, "latest_price": "29.71", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-05", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-04 06:07", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "3874658bbcc5e6fb6511e265046b0ab6a461ae0eb647447e40e935bb06843d46", "inputs": {"currency": "USD", "factors": {}, "latest_price": 29.52}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["PRICE_MOVE_5PCT", "FULL_REPORT_AUTO_UPDATE_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 451, "latest_price": "29.52", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "PRICE_MOVE_5PCT\u3001FULL_REPORT_AUTO_UPDATE_FAILED\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["PRICE_MOVE_5PCT", "FULL_REPORT_AUTO_UPDATE_FAILED", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-04", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-03 06:02", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "db0f9eb53e93d48fa82e12f6d2bdb1cbb96c499d3f99766943dbb53f302181d7", "inputs": {"currency": "USD", "factors": {}, "latest_price": 27.7}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 426, "latest_price": "27.70", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "PRICE_MOVE_5PCT\u3001TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["PRICE_MOVE_5PCT", "TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-03", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-02 06:04", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "a2d29a9eada729649fa1e7dd1ab0a61ae1b52f7e2de586bb7728115f6ddfe8c8", "inputs": {"currency": "USD", "factors": {}, "latest_price": 30.34}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 405, "latest_price": "30.34", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-02", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-06-01 06:02", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 383, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-06-01", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-31 06:00", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 361, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-31", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-30 06:01", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "572b2c8cdc1e24ed70fb4a7eff6d6a980802e87b4a8437ab4d73f245fa367b20", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.05}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 339, "latest_price": "31.05", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-30", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}, {"action": "\u89c2\u5bdf", "average_target_price": "--", "confidence": "\u4f4e 40/100", "created_at": "2026-05-29 21:16", "decision_trace": {"bucket": "SpecialProducts", "formula": {"formula_version": "v4.0-whitebox-factors", "method": "\u4e0d\u8f93\u51fa12\u4e2a\u6708\u76ee\u6807\u4ef7\uff0c\u53ea\u505a\u8d8b\u52bf\u98ce\u9669\u590d\u76d8"}, "input_snapshot_hash": "4259025776b41c4f3b7e7274db6917257520dd7e35c5ee5f880adfa0f50cb50c", "inputs": {"currency": "USD", "factors": {}, "latest_price": 31.11}, "methods": {"fallback": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "primary": "\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\uff1a\u8d8b\u52bf\u4e0e\u98ce\u9669\uff0c\u4e0d\u8f93\u51fa12\u6708\u76ee\u6807\u4ef7", "secondary": "\u4e8b\u4ef6\u9a71\u52a8\u98ce\u9669\u590d\u76d8"}, "outputs": {"action": "\u89c2\u5bdf", "confidence": "\u4f4e 40/100", "confidence_deductions": ["\u6760\u6746/\u53cd\u5411\u4ea7\u54c1\u4e0d\u9002\u752812\u4e2a\u6708\u57fa\u672c\u9762\u76ee\u6807\u4ef7"], "confidence_score": 40, "price_gap_percent": null, "risk_flags": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "valuation_target": null}, "trace_version": "v4.0", "valuation_model": "SpecialProducts / \u8d8b\u52bf\u4e0e\u98ce\u9669"}, "error": "", "id": 317, "latest_price": "31.11", "price_gap_percent": "--", "rationale": "\u6760\u6746/\u53cd\u5411ETF\u4e0d\u9002\u5408\u7528\u957f\u671f\u57fa\u672c\u9762\u76ee\u6807\u4ef7\uff0c\u4eca\u65e5\u53ea\u505a\u8d8b\u52bf\u4e0e\u98ce\u9669\u89c2\u5bdf\u3002", "raw_codex": "", "raw_gemini": "", "risk_flags": "TARGET_NOT_APPLICABLE_TREND_PRODUCT", "risk_flags_list": ["TARGET_NOT_APPLICABLE_TREND_PRODUCT"], "run_date": "2026-05-29", "status": "COMPLETE", "target_dispersion_percent": "--", "valuation_target_price": "--"}]</script>
                 <table>
                   <thead>
                     <tr>
@@ -334,6 +428,78 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
                     </tr>
                   </thead>
                   <tbody>
+                    
+                      <tr data-decision-row data-has-target="0">
+                        <td>
+                          <button
+                            type="button"
+                            class="decision-log-link"
+                            data-decision-open
+                            data-decision-id="502"
+                          >
+                            2026-06-06 06:55
+                          </button>
+                        </td>
+                        <td>观察</td>
+                        <td>31.53</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>低 40/100</td>
+                      </tr>
+                    
+                      <tr data-decision-row data-has-target="0">
+                        <td>
+                          <button
+                            type="button"
+                            class="decision-log-link"
+                            data-decision-open
+                            data-decision-id="497"
+                          >
+                            2026-06-06 06:52
+                          </button>
+                        </td>
+                        <td>观察</td>
+                        <td>31.53</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>低 40/100</td>
+                      </tr>
+                    
+                      <tr data-decision-row data-has-target="0">
+                        <td>
+                          <button
+                            type="button"
+                            class="decision-log-link"
+                            data-decision-open
+                            data-decision-id="478"
+                          >
+                            2026-06-05 06:03
+                          </button>
+                        </td>
+                        <td>观察</td>
+                        <td>29.71</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>低 40/100</td>
+                      </tr>
+                    
+                      <tr data-decision-row data-has-target="0">
+                        <td>
+                          <button
+                            type="button"
+                            class="decision-log-link"
+                            data-decision-open
+                            data-decision-id="451"
+                          >
+                            2026-06-04 06:07
+                          </button>
+                        </td>
+                        <td>观察</td>
+                        <td>29.52</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>低 40/100</td>
+                      </tr>
                     
                       <tr data-decision-row data-has-target="0">
                         <td>
@@ -443,78 +609,6 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
                         <td>低 40/100</td>
                       </tr>
                     
-                      <tr data-decision-row data-has-target="0">
-                        <td>
-                          <button
-                            type="button"
-                            class="decision-log-link"
-                            data-decision-open
-                            data-decision-id="293"
-                          >
-                            2026-05-28 17:13
-                          </button>
-                        </td>
-                        <td>观察</td>
-                        <td>30.24</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>低 0/100</td>
-                      </tr>
-                    
-                      <tr data-decision-row data-has-target="0">
-                        <td>
-                          <button
-                            type="button"
-                            class="decision-log-link"
-                            data-decision-open
-                            data-decision-id="265"
-                          >
-                            2026-05-28 09:17
-                          </button>
-                        </td>
-                        <td>观察</td>
-                        <td>30.24</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>低 0/100</td>
-                      </tr>
-                    
-                      <tr data-decision-row data-has-target="0">
-                        <td>
-                          <button
-                            type="button"
-                            class="decision-log-link"
-                            data-decision-open
-                            data-decision-id="232"
-                          >
-                            2026-05-27 06:34
-                          </button>
-                        </td>
-                        <td>观察</td>
-                        <td>29.23</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>低 0/100</td>
-                      </tr>
-                    
-                      <tr data-decision-row data-has-target="0">
-                        <td>
-                          <button
-                            type="button"
-                            class="decision-log-link"
-                            data-decision-open
-                            data-decision-id="211"
-                          >
-                            2026-05-26 06:30
-                          </button>
-                        </td>
-                        <td>观察</td>
-                        <td>29.79</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>低 0/100</td>
-                      </tr>
-                    
                   </tbody>
                 </table>
               </div>
@@ -554,11 +648,13 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
         <p class="eyebrow">Risk</p>
         <h2>风险点</h2>
         
-          <pre class="section-excerpt">事实<strong class="decision-alert">风险</strong>：每日 -3 倍目标、非长期跟踪、互换交易对手、融资成本、跟踪误差、单日极端<strong class="decision-alert">亏损</strong>、非多元化、中国证券政策<strong class="decision-alert">风险</strong>。Direxion 明确提示杠杆基金可能在不利市场中<strong class="decision-alert">亏损</strong>更多，甚至单日发生总损失。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
-
-交易<strong class="decision-alert">风险</strong>：YANG 的最大敌人不是单日判断错误，而是“方向大体正确但路径震荡”。中国资产若先急涨再回落，YANG 可能因为复利路径和再平衡损耗而表现差于直觉。
-
-误读<strong class="decision-alert">风险</strong>：官网网页抽取的指数行业权重存在重复/异常显示，报告采用官方事实表与产品说明为主；投资者应优先核对最新 PDF/CSV，而不是只看网页聚合表格。</pre>
+          <pre class="section-excerpt">1. **单日目标<strong class="decision-alert">风险</strong>**：YANG 只追求单日 -3x，不追求多日 -3x。持有越久，偏离越大。
+2. **复利损耗<strong class="decision-alert">风险</strong>**：招募说明书明确，长期持有时即使指数区间下跌，基金也可能亏钱。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))
+3. **极端损失<strong class="decision-alert">风险</strong>**：若 FTSE China 50 单日上涨超过约 33%，投资者可能在一天内损失全部本金；招募说明书明确提示该<strong class="decision-alert">风险</strong>。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))
+4. **政策反转<strong class="decision-alert">风险</strong>**：中国若推出强刺激、平台经济政策改善、地产信用修复或港股大盘快速反弹，YANG 将被三倍放大<strong class="decision-alert">亏损</strong>。
+5. **衍生品和交易结构<strong class="decision-alert">风险</strong>**：YANG 依赖掉期、期货、空头敞口、现金和抵押品，存在对手方、融资成本、流动性和跟踪误差<strong class="decision-alert">风险</strong>。
+6. **折溢价与流动性<strong class="decision-alert">风险</strong>**：市场压力下 ETF 可能出现折溢价扩大、买卖价差扩大或无法有效再平衡。招募说明书也提示极端情况下份额可显著偏离 NAV。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))
+7. **误读<strong class="decision-alert">风险</strong>**：看到 YANG 近 1 个月/YTD 为正，不能推断其适合中长期持有；官方历史表现显示成立以来年化约 -38%，长期损耗严重。</pre>
         
       </section>
 
@@ -566,15 +662,17 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
         <p class="eyebrow">Review</p>
         <h2>反方观点</h2>
         
-          <pre class="section-excerpt">反方一：YANG 过去长期收益极差，官方 10 年和成立以来年化均大幅为负，说明长期持有它不是“看空中国”的低成本方式，而是持续支付波动损耗和融资成本。
-反方二：中国政策底、港股流动性、AI/科技链重估、人民币走强都可能引发 YANG 快速回撤。Reuters 报道 2026 年 4 月内地买家购买香港住宅环比增加 48%，显示部分资产价格和资金情绪已有修复迹象。[Investing/Reuters](https://www.investing.com/news/economic-indicators/mainland-chinese-snap-up-hong-kong-homes-in-april-most-in-2-years-4683159)
-反方三：如果投资目的只是对冲中国股票组合，直接降低多头仓位、买保护性期权或用低杠杆反向工具，通常比持有 -3 倍 ETF 更容易控制损耗。
+          <pre class="section-excerpt">如果投资者把它当作普通股票或长期中国空头仓位，可能因每日重置、融资成本和波动损耗而持续<strong class="decision-alert">亏损</strong>。
 
-1. 价格触发：若 YANG 相对本地证据锚点 27.92 美元下跌 10%-15%，且不是单日噪音，应复盘空头假设是否被政策或资金流反转击穿。
-2. 基准触发：若 FTSE China 50、FXI 或港股中国大盘连续两到三日<strong class="decision-alert">放量</strong>上涨，YANG 只能按短线止损逻辑处理，不能用长期基本面理由硬扛。
-3. 宏观触发：若中国消费、地产销售、信贷、出口数据连续改善，或 IMF/世界银行/主流券商上修中国增长预期，应降低 YANG 仓位假设。
-4. 政策触发：降准、资本市场支持工具扩容、地产融资放松、中美关税缓和、港股 IPO/南向资金大幅改善，均是 YANG 的负面复盘信号。
-5. 产品触发：若 YANG 折溢价扩大、成交量异常萎缩、互换持仓/交易对手结构大幅变化，需重新核对 Direxion 每日持仓 CSV 和最新招募说明书。</pre>
+1. 持仓超过 1 个交易日：<strong class="decision-alert">必须</strong>复盘是否仍需承担复利损耗。
+2. FTSE China 50 / FXI / 港股中国大盘连续反弹：复盘 YANG 是否触发止损或仓位削减。
+3. 中国官方 PMI 连续高于 50.5，或新订单重回扩张：复盘空头宏观假设。
+4. 房地产开发投资降幅显著收窄，或销售/融资政策明显改善：复盘地产拖累假设。
+5. 中国出台超预期财政、消费券、地产、平台经济或资本市场支持政策：立即复盘。
+6. YANG 折溢价、买卖价差或成交量异常扩大：复盘交易执行<strong class="decision-alert">风险</strong>。
+7. AUM 快速下降、份额变化异常或反向拆股/合并公告：复盘产品延续性和流动性。
+8. 持仓中掉期/抵押品结构明显变化：复盘对手方和跟踪误差<strong class="decision-alert">风险</strong>。
+9. 本地证据价格与官方/NAV 数据显著不一致：复盘数据源质量，不以单一免费行情源决策。</pre>
         
       </section>
 
@@ -582,11 +680,7 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
         <p class="eyebrow">Fundamentals</p>
         <h2>公司财报与基本面</h2>
         
-          <pre class="section-excerpt">事实：YANG 的目标是“单日”实现 FTSE China 50 指数 -300% 的结果，Direxion 明确提示不应期待它在超过一天的周期内等于指数累计收益的负三倍。YANG 的总/净费率官方披露为 1.03%/1.03%，4 月底官网绩效显示 YANG NAV：1 个月 -7.01%、3 个月 +22.48%、年初至今 +8.67%、1 年 -33.01%、5 年 -35.56%、10 年 -39.53%。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
-
-事实：基金不是靠“做空 50 只中国股票”简单实现，而是通过现金、货币市场基金和 iShares China Large-Cap ETF 相关总收益互换实现反向杠杆。2026-01-31 半年度持仓显示，YANG 短期投资 1.5558 亿美元，占净资产 103.9%；净资产 1.4970 亿美元；短总收益互换名义金额约 4.4365 亿美元，交易对手包括 BNP Paribas、Goldman Sachs、BofA、UBS。[OTC Markets SEC filing](https://www.otcmarkets.com/filing/conv_pdf?guid=vJI-kKd1NB_TB3h&amp;id=19310586)
-
-推断：YANG 的“基本面”不是营收、利润、估值，而是三件事：底层中国/港股大盘方向、波动率路径、互换/融资/跟踪误差成本。若中国资产单边下跌，YANG 会放大利润；若横盘震荡或政策利好反复拉升，净值损耗和反向杠杆会快速侵蚀持仓。</pre>
+          <pre class="section-excerpt">YANG 的底层不是公司盈利，而是日度反向杠杆机制。招募说明书说明，基金正常情况下至少 80% 净资产加借款投资于金融工具，包括掉期、期货或空头仓位，以提供对指数或跟踪指数 ETF 的 3 倍日度反向/空头敞口。([prospectusdocs.com](https://www.prospectusdocs.com/eol/docman?funddocid=3766786))</pre>
         
       </section>
 
@@ -594,11 +688,10 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
         <p class="eyebrow">Street</p>
         <h2>市场传闻与情绪</h2>
         
-          <pre class="section-excerpt">事实/研报：Direxion 自身文件不是买卖建议，而是产品说明和<strong class="decision-alert">风险</strong>揭示。其核心观点是“交易不同于投资”，杠杆/反向 ETF 应由理解杠杆<strong class="decision-alert">风险</strong>且主动管理的投资者使用。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
+          <pre class="section-excerpt">因为 YANG 是 ETF，不存在并购、订单、业绩泄露等普通公司传闻。
 
-第三方观点：Schwab/ETF 类报告显示，YANG 长期年化表现显著为负，体现了反向杠杆 ETF 的路径损耗和长期持有劣势。Direxion 官方截至 2026-04-30 的长期绩效也显示 5 年、10 年、成立以来均为大幅负收益。[Schwab ETF report](https://www.schwab.wallst.com/schwab/Prospect/research/etfs/reports/reportRetrieve.asp?reportType=etfrc&amp;symbol=YANG)、[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
-
-传闻/情绪：社媒上 YANG/YINN 常被当作政策消息、港股反弹/崩跌的高波动交易工具。Reddit 旧帖也提醒 YANG 曾在政策刺激后快速回落，说明散户情绪高度投机化、样本不稳定，不能作为事实依据。[Reddit 示例](https://www.reddit.com/r/wallstreetbets/comments/15x7lwe)</pre>
+近期 Reddit 讨论中，对中国股票的分歧集中在“估值很低、腾讯/阿里等基本面便宜”与“地缘政治、政策干预、地产后遗症、价格战压制估值”之间。
+这类情绪对 YANG 的含义是双向的：如果市场继续把中国资产视为高政策<strong class="decision-alert">风险</strong>/低信任资产，YANG 的短线需求会上升；如果低估值叙事触发资金回补，YANG 会快速受损。</pre>
         
       </section>
 
@@ -606,15 +699,20 @@ YANG 今日跟踪：最新价 27.70，涨跌幅 -8.70%。
         <p class="eyebrow">Events</p>
         <h2>关联重大事件影响因子</h2>
         
-          <pre class="section-excerpt">事实：2024-11-04，YANG 执行 1:20 反向拆股，MarketBeat 亦记录该事件；这解释了长期价格图中可能出现的跳变，不能误读为单日暴涨。[MarketBeat](https://www.marketbeat.com/stocks/NYSEARCA/YANG/)
+          <pre class="section-excerpt">1. 2024-10-11，Direxion 宣布 YANG 进行 1-for-20 反向拆股，2024-11-04 起按拆股调整后交易，新 CUSIP 为 25461A460。反向拆股不改变总市值，但会显著提高单份价格并减少份额数量。
+2. 2026-06-03，Direxion 官方显示 YANG NAV 29.57、市场收盘价 29.52，单日市场价 +6.57%。
+3. 2026-06-04，本地与 StockAnalysis 均显示 YANG 收于 29.71，+0.64%（本地 EVIDENCE-869；StockAnalysis 页面也显示 2026-06-04 收盘 29.71）。
+4. 2026 年 5 月中国制造业 PMI 降至 50.0，新订单 49.9，地产投资 1-4 月同比 -13.7%，为 YANG 的宏观交易逻辑提供背景，但不是买入信号本身。
 
-事实：2026-03-24 除息，2026-03-31 支付，YANG 每份收益分配 0.26168 美元；2025 年也有多次季度分配。分配不是经营性盈利，主要来自基金资产和衍生品/现金管理结构。[Direxion](https://www.direxion.com/product/daily-ftse-china-bull-bear-3x-etfs)
-
-1. 价格触发：若 YANG 相对本地证据锚点 27.92 美元下跌 10%-15%，且不是单日噪音，应复盘空头假设是否被政策或资金流反转击穿。
-2. 基准触发：若 FTSE China 50、FXI 或港股中国大盘连续两到三日<strong class="decision-alert">放量</strong>上涨，YANG 只能按短线止损逻辑处理，不能用长期基本面理由硬扛。
-3. 宏观触发：若中国消费、地产销售、信贷、出口数据连续改善，或 IMF/世界银行/主流券商上修中国增长预期，应降低 YANG 仓位假设。
-4. 政策触发：降准、资本市场支持工具扩容、地产融资放松、中美关税缓和、港股 IPO/南向资金大幅改善，均是 YANG 的负面复盘信号。
-5. 产品触发：若 YANG 折溢价扩大、成交量异常萎缩、互换持仓/交易对手结构大幅变化，需重新核对 Direxion 每日持仓 CSV 和最新招募说明书。</pre>
+1. 持仓超过 1 个交易日：<strong class="decision-alert">必须</strong>复盘是否仍需承担复利损耗。
+2. FTSE China 50 / FXI / 港股中国大盘连续反弹：复盘 YANG 是否触发止损或仓位削减。
+3. 中国官方 PMI 连续高于 50.5，或新订单重回扩张：复盘空头宏观假设。
+4. 房地产开发投资降幅显著收窄，或销售/融资政策明显改善：复盘地产拖累假设。
+5. 中国出台超预期财政、消费券、地产、平台经济或资本市场支持政策：立即复盘。
+6. YANG 折溢价、买卖价差或成交量异常扩大：复盘交易执行<strong class="decision-alert">风险</strong>。
+7. AUM 快速下降、份额变化异常或反向拆股/合并公告：复盘产品延续性和流动性。
+8. 持仓中掉期/抵押品结构明显变化：复盘对手方和跟踪误差<strong class="decision-alert">风险</strong>。
+9. 本地证据价格与官方/NAV 数据显著不一致：复盘数据源质量，不以单一免费行情源决策。</pre>
         
       </section>
 

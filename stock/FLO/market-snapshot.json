@@ -2,52 +2,20 @@
   "symbol": "FLO",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 7.41,
-    "change_percent": -3.26,
-    "open": 7.65,
-    "high": 7.65,
-    "low": 7.41,
-    "volume": 7074739,
-    "market_cap": 1570869693.0,
+    "latest": 7.48,
+    "change_percent": 2.47,
+    "open": 7.37,
+    "high": 7.6,
+    "low": 7.33,
+    "volume": 6701949,
+    "market_cap": 1584623054.0,
     "eps_ttm": 0.34,
-    "trailing_pe": 21.79,
-    "previous_close": 7.66,
+    "trailing_pe": 22.0,
+    "previous_close": 7.3,
     "fifty_two_week_high": 16.212,
     "fifty_two_week_low": 6.8
   },
   "candles": [
-    {
-      "date": "2025-10-10",
-      "open": 12.54,
-      "high": 12.8,
-      "low": 12.54,
-      "close": 12.6,
-      "volume": 2642450
-    },
-    {
-      "date": "2025-10-13",
-      "open": 12.66,
-      "high": 12.85,
-      "low": 12.47,
-      "close": 12.51,
-      "volume": 2825578
-    },
-    {
-      "date": "2025-10-14",
-      "open": 12.47,
-      "high": 12.72,
-      "low": 12.45,
-      "close": 12.68,
-      "volume": 2096989
-    },
-    {
-      "date": "2025-10-15",
-      "open": 12.66,
-      "high": 12.78,
-      "low": 12.57,
-      "close": 12.57,
-      "volume": 3079905
-    },
     {
       "date": "2025-10-16",
       "open": 12.62,
@@ -1295,6 +1263,38 @@
       "low": 7.52,
       "close": 7.66,
       "volume": 7715838
+    },
+    {
+      "date": "2026-06-02",
+      "open": 7.65,
+      "high": 7.65,
+      "low": 7.41,
+      "close": 7.41,
+      "volume": 7075062
+    },
+    {
+      "date": "2026-06-03",
+      "open": 7.37,
+      "high": 7.5,
+      "low": 7.22,
+      "close": 7.27,
+      "volume": 6023244
+    },
+    {
+      "date": "2026-06-04",
+      "open": 7.43,
+      "high": 7.59,
+      "low": 7.22,
+      "close": 7.3,
+      "volume": 6162031
+    },
+    {
+      "date": "2026-06-05",
+      "open": 7.37,
+      "high": 7.6,
+      "low": 7.33,
+      "close": 7.48,
+      "volume": 6701945
     }
   ]
 }

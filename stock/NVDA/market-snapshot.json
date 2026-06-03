@@ -2,52 +2,20 @@
   "symbol": "NVDA",
   "source": "Sina Finance free quote/K-line endpoints",
   "quote": {
-    "latest": 222.82,
-    "change_percent": -0.69,
-    "open": 227.18,
-    "high": 232.28,
-    "low": 221.35,
-    "volume": 192139973,
-    "market_cap": 5396923220000.0,
+    "latest": 205.1,
+    "change_percent": -6.2,
+    "open": 214.53,
+    "high": 214.87,
+    "low": 204.33,
+    "volume": 219655531,
+    "market_cap": 4967727100000.0,
     "eps_ttm": 6.57,
-    "trailing_pe": 33.91,
-    "previous_close": 224.36,
-    "fifty_two_week_high": 236.54,
-    "fifty_two_week_low": 137.91
+    "trailing_pe": 31.22,
+    "previous_close": 218.66,
+    "fifty_two_week_high": 236.29,
+    "fifty_two_week_low": 140.575
   },
   "candles": [
-    {
-      "date": "2025-10-10",
-      "open": 193.5,
-      "high": 195.62,
-      "low": 182.05,
-      "close": 183.16,
-      "volume": 268774359
-    },
-    {
-      "date": "2025-10-13",
-      "open": 187.97,
-      "high": 190.11,
-      "low": 185.96,
-      "close": 188.32,
-      "volume": 153482704
-    },
-    {
-      "date": "2025-10-14",
-      "open": 184.77,
-      "high": 184.8,
-      "low": 179.7,
-      "close": 180.03,
-      "volume": 205641380
-    },
-    {
-      "date": "2025-10-15",
-      "open": 184.8,
-      "high": 184.87,
-      "low": 177.29,
-      "close": 179.83,
-      "volume": 214450374
-    },
     {
       "date": "2025-10-16",
       "open": 182.23,
@@ -1295,6 +1263,38 @@
       "low": 215.7,
       "close": 224.36,
       "volume": 212850540
+    },
+    {
+      "date": "2026-06-02",
+      "open": 227.18,
+      "high": 232.28,
+      "low": 221.35,
+      "close": 222.82,
+      "volume": 193362711
+    },
+    {
+      "date": "2026-06-03",
+      "open": 221.72,
+      "high": 222.82,
+      "low": 214.51,
+      "close": 214.75,
+      "volume": 160906804
+    },
+    {
+      "date": "2026-06-04",
+      "open": 213.91,
+      "high": 221.6,
+      "low": 210.97,
+      "close": 218.66,
+      "volume": 169022152
+    },
+    {
+      "date": "2026-06-05",
+      "open": 214.53,
+      "high": 214.87,
+      "low": 204.33,
+      "close": 205.1,
+      "volume": 219655531
     }
   ]
 }
