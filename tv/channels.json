@@ -1,171 +1,26 @@
 {
-  "version": 23,
-  "publishedAt": "2026-05-24T17:16:38.289Z",
+  "version": 24,
+  "publishedAt": "2026-06-12T09:47:04.950Z",
   "channels": [
     {
       "id": "cctv-1",
       "name": "CCTV-1综合",
-      "url": "http://74.91.26.218:82/live/cctv1hd.m3u8",
+      "url": "http://198.204.240.250:82/live/cctv1.m3u8",
       "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?",
-        "http://223.110.236.8/ott.js.chinamobile.com/PLTV/3/224/3221228149/index.m3u8"
+        "http://74.91.26.218:82/live/cctv1hd.m3u8",
+        "http://69.30.245.50/live/cctv1.m3u8"
       ],
       "group": "央视",
       "region": "中国大陆",
-      "sourceNote": "iptv-org CN 同名公开 HLS 源，2026-05-25 本机验证返回 #EXTM3U；备用为 fanmingming/live IPv6 与原中国移动线路",
+      "sourceNote": "原 74.91 源重定向后超时；改用 iptv-org 同名公开备用源，2026-06-12 本机验证返回 #EXTM3U。",
       "logoUrl": "",
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
       "sortOrder": 0,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "cctv-2",
-      "name": "CCTV-2财经",
-      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?",
-      "backupUrls": [
-        "http://223.110.241.204:6610/gitv/live1/G_CCTV-2-CQ/G_CCTV-2-CQ"
-      ],
-      "group": "央视",
-      "region": "中国大陆",
-      "sourceNote": "原 fanmingming/live IPv6 源本机无 IPv6 路由；iptv-org CN 同名 74.91 HLS 候选可偶发返回 #EXTM3U，但最终串行复测重定向节点超时，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "route-timeout",
-      "sortOrder": 1,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "cctv-4",
-      "name": "CCTV-4中文国际",
-      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?",
-      "backupUrls": [
-        "http://223.110.241.204:6610/gitv/live1/G_CCTV-4-CQ/G_CCTV-4-CQ"
-      ],
-      "group": "央视",
-      "region": "中国大陆",
-      "sourceNote": "原 fanmingming/live IPv6 源本机无 IPv6 路由；iptv-org CN 同名 74.91 HLS 候选单独复测重定向后超时，保留禁用，需 IPv6 或可达大陆/北美中继线路",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "route-timeout",
-      "sortOrder": 2,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "cctv-5",
-      "name": "CCTV-5体育",
-      "url": "http://74.91.26.218:82/live/cctv5hd.m3u8",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?",
-        "http://223.110.241.204:6610/gitv/live1/G_CCTV-5-CQ/G_CCTV-5-CQ"
-      ],
-      "group": "央视体育",
-      "region": "中国大陆",
-      "sourceNote": "iptv-org CN 同名公开 HLS 源，2026-05-25 本机验证返回 #EXTM3U；备用为 fanmingming/live IPv6 与原中国移动线路",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 3,
-      "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "cctv-13",
-      "name": "CCTV-13 新闻",
-      "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?"
-      ],
-      "group": "新闻",
-      "region": "中国大陆",
-      "sourceNote": "iptv-org CN 同名公开 HLS 本轮连续重定向后超时；fanmingming/live 同名 IPv6 备用源需 IPv6 或大陆运营商线路，暂不启用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "timeout",
-      "sortOrder": 4,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "beijing-satellite",
-      "name": "北京卫视",
-      "url": "https://cctvtxyh5ca.liveplay.myqcloud.com/wstv/btv1_2/index.m3u8",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226900/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EcYPi33WFyhvd6SjmqUKhJg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
-      ],
-      "group": "卫视",
-      "region": "中国大陆",
-      "sourceNote": "同名公开候选仅找到 iptv-org CN 与 fanmingming/live IPv6；本机验证 iptv-org IPv4 候选超时/拒连，fanmingming 源需 IPv6，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "route-timeout",
-      "sortOrder": 5,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "dragon-tv",
-      "name": "东方卫视",
-      "url": "http://223.110.241.204:6610/gitv/live1/G_DONGFANG-CQ/G_DONGFANG-CQ/",
-      "backupUrls": [
-        "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND"
-      ],
-      "group": "卫视",
-      "region": "中国大陆",
-      "sourceNote": "同名公开候选仅找到 iptv-org CN 与 fanmingming/live IPv6；本机验证 iptv-org IPv4 候选拒连，fanmingming 源需 IPv6，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "route-timeout",
-      "sortOrder": 6,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "shenzhen-satellite",
-      "name": "深圳卫视",
-      "url": "http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226959/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EGrVNEZREjuNVKiTJo2mtwg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND",
-      "backupUrls": [
-        "http://223.110.241.204:6610/gitv/live1/G_SHENZHEN-CQ/G_SHENZHEN-CQ/"
-      ],
-      "group": "卫视",
-      "region": "中国大陆",
-      "sourceNote": "同名公开候选来自 iptv-org CN 与 fanmingming/live IPv6；本机验证多个 IPv4/大陆运营商候选超时，fanmingming 源需 IPv6，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "route-timeout",
-      "sortOrder": 7,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "abc-news-live-us",
-      "name": "ABC News Live",
-      "url": "https://abcnews-streams.akamaized.net/hls/live/2023561/abcnewshudson2/master_4000.m3u8",
-      "backupUrls": [
-        "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master_4000.m3u8",
-        "https://abcnews-streams.akamaized.net/hls/live/2023562/abcnewshudson3/master_4000.m3u8"
-      ],
-      "group": "新闻",
-      "region": "美国",
-      "sourceNote": "现有主源可播，ffprobe 验证通过",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "playable",
-      "sortOrder": 8,
-      "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "livenowfromfox-us",
@@ -181,9 +36,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 9,
+      "sortOrder": 1,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "nbcnewsnow-us",
@@ -196,28 +52,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 10,
+      "sortOrder": 2,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "bloomberg-television-us",
-      "name": "Bloomberg Television",
-      "url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
-      "group": "财经",
-      "region": "美国",
-      "sourceNote": "原 CloudFront 源连接重置；iptv-org 同名 Bloomberg TV US 候选在本机网络连接 bloomberg.com 超时，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "timeout",
-      "sortOrder": 11,
-      "disabled": true,
       "lastCheckedAt": 1779642998289,
-      "backupUrls": [
-        "https://bloomberg.com/media-manifest/streams/us-event.m3u8",
-        "https://bloomberg.com/media-manifest/streams/politics.m3u8"
-      ]
+      "remoteVersion": 24
     },
     {
       "id": "espn8-the-ocho-us",
@@ -230,9 +68,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 12,
+      "sortOrder": 3,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "flo-hockey-us",
@@ -245,9 +84,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 13,
+      "sortOrder": 4,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "fubo-sports-network-us",
@@ -260,9 +100,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 14,
+      "sortOrder": 5,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "stadium-us",
@@ -275,9 +116,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 15,
+      "sortOrder": 6,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "waypoint-tv-us",
@@ -290,39 +132,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 16,
+      "sortOrder": 7,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "bfm-tech-co-us",
-      "name": "BFM Tech & Co",
-      "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
-      "group": "科技",
-      "region": "美国",
-      "sourceNote": "现有源返回 403/452；允许来源中未找到同名可用替代，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "forbidden",
-      "sortOrder": 17,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "cbc-news-ca",
-      "name": "CBC News",
-      "url": "https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8",
-      "group": "新闻",
-      "region": "加拿大",
-      "sourceNote": "原 CBC News International 源 ffprobe 失败；iptv-org 同名/近似候选中 CBC News BC/Explore 可取，但不是同名频道，未替换",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "timeout",
-      "sortOrder": 18,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "citynewsvancouver-ca",
@@ -335,9 +148,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 19,
+      "sortOrder": 8,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "citynews-toronto-ca",
@@ -350,9 +164,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 20,
+      "sortOrder": 9,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
+      "lastCheckedAt": 1779642998289,
+      "remoteVersion": 24
     },
     {
       "id": "rthk-tv31-hk",
@@ -365,45 +180,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 21,
+      "sortOrder": 10,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "hoy-ibc-hk",
-      "name": "HOY International Business Channel",
-      "url": "https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8",
-      "group": "财经",
-      "region": "香港",
-      "sourceNote": "原源与 iptv-org HK 同名备用源本机连接 hoy.tv 超时，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "timeout",
-      "sortOrder": 22,
-      "disabled": true,
       "lastCheckedAt": 1779642998289,
-      "backupUrls": [
-        "https://hoytv-live-stream.hoy.tv/ch76/va2-index.m3u8"
-      ]
-    },
-    {
-      "id": "phoenix-info-hk",
-      "name": "凤凰资讯",
-      "url": "http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8",
-      "group": "新闻",
-      "region": "香港",
-      "sourceNote": "原源超时；iptv-org HK/CN 同名候选本机解析失败或连接超时，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "timeout",
-      "sortOrder": 23,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289,
-      "backupUrls": [
-        "http://php.17186.eu.org/phtv/fhzx.m3u8"
-      ]
+      "remoteVersion": 24
     },
     {
       "id": "tvbsasia-tw",
@@ -416,42 +196,10 @@
       "source": "remote",
       "isBundledCandidate": true,
       "lastStatus": "playable",
-      "sortOrder": 24,
+      "sortOrder": 11,
       "disabled": false,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "taiwanplus-tv-tw",
-      "name": "TaiwanPlus TV",
-      "url": "https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/6282251407001/playlist.m3u8",
-      "group": "新闻",
-      "region": "台湾",
-      "sourceNote": "现有源与 iptv-org TW 同名源一致，本机返回 403，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "forbidden",
-      "sortOrder": 25,
-      "disabled": true,
-      "lastCheckedAt": 1779642998289
-    },
-    {
-      "id": "taiwan-indigenous-tv-tw",
-      "name": "Taiwan Indigenous TV",
-      "url": "http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8",
-      "group": "综合",
-      "region": "台湾",
-      "sourceNote": "现有源与 iptv-org TW 同名源一致，本机返回 403，保留禁用",
-      "logoUrl": "",
-      "source": "remote",
-      "isBundledCandidate": true,
-      "lastStatus": "forbidden",
-      "sortOrder": 26,
-      "disabled": true,
       "lastCheckedAt": 1779642998289,
-      "backupUrls": [
-        "http://streamipcf.akamaized.net/live/_definst_/smil:liveabr.smil/playlist.m3u8"
-      ]
+      "remoteVersion": 24
     }
   ]
 }
