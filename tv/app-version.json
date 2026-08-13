@@ -1,8 +1,8 @@
 {
   "versionCode": 11,
   "versionName": "1.8.0",
-  "publishedAt": "2026-05-17T03:30:20.761Z",
+  "publishedAt": "2026-08-12T23:52:09.000Z",
   "apkUrl": "https://frankzh.top/tv/mytv-1.8.0.apk",
-  "sha256": "cc285c256f72b0a91031b7505af470291f7ca60259ed3bc1ba4707a9b2a8ec19",
-  "notes": "新增网页直播频道类型；CCTV 网页直播入口会在 MyTV 内置浏览器中打开，HLS 频道继续通过聚合器健康检查与置灰机制发布。"
+  "sha256": "39ed59ab5c3ae820c33d12c507f2dcaa7ee550bf15564b5c43e8152af3a1c2bd",
+  "notes": "新增网页直播频道类型；启动后每天最多检查一次频道版本，发现新版只提示，用户点更新后再同步频道。"
 }
